@@ -2,10 +2,10 @@
 title: yq
 type: software
 category: utility
-url: https://mikefarah.gitbook.io/yq/
-docs: https://mikefarah.gitbook.io/yq/
-github: https://github.com/mikefarah/yq
-developer: https://github.com/mikefarah
+url: "https://mikefarah.gitbook.io/yq/"
+docs: "https://mikefarah.gitbook.io/yq/"
+github: "https://github.com/mikefarah/yq"
+developer: "https://github.com/mikefarah"
 desc-short: |
   yq is a portable command-line YAML, JSON, XML, CSV, TOML and properties processor
 tags: dev/bash dev/cli dev/golang dev/yaml dev/toml dev/json dev/csv dev/xml dev/tools

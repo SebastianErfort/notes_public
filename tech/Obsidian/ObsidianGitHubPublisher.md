@@ -1,7 +1,7 @@
 ---
 title: Obsidian GitHub Publisher
-source: https://github.com/ObsidianPublisher/obsidian-github-publisher
-url: https://obsidian-publisher.netlify.app/
+source: "https://github.com/ObsidianPublisher/obsidian-github-publisher"
+url: "https://obsidian-publisher.netlify.app/"
 type: publishing
 category: Obsidian
 desc-short: Github Publisher helps you to publish your notes on a preconfigured GitHub repository, for free, and more!

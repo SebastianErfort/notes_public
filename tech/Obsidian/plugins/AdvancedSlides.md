@@ -2,9 +2,9 @@
 title:
 type: software
 category: obsidian/plugin
-url: https://mszturc.github.io/obsidian-advanced-slides/
-docs: https://mszturc.github.io/obsidian-advanced-slides/
-github: https://github.com/MSzturc/obsidian-advanced-slides
+url: "https://mszturc.github.io/obsidian-advanced-slides/"
+docs: "https://mszturc.github.io/obsidian-advanced-slides/"
+github: "https://github.com/MSzturc/obsidian-advanced-slides"
 developer: "[MSzturc](https://github.com/MSzturc)"
 desc-short: |
   Create markdown-based reveal.js presentations in Obsidian

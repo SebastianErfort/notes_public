@@ -2,9 +2,9 @@
 title: Kitty
 type: software
 category: terminal-emulator
-url: https://sw.kovidgoyal.net/kitty/
-docs: https://sw.kovidgoyal.net/kitty/
-github: https://github.com/kovidgoyal/kitty
+url: "https://sw.kovidgoyal.net/kitty/"
+docs: "https://sw.kovidgoyal.net/kitty/"
+github: "https://github.com/kovidgoyal/kitty"
 developer:
 desc-short: |
   The fast, feature-rich, GPU based terminal emulator

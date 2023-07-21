@@ -4,7 +4,7 @@ type: software
 category: markdown
 url:
 docs:
-source: https://github.com/joeyespo/grip
+source: "https://github.com/joeyespo/grip"
 developer:
 desc-short: |
   Markdown reader. Github flavour, requires browser and internet connection.

@@ -3,7 +3,7 @@ title: Matrix
 type: software
 category: communication
 model: free (open source)
-url: https://matrix.org/
+url: "https://matrix.org/"
 visibility: public
 ---
 `= ( "[Website](" + this.url + ")")`

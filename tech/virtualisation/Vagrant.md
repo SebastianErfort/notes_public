@@ -1,7 +1,7 @@
 ---
 type: software
-website: https://www.vagrantup.com/
-github: https://github.com/hashicorp/vagrant
+website: "https://www.vagrantup.com/"
+github: "https://github.com/hashicorp/vagrant"
 code: open source
 company: Hashicorp
 visibility: public

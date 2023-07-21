@@ -1,6 +1,6 @@
 ---
 title: Server Message Block (SMB)
-wikipedia: https://en.wikipedia.org/wiki/Server_Message_Block
+wikipedia: "https://en.wikipedia.org/wiki/Server_Message_Block"
 tags: tech/printing
 visibility: public
 ---

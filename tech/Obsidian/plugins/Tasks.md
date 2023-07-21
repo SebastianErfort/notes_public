@@ -2,9 +2,9 @@
 title: Obsidian Tasks
 type: software
 category: obsidian/plugin
-url: https://publish.obsidian.md/tasks/
-docs: https://publish.obsidian.md/tasks/Introduction
-github: https://github.com/obsidian-tasks-group/obsidian-tasks
+url: "https://publish.obsidian.md/tasks/"
+docs: "https://publish.obsidian.md/tasks/Introduction"
+github: "https://github.com/obsidian-tasks-group/obsidian-tasks"
 developer: "[obsidian-tasks-group](https://github.com/obsidian-tasks-group)"
 desc-short: |
   Task management for the Obsidian knowledge base.

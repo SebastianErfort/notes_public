@@ -2,10 +2,10 @@
 title: Wiki.js
 type: software
 category: Wiki
-docs: https://docs.requarks.io/
-url: https://js.wiki/
-docker-image: requarks/wiki:2
-github: https://github.com/Requarks/wiki
+docs: "https://docs.requarks.io/"
+url: "https://js.wiki/"
+docker-image: "requarks/wiki:2"
+github: "https://github.com/Requarks/wiki"
 desc-short: |
   A modern and powerful wiki app built on Node.js
 tags:

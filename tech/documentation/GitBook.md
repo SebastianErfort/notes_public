@@ -2,8 +2,8 @@
 name: GitBook
 type: software
 category: documentation
-url: https://www.gitbook.com/
-docs: https://docs.gitbook.com/
+url: "https://www.gitbook.com/"
+docs: "https://docs.gitbook.com/"
 desc-short: |
   GitBook is a modern documentation platform where teams can document everything from products to internal knowledge bases and APIs.
 license: commerical

@@ -2,8 +2,8 @@
 title: Obsidian Git
 type: software
 category: obsidian/plugin
-docs: https://publish.obsidian.md/git-doc
-github: https://github.com/denolehov/obsidian-git
+docs: "https://publish.obsidian.md/git-doc"
+github: "https://github.com/denolehov/obsidian-git"
 developer: "[MSzturc](https://github.com/MSzturc)"
 desc-short: |
   Backup your Obsidian.md vault with git

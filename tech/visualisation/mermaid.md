@@ -2,9 +2,9 @@
 title: Mermaid
 type: software
 category: visualisation
-url: https://mermaid.js.org
-docs: https://mermaid.js.org/intro/
-source: https://github.com/mermaid-js/mermaid
+url: "https://mermaid.js.org"
+docs: "https://mermaid.js.org/intro/"
+source: "https://github.com/mermaid-js/mermaid"
 developer:
 desc-short: |
   JavaScript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically

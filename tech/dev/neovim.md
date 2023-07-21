@@ -3,7 +3,7 @@ title: neovim
 type: software
 category: editor
 aliases: nvim
-url: https://neovim.io/
+url: "https://neovim.io/"
 visibility: public
 ---
 

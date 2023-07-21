@@ -2,9 +2,9 @@
 name: Gatsby
 type: software
 category: website
-url: https://www.gatsbyjs.com/
+url: "https://www.gatsbyjs.com/"
 docs:
-github: https://github.com/gatsbyjs/gatsby
+github: "https://github.com/gatsbyjs/gatsby"
 developer:
 desc-short: |
   Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps.

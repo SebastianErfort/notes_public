@@ -2,9 +2,9 @@
 title: OpenSearch
 type: software
 category: search
-url: https://github.com/opensearch-project
-docs: https://opensearch.org/docs/latest/
-source: https://github.com/opensearch-project/opensearch
+url: "https://github.com/opensearch-project"
+docs: "https://opensearch.org/docs/latest/"
+source: "https://github.com/opensearch-project/opensearch"
 developer: Amazon Web Services
 license: Apache v2.0
 desc-short: |

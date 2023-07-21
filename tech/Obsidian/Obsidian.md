@@ -2,8 +2,8 @@
 title: Obsidian
 tags: dev/markdown obsidian
 author: Sebastian Erfort
-url: https://obsidian.md/
-docs: https://help.obsidian.md/Home
+url: "https://obsidian.md/"
+docs: "https://help.obsidian.md/Home"
 syntax: markdown
 type: software
 category: markdown

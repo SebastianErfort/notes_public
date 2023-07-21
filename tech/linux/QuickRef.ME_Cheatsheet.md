@@ -8,8 +8,7 @@ tags:
   - script
 categories:
   - Linux Command
-intro: |
-  This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.
+intro: "This is a one page quick reference cheat sheet to the [GNU awk](https://www.gnu.org/software/gawk/manual/gawk.html), which covers commonly used awk expressions and commands.\n"
 plugins:
   - copyCode
 visibility: public

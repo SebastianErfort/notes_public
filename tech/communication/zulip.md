@@ -1,7 +1,7 @@
 ---
 title: Zulip
-url: https://zulip.com/
-docs: https://zulip.readthedocs.io/en/latest/index.html
+url: "https://zulip.com/"
+docs: "https://zulip.readthedocs.io/en/latest/index.html"
 type: software
 category: communication
 visibility: public

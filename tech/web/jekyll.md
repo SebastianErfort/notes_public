@@ -3,7 +3,7 @@ name: Jekyll
 title: Jekyll
 type: software
 category:
-url: https://jekyllrb.com/
+url: "https://jekyllrb.com/"
 docker-image:
 desc-short: |
   ...

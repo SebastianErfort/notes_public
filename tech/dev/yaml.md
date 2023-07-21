@@ -7,6 +7,10 @@ visibility: public
 #dev/yaml
 ```
 
+
+## References
+<https://yaml-multiline.info/>: YAML multi-line (string) syntax explained, with examples
+
 ## Linting
 yamllint: [Documentation](https://yamllint.readthedocs.io/en/stable/index.html) | [![|20](github.png) GitHub](https://github.com/adrienverge/yamllint)
 

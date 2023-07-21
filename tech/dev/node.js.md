@@ -2,8 +2,8 @@
 title: node.js
 type: software
 category: pl/javascript
-url: https://www.npmjs.com/
-docs: https://docs.npmjs.com/
+url: "https://www.npmjs.com/"
+docs: "https://docs.npmjs.com/"
 source:
 developer: GitHub
 desc-short: |

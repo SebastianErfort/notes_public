@@ -4,7 +4,7 @@ type: software
 category: markdown
 url:
 docs:
-source: https://github.com/charmbracelet/glow
+source: "https://github.com/charmbracelet/glow"
 developer: Charmbracelet
 desc-short: "Render markdown on the CLI, with pizzazz! \U0001F485\n"
 tags:

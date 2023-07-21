@@ -2,8 +2,8 @@
 name: Jiffy Reader
 type: software
 category: browser-extension
-url: https://www.jiffyreader.com/
-github: https://github.com/ansh/jiffyreader.com
+url: "https://www.jiffyreader.com/"
+github: "https://github.com/ansh/jiffyreader.com"
 developer:
 desc-short: |
   A Browser Extension for faster reading on ANY website!

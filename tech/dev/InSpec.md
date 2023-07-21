@@ -4,7 +4,7 @@ developer: Chef
 type: software
 category: testing/functional
 tags: software/InSpec dev/testing dev/testing/functional
-docs: https://docs.chef.io/inspec/
+docs: "https://docs.chef.io/inspec/"
 visibility: public
 ---
 Chef InSpec provides a framework for functional testing.

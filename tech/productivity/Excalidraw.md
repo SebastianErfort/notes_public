@@ -2,9 +2,9 @@
 title: Excalidraw
 type: software
 category:
-url: https://excalidraw.com/
-docs: https://github.com/excalidraw/excalidraw#documentation
-github: https://github.com/excalidraw/excalidraw
+url: "https://excalidraw.com/"
+docs: "https://github.com/excalidraw/excalidraw#documentation"
+github: "https://github.com/excalidraw/excalidraw"
 developer:
 desc-short: |
   Virtual whiteboard for sketching hand-drawn like diagrams

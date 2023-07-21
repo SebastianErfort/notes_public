@@ -2,10 +2,10 @@
 name: Gollum
 type: software
 category: Wiki
-docs: https://github.com/gollum/gollum/wiki
-url: https://github.com/gollum/gollum
-docker-image: gollumwiki/gollum:master
-github: https://github.com/gollum/gollum
+docs: "https://github.com/gollum/gollum/wiki"
+url: "https://github.com/gollum/gollum"
+docker-image: "gollumwiki/gollum:master"
+github: "https://github.com/gollum/gollum"
 visibility: public
 ---
 
