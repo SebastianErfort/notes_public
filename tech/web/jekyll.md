@@ -2,12 +2,12 @@
 name: Jekyll
 title: Jekyll
 type: software
-category:
+category: ""
 url: "https://jekyllrb.com/"
-docker-image:
+docker-image: ""
 desc-short: |
   ...
-tags:
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")`

@@ -5,10 +5,10 @@ category: visualisation
 url: "https://mermaid.js.org"
 docs: "https://mermaid.js.org/intro/"
 source: "https://github.com/mermaid-js/mermaid"
-developer:
+developer: ""
 desc-short: |
   JavaScript based diagramming and charting tool that renders Markdown-inspired text definitions to create and modify diagrams dynamically
-tags:
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")` | [mermaid.live](https://mermaid.live/) | [My examples](file://rsc/mermaid)

@@ -1,5 +1,5 @@
 ---
-title:
+title: ""
 type: software
 category: obsidian/plugin
 url: "https://mszturc.github.io/obsidian-advanced-slides/"

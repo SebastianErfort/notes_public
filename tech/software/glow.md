@@ -2,12 +2,12 @@
 title: glow
 type: software
 category: markdown
-url:
-docs:
+url: ""
+docs: ""
 source: "https://github.com/charmbracelet/glow"
 developer: Charmbracelet
 desc-short: "Render markdown on the CLI, with pizzazz! \U0001F485\n"
-tags:
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

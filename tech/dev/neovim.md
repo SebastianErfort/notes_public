@@ -23,6 +23,14 @@ See also my notes on [[vim]] and [[Editors]].
 - [Blog-entry switching from CoC to neovim native LSP](https://www.vikasraj.dev/blog/lsp-neovim-retrospective)
 - [reddit discussion about neovim plugins and configuration overhead](https://www.reddit.com/r/neovim/comments/wehqqr/some_constructive_criticism_for_the_hard_working/)
 
+
+## Installation
+
+- from distro repos
+- from archive
+    1. download [archive](https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz)
+    2. extract and move files for example to `~/.local`
+
 ## Config
 
 - [Video *Effective Neovim: Instant IDE*](https://www.youtube.com/watch?v=stqUbv-5u2s) by TJ DeVries (developer of [[#^34282b|telescope.nvim]] and more): [[#^f8af35|kickstart.nvim]] config repo

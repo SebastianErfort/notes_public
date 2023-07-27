@@ -13,6 +13,10 @@ See also
 
 ## Software
 
+- [[linux#tmux|Tmux]]
+- `screen`
+- [reptyr](https://github.com/nelhage/reptyr): Attach a running process to a new terminal
+
 ### Quick Reference and Cheatsheets
 
 - [cheat](https://github.com/cheat/cheatsheets): Community-sourced cheatsheets
@@ -87,9 +91,10 @@ CodeQL is free for research and open source.
 
 # Linux
 
-[KIWI: command line utility to build Linux system appliances](https://osinside.github.io/kiwi/)
-[openQA: automated tests (for OSs)](command line utility to build Linux system appliances)
-[Semantic Versioning: conventions for version numbers and changes](https://semver.org/)
+- [KIWI: command line utility to build Linux system appliances](https://osinside.github.io/kiwi/)
+- [openQA: automated tests (for OSs)](command line utility to build Linux system appliances)
+- [Semantic Versioning: conventions for version numbers and changes](https://semver.org/)
+- [Appstream](https://www.freedesktop.org/software/appstream/docs/): Infrastructure for distro-agnostic software-centers and universal software component metadata
 
 ## Automisation
 https://github.com/ReimuNotMoe/ydotool

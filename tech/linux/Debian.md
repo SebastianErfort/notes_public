@@ -31,9 +31,12 @@ sudo reprepro \
 ```
 
 ### dpkg
+
 ```bash
 # extract package
 dpkg -x [-X] <package> <destination>
+# compare package versions
+dpkg --compare-versions $version1 ne $version2
 ```
 
 ### apt
@@ -55,6 +58,14 @@ sudo apt install package_name=package_version
 [apt-fast](https://github.com/ilikenwf/apt-fast): shellscript wrapper for apt-get and aptitude that can drastically improve apt download times by downloading packages in parallel, with multiple connections per package
 
 Speed up downloads by using multiple parallel connections: (unofficial) [package `apt-fast`](https://github.com/ilikenwf/apt-fast)
+
+#### Packages
+
+Pin/hold a package version, for example Kernel version (see [RUG notes > Puppet > module Kernel Maintenance](obsidian://vault/rug/lwp/Puppet/modules/kernel_maintenance) and [code](file://git/puppetserver/our-modules/kernel_maintenance/manifests/init.pp))
+```bash
+apt-mark showhold | grep -q -e '^linux-headers-${pin}' -e '^linux-image-${pin}' -e '^linux-modules-${pin}' -e '^linux-modules-extra-${pin}'
+apt-mark hold linux-headers-${pin}-generic linux-image-${pin}-generic linux-modules-${pin}-generic linux-modules-extra-${pin}-generic
+```
 
 #### Nala
 [![[github.svg]] Github](https://github.com/volitank/nala) | [![[book.svg]] Wiki](https://gitlab.com/volian/nala/-/wikis/Installation)

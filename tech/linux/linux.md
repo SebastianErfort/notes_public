@@ -161,6 +161,22 @@ _remote_commands
 > [!info]- [[sudo]]
 > ![[sudo]]
 
+
+## Mounting
+
+```bash
+# root
+mount
+umount
+# user
+udisksctl mount -b /dev/sda # user-mount block device w/o root perm.
+udisksctl unmount -b /dev/sda # unmount
+# SSHFS
+sshfs user@host:<path> <target> # use fuse and SSH to mount remote directory
+fusermount -u <target> # unmount directory
+```
+
+
 ## Time and Date
   ```bash
   timedatectl # show time and date info
@@ -218,9 +234,19 @@ fc-cache -f -v # refresh fonts
   - read with `$ xauth`
   - ensure environment variable `$XAUTHORITY` is set
 
+## Files and Directories
+
+### Temporary Files
+
+- Systemd [tmpfiles.d](https://www.freedesktop.org/software/systemd/man/tmpfiles.d.html): Configuration for creation, deletion and cleaning of volatile and temporary files
+
+
+# Daemons and Services
+
 ## Systemd
 > [!info]- [[systemd]]
 > ![[systemd]]
+
 
 ## supervisord
 [Documentation](http://supervisord.org)
@@ -228,19 +254,21 @@ fc-cache -f -v # refresh fonts
 
 Written in Python
 
+
 # Important files and directories
+
+
 ## Logs
   - `/var/log{auth,syslog}`
   - #tech/ssh `~/.ssh/config`, `/etc/ssh/ssh_config`, `/etc/ssh/sshd_config`
 
+
 ## Grub
 `/etc/default/grub`, `/boot/grub/grub.cfg` (maintained through command `update-grub` and such, from files in `/etc/grub.d`, see [README](file:///etc/grub.d/README))
 
+
 ## EFI
 if the directory `/sys/firmware/efi` exists, the system uses UEFI boot #tech/uefi
-
-## Bash
-![bash](bash.md#commands)
 
 
 # [[Hardware]]

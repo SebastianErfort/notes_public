@@ -5,7 +5,7 @@ category: terminal-emulator
 url: "https://sw.kovidgoyal.net/kitty/"
 docs: "https://sw.kovidgoyal.net/kitty/"
 github: "https://github.com/kovidgoyal/kitty"
-developer:
+developer: ""
 desc-short: |
   The fast, feature-rich, GPU based terminal emulator
 tags: tech/cli tech/terminal tech/terminal-emulator

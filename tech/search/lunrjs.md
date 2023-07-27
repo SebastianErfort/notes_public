@@ -8,7 +8,7 @@ source: "https://github.com/olivernn/lunr.js"
 developer: "https://github.com/olivernn"
 desc-short: |
   Javascript search tool, requires index
-tags:
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

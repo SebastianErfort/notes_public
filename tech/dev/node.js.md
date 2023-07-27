@@ -4,11 +4,11 @@ type: software
 category: pl/javascript
 url: "https://www.npmjs.com/"
 docs: "https://docs.npmjs.com/"
-source:
+source: ""
 developer: GitHub
 desc-short: |
   ...
-tags:
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

@@ -60,6 +60,8 @@ Plugin managers
   - HTML
     - [tagalong.vim](https://github.com/AndrewRadev/tagalong.vim): Change an HTML(ish) opening tag and take the closing one along as well
 - [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc): pandoc integration and utilities for vim
+- [vim-tabular]():
+    - [article](http://vimcasts.org/episodes/aligning-text-with-tabular-vim/): gist for automatic indentation/tabularisation when typing for example `|`
 
 # Aesthetics, customisation
 [Color scheme highlight groups](https://github.com/norcalli/nvim-base16.lua/blob/master/lua/base16.lua#L102)

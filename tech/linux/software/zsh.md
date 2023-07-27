@@ -2,13 +2,13 @@
 title: zsh
 type: software
 category: terminal-emulator
-url:
-docs:
-source:
-developer:
+url: ""
+docs: ""
+source: ""
+developer: ""
 desc-short: |
   ...
-tags:
+tags: ""
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`

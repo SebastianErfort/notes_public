@@ -13,7 +13,7 @@ desc-short: |
   The Easier To Use Alternative to Elasticsearch
   Typesense is a modern, privacy-friendly, open source search engine built from the ground up using cutting-edge search algorithms, that take advantage of the latest advances in hardware capabilities.
   Typesense can be used to build blazing-fast search experiences, faceted navigation experiences, geo-search, vector search, semantic search, similarity search and much more.
-tags:
+tags: ""
 docker-image: "typesense/typesense:x.x.x"
 visibility: public
 ---

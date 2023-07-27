@@ -5,7 +5,7 @@ category: obsidian/plugin
 url: "https://silentvoid13.github.io/Templater"
 docs: "https://silentvoid13.github.io/Templater"
 github: "https://github.com/SilentVoid13/Templater"
-developer:
+developer: ""
 desc-short: |
   A template plugin for obsidian
 tags: tech/Obsdidian Obsidian/plugin

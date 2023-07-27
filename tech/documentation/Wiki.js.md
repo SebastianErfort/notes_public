@@ -8,7 +8,7 @@ docker-image: "requarks/wiki:2"
 github: "https://github.com/Requarks/wiki"
 desc-short: |
   A modern and powerful wiki app built on Node.js
-tags:
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

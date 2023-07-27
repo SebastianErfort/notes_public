@@ -3,7 +3,7 @@ name: Docker
 type: software
 category: container
 tags: dev/Docker
-url:
+url: ""
 docs: "https://docs.docker.com/"
 visibility: public
 ---
@@ -15,6 +15,7 @@ visibility: public
 docker pull <image> # pull image from registry
 docker container ls # list (running) containers
 docker exec -it <container-id or image> /bin/bash # get a shell
+docker ps # list containers
 ```
 
 
@@ -24,6 +25,7 @@ Using an image checksum in the definition can be used to verify integrity and do
 [^1]: https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#use-checksum-to-keep-your-image-secure
 
 - [[Github#GitHub packages|Publish image as GitHub Package]]
+
 
 ## Rootless
 https://docs.docker.com/engine/security/rootless/

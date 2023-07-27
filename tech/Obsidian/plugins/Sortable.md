@@ -2,10 +2,10 @@
 title: Obsidian Sortable
 type: software
 category: obsidian/plugin
-url:
-docs:
-github:
-developer:
+url: ""
+docs: ""
+github: ""
+developer: ""
 desc-short: |
   ...
 tags: tech/Obsdidian Obsidian/plugin

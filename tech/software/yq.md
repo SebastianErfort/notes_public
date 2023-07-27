@@ -29,6 +29,20 @@ yq --front-matter=process '.a="chocolate"' <file>
 yq --front-matter=extract '.a="chocolate"' <file>
 ```
 
+### Tests and comparison
+```bash
+yq '.[] | tag="!!str"' # value is string
+```
+
+## Output
+
+### Formatting
+
+```bash
+# double-quote strings
+yq ... --style=double ...
+```
+
 
 ## References
 - https://towardsdatascience.com/yq-mastering-yaml-processing-in-command-line-e1ff5ebc0823

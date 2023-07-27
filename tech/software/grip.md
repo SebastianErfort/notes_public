@@ -2,13 +2,13 @@
 title: grip
 type: software
 category: markdown
-url:
-docs:
+url: ""
+docs: ""
 source: "https://github.com/joeyespo/grip"
-developer:
+developer: ""
 desc-short: |
   Markdown reader. Github flavour, requires browser and internet connection.
-tags:
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
