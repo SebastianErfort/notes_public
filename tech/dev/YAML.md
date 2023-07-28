@@ -1,6 +1,9 @@
 ---
+title: YAML
 visibility: public
+tags: [dev/yaml]
 ---
+
 [YAML 1.2 Revision 1.2.2](https://yaml.org/spec/1.2.2/)
 
 ```query

@@ -7,7 +7,7 @@ visibility: public
 - [Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - https://www.markdownguide.org/
   - [Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-- [[yaml]]
+- [[YAML]]
 
 
 # Tools & Software

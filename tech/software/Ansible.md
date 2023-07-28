@@ -15,7 +15,7 @@ visibility: public
 ![|500](https://www.ansible.com/hubfs/2-diagram.jpg)
 `= ("> " + this.desc-short)`
 - idempotent (like Puppet)
-- [[yaml]]
+- [[YAML]]
 
 ## Roles and Collections
 - [Ansible-Galaxy](https://galaxy.ansible.com/home)
