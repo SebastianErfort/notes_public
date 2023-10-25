@@ -1,5 +1,6 @@
 ---
 visibility: public
+title: Presenting
 ---
 - [Poll Everywhere](https://pollev.com/home): easily create polls
 - [Strawpoll](https://strawpoll.com/): Create your poll in seconds
@@ -9,3 +10,10 @@ visibility: public
   - comments
   - duplicate detection
   Seems to work better in [[revealjs|revealjs]] presentations.
+
+```dataview
+TABLE WITHOUT ID
+file.link AS "Name",
+url AS "Website"
+WHERE type = "software" AND contains(category, "present") OR contains(file.folder, "presenting")
+```

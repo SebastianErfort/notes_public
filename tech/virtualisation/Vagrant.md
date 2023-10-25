@@ -1,12 +1,13 @@
 ---
+title: Vagrant
 type: software
-website: "https://www.vagrantup.com/"
-github: "https://github.com/hashicorp/vagrant"
+website: https://www.vagrantup.com/
+source: https://github.com/hashicorp/vagrant
 code: open source
 company: Hashicorp
 visibility: public
 ---
-`= ("[Website](" + this.website + ")")` |  `= ("[GitHub](" + this.github + ")")`
+`= ("[Website](" + this.website + ")")` |  `= ("[GitHub](" + this.source + ")")`
 
 Working directory is shared with VM, accessible under `/vagrant`.
 
@@ -36,7 +37,9 @@ Happens
 
 
 # Vagrantfile
+
 Written in [[ruby|ruby]] language
+
 ```ruby
 Vagrant.configure("2") do |config|
   # specify box to use, see

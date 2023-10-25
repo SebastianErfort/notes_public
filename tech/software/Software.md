@@ -1,8 +1,12 @@
 ---
+title: Software
 visibility: public
 ---
+
 # Package Repositories and Managers
+
 ## npm
+
 Node Package Manager (npm) is the most common javascript package manager
 ```bash
 npm i[nstall] [-g]
@@ -59,7 +63,8 @@ npm list [-g] # list installed package(s) with version and dependencies
     - [wizard tutorial using Bubble Tea and Lip Gloss](https://github.com/charmbracelet/wizard-tutorial)
 
 # Backup, file-transfer, synchronisation
-- Unison: [Wiki](https://en.wikipedia.org/wiki/Unison_(software)) | [LWPWiki](https://lwpwiki.webhosting.rug.nl/index.php/Syncing_files_with_unison)
+
+- Unison: [Wiki](https://en.wikipedia.org/wiki/Unison_(software)) | [LWP Wiki](https://lwpwiki.webhosting.rug.nl/index.php/Syncing_files_with_unison)
 - Borg: [Website](https://www.borgbackup.org/) | [Github](https://github.com/borgbackup/borg)
   Deduplicating archiver with compression and encryption, supports remote locations (SSH)
 

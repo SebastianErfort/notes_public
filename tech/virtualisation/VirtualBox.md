@@ -1,6 +1,19 @@
 ---
+title: Virtual Box
+type: software
+category: ""
+url: ""
+docs: ""
+source: ""
+developer: Oracle
+desc-short: |
+  ...
+tags: [sw/virtualBox]
 visibility: public
 ---
+`=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
+`= ("> " + this.desc-short)`
+
 # Oracle VirtualBox
 ## Guest Additions
 Provide improved performance and behaviour of guest machine. Require kernel development packages to be installed in guest system, e.g.
@@ -18,3 +31,14 @@ VirtualBox Guest Additions:   /sbin/rcvboxadd quicksetup all
 ```
 
 *Update:* `Devices > Upgrade Guest Additions`
+
+
+## Networking
+
+Capture network traffic to `pcap` file, enable network tracing[^1]
+```
+# VBoxManage modifyvm [your-vm] --nictrace[adapter-number] on --nictracefile[adapter-number] file.pcap
+# VirtualBox -startvm [your-vm]
+```
+
+[^1]: https://www.virtualbox.org/wiki/Network_tips

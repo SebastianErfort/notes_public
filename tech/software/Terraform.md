@@ -1,5 +1,8 @@
 ---
-tags: dev/IaC dev/Terraform
+title: Terraform
+tags:
+  - dev/IaC
+  - dev/Terraform
 visibility: public
 ---
 - Hashicorp product

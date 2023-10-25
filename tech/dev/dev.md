@@ -4,7 +4,7 @@ visibility: public
 ---
 See also
 [[personal/tech/software/Software#Dev|My notes: Software - Dev]]
-[[personal/tech/software/Gitlab#CI/CD|GitLab CI/CD]]
+[[personal/tech/software/git/Gitlab#CI/CD|GitLab CI/CD]]
 
 
 # Command Line
@@ -56,7 +56,7 @@ See also
 
 # Git
 [[git|Notes on Git]]
-- [[tech/software/Gitlab|Notes on GitLab]]
+- [[personal/tech/software/git/Gitlab|Notes on GitLab]]
 - [[Github|Notes on Github]]
 
 # Build
@@ -110,7 +110,7 @@ https://github.com/ReimuNotMoe/ydotool
 
 ## [[VMWare]]
 
-## [[personal/tech/dev/VirtualBox]]
+## [[VirtualBox]]
 
 
 # Infrastructure
@@ -124,7 +124,7 @@ https://github.com/ReimuNotMoe/ydotool
 
 
 # Android
-#dev/app #os/android
+#dev/app #dev/os/android
 https://www.codingem.com/how-to-make-an-app/
 
 

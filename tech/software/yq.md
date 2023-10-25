@@ -38,6 +38,7 @@ yq '.[] | tag="!!str"' # value is string
 
 ### Formatting
 
+<https://github.com/mikefarah/yq/discussions/1138>
 ```bash
 # double-quote strings
 yq ... --style=double ...

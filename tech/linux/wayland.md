@@ -16,3 +16,8 @@ tags: ""
 ## Projects
 
 ![[KDE#^bee181]]
+
+
+## References
+
+[Dave McKay @hwotogeek](https://www.howtogeek.com/900698/what-is-wayland-on-linux-and-how-is-it-different-from-x/)

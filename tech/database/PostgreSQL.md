@@ -8,7 +8,7 @@ developer: PostgreSQL Global Development Group
 docker-image: postgres
 desc-short: |
   PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
-tags: database db/PostgreSQL db/Postgres
+tags: db db/PostgreSQL db/Postgres
 wikipedia: "https://en.wikipedia.org/wiki/PostgreSQL"
 visibility: public
 ---

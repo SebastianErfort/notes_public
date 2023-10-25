@@ -24,7 +24,7 @@ zypper se --provides [--match-exact]
 
 # Log
 
-- 2023-03-21: after update mouse buttons were swapped. Changed settings to left-handed, but that's stupid. Found an entry in `~/.config/kcminputrc` with `XLbInptLeftHanded=true` and deleted it. Hopefully this will not revert the mouse buttons to being swapped on reboot. #hw/mouse #os/openSUSE
+- 2023-03-21: after update mouse buttons were swapped. Changed settings to left-handed, but that's stupid. Found an entry in `~/.config/kcminputrc` with `XLbInptLeftHanded=true` and deleted it. Hopefully this will not revert the mouse buttons to being swapped on reboot. #hw/mouse #dev/os/openSUSE
 - KDE bug Night Color not deactivating for primary screen
   > I can confirm this problem.
   >

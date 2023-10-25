@@ -24,7 +24,8 @@ sudo cryptsetup luksClose cr_dev
 
 
 # PAM (Pluggable Authentication Module)
-#Linux/PAM
+
+Tags: #Linux/PAM
 
 - [Arch Wiki: PAM](https://wiki.archlinux.org/title/PAM)
 - [RedHat article: PAM](https://www.redhat.com/sysadmin/pluggable-authentication-modules-pam)
@@ -33,16 +34,24 @@ sudo cryptsetup luksClose cr_dev
 - [Setting up multi-factor authentication on Linux systems (using google-authenticator) @RedHat](https://www.redhat.com/sysadmin/mfa-linux)
 
 ### General & config
-PAM (Pluggable Authentication Modules): centralised authentication mechanism
-+ can break security/system if configured incorrectly (allow any password or none at all)
-+ a library for programs like SSH to authenticate users
-+ configuration files in `/etc/pam.d`
-+ in our puppet modules the configuration is not written directly, but through the Debian program `pam-auth-update` which is part of the `libpam-runtime` package
 
-*Testing* (from [Remco's README for liapam_2fa](https://git.lwp.rug.nl/rwouts/pam_2fa/-/tree/master))
+PAM (Pluggable Authentication Modules): centralised authentication mechanism
+
+- can break security/system if configured incorrectly (allow any password or none at all)
+- a library for programs like SSH to authenticate users
+- configuration files in `/etc/pam.d`
+- in our puppet modules the configuration is not written directly, but through the Debian program `pam-auth-update` which is part of the `libpam-runtime` package
+
+Testing (from [Remco's README for liapam_2fa](https://git.lwp.rug.nl/rwouts/pam_2fa/-/tree/master))
+
 This is a handy tool for testing (on linux)
- - `git clone https://github.com/pbrezina/pam-test`
+
+```bash
+git clone https://github.com/pbrezina/pam-test
+```
+
 You can use it by defining `/etc/pam.d/pam_test`
+
 ```
 auth	[success=3 default=ignore]	pam_unix.so nullok try_first_pass
 auth	required	                pam_sss.so use_first_pass
@@ -52,9 +61,15 @@ auth	requisite			pam_deny.so
 auth	required			pam_permit.so
 auth	required                        pam_group.so use_first_pass
 ```
+
 and then running
-`$ ./pam_test auth foobar
+
+```bash
+$ ./pam_test auth foobar
+```
+
 from the `pam_test` directory.
+
 
 ## Modules
 
@@ -71,6 +86,9 @@ Seems not be available in default Ubuntu PAM installation and has to be compiled
 - can be used to transform for example username, say to all lower case
   `auth [...] pam_regex.so extended regex=... transform=s/.*/\L&/g`
 
+ 
 ### pam_ssh_agent_auth
+ 
 Package: `libpam-ssh-agent-auth`
-See [[../../../rug/projects/PAM_SSH-agent|LWP: project sudo with SSH agent PAM]]
+
+See [[rug/projects/PAM_SSH-agent|Work notes LWP: project sudo with SSH agent PAM]]

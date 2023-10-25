@@ -1,5 +1,9 @@
 ---
-tags: dev/programming python dev/coding
+title: Python
+tags:
+  - dev/programming
+  - dev/python
+  - dev/coding
 visibility: public
 ---
 
@@ -61,10 +65,15 @@ The `with` statement
         data = file.read()
       ```
 
-----
-# Dictionaries
-[W3schools Dictionaries Reference](https://www.w3schools.com/python/python_ref_dictionary.asp)
-[RealPython on Dictionaries (iteration)](https://realpython.com/iterate-through-dictionary-python/)
+
+
+# Data Types
+
+
+## Dictionaries
+
+[W3schools Dictionaries Reference](https://www.w3schools.com/python/python_ref_dictionary.asp) |  [RealPython on Dictionaries (iteration)](https://realpython.com/iterate-through-dictionary-python/)
+
 Merge two dictionaries [stackoverflow](https://stackoverflow.com/a/26853961)
 - Python >= 3.9.0: `z = x | y`
 - Python >= 3.5: `z = {**x, **y}`
@@ -76,46 +85,31 @@ Merge two dictionaries [stackoverflow](https://stackoverflow.com/a/26853961)
       return z
   ```
 
-----
-## Special file formats
-
-### YAML
-[python.org](https://wiki.python.org/moin/YAML) |  [pyyaml.org documentation](https://pyyaml.org/wiki/PyYAMLDocumentation) | [![github | 20](file:///home/erfort/.icons/github-brands.svg)](https://github.com/yaml/pyyaml)
-`PyYAML` seems to be the standard, it is imported just as `import yaml`.
-Use like
-  ```python
-  from yaml import load as _yaml_load, dump as _yaml_dump
-  try:
-    from yaml import CLoader as Loader, CDumper as Dumper
-  except ImportError:
-    from yaml import Loader, Dumper
-  def yaml_load(f):
-    return _yaml_load(f,Loader=Loader)
-  def yaml_dump(d):
-    return _yaml_dump(d,Dumper=Dumper)
-  ```
-To write to a file
-```python
-_yaml_dump(dictionary, file [, explicit_start=True, explicit_end=True])
-```
-where `explicit_start` will write YAML style `---` at the beginning of the file and `explicit_end` writes `...` at the end of the file.
-
 ### Pictures
 [Simple edits with pillow library](https://python.plainenglish.io/10-python-automation-scripts-for-everyday-problems-3ca0f2011282)
 
 
-----
 # Libraries, packages and modules
+
+
+## Importing Modules
+
+See [documentation on the import system](https://docs.python.org/3/reference/import.html).
+
+## Sources
 
 [pip](https://pip.pypa.io/en/stable/): pip is the [package installer for Python](https://packaging.python.org/guides/tool-recommendations/). You can use it to install packages from the [Python Package Index](https://pypi.org/) and other indexes
 - [requirements file](https://pip.pypa.io/en/stable/reference/requirements-file-format/)
 
+_awesome-python:_ curated list of awesome Python frameworks, libraries, software and resources [Github](https://github.com/vinta/awesome-python)
+
+## Technical
+
 *argparse*: parse command line arguments and create help page
 [Documentation](https://docs.python.org/3/library/argparse.html) |  [@golinuxcloud](https://www.golinuxcloud.com/python-argparse/)
 
-_awesome-python:_ curated list of awesome Python frameworks, libraries, software and resources [Github](https://github.com/vinta/awesome-python)
-
 ## Visualisation, GUI, visuals
+
 - _curses_: "supplies a terminal-independent screen-painting and keyboard-handling facility for text-based terminals"
 - [_Python GUI with Qt_](file://rsc/python_gui.py)
 - [_PyAutoGUI: automate GUI interaction across OSs_](file://rsc/PyAutoGUI.py)
@@ -242,15 +236,25 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
   >   Simple lightweight unbounded function cache. Sometimes called [“memoize”](https://en.wikipedia.org/wiki/Memoization).
 
 
+# Filetypes
+
+## YAML
+
+
 # Testing, Linters
 [Essential Python Tools: Linters and formatters](https://books.agiliq.com/projects/essential-python-tools/en/latest/linters.html#)
 
+Linters
 - *pycodestyle* (formerly *pep8*): [Homepage, Documentation](https://pycodestyle.pycqa.org/) | [Error Codes](https://pycodestyle.pycqa.org/en/latest/intro.html#error-codes) | [Source @GitHub](https://github.com/PyCQA/pycodestyle)
   - config: `setup.cfg` section `[pycodestyle]`
   - [advanced usage: automated tests](https://pycodestyle.pycqa.org/en/latest/advanced.html)
 - pylint: [Documentation](https://pylint.pycqa.org/en/latest/index.html) | [Checker Features](https://pylint.pycqa.org/en/latest/user_guide/checkers/features.html) | [Config Examples](https://www.getcodeflow.com/pylint-configuration.html) | [Error Codes](https://vald-phoenix.github.io/pylint-errors/)
   - Config: `~/.pylintrc`
-- autopep8: automatically apply (specific) PEP8 rules like ``
+- autopep8: automatically apply (specific) PEP8 rules
+
+Testing
+- [tox](https://tox.wiki/en/latest/):  generic virtual environment management and test command line tool
+  #dev/build/python
 
 # Project Guidelines
 ## Virtual Environment
@@ -263,7 +267,7 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 ## Tests
 1. by convention start filenames with prefix `test_`, followed by name of script, same for test functions
 2. can be run with `pytest` (`pip install pytest`)
-3. can be used from sub-directory if emty file `__init__.py` is created (used to mark directories as Python package directories\
+3. can be used from sub-directory if empty file `__init__.py` is created (used to mark directories as Python package directories
 ## Documentation
 - [Sphinx](https://www.sphinx-doc.org/en/master/): Python Documentation Generator
   > Sphinx makes it easy to create intelligent and beautiful documentation ^e526ca
@@ -283,4 +287,4 @@ Using Camelot to extract data into Pandas dataframe from PDF with multiple table
 
 # Jupyter: Notebook, Lab, ...
 https://jupyter.org/ | [Jupyter Notebook documentation](https://ipython.org/notebook) |  [Built-in magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
-[Remco's notes @Wiki: conda env, kernel installation](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/Jupyter) | ![[rug/lwp/Software#Python|Obsidian notes]] #python/jupyter #python/conda #python/Anaconda #python/miniconda
+[Remco's notes @Wiki: conda env, kernel installation](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/Jupyter) | ![[rug/lwp/Software#Python|Obsidian notes]] #dev/python/jupyter #dev/python/conda #dev/python/Anaconda #dev/python/miniconda

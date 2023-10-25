@@ -1,5 +1,5 @@
 ---
-name: GitBook
+title: GitBook
 type: software
 category: documentation
 url: "https://www.gitbook.com/"

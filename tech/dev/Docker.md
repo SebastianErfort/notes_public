@@ -14,7 +14,8 @@ visibility: public
 ```bash
 docker pull <image> # pull image from registry
 docker container ls # list (running) containers
-docker exec -it <container-id or image> /bin/bash # get a shell
+docker exec -it <container-id> /bin/bash # get a shell
+docker run -it <image name> /bin/bash # get a shell
 docker ps # list containers
 ```
 

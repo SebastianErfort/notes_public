@@ -1,11 +1,17 @@
 ---
-tags: linux dev/bash
+title: Linux
+tags:
+  - linux
+  - dev/bash
 visibility: public
 ---
 
-[Test](obsidian://vault/life/tech/Markdown)
-
+See also
 [[bash]] | [[ssh]] | [[personal/tech/linux/security]] | [[openSUSE]]
+
+Installation
+
+- [Microsoft: Install Linux](https://learn.microsoft.com/en-us/linux/install)
 
 ----
 # Command Line
@@ -230,6 +236,7 @@ fc-cache -f -v # refresh fonts
 ```
 
 ## Display
+
 - Xauthority file `~/.Xauthority`: cookies allowing use of displays
   - read with `$ xauth`
   - ensure environment variable `$XAUTHORITY` is set
@@ -296,7 +303,14 @@ https://snapcraft.io/
 *Installation*
 - openSUSE: https://snapcraft.io/docs/installing-snap-on-opensuse
 
-# Distros
+Home directory outside of `/home`: `snap` currently requires a workaround
+
+1. bind-mount home directory under `/home/<username>`
+    ```bash
+    sudo mount --bind /path/to/homedir /home/<username>
+    ```
+1. and update the user's entry in `/etc/passwd`
+# Distributions
 
 ## [[Debian]]
 
@@ -307,7 +321,13 @@ https://snapcraft.io/
 ## [[Asahi Linux]]
 [Asahi Linux](https://asahilinux.org): Linux on Apple Silicon (M1 ARM processor)
 
+## Others
+
+- [OpenWrt](https://openwrt.org/): The OpenWrt Project is a Linux operating system targeting embedded devices. Instead of trying to create a single, static firmware, OpenWrt provides a fully writable filesystem with package management.
+
 # Desktops
+
+Environment variable with current desktop: `$XDG_CURRENT_DESKTOP`
 
 ![[KDE#KDE Plasma]]
 
@@ -322,6 +342,8 @@ update-desktop-database ~/.local/share/applications
 
 
 # Window Systems
+
+To find out whether your desktop is using [[x11]] or [[Wayland]], check the value of `$XDG_SESSION_TYPE`
 
 ## Window Managers
 

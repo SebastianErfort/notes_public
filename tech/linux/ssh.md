@@ -59,14 +59,22 @@ program scp://user@server[:port]//path/to/file
 ```
 
 ## SOCKS proxy
-#tech/SSH/SOCKS
+
+Tags: #tech/SSH/SOCKS
+[[networking#^d2523a|IANA port]]: 1080
+
 SSH config
 ```
-Host awp
-    User lastn001
-    HostName %h3.rcupw.rug.nl
-    # socks proxy
-    RemoteForward 12345
+Host hostname
+    User username
+    HostName %h.domain.com
+    # SOCKS proxy
+    # RemoteForward 1080
+    DynamicForward 1080 # corresponds to CL option -D
 ```
-then configure browser to use that Socks proxy: manual SOCKS
-  Host: localhost, port from ssh config, no proxy for *.rug.nl aka 129.125.0.0/16 range or auto-detect*
+then configure browser to use that proxy.
+
+References
+- [RedHat article]
+
+[RedHat article]: https://www.redhat.com/sysadmin/ssh-dynamic-port-forwarding

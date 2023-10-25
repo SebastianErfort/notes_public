@@ -20,6 +20,8 @@ Quick reference [cheatsheet](file://rsrc/awk/awk.sh)
 > [!tip]- [quickref.me](https://quickref.me/awk) 
 > ![[QuickRef.ME_Cheatsheet.md]]
 
+[Collection of AWK one-liners](https://pement.org/awk/awk1line.txt)
+
 `= ("[Documentation](" + this.docs + ")")`
 - [`gawk`](https://www.gnu.org/software/gawk/)
     - [`gawk`-Specific Regexp Operators](https://www.gnu.org/software/gawk/manual/html_node/GNU-Regexp-Operators.html)
@@ -34,15 +36,15 @@ awk '{print $(NF-2)}' # arithemtic operations
 ```
 
 
+### Logic
+```awk
+if ( <expr> ) { <cmd> } [else { <cmd> }]
+```
+
 ### Loops
 ```awk
 for ( i=1; i<=NF; i++ )
   ...
-```
-
-### Logic
-```awk
-if ( <expr> ) { <cmd> } [else { <cmd> }]
 ```
 
 ### Functions
@@ -78,23 +80,30 @@ gsub(regex,newval[,string]) # replace all occurances
 split(string,array[,regex])
 ```
 
+
 ### Arrays
-Only one-dimensional arrays supported, multi-dimensional ones can be simulated by nesting arrays.
-Awk supported
+
+Awk arrays are associative (dictionaries). Only one-dimensional arrays supported, multi-dimensional ones can be simulated by nesting arrays. Awk supports
+
 - Indexed arrays
 - Associative arrays
-    ```awk
-    a["x"] = 1; a["y"] = 2; a["z"] = 3
-    for ( <index> in <array> ) {}
-    ```
+
+```awk
+a["x"] = 1; a["y"] = 2; a["z"] = 3
+for ( <index> in <array> ) {}
+```
+
+There is no easy way to iterate over values in an array.
+
 
 ### Special
+
 ```bash
 FS # field separator
 OFS # output field separator
 RS # record separator
 NF # number of fields on a line
-NR # number of record (lines)
+NR # number of current record (line)
 FILENAME
 ```
 
@@ -110,8 +119,15 @@ END { close("sh") }
 ## Examples
 
 [My snippets/scripts](file://rsrc/awk)
+
 - Find regular expression, if next line matches another regular expression insert something in-between (empty line): [regexps_differentlines_insert.awk](file://rsrc/awk/regexps_differentlines_insert.awk)
 
 ## References
+
+- [pement.org: handy one-line scripts for awk](https://pement.org/awk/awk1line.txt)
+
+Tutorials and courses
+
 - [[LIL_awk_et|LinkedIn Learning course: AWK Essential Training]]
 - https://www.tutorialspoint.com/awk/index.htm
+- https://developer.ibm.com/tutorials/l-awk1/

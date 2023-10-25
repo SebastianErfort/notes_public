@@ -1,6 +1,13 @@
 ---
+title: Ubuntu
 visibility: public
+docker-image:
+  - ubuntu
+  - ubuntu:jammy
 ---
+
+## Releases
+
 [Ubuntu release-cycle: versions, LTS](https://ubuntu.com/about/release-cycle)
 
 

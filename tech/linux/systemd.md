@@ -33,7 +33,10 @@ visibility: public
 
 
 ## Service Files
-See `man systemd.directives` for available stanzas
+
+See `man systemd.directives` for available stanzas.
+
+- [Condition and Asserts](https://www.freedesktop.org/software/systemd/man/systemd.unit.html#Conditions%20and%20Asserts): "Before the unit is started, systemd will verify that the specified conditions and asserts are true"
 
 
 ## Documentation

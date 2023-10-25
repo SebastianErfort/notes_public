@@ -13,9 +13,21 @@ visibility: public
 [gnu.org: The Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
 
 # Command Line
+
+
 ## Completion
+
 See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-completion/completions) and `/etc/bash_completion.d/`
+
 - [hostname completion](https://blog.sanctum.geek.nz/bash-hostname-completion/)
+
+## History
+  ```bash
+  !!     # repeat last command
+  !123   # repeat command 123 from history
+  !cmd   # repeat last command starting with "cmd"
+  !cmd:p # print command but don't execute
+  ```
 
 # General
 ## Loops
@@ -53,7 +65,7 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
   done
   ```
 
-## Arithemtics and logic
+## Arithmetics and logic
 ```bash
 n=0
 (( n++ ))
@@ -126,7 +138,7 @@ done
   echo ${s,} # first lower case
   echo ${s,,} # all lower case
   ```
-- Sanitize a string
+- Sanitise a string
   ```bash
   s='abc123XYZ@troll_ol-!"§$%&/()=?'
   echo ${s//[^a-zA-Z0-9_@\\\-.]} # delete all characters not matching
@@ -140,7 +152,9 @@ done
   ```
 
 ### Arrays
+
 Can be declared or instantiated like
+
 ```bash
 # explicit declaration (can also be done implicitely, on-the-fly)
 declare -a arr1 # indexed array
@@ -158,6 +172,7 @@ arr1+=("new" "elements")
 # number of elements
 ${#arr[@]}
 ```
+
 > The only difference between `@` and `*` is when the form `${my_array[x]}` is surrounded with double-quotes. In this case, `*` expands to a single word where array elements are separated with space. `@` expands each array element to a separate word. This is especially important when using the form to iterate through array elements.
 > https://linuxize.com/post/bash-arrays/
 
@@ -220,12 +235,20 @@ References
 - bash function with array in-/output
 
 ## Arguments
-- special variables holding arguments
+
+- special variables to access arguments
     ```bash
-    $0   # shell or script name
-    $@   # arguments
-    $*   # arguments
+    $@   # all arguments, "$@" expands to separate, quoted entities
+    $*   # all arguments, "$*" expands to single, space-sep. entity
     $#   # number of arguments
+    ```
+  For differences between  `$@` and `$*` see [[arguments|Bash: Arguments]]
+- update arguments
+    ```bash
+    # overwrite original positional parameters
+    set -- "${newparams[@]}"
+    # drop current first argument, can be used to iteratively reduce number of arguments
+    shift
     ```
 - read arguments from STDIN/STDERR
   ```bash
@@ -242,14 +265,6 @@ References
   echo !:^ # previous first argument
   echo !:$ # previous last argument
   ```
-- History
-  ```bash
-  !!     # repeat last command
-  !123   # repeat command 123 from history
-  !cmd   # repeat last command starting with "cmd"
-  !cmd:p # print command but don't execute
-  ```
-
 # Commands
 - List (builtin) commands
   ```bash
@@ -268,7 +283,18 @@ References
 # Input & Output
 ## STDIN, STDERR and exit codes
 
-- re-direct stderr to command and re-direct that command's stdout back to original stderr: `mycmd 2> >(myfunc >&2)`
+- re-direct stderr to command and re-direct that command's stdout back to original stderr
+    ```
+    mycmd 2> >(myfunc >&2)
+    # redirect all output
+    exec 2> >(myfunc) # e.g. tee to file or log
+    # revert redirect
+    exec 2> $(tty)
+    ```
+- output to STDERR
+    ```bash
+    echo error >&2
+    ```
 - check whether there is stdin/stderr [Stackexchange](https://unix.stackexchange.com/a/388462/247791): `[[ ! -t 0 ]]`
 - Bash 4: just `&` is equivalent to `2>&1`
   ```bash
@@ -283,24 +309,33 @@ trap 'exs+=($?)' DEBUG; cmd1; cmd2; cmd3; trap - DEBUG
 
 
 ## Stream manipulation
+
 - *Here Documents*: inline files with optional variable substitution [TLDP](https://tldp.org/LDP/abs/html/here-docs.html) #dev/shell/heredoc
-```bash
-sed 's/\/.*\///' << EOF
-  Found your home directory, $HOME!
-EOF
-sed 's/\/.*\///' << 'EOF'
-  I just checked $HOME.
-EOF
-sed 's/\/.*\///' <<- EOF
-  And this will remove leading TABS, $HOME.
-EOF
-```
+
+    ```bash
+    # variable expansion
+    sed 's/\/.*\///' << EOF
+      Found your home directory, $HOME!
+    EOF
+    # literal, no variable expansion
+    sed 's/\/.*\///' << 'EOF'
+      I just checked $HOME.
+    EOF
+    # trim leading whitespace
+    sed 's/\/.*\///' <<- EOF
+      And this will remove leading whitespace, $HOME.
+    EOF
+    ```
+
 - cut
-```bash
-cut -d " " -f 2,3 # Cut fields from file/standard input if omitted. Delimiter " ", fields 2+3
-```
+
+    ```bash
+    cut -d " " -f 2,3 # Cut fields from file/standard input if omitted. Delimiter " ", fields 2+3
+  ```
+
 
 ## Permissions
+
 Grant execute permissions if on directories, but not files [@stackoverflow](https://stackoverflow.com/questions/17091300/linux-set-permission-only-to-directories)
 ```bash
 chmod -R X /path/to/file
@@ -332,6 +367,7 @@ https://stackoverflow.com/questions/64786/error-handling-in-bash
    - Also consider option `set -o errtrace` (functions and subshells inherit `errexit` option). [StackExchange](https://stackoverflow.com/questions/25378845/what-does-set-o-errtrace-do-in-a-shell-script)
 
 # Shell Expansion
+
 See https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expansion
 - [Bash Error Handling @RedHat](https://www.redhat.com/sysadmin/bash-error-handling)
 - [Tilde Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Tilde-Expansion)
@@ -345,5 +381,7 @@ See https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expan
 
 
 # References
+
 - `set -e`: [caveats and why it is crap](https://mywiki.wooledge.org/BashFAQ/105/Answers)
 [bash: silently kill background function process](https://stackoverflow.com/questions/5719030/bash-silently-kill-background-function-process)
+- [Difference `$@` and `$*` from ChatGPT](arguments.md)

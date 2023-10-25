@@ -1,26 +1,37 @@
 ---
-tags: net net/DHCP net/DNS
 title: Networking
+tags: net net/DHCP net/DNS
 visibility: public
 ---
-## References
-- [Wikipedia: List of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
-- [[Hardware#MAC Address|My notes on MAC addresses]]
-- [Get public IP address DaveMcKay@HowToGeek](https://www.howtogeek.com/839170/how-to-get-your-public-ip-in-a-linux-bash-script/)
 
 
 ## IP Address, Mask, Gateway
 
+
 ### IPv4
+
 Four 8-bit numbers `0-255.0-255.0-255.0-255`
+
 - subnet mask
 - gateway server: where to send packages?
 - DNS server: resolve domain names to IPs
 
 
+## Ports
+
+[IANA (Internet Assigned Numbers Authority): Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt) ^d2523a
+
+Excerpt
+```
+socks              1080        tcp    Socks
+socks              1080        udp    Socks
+```
+
 ## Technologies and Protocols
 
+
 ### NFS
+
 #tech/NFS
 https://wiki.archlinux.org/title/NFS
 
@@ -29,10 +40,13 @@ https://wiki.archlinux.org/title/NFS
 - [RedHat: pNFS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-pnfs)
 - [linux-nfs.org: Configuring pNFS](https://wiki.linux-nfs.org/wiki/index.php/Configuring_pNFS/spnfsd)
 
+
 #### ACLs (Access Control Lists)
+
 Different models with interoperability problem: NFSv4, Windows and POSIX ACLsw
-https://wiki.linux-nfs.org/wiki/index.php/ACLs
-https://wiki.archlinux.org/title/Access_Control_Lists
+<https://wiki.linux-nfs.org/wiki/index.php/ACLs>
+<https://wiki.archlinux.org/title/Access_Control_Lists>
+
 - edit
   - `setfacl -m "u:user:permissions" file/dir`
   - `nfs4_editfacl file/dir`
@@ -46,7 +60,9 @@ https://wiki.archlinux.org/title/Access_Control_Lists
 
 
 ### DHCP & DNS
-#net/DHCP #net/DNS
+
+Tags: #net/DHCP #net/DNS
+
 Machines have an _A record_ to be indentified. It maps a domain name to the IP (4/6) address of the computer hosting the domain. Usually is the same as the _hostname_ for convenience and to avoid confusion. In addition there can be an arbitrary number of _CNAME_. Also see _FQDN_ (full qualifies domain name).
 - [DNSSEC (DNS Security Extensions)](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
 
@@ -56,21 +72,116 @@ DNS resolution config: `/etc/resolv.conf`
 
 Tools: `host`, `nslookup`, `dig`
 
+
 ### Security
+
 [[personal/tech/networking/security|Networking: Security]]
+
 - [[personal/tech/networking/security#TLS|TLS]]
 - [[personal/tech/networking/security#SSL|SSL]]
 - [[personal/tech/networking/security#SASL|SASL]]
 
 
 ### TFTP
-#net/TFTP
+
+Tags: #net/TFTP
+
 [fbtftp](https://github.com/facebookarchive/fbtftp): Facebook implementation of a TFTP server in Python3
 [hooktftp](https://github.com/tftp-go-team/hooktftp): dynamic read-only TFTP server written in Go
 
 
+### NTP
+<dl>
+<dt>Network Time Protocol</dt>
+<ul>
+<li>Time in seconds from 1900-01-01. Roll-over in 2036, but not a problem since it works with differences</li>
+<li>accounts for round-trip time and processing time</li>
+</ul>
+<dt>Strata</dt>
+<dd>Levels of accuracy where level 0 are certain atomic clocks. Stratum 16 is considered unsynched.</dd>
+<dt>Synchronisation</dt>
+<dd>
+Slewing: done in steps of 0.5ms or less
+</dd>
+<dt>VMs</dt>
+<dd>No reliable system clocks, but hypervisors can provide paravirtualised clocks to VMs. One can run a NTP serve on the host machine.</dd>
+<dt>Linux</dt>
+<dd>
+<code>ntpd</code>
+<ul>
+<li>supports all NTP4 modes (unlike `chronyd`)</li>
+<li>broadcast</li>
+<li>multicast</li>
+<li>manycast</li>
+</ul>
+<code>chronyd</code>
+<ul>
+<li>better in intermittent networks</li>
+<li>works in isolated networks</li>
+<li>synchronises faster than ntpd</li>
+<li>uses less memory than ntpd</li>
+</ul>
+<dt>Configure using NTP</dt>
+<dd><code>timedatectl set-ntp true</code></dd>
+</dl>
+
+
+#### chrony
+
+Configure server: in `/etc/chrony.conf`
+- activate NTP server functionality: allow NTP client access from local network
+- allow `chronyc` to control `chronyd`: add line `cmdallow 192.168.1.0/24`
+- peers: add to each other's config
+- fall back to peers, then local, if remote isn't available
+
+Configure client: in `/etc/chrony.conf` add
+`server x.x.x.x iburst`
+
+Ensure using NTP
+`sudo timedatectl set-ntp true`
+
+Add exceptions to firewall, e.g.
+```bash
+sudo firewall-cmd --permanent --zone-public --add-service ntp
+sudo firewall-cmd --reload # reload with new config
+sudo firewall-cmd --list-all # check
+sudo systemctl restart chronyd # restart NTP service
+```
+
+Check client status
+```bash
+chronyc sources -v # show NTP server info
+chronyc tracking # show time sync info
+```
+
+
+### Wake-on-LAN
+
+Tags: #net/wol #net/wakeonlan
+
+```bash
+# check status
+ethtool <nic name> | grep Wake
+# see man page for options
+# set value
+ethtool -s eth0 wol g
+```
+
+
+## Network Managers
+
+
+### Netplan
+
+[Netplan documentation](https://netplan.readthedocs.io/en/latest/)
+
+- [YAML configuration](https://netplan.readthedocs.io/en/latest/netplan-yaml/)
+
+
 ## Tools
+
 `ip` #web/tools/ip
+
 - network namespaces
   - create virtual route/network between VM and host ([K8s Documentation](https://docker-k8s-lab.readthedocs.io/en/latest/docker/netns.html))
     1. create network namespace for VM
@@ -179,6 +290,12 @@ Config at `/etc/resolv.conf` specifying DNS servers, but usually managed by some
 nslookup host [server]
 ```
 
+`traceroute`: print the route packets trace to network host
+
+```bash
+traceroute <host>
+```
+
 #net/tools/wireshark: the world’s foremost and widely-used network protocol analyzer
 [Website](https://www.wireshark.org/) | [Documentation](https://www.wireshark.org/docs/wsug_html_chunked/) | [Wiki](https://gitlab.com/wireshark/wireshark/-/wikis/home)
 
@@ -191,69 +308,11 @@ See [[personal/tech/networking/security|my notes on networking security]]
 [SSL Labs](ssllabs.com): Check website certificate, protocols, keys, etc.
 
 ### Authentication
-![[personal/tech/security#Authentication]]
+![[personal/tech/security/security#Authentication]]
 
 
-## NTP
-<dl>
-<dt>Network Time Protocol</dt>
-<ul>
-<li>Time in seconds from 1900-01-01. Roll-over in 2036, but not a problem since it works with differences</li>
-<li>accounts for round-trip time and processing time</li>
-</ul>
-<dt>Strata</dt>
-<dd>Levels of accuracy where level 0 are certain atomic clocks. Stratum 16 is considered unsynched.</dd>
-<dt>Synchronisation</dt>
-<dd>
-Slewing: done in steps of 0.5ms or less
-</dd>
-<dt>VMs</dt>
-<dd>No reliable system clocks, but hypervisors can provide paravirtualised clocks to VMs. One can run a NTP serve on the host machine.</dd>
-<dt>Linux</dt>
-<dd>
-<code>ntpd</code>
-<ul>
-<li>supports all NTP4 modes (unlike `chronyd`)</li>
-<li>broadcast</li>
-<li>multicast</li>
-<li>manycast</li>
-</ul>
-<code>chronyd</code>
-<ul>
-<li>better in intermittent networks</li>
-<li>works in isolated networks</li>
-<li>synchronises faster than ntpd</li>
-<li>uses less memory than ntpd</li>
-</ul>
-<dt>Configure using NTP</dt>
-<dd><code>timedatectl set-ntp true</code></dd>
-</dl>
+## References
+- [Wikipedia: List of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+- [[Hardware#MAC Address|My notes on MAC addresses]]
+- [Get public IP address DaveMcKay@HowToGeek](https://www.howtogeek.com/839170/how-to-get-your-public-ip-in-a-linux-bash-script/)
 
-
-### chrony
-
-Configure server: in `/etc/chrony.conf`
-- activate NTP server functionality: allow NTP client access from local network
-- allow `chronyc` to control `chronyd`: add line `cmdallow 192.168.1.0/24`
-- peers: add to each other's config
-- fall back to peers, then local, if remote isn't available
-
-Configure client: in `/etc/chrony.conf` add
-`server x.x.x.x iburst`
-
-Ensure using NTP
-`sudo timedatectl set-ntp true`
-
-Add exceptions to firewall, e.g.
-```bash
-sudo firewall-cmd --permanent --zone-public --add-service ntp
-sudo firewall-cmd --reload # reload with new config
-sudo firewall-cmd --list-all # check
-sudo systemctl restart chronyd # restart NTP service
-```
-
-Check client status
-```bash
-chronyc sources -v # show NTP server info
-chronyc tracking # show time sync info
-```

@@ -1,5 +1,5 @@
 ---
-name: Gollum
+title: Gollum
 type: software
 category: Wiki
 docs: "https://github.com/gollum/gollum/wiki"

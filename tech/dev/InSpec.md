@@ -28,9 +28,9 @@ examples/profile
 │   └── control.rb
 └── inspec.yml
 ```
-That means it might be necessary to create a sub-directory `/var/lwp/inspec_controls/controls` and move the `.rb` files there. Then running
+That means it might be necessary to create a sub-directory `/var/<project path>/inspec_controls/controls` and move the `.rb` files there. Then running
 ```bash
-inspec exec /var/lwp/inspec_controls/ --chef-license=accept-silent --reporter cli html:/some/directory/inspec_results.html
+inspec exec /var/<project path>/inspec_controls/ --chef-license=accept-silent --reporter cli html:/some/directory/inspec_results.html
 ```
 should be possible.
 
@@ -61,6 +61,6 @@ Similar to puppet a lot (more than 500) of ["resources"](https://docs.chef.io/in
 
 Can be run on a remote machine using SSH by specifying a target:
 ```bash
-inspec exec /var/lwp/inspec --key-files $HOME/.ssh/id_rsa --target ssh://root@remote --chef-license=accept-silent --reporter cli html:/root/inspec_results.html
+inspec exec /var/<project path>/inspec --key-files $HOME/.ssh/id_rsa --target ssh://root@remote --chef-license=accept-silent --reporter cli html:/root/inspec_results.html
 ```
 But of course there are some caveats as some of the tests rely on being run directly on the machine and/or command output might differ when run through SSH.

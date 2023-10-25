@@ -23,7 +23,7 @@ visibility: public
     ```bash
     mkdocs new my-project
     ```
-  will result in files/folders
+    will result in files/folders
     ```
     .
     ├── docs
@@ -191,7 +191,7 @@ some_url: https://example.com
 
 
 ## Integrations
-- [[personal/tech/software/Gitlab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
+- [[personal/tech/software/git/Gitlab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
 - Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 
 ### Search

@@ -9,11 +9,6 @@ visibility: public
 
 See also my notes on [[vim]] and [[Editors]].
 
-## To-Do
-#TODO/nvim
-- [ ] Plugins
-  - [ ] [![|20](github.png) nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
-
 ### Links
 [This Week in Neovim](https://this-week-in-neovim.org/)
 
@@ -91,7 +86,8 @@ Plugin managers
 - [vim-plug]
 
 ### UI
-- [Noice](https://github.com/folke/noice.nvim): ![boom|20](https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png) Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu
+- statusbar
+    - [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - file explorer
     - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua): A file explorer tree for neovim written in lua
     - [neotree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim): Neovim plugin to manage the file system and other tree like structures
@@ -101,6 +97,7 @@ Plugin managers
 - icons
     - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [hologram.nvim](https://github.com/edluffy/hologram.nvim): ![ghost|20](https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png) A cross platform terminal image viewer for Neovim. Extensible and fast, written in Lua and C. Works on macOS and Linux.
+- [Noice](https://github.com/folke/noice.nvim): ![boom|20](https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png) Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu
 
 ### Editing
 

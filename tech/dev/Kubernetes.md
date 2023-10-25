@@ -1,7 +1,9 @@
 ---
+title: Kubernetes
 visibility: public
 ---
 ## Kubernetes
+
 #dev/kubernetes
 aka K8s (K-8 letters-s)
 [Documentation](https://kubernetes.io/docs/home/)
@@ -12,10 +14,11 @@ aka K8s (K-8 letters-s)
 [Documentation](https://helm.sh/docs/)
 > package manager for Kubernetes
 
-
-
 [Compose specification](https://github.com/compose-spec/compose-spec/blob/master/spec.md): Compose file format used to define multi-containers applications
 
 
+## Implementations and Distributions
+
+- [k8e](https://getk8e.com/): Kubernetes Easy Engine
 ## References
 - [Canoncial: Kubernetes at the edge](file://edu/kubernetes/MicroK8s+Strict+Confinement+Whitepaper.pdf) #dev/iot #dev/edge

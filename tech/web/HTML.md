@@ -1,10 +1,18 @@
 ---
 visibility: public
+title: HTML
+desc-short: HTML (Hyper Text Markup Language)
 ---
-My notes
-- [[CSS|CSS]]
-- [[Markdown|Markdown]]
+See also my notes on [[CSS|CSS]] | [[Markdown|Markdown]]
 
+## Language
+
+HTML entities: reserved characters in HTML must be replaced with entities[^1]
+
+> [!info]- [ HTML Characters Entities cheatsheet (QuickRef.ME)](https://quickref.me/html-char.html#html-character-entity-references)
+> <iframe title="" src="https://quickref.me/html-char.html#html-character-entity-references" width="100%" height="600"></iframe>
+
+[^1]: https://www.w3schools.com/HTML/html_entities.asp
 # References
 - [W3C: World-Wide Web Consortium](https://www.w3.org/)
 - [CanIUse.com](https://caniuse.com/): check feature/code compatablitity

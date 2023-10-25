@@ -1,7 +1,9 @@
 ---
+title: Hugo
 visibility: public
 ---
-### Hugo
+## Hugo
+
 https://gohugo.io/
 - https://www.youtube.com/watch?v=PodcwH83zvc
 - [Themes](https://themes.gohugo.io/)
@@ -22,6 +24,12 @@ Documentation
 - site/repo structure
   - [Page Bundles](https://gohugo.io/content-management/page-bundles/)
 
+
+## Configuration
+
+###  Themes
+
+- <https://getdoks.org/>: Modern Documentation Theme
 
 ## References
 - [roneo.org](https://roneo.org/en/): Thinking out loud about Linux, Git, Hugo and the Jamstack.

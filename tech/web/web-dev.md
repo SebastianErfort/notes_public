@@ -30,7 +30,7 @@ Free $0
 -   Unlimited static requests
 -   Unlimited bandwidth
 
-### [[personal/tech/software/Gitlab#GitLab Pages|GitLab Pages]]
+### [[personal/tech/software/git/Gitlab#GitLab Pages|GitLab Pages]]
 
 
 ## Static Site Frameworks
