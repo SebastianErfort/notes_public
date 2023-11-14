@@ -1,6 +1,10 @@
 ---
-tags: dev/markdown tech/presentation dev/HTML
+tags:
+  - dev/markdown
+  - tech/presentation
+  - dev/HTML
 visibility: public
+title: Revealjs
 ---
 [Homepage](https://revealjs.com/) | [Github](https://github.com/hakimel/reveal.js) | [Config](https://revealjs.com/config/)
 
@@ -11,16 +15,20 @@ visibility: public
 - [Markdown](https://revealjs.com/markdown/)
 
 ## Configuration
+
 - [Themes](https://revealjs.com/themes/)
 - [Configuration](https://revealjs.com/config/)
 - [Backgrounds](https://revealjs.com/backgrounds/)
 
 ## Features
+
 Example files
+
 - [Example Presentation reveal.js](file://rsc/revealjs/presentation_revealjs.md)
 - [Collection of features by J. Reagle (bit outdated)](file://rsc/markdown/revealjs_features_JReagle.md) ([source](https://reagle.org/joseph/talks/2014/exemplar.md))
 
 ### Fragments
+
 [Documentation](https://revealjs.com/fragments/)
 <iframe title="" src="https://revealjs.com/fragments/" width="100%" height="400"></iframe>
 > [!info]- List of all available fragments
@@ -47,6 +55,7 @@ Example files
 > highlight-current-blue | Turn text blue, then back to original on next step
 
 [Custom Fragments](https://revealjs.com/fragments/#custom-fragments)
+
 ```css
 .fragment.blur {
   filter: blur(5px);
@@ -60,6 +69,7 @@ Example files
 ```
 
 ## Integration
+
 - [[Pandoc]]
 - [Automate build and publish to Pages with Travis CI - GH GIST](https://gist.github.com/jonashackt/85f9df62986db4e70396e3c494e26b76)
 - reveal-hugo: [Github](https://github.com/dzello/reveal-hugo)

@@ -11,6 +11,7 @@ desc-short: |
   It combines the control and scalability of dynamically rendered sites with the speed of static-site generation, creating a whole new web of possibilities.
 tags: ""
 visibility: public
+title: Gatsby
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")`
 `= ("> " + this.desc-short)`

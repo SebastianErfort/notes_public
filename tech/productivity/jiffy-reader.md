@@ -7,8 +7,11 @@ github: "https://github.com/ansh/jiffyreader.com"
 developer: ""
 desc-short: |
   A Browser Extension for faster reading on ANY website!
-tags: sw/reading sw/browser
+tags:
+  - sw/reading
+  - sw/browser
 visibility: public
+title: Jiffy-reader
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")`
 `= ("> " + this.desc-short)`

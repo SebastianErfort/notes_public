@@ -1,5 +1,6 @@
 ---
 visibility: public
+title: Demo
 ---
 This is a little demo to showcase the features of Obsidian.
 
@@ -28,6 +29,7 @@ supports most HTML tags, some are sanitised
 </details>
 
 Obsidian adds
+
 - Wiki-links: see [[Obsidian#^cecfe6|Obsidian: Wiki-links]] `[[...]]`
 - comments by using `%%` %% like this %%
 - call-outs

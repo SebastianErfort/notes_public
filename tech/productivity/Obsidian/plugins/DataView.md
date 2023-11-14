@@ -1,6 +1,8 @@
 ---
 title: Obsidian DataView
-tags: Obsidian Obsidian/DataView
+tags:
+  - Obsidian
+  - Obsidian/DataView
 desc-short: "Dataview is a live index and query engine over your personal knowledge base. You can [**add metadata**](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/) to your notes and **query** them with the [**Dataview Query Language**](https://blacksmithgu.github.io/obsidian-dataview/queries/structure/) to list, filter, sort or group your data. Dataview keeps your queries always up to date and makes data aggregation a breeze.\n"
 type: software
 category: ""
@@ -12,19 +14,20 @@ visibility: public
 ---
 
 # `= this.title`
+
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
+
 - [Obsidian Example Vault for Dataview Queries](https://github.com/s-blu/obsidian_dataview_example_vault) | [Demo Website](https://s-blu.github.io/obsidian_dataview_example_vault/)
 - [Omit "File" Column in TABLE results @ObsidianForum](https://github.com/blacksmithgu/obsidian-dataview/issues/102)
+
   ```
   TABLE WITHOUT ID
     col1, col2, ...
   ...
   ```
 
-
 ### Metadata
-
 
 #### YAML Front Matter
 
@@ -36,7 +39,6 @@ You can add data inline as [curry:: Thai] with `curry:: Katsu` or `[curry: ]`
 or hiding the long key output in Reading mode (cake:: Schwarzwälder Kirsch)
 
 I love `= this.curry` curry and `= this.cake` cake
-
 
 #### Implicit Fields
 
@@ -67,9 +69,7 @@ Automatically added fields, collected under `file`[^1]
 > |`file.day`|Date|Only available if the file has a date inside its file name (of form `yyyy-mm-dd` or `yyyymmdd`), or has a `Date` field/inline field.|
 > |`file.starred`|Boolean|if this file has been starred via the Obsidian Core Plugin "Starred Files".|
 
-
-[^1]: https://blacksmithgu.github.io/obsidian-dataview/annotation/metadata-pages/
-
+[^1]: <https://blacksmithgu.github.io/obsidian-dataview/annotation/metadata-pages/>
 
 ### Queries
 
@@ -87,22 +87,24 @@ Note source: `FROM`
 - outgoing link: `FROM outgoing([[Note1]])`
 - exclude notes: `FROM "dir1" AND -"dir1/subdir"`
 - issues
-  - relative paths not yet supported without JS, see [issue](https://github.com/blacksmithgu/obsidian-dataview/issues/517), but this should work
+    - relative paths not yet supported without JS, see [issue](https://github.com/blacksmithgu/obsidian-dataview/issues/517), but this should work
+
     ```
     WHERE file.folder = this.file.folder
     ```
 
 Filter metadata: `WHERE`
+
 - partial match: `WHERE contains(field,"value)"`
 - created within last dat: `WHERE file.ctime >= date(today) - dur(1 day)`
 
 Sort results: `SORT`
+
 - by modification date: `Sort file.mtime DESC`
 
 Limit results: `LIMIT value`
 
 [Example vault with queries](https://github.com/s-blu/obsidian_dataview_example_vault/)
-
 
 #### Inline
 
@@ -111,21 +113,23 @@ See [documentation on inline DQLs](https://blacksmithgu.github.io/obsidian-datav
 - data from other notes can be accessed with <code>`=[[otherNote]].file.name`</code>
 
 ### Functions
-https://blacksmithgu.github.io/obsidian-dataview/reference/functions/
+
+<https://blacksmithgu.github.io/obsidian-dataview/reference/functions/>
 DataView uses [Luxon tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for time formatting.
+
 ```
 dateformat(field, "yyyy-MM-dd") # format dates
 ```
 
-
 #### Javascript
+
 ```markdown
 %% find index of element in array %%
 `$= dv.current().field.indexOf("value")`
 ```
 
-
 ## Examples
+
 [Dataview task and project examples](https://forum.obsidian.md/t/dataview-task-and-project-examples/17011)
 
 ### List
@@ -137,6 +141,7 @@ dateformat(field, "yyyy-MM-dd") # format dates
 - [ ] a task
 
 Query for all tasks in this file
+
 ```dataview
 TASK
 WHERE file.path = this.file.path
@@ -144,11 +149,10 @@ WHERE file.path = this.file.path
 
 ### Calendar
 
-
 HTML link from metadata[^1]
+
 ```js
 page = dv.page(dv.parse(THE_STRING))
 
 link = `<a href="${page.file.path}" class="internal-link">${page.file.name}</a>`
 ```
-[^1]: https://forum.obsidian.md/t/allow-internal-links-inside-html-tags/18077/5?u=treetanium

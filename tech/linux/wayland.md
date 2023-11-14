@@ -9,6 +9,7 @@ developer: ""
 desc-short: |
   ...
 tags: ""
+visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
@@ -16,7 +17,6 @@ tags: ""
 ## Projects
 
 ![[KDE#^bee181]]
-
 
 ## References
 

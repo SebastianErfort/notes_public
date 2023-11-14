@@ -1,8 +1,11 @@
 ---
 visibility: public
+title: Fortran
 ---
 ### Style & Linting
+
 [fortran-linter PyPi](https://pypi.org/project/fortran-linter/)
+
 - Punctuation should be followed by a space, this include `,`, `;` and `)`.
 - Binary operators (`==`, `+`, ...) should be surrounded by spaces
 - The following special characters are surrounded by at least one space: `::`, `=`.

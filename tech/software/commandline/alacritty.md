@@ -8,7 +8,10 @@ github: "https://github.com/alacritty/alacritty"
 logo: "https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png"
 desc-short: |
   A cross-platform, OpenGL terminal emulator.
-tags: tech/cli tech/terminal tech/terminal-emulator
+tags:
+  - tech/cli
+  - tech/terminal
+  - tech/terminal-emulator
 visibility: public
 ---
 `= ("![|50](" + this.logo + ")")` `= ("[Website](" + this.url + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`

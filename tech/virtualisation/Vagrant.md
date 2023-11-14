@@ -1,8 +1,8 @@
 ---
 title: Vagrant
 type: software
-website: https://www.vagrantup.com/
-source: https://github.com/hashicorp/vagrant
+website: "https://www.vagrantup.com/"
+source: "https://github.com/hashicorp/vagrant"
 code: open source
 company: Hashicorp
 visibility: public
@@ -12,6 +12,7 @@ visibility: public
 Working directory is shared with VM, accessible under `/vagrant`.
 
 # Commands
+
 ```bash
 vagrant init hasicorp/bionic64 # create Vagrantfile for specified box
 vagrant status # show status of current environment's VMs
@@ -27,14 +28,14 @@ vagrant box remove
 vagrant up --provider=vmware_desktop # use specified provider, no changes to Vagrantfile necessary. Following commands should use the same, no need to specify again
 ```
 
-
 # Provisioning
-https://developer.hashicorp.com/vagrant/docs/provisioning
+
+<https://developer.hashicorp.com/vagrant/docs/provisioning>
 Happens
+
 - at first `vagrant up`, after only if `--provision` is set
 - when running `vagrant provision`
 - calling `vagrant reload --provision`
-
 
 # Vagrantfile
 
@@ -59,19 +60,21 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "src/", "/srv/website"
 end
 ```
+
 with provisioning script `bootstrap.sh`. Reload after editing, `vagrant reload`.
 
 Vagrant also supports *linked clones*, providing significant savings in disk space, see [this article](https://medium.com/oracledevs/two-birds-with-one-home-cloned-vagrant-multi-machines-2ee5ba75fad8).
 
-
 # Boxes
+
 - Documentation
-  - [Boxes > Creating a Base Box](https://developer.hashicorp.com/vagrant/docs/boxes/base)
-  - [Providers > VirtualBox > Creating a Base Box](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/boxes)
+    - [Boxes > Creating a Base Box](https://developer.hashicorp.com/vagrant/docs/boxes/base)
+    - [Providers > VirtualBox > Creating a Base Box](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/boxes)
 - [softwaretester.info: Create private vagrant box repository](https://softwaretester.info/create-private-vagrant-box-repository/)
 
 [Package](https://developer.hashicorp.com/vagrant/docs/cli/package)
 Package a box for reuse. **This didn't work the way I expected, the packages box didn't include additional packages I had installed on the parent machine.** ^15d863
+
 ```bash
 vagrant package [--base NAME]
 # --base NAME  package a VirtualBox machine VirtualBox manages instead
@@ -79,8 +82,11 @@ vagrant box add mybox /path/to/my.box
 ```
 
 ### Repository
+
 [Create private Vagrant box repository](https://softwaretester.info/create-private-vagrant-box-repository/)
+
 1. set up [[nginx]] on (virtual) machine
+
    ```bash
    # install epel-release and nginx
    systemctl enable nginx
@@ -93,15 +99,16 @@ vagrant box add mybox /path/to/my.box
    # edit nginx config
    nginx -t # check nginx config
    systemctl restart nginx
-    ```
-
+   ```
 
 # Examples
 
 ## HTML server
-See https://developer.hashicorp.com/vagrant/tutorials/networking-provisioning-operations/getting-started-provisioning
+
+See <https://developer.hashicorp.com/vagrant/tutorials/networking-provisioning-operations/getting-started-provisioning>
 
 In working dir with Vagrantfile, create dir `html` with file `index.html`
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -110,7 +117,9 @@ In working dir with Vagrantfile, create dir `html` with file `index.html`
   </body>
 </html>
 ```
+
 Create provisioning script `bootstrap.sh` with content
+
 ```bash
 #!/usr/bin/env bash
 
@@ -121,9 +130,11 @@ if ! [ -L /var/www ]; then
   ln -fs /vagrant /var/www
 fi
 ```
+
 assuming Debian family OS, installing Apache and sym-linking synced Vagrant directory and Apache content directory to be served.
 
 Edit Vagrantfile to use provisioning script
+
 ```ruby
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/bionic64"

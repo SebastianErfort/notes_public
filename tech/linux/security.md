@@ -1,7 +1,9 @@
 ---
 visibility: public
+title: Security
 ---
 # Links
+
 - [LDAP](https://ldap.com/) | [slapd: Stand-alone LDAP Daemon](https://linux.die.net/man/8/slapd) | [LDAP Wiki](http://ldapwiki.com/wiki/Main)
 - [Enhancing Linux security with Advanced Intrusion Detection Environment (AIDE) @RedHat](https://www.redhat.com/sysadmin/linux-security-aide)
 
@@ -12,16 +14,18 @@ visibility: public
 - [[../../../rug/cit/Disk_encryption|CIT disk encryption guide for personal devices]]
 
 Opening and mounting an encrypted device
+
 ```
 sudo cryptsetup luksOpen /dev/sdxx cr_dev
 udisksctl mount -b /dev/mapper/cr_dev
 ```
+
 Unmounting and closing
+
 ```
 udisksctl unmount -b /dev/mapper/cr_dev
 sudo cryptsetup luksClose cr_dev
 ```
-
 
 # PAM (Pluggable Authentication Module)
 
@@ -53,27 +57,27 @@ git clone https://github.com/pbrezina/pam-test
 You can use it by defining `/etc/pam.d/pam_test`
 
 ```
-auth	[success=3 default=ignore]	pam_unix.so nullok try_first_pass
-auth	required	                pam_sss.so use_first_pass
+auth  [success=3 default=ignore]  pam_unix.so nullok try_first_pass
+auth  required                  pam_sss.so use_first_pass
 auth    [success=1]                     /home/user/test/lib/security/pam_2fa.so config=/home/user/.config/netiq.json
 # here's the fallback if no module succeeds
-auth	requisite			pam_deny.so
-auth	required			pam_permit.so
-auth	required                        pam_group.so use_first_pass
+auth  requisite      pam_deny.so
+auth  required      pam_permit.so
+auth  required                        pam_group.so use_first_pass
 ```
 
 and then running
 
 ```bash
-$ ./pam_test auth foobar
+./pam_test auth foobar
 ```
 
 from the `pam_test` directory.
 
-
 ## Modules
 
 ### pam_exec
+
 ```
 auth [succeed=1, default=ignore]  pam_exec.so quiet exposeauthk /path/to/file
 ```
@@ -81,14 +85,15 @@ auth [succeed=1, default=ignore]  pam_exec.so quiet exposeauthk /path/to/file
 ### pam_succeed_if
 
 ### pam_regex
+
 [Man page](https://www.gnu.org.ua/software/pam-modules/manual/html_chapter/regex.html)
 Seems not be available in default Ubuntu PAM installation and has to be compiled manually. :facepalm:
+
 - can be used to transform for example username, say to all lower case
   `auth [...] pam_regex.so extended regex=... transform=s/.*/\L&/g`
 
- 
 ### pam_ssh_agent_auth
- 
+
 Package: `libpam-ssh-agent-auth`
 
 See [[rug/projects/PAM_SSH-agent|Work notes LWP: project sudo with SSH agent PAM]]

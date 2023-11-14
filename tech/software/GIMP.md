@@ -15,4 +15,5 @@ visibility: public
 `= ("> " + this.desc-short)`
 
 ## Tutorials and References
+
 - [YT: GIMP | Create Beautiful Logos from any Image](https://www.youtube.com/watch?v=RNQ-MtDxqmo)

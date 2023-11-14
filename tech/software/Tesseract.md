@@ -8,7 +8,8 @@ github: "https://github.com/tesseract-ocr/tesseract"
 developer: ""
 desc-short: |
   Tesseract is an open source text recognition (OCR) Engine
-tags: tech/ocr
+tags:
+  - tech/ocr
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`

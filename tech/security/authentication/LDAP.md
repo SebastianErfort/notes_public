@@ -7,6 +7,7 @@ ports:
   - 636 (Secure LDAP)
 ---
 Lightweight Directory Access Protocol
+
 - centralised information storage
 - user authentication
 - email messaging
@@ -30,6 +31,7 @@ LDIF | plaintext representation of a LDAP entry (platform-independent)
 *Relative Distinguished Name (RDN)* | unique identifier for components of an entry
 
 Attributes
+
 - type (describes information) and value (data) pairs
 - *Common Name (CN)*
 - *Domain Component (DC)*
@@ -39,7 +41,6 @@ Attributes
 - *Organisational Unit (OU)*
 - *Surname (SN)*
 - telephone number (telephoneNumber)
-
 
 # OpenLDAP
 
@@ -64,6 +65,7 @@ Packages
 - openldap-servers-sql: allows OpenLDAP to use relational database back-ends
 
 ## Server: slap
+
 ```bash
 slapacl    # check access to attributes
 slapadd    # add entried from LDIF file
@@ -79,6 +81,7 @@ slaptest   # check LDAP server configuration
 ```
 
 ## Client: ldap
+
 ```bash
 ldapadd # add entries
 ldapcompare # compare attributes with entry
@@ -90,10 +93,10 @@ ldapsearch # query LDAP entries
 ```
 
 ## Examples
+
 ```bash
 ldapsearch -x cn=pxxxxxx
 ```
-
 
 ## References
 

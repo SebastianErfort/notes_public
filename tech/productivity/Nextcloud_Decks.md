@@ -2,12 +2,13 @@
 title: Nextcloud Decks
 type: software
 category: agile/kanban
-url: https://apps.nextcloud.com/apps/deck
+url: "https://apps.nextcloud.com/apps/deck"
 desc-short: |
   ...
 tags:
   - devops/agile/Kanban
   - software/agile
+visibility: public
 ---
 # `=this.title`
 

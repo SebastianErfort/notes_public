@@ -2,12 +2,13 @@
 title: Remmina
 type: software
 category: remote-desktop
-url: https://www.remmina.org/
+url: "https://www.remmina.org/"
 docs: ""
-source: https://gitlab.com/Remmina/Remmina
+source: "https://gitlab.com/Remmina/Remmina"
 desc-short: The GTK Remmina Remote Desktop Client
 tags:
-  - remote-desktop
+  - os/remote-desktop
+visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`

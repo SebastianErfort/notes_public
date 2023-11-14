@@ -1,7 +1,11 @@
 ---
 title: YAML
 visibility: public
-tags: [dev/yaml]
+tags:
+  - dev/yaml
+type: language
+category: markup
+url: "https://yaml.org/"
 ---
 
 [YAML 1.2 Revision 1.2.2](https://yaml.org/spec/1.2.2/)
@@ -10,14 +14,31 @@ tags: [dev/yaml]
 #dev/yaml
 ```
 
+## Language
+
+### Strings
+
+YAML multi-line string (block scalar)
+
+```yaml
+# Block scalars (extended, multi-line strings)
+key: |
+  Block scalars support extended escaping and 3 parameters to modify how white-space and newlines are treated.
+```
+
+See <https://yaml-multiline.info/>: syntax explained, with examples
 
 ## References
-<https://yaml-multiline.info/>: YAML multi-line (string) syntax explained, with examples
 
 ## Linting
-yamllint: [Documentation](https://yamllint.readthedocs.io/en/stable/index.html) | [![|20](github.png) GitHub](https://github.com/adrienverge/yamllint)
+
+- yamllint: [Documentation](https://yamllint.readthedocs.io/en/stable/index.html) | [![|20](github.png) GitHub](https://github.com/adrienverge/yamllint)
+    - supports extracting and processing of **YAML front matter in Markdown** files
+- yamlfmt: [Source: github.com/google/yamlfmt](https://github.com/google/yamlfmt) |
+- yamlfix: [GitHub](https://github.com/lyz-code/yamlfix) | [Documentation](https://lyz-code.github.io/yamlfix/)
 
 ### Examples
+
 ```yaml
 # |2 will preserve leading white space by telling yaml there are 2 spaces of
 # additional indentation

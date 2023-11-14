@@ -10,10 +10,9 @@ docker-image:
 
 [Ubuntu release-cycle: versions, LTS](https://ubuntu.com/about/release-cycle)
 
-
 ## Repositories and Packages
-![[Debian#Repositories & Packages]]
 
+![[Debian#Repositories & Packages]]
 
 ## Updates and Upgrades
 

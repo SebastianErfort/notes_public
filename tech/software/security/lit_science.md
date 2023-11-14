@@ -1,0 +1,14 @@
+---
+title: ""
+author: ""
+address: ""
+publisher: ""
+year: ""
+isbn: ""
+doi: ""
+---
+
+## `= this.title`
+
+by `=this.author`
+`= ("[DOI](https://doi.org/" + this.doi + ")")`

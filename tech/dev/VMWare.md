@@ -1,6 +1,9 @@
 ---
 visibility: public
+title: VMWare
 ---
 ## VMWare
-#sw/vmware
+
+# sw/vmware
+
 Reset free trial period: delete license file `/etc/vmware/license-ws-...` and run `sudo vmware` once.

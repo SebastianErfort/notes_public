@@ -2,11 +2,13 @@
 title: X2Go
 type: software
 category: remote-desktop
-url: https://wiki.x2go.org
-docs: https://wiki.x2go.org/doku.php
-desc-short: X2Go is a Remote Desktop solution, which some vendors vaguely call Remote Control.
+url: "https://wiki.x2go.org"
+docs: "https://wiki.x2go.org/doku.php"
+desc-short: |
+  X2Go is a Remote Desktop solution, which some vendors vaguely call Remote Control.
 tags:
-  - remote-desktop
+  - os/remote-desktop
+visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`

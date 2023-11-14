@@ -15,51 +15,71 @@ visibility: public
 `= ("> " + this.desc-short)`
 
 ## Getting Started
+
 1. install `mkdocs` package (from package repos or via [[Python#pip|pip]])
+
     ```bash
     pip install mkdocs
     ```
+
 1. create new project
+
     ```bash
     mkdocs new my-project
     ```
+
     will result in files/folders
+
     ```
     .
     ├── docs
     │   └── index.md
     └── mkdocs.yml
     ```
+
 1. dump our Markdown files in `docs/`, e.g. as Git submodule
+
     ```bash
     git submodule add URL docs
     ```
+
     or in separate subdirectories if we include more sources (adding submodules to our Wiki repo doesn't work for the GitLab Wiki as it doesn't pull submodules, **but** it sucks anyway)
 1. start server for local testing
+
     ```bash
     mkdocs serve
     ```
 
-
 ## Documentation
+
 - [Writing with Markdown](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown)
-  - [Internal Links](https://www.mkdocs.org/user-guide/writing-your-docs/#internal-links)
+    - [Internal Links](https://www.mkdocs.org/user-guide/writing-your-docs/#internal-links)
+
 > MkDocs uses the [Python Markdown](https://python-markdown.github.io/) library to translate Markdown files into HTML
 
-
 ## Config
+
+In file `mkdocs.yml`.
+
 - [Environment variables](https://www.mkdocs.org/user-guide/configuration/#environment-variables)
+
     ```yaml
     site_name: !ENV SITE_NAME
     ```
 
+Examples
+
+- [MkDocs config Python Markdown extensions](https://github.com/facelessuser/pymdown-extensions/blob/main/mkdocs.yml)
+
 ### Themes
+
 - [Cinder](https://sourcefoundry.org/cinder/)
-- [mkdocs-terminal/](https://ntno.github.io/mkdocs-terminal/)
+- [mkdocs-terminal](https://ntno.github.io/mkdocs-terminal/)
 
 #### mkdocs-material
-[PyPI](https://pypi.org/project/mkdocs-material/)
-See [Website](https://squidfunk.github.io/mkdocs-material/)
+
+See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pypi.org/project/mkdocs-material/)
+
 - [Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)
 - [plugins: search](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#setting-up-site-search)
 - [plugins: tags](https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#setting-up-tags): support for tags in page front matter and search function
@@ -67,10 +87,11 @@ See [Website](https://squidfunk.github.io/mkdocs-material/)
     - create a [Tags Index](https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#adding-a-tags-index): `[TAGS]`
     - hide tags on a page: add following to front matter, `hide: [tags]`
 - Markdown
-  - [Reference](https://squidfunk.github.io/mkdocs-material/reference/)
-  - [[#Markdown Extensions]]
+    - [Reference](https://squidfunk.github.io/mkdocs-material/reference/)
+    - [[#Markdown Extensions]]
 - Navigation/sidebar
-  - [Navigation Tabs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs)
+    - [Navigation Tabs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs)
+
   ```yaml
   theme:
     features:
@@ -81,9 +102,11 @@ See [Website](https://squidfunk.github.io/mkdocs-material/)
 
 ### Markdown
 
+To be rendered correctly, notes have to adhere MkDocs's Markdown parser's specification, see  [[Python-Markdown#Specifications|Python-Markdown Specifications]].
+
 #### Markdown Extensions
-[Markdown Extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions)
-See [list](https://python-markdown.github.io/extensions/) of [[Python-Markdown]] extensions
+
+See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions), [list of Python-Markdown extensions](https://python-markdown.github.io/extensions/) and [[Python-Markdown]]
 
 - [TOC](https://python-markdown.github.io/extensions/toc/)
 - [Footnotes](https://python-markdown.github.io/extensions/footnotes/)
@@ -97,19 +120,20 @@ See [list](https://python-markdown.github.io/extensions/) of [[Python-Markdown]]
 [[#mkdocs-material]] documentation
 
 - [Tasklist](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tasklist): to-do/check lists
-  - [Footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
+    - [Footnotes](https://squidfunk.github.io/mkdocs-material/reference/footnotes/)
 - [Formatting](https://squidfunk.github.io/mkdocs-material/reference/formatting/): strikeout, highlight, underline, sub- and super-script, keyboard keys (short-code for HTML tag `<kbd>`)
 - [Table of Contents](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=#table-of-contents)
 - [Emoji](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#emoji)
 - [Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/): Superfences for [[Markdown#Graphs Mermaid]]
 - [Annotations](https://squidfunk.github.io/mkdocs-material/reference/annotations/#usage)
-  - [Code blocks](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/): different ways to set up syntax highlighting for code blocks, either during build time using [Pygments](https://pygments.org) or during runtime using a JavaScript syntax highlighter
-    - [Code copy button](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button)
-    - [Code annotations](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations)
-    - [Embedding external files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files)
-  - [Snippets](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets): adds the ability to embed content from arbitrary files into a document, including other documents or source files, by using a simple syntax
+    - [Code blocks](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/): different ways to set up syntax highlighting for code blocks, either during build time using [Pygments](https://pygments.org) or during runtime using a JavaScript syntax highlighter
+        - [Code copy button](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button)
+        - [Code annotations](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations)
+        - [Embedding external files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files)
+    - [Snippets](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets): adds the ability to embed content from arbitrary files into a document, including other documents or source files, by using a simple syntax
 
 Example
+
 ```yaml
 ---
 # some sections error'd with 2 spaces indentation, keep 4!
@@ -152,10 +176,11 @@ markdown_extensions:
 
 ```
 
-
 ## Plugins
+
 - [tags](https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags)
 - [exclude](https://github.com/apenwarr/mkdocs-exclude): mkdocs plugin that lets you exclude files or trees from your output
+
     ```yaml
     plugins:
     - exclude:
@@ -165,13 +190,13 @@ markdown_extensions:
         regex:
           - '.*\.(tmp|bin|tar)$'
     ```
+
 - [mkdocs-macros](https://mkdocs-macros-plugin.readthedocs.io/en/latest/): A plugin for unleashing the power of Mkdocs, by using variables and macros
 - [mkdocs-gitlab-plugin](https://gitlab.inria.fr/vidjil/mkdocs-gitlab-plugin): MkDocs plugin to transform strings such as #1234, %56, or !789 into links to a Gitlab repository.
 - [mkdocs-ezlinked-plugin](https://pypi.org/project/mkdocs-ezlinked-plugin/): enables easier linking between pages
 - [mkdocs-obsidian-support-plugin](https://github.com/ndy2/mkdocs-obsidian-support-plugin): convert Obsidian call-outs and wiki-link images to mkdocs-material compatible code
     Problems
     - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
-
 
 ## [YAML Metadata or Front Matter](https://www.mkdocs.org/user-guide/writing-your-docs/#yaml-style-meta-data)
 
@@ -189,16 +214,18 @@ some_url: https://example.com
 ---
 ```
 
-
 ## Integrations
+
 - [[personal/tech/software/git/Gitlab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
 - Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 
 ### Search
+>
 > A search plugin is provided by default with MkDocs which uses [lunr.js](https://lunrjs.com/) as a search engine.[^1]
 
-[^1]: https://www.mkdocs.org/user-guide/configuration/#search
+[^1]: <https://www.mkdocs.org/user-guide/configuration/#search>
 
 ## References
+
 - [catalog](https://github.com/mkdocs/catalog): A list of awesome MkDocs projects and plugins.
 - [Blog: Create a Personal Site](https://www.codeinsideout.com/blog/site-setup/create-site-project)

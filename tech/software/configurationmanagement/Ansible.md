@@ -2,7 +2,11 @@
 title: Ansible
 type: software
 category: Automation
-tags: dev/Ansible dev/CM dev/ConfigurationManagement dev/Automation
+tags:
+  - dev/Ansible
+  - dev/CM
+  - dev/ConfigurationManagement
+  - dev/Automation
 code: open source
 company: |
   [[RedHat]]
@@ -14,9 +18,11 @@ visibility: public
 ---
 ![|500](https://www.ansible.com/hubfs/2-diagram.jpg)
 `= ("> " + this.desc-short)`
+
 - idempotent (like Puppet)
 - [[YAML]]
 
 ## Roles and Collections
+
 - [Ansible-Galaxy](https://galaxy.ansible.com/home)
-  - [Community > General](https://galaxy.ansible.com/community/general)
+    - [Community > General](https://galaxy.ansible.com/community/general)

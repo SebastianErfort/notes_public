@@ -1,7 +1,7 @@
 ---
 title: zsh
 type: software
-category: terminal-emulator
+category: shell
 url: ""
 docs: ""
 source: ""
@@ -9,9 +9,11 @@ developer: ""
 desc-short: |
   ...
 tags: ""
+visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
+
 ## Config
 
 ### Themes

@@ -21,6 +21,7 @@ visibility: public
 Allows to use multiple proxy servers, selected by wildcard or regex patterns.
 
 For example set up usage of a (SSH) SOCKS proxy[^1]
+
 1. set up connection to SOCKS proxy, e.g. with port 1080
 2. configure proxy
    IP address: 127.0.0.1

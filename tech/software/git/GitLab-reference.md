@@ -1,6 +1,8 @@
 ---
-tags: dev/GitLab
+tags:
+  - dev/GitLab
 visibility: public
+title: GitLab-reference
 ---
 
 See also [[personal/tech/software/git/Gitlab|my notes on GitLab]] and [[rug/lwp/GitLab|Work notes LWP: GitLab]]
@@ -11,6 +13,7 @@ See also [[personal/tech/software/git/Gitlab|my notes on GitLab]] and [[rug/lwp/
 [[_TOC_]]
 
 To automatically create a table of contents for a page just add the following line
+
 ```markdown
 [[_TOC_]]
 ```
@@ -18,7 +21,6 @@ To automatically create a table of contents for a page just add the following li
 ---
 
 See also [presentation on GitLab](sebastian/2023_presentation_GitLab/slides.html)
-
 
 # Issues and Merge Requests
 
@@ -45,8 +47,8 @@ graph LR
   --> cc["<b>Close Issue/MR</b><div style='text-align: left;'>Review</br>Remaining To-Dos? New issue/MR?</br>(Announce 'problem solved')</br>update other systems</br></div>Close issue</br>_"]
   -->|"refine, link,</br>archive"| kms[(KMS)]
 ```
-See [[Markdown#Graphs: Mermaid|notes on Mermaid graphs]] for reference.
 
+See [[Markdown#Graphs: Mermaid|notes on Mermaid graphs]] for reference.
 
 ### Templates
 
@@ -64,7 +66,6 @@ If WIP mark it as draft by ticking the checkbox or start title with `Draft:`.
 
 In the <em>Changes</em> section GitLab offers a great tool for WIP MRs and collaboration. Changes to the code are shown as diffs with respect to the reference branch and there's a feature to discuss changes and collaborate on solutions.
 
-
 ## Linking/referencing Items
 
 For an issue on the same project the shorthand `#...` with the issue number works. Starting to type  `#` gives a list of issues.
@@ -73,75 +74,91 @@ The same works with MRs by using `!...`. This will also show the MR status (e.g.
 
 To link items from a different project use `group/project/...` followed by the issue or MR reference or copy the whole URL.
 
-To link issues and merge requests the most benefits are achieved by mentioning an issue in a merge request *description*. This will create an entry <em>Related Merge Requests</em> on the issue and show up in the MR activity.
+To link issues and merge requests the most benefits are achieved by mentioning an issue in a merge request _description_. This will create an entry <em>Related Merge Requests</em> on the issue and show up in the MR activity.
 
 See also [presentation on GitLab](sebastian/2023_presentation_GitLab/slides.html#/referencing-linking/0).
 
 ## Issue Boards
 
-
 # Markdown and HTML
 
 Commenting: `<!-- ... -->`
+
 ```markdown
 <!-- This is a
 comment -->
 ```
 
-
 # GitLab Webinterface
 
 ## Labels
+
 Start typing `~` for available labels, for example ~"In progress" ~Ready ~Blocked. Use double ticks for labels with spaces, e.g. `~"In progress"`.
 
-
 ## Emojis
+
 Start typing `:` to get suggestions/a search
+
 - :construction: WIP: `:construction:`
 - :gear: running: `:gear:`
 - :x: error: `:x:`
 - :white_check_mark: successful: `:white_check_mark:`
 
-
 ## Icons
-[Gitlab SVG icons](https://gitlab.com/gitlab-org/gitlab-svgs/-/tree/main/sprite_icons)
-- ![](/GitLab/book.svg) Wiki:
-  - local (Wiki):
-    ```Markdown
-    ![](/GitLab/book.svg)
-    ```
-  - remote (issue/MR):
-    ```Markdown
-    ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/book.svg)
-    ```
-- ![](/GitLab/issues.svg) Issue:
-  - local (Wiki):
-    ```Markdown
-    ![](/GitLab/issues.svg)
-    ```
-  - remote (issue/MR):
-    ```Markdown
-    ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/issues.svg)
-    ```
-- ![](/GitLab/merge-request.svg) Open Merge Request:
-  - local (Wiki):
-    ```Markdown
-    ![](/GitLab/merge-request.svg)
-    ```
-  - remote (issue/MR):
-    ```Markdown
-    ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/merge-request.svg)
-    ```
-- ![](/GitLab/merge.svg) Merged Merge Request:
-  - local (Wiki):
-    ```Markdown
-    ![](/GitLab/merge.svg)
-    ```
-  - remote (issue/MR):
-    ```Markdown
-    ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/merge.svg)
-    ```
 
+[Gitlab SVG icons](https://gitlab.com/gitlab-org/gitlab-svgs/-/tree/main/sprite_icons)
+
+- ![](/GitLab/book.svg) Wiki:
+    - local (Wiki):
+
+      ```Markdown
+      ![](/GitLab/book.svg)
+      ```
+
+    - remote (issue/MR):
+
+      ```Markdown
+      ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/book.svg)
+      ```
+
+- ![](/GitLab/issues.svg) Issue:
+    - local (Wiki):
+
+      ```Markdown
+      ![](/GitLab/issues.svg)
+      ```
+
+    - remote (issue/MR):
+
+      ```Markdown
+      ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/issues.svg)
+      ```
+
+- ![](/GitLab/merge-request.svg) Open Merge Request:
+    - local (Wiki):
+
+      ```Markdown
+      ![](/GitLab/merge-request.svg)
+      ```
+
+    - remote (issue/MR):
+
+      ```Markdown
+      ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/merge-request.svg)
+      ```
+
+- ![](/GitLab/merge.svg) Merged Merge Request:
+    - local (Wiki):
+
+      ```Markdown
+      ![](/GitLab/merge.svg)
+      ```
+
+    - remote (issue/MR):
+
+      ```Markdown
+      ![](https://gitlab.com/gitlab-org/gitlab-svgs/-/raw/main/sprite_icons/merge.svg)
+      ```
 
 # CI/CD
 
@@ -151,16 +168,13 @@ By default file `.gitlab-ci.yml`
 
 - [Keyword reference](https://docs.gitlab.com/ee/ci/yaml/)
 
-
 # Wiki
 
 GitLab CE doesn't allow for group Wikis. The GitLab Wiki Webinterface is very limited. The only way to browse pages is by manually creating references, for example on a and in the sidebar. The latter is the same for any page visited, so a fairly good place to have a general table of contents. It is reommenced to edit and view the Wiki with external tools such as [[Obsidian]].
 
-
 # Activity
 
 See for example [presentation on GitLab](sebastian/2023_presentation_GitLab/slides.html#/merge-activity---changelog)
-
 
 # Miscellaneous
 

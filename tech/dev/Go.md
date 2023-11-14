@@ -1,30 +1,35 @@
 ---
 visibility: public
+title: Go
 ---
 ![[LIL_go-essential-training|LiL course Go Essential Training]]
 
 - [Free Gophers: pixel-art, vector images, hand-drawn sketches](https://github.com/egonelbre/gophers)
 
 # Tools
+
 [[personal/tech/software/Software#^247416|Charm CL tools]]
 
-
 # Built-ins
+
 ## Output
+
 ```go
 import () {
     "fmt" // Formated output
 }
 ```
 
-
 # Variables, Data Types, Structs
 
 ## Private and Public
+
 Upper case is automatically accessible outside of definition (public, *exported symbol*), lower case only internal (private, *unexported symbol*)
 
 ## Structs
+
 [Go struct example file](file://.snippets/go/struct.go)
+
 ```go
 type MyStruct struct {
     ID      string
@@ -48,17 +53,19 @@ var obj3 MyStruct
 ```
 
 Define methods on structs
+
 ```go
 func (o MyStruct) Lifetime() time.Duration {
     return b.Created.Sub(time.Now().UTC())
 }
 ```
 
-
 # Modules
 
 ## Time & Date
+
 Module `time`
+
 ```go
 mytime time.Time // time data type
 
@@ -70,8 +77,10 @@ newtime = time.Now().Add(24 * 7 * time.Hour) // now + 7 days
 ```
 
 ## HTTP requests
+
 `net` module
 [Go HTTP example file](file://.snippets/go/http.go)
+
 ```go
 import (
     "net/http"

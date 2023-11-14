@@ -4,6 +4,7 @@
 - apache
 - applescript
 - asp
+- bash
 - brainfuck
 - c
 - cfm
@@ -15,7 +16,6 @@
 - csharp
 - css
 - csv
-- bash
 - diff
 - elixir
 - erb – HTML Embedded Ruby

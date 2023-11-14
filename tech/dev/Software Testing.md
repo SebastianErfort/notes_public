@@ -1,14 +1,19 @@
 ---
 visibility: public
+title: Software Testing
 ---
 ## Spec
-#dev/test/InSpec #dev/test/spec #dev/test/rspec
+
+# dev/test/InSpec #dev/test/spec #dev/test/rspec
+
 - [[InSpec|My notes on Chef InSpec]]
 - [[Code Testing|LWP: Code Testing > InSpec]]
 - [![|20](github.png) InSpec](https://github.com/inspec/inspec)
 
 ### Methods
+
 - _expect_: test whether value is as expected (`expect()`) __or changes__ (`expect{}`) as expected
+
   ```ruby
   # Example
   it "creates one more volunteer" do

@@ -5,14 +5,16 @@ aliases: [Virtualisation, Containers]
 ---
 
 # Oracle VirtualBox
+
 ![[personal/tech/VirtualBox]]
 
 # Vagrant
+
 ![[Vagrant]]
 
 # VMWare
-![[../../rug/cit/Virtualisation and Containers#VMware]]
 
+![[../../rug/cit/Virtualisation and Containers#VMware]]
 
 # References
 

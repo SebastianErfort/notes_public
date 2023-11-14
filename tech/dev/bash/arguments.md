@@ -10,12 +10,12 @@ From [ChatGPT](https://chat.openai.com/share/8bfea325-bbcd-497d-821c-bd05b91b724
 In Bash, the special variables `$@` and `$*` are used to access function arguments, specifically the arguments passed to a script or function. While they might appear to behave similarly in some cases, they have subtle differences in how they handle arguments, particularly when it comes to handling spaces and quotes.
 
 1. `$@`:
-   - When used within double quotes (e.g., `"$@"`), each argument is treated as a separate entity, preserving any whitespace and quotes within the arguments.
-   - This means that arguments are individually wrapped in double quotes and treated as separate strings, making it suitable for scenarios where you want to maintain the individual arguments as distinct entities.
+    - When used within double quotes (e.g., `"$@"`), each argument is treated as a separate entity, preserving any whitespace and quotes within the arguments.
+    - This means that arguments are individually wrapped in double quotes and treated as separate strings, making it suitable for scenarios where you want to maintain the individual arguments as distinct entities.
 
 2. `$*`:
-   - When used within double quotes (e.g., `"$*"`), all arguments are treated as a single entity, with spaces acting as separators. The entire list of arguments is treated as a single string.
-   - This is useful when you want to treat all arguments as a single string, effectively concatenating them together.
+    - When used within double quotes (e.g., `"$*"`), all arguments are treated as a single entity, with spaces acting as separators. The entire list of arguments is treated as a single string.
+    - This is useful when you want to treat all arguments as a single string, effectively concatenating them together.
 
 Here's an example to illustrate the difference:
 

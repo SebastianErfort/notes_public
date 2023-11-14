@@ -1,5 +1,6 @@
 ---
 visibility: public
+title: CSS
 ---
 [[HTML|My notes on HTML]]
 

@@ -1,6 +1,7 @@
 ---
 title: Remote Desktop
 date: 2023-09-04
+visibility: public
 ---
 ```dataview
 TABLE WITHOUT ID
@@ -8,7 +9,6 @@ TABLE WITHOUT ID
 ("[Website](" + url + ")") AS "Links"
 WHERE type = "software" AND category = "remote-desktop"
 ```
-
 
 ## References
 

@@ -15,15 +15,16 @@ visibility: public
 `= ("> " + this.desc-short)`
 
 ## Documentation
+
 - [Installation](https://docs.requarks.io/install)
-  - [Requirements](https://docs.requarks.io/install/requirements)
+    - [Requirements](https://docs.requarks.io/install/requirements)
 - [Rendering (Markdown)](https://docs.requarks.io/en/rendering)
 - [Modules](https://js.wiki/modules)
-  - Authentication
-    - [LDAP](https://docs.requarks.io/auth/ldap)
-  - [Search](https://docs.requarks.io/en/search)
-  - [Storage](https://docs.requarks.io/dev/storage)
-
+    - Authentication
+        - [LDAP](https://docs.requarks.io/auth/ldap)
+    - [Search](https://docs.requarks.io/en/search)
+    - [Storage](https://docs.requarks.io/dev/storage)
 
 ## References
+
 - [Article medevel.com: Wiki.js](https://medevel.com/wikijs/)

@@ -1,5 +1,6 @@
 ---
 visibility: public
+title: Zapier
 ---
 [Website](https://zapier.com/) | [Wiki](https://en.wikipedia.org/wiki/Zapier)
 

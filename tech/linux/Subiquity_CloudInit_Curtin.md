@@ -35,7 +35,6 @@ Cloud-init assumes defaults where no explicit config is given. It requires yaml-
 - user-data (optional): [documentation](https://cloudinit.readthedocs.io/en/latest/topics/format.html) | [examples](https://cloudinit.readthedocs.io/en/latest/topics/examples.html) | [further examples](https://gist.github.com/dbkinghorn/c236aea31d76028b2b6ccdf6d3c6f07e)
 - vendor-data (optional)
 
- 
 ### user-data
 
 [Cloud-init documentation examples](https://cloudinit.readthedocs.io/en/latest/topics/examples.html) |  [local example file](file:///home/erfort/journal/journal/20220429_user-data_preserve)
@@ -48,57 +47,57 @@ cloud-init devel schema --config-file file
 
 <details><summary>Example storage config section</summary>
 
-  ```yaml
-  storage:
-    # version: 2
-    # swap:
-    #   size: 8G
-    config:
-      - type: disk
-        id: the_disk
-        ptable: gpt
-        grub_device: true
-        preserve: true
-      # bios_grub will allow an EFI system to use BIOS boot as well. Should only be needed in bios boot mode, not for efi
-      # - { type: partition, id: bios_grub, device: the_disk,   size: 1M,   flag: bios_grub,   preserve: false, grub_device: true } # bios_grub
-      - { type: partition, device: the_disk, id: efi,     number: 2, size: 512M,   preserve: true, flag: boot, grub_device: true }  # EFI
-      - { type: partition, device: the_disk, id: root,    number: 3, size: 100G,   preserve: true, wipe: superblock } # root
-      - { type: partition, device: the_disk, id: var_tmp, number: 5, size: 20G,    preserve: true, wipe: superblock } # /var/tmp
-      - { type: partition, device: the_disk, id: swap,    number: 4, size: 8G,     preserve: true, flag: swap } # swap
-      - { type: partition, device: the_disk, id: keep1,   number: 1, size: 50G,    preserve: true } # "windows"
-      - { type: partition, device: the_disk, id: keep2,   number: 6, size: 23082303488, preserve: true } # "D"
-      # Since this is the last partition, curtin is very specific about the size!
-      #
-      - { type: format, volume: efi,     id: efi_fs,     fstype: fat32, label: EFI,      }
-      - { type: format, volume: root,    id: root_fs,    fstype: ext4,  label: root   }
-      - { type: format, volume: var_tmp, id: var_tmp_fs, fstype: ext4,  label: vartmp }
-      - { type: format, volume: swap,    id: swap_fs,    fstype: swap,  label: swap   }
-      - { type: format, volume: keep1,   id: keep1_fs,   fstype: ntfs,  preserve: true }
-      - { type: format, volume: keep2,   id: keep2_fs,   fstype: fat32, preserve: true, label: data }
-      #
-      - { type: mount, device: efi_fs,     id: mnt0, path: /boot/efi }
-      - { type: mount, device: root_fs,    id: mnt1, path: / }
-      - { type: mount, device: var_tmp_fs, id: mnt2, path: /var/tmp }
-      - { type: mount, device: swap_fs,    id: mnt3, path: '' }
-      - { type: mount, device: keep2_fs,   id: mnt4, path: /D }
-  ```
+```yaml
+storage:
+  # version: 2
+  # swap:
+  #   size: 8G
+  config:
+    - type: disk
+      id: the_disk
+      ptable: gpt
+      grub_device: true
+      preserve: true
+    # bios_grub will allow an EFI system to use BIOS boot as well. Should only be needed in bios boot mode, not for efi
+    # - { type: partition, id: bios_grub, device: the_disk,   size: 1M,   flag: bios_grub,   preserve: false, grub_device: true } # bios_grub
+    - { type: partition, device: the_disk, id: efi,     number: 2, size: 512M,   preserve: true, flag: boot, grub_device: true }  # EFI
+    - { type: partition, device: the_disk, id: root,    number: 3, size: 100G,   preserve: true, wipe: superblock } # root
+    - { type: partition, device: the_disk, id: var_tmp, number: 5, size: 20G,    preserve: true, wipe: superblock } # /var/tmp
+    - { type: partition, device: the_disk, id: swap,    number: 4, size: 8G,     preserve: true, flag: swap } # swap
+    - { type: partition, device: the_disk, id: keep1,   number: 1, size: 50G,    preserve: true } # "windows"
+    - { type: partition, device: the_disk, id: keep2,   number: 6, size: 23082303488, preserve: true } # "D"
+    # Since this is the last partition, curtin is very specific about the size!
+    #
+    - { type: format, volume: efi,     id: efi_fs,     fstype: fat32, label: EFI,      }
+    - { type: format, volume: root,    id: root_fs,    fstype: ext4,  label: root   }
+    - { type: format, volume: var_tmp, id: var_tmp_fs, fstype: ext4,  label: vartmp }
+    - { type: format, volume: swap,    id: swap_fs,    fstype: swap,  label: swap   }
+    - { type: format, volume: keep1,   id: keep1_fs,   fstype: ntfs,  preserve: true }
+    - { type: format, volume: keep2,   id: keep2_fs,   fstype: fat32, preserve: true, label: data }
+    #
+    - { type: mount, device: efi_fs,     id: mnt0, path: /boot/efi }
+    - { type: mount, device: root_fs,    id: mnt1, path: / }
+    - { type: mount, device: var_tmp_fs, id: mnt2, path: /var/tmp }
+    - { type: mount, device: swap_fs,    id: mnt3, path: '' }
+    - { type: mount, device: keep2_fs,   id: mnt4, path: /D }
+```
 
 </details>
 
 <details><summary><a href="https://discourse.ubuntu.com/t/autoinstall-generator-tool-to-help-with-creation-of-autoinstall-files-based-on-preseed/21334"><code>autoinstall-generator</code></a></summary>
 
 Converting the preseed to <code>cloud-init</code> format can partially be done with <code>autoinstall-generator</code>
-  <ul>
-  <li>source: <https://github.com/covertsh/ubuntu-autoinstall-generator></li>
-  <li>install snap <https://snapcraft.io/autoinstall-generator></li>
-  <li>run</li>
-  </ul>
+<ul>
+<li>source: <https://github.com/covertsh/ubuntu-autoinstall-generator></li>
+<li>install snap <https://snapcraft.io/autoinstall-generator></li>
+<li>run</li>
+</ul>
 
-  ```bash
-  autoinstall-generator --cloud --debug preseed.txt user-data
-  ```
+```bash
+autoinstall-generator --cloud --debug preseed.txt user-data
+```
 
-  but most of our preseed isn't supported as can be seen in the debug output.
+but most of our preseed isn't supported as can be seen in the debug output.
 </details>
 
 To disable cloud-init (after installation)
@@ -117,16 +116,13 @@ The working directory of the installer is `/var/snap/subiquity` with subfolders 
 Log files can be found in `/var/log/{installer,cloud-init*,curtin}`, in case of a critical error in `/var/crash`, and the cloud-init autoinstall section used by Curtin in `/autoinstall.yaml`. The journal for example ends up in `/var/log/installer/installer-journal.txt`.
 `/var/log/installer` gets copied into the target at the end of the installation.
 
-
 ### Modules
-
 
 #### snap
 
 Snaps get installed during first boot[^1] which means cloud-init can't be disabled for the first boot.
 
 [^1]: <https://bugs.launchpad.net/subiquity/+bug/1778226>
-
 
 ### Specify config source (seedfrom)
 
@@ -144,15 +140,14 @@ menuentry "Autoinstall" {
 
 and can also be a remote source (requires `ds=nocloud-net`).
 
- 
 ### Datasources
 
 > [!info]- [From the documentation](https://cloudinit.readthedocs.io/en/latest/topics/datasources.html)
-> 
+>
 > Datasources are sources of configuration data for cloud-init that typically come from the user (i.e. userdata) or come from the cloud that created the configuration drive (i.e. metadata). Typical userdata would include files, YAML, and shell scripts while typical metadata would include server name, instance id, display name and other cloud specific details.
-> 
+>
 > Since there are multiple ways to provide this data (each cloud solution seems to prefer its own way) internally a datasource abstract class was created to allow for a single way to access the different cloud systems methods to provide this data through the typical usage of subclasses.
-> 
+>
 > Any metadata processed by cloud-init’s datasources is persisted as /run/cloud-init/instance-data.json. Cloud-init provides tooling to quickly introspect some of that data. See Instance Metadata for more information.
 
 > [!tip] TL; DR
@@ -160,19 +155,16 @@ and can also be a remote source (requires `ds=nocloud-net`).
 >
 > So maybe we can add hardware information in a similar way to `instance-data.json` from a bash script or whatever and use that in `user-data` via Jinja templating to set for example the disk layout.
 
- 
 #### NoCloud
 
 See [Cloud-Init documentation on NoCloud Datasource](https://cloudinit.readthedocs.io/en/latest/reference/datasources/nocloud.html).
 
 - [Network](https://cloudinit.readthedocs.io/en/latest/reference/datasources/nocloud.html#example-config)
 
- 
 ### Config
 
 - [Network](https://cloudinit.readthedocs.io/en/latest/reference/network-config.html)
 
- 
 ## Curtin
 
 [🐛 Bugs](https://bugs.launchpad.net/curtin/+bugs)
@@ -180,7 +172,6 @@ See [Cloud-Init documentation on NoCloud Datasource](https://cloudinit.readthedo
 [Documentation](https://curtin.readthedocs.io/en/latest/index.html) |  [YAML examples](https://github.com/canonical/curtin/tree/master/examples) (8yrs old)
 > Curtin is intended to be a bare bones “installer”. Its goal is to take data from a source, and get it onto disk as quick as possible and then boot it. The key difference from traditional package based installers is that curtin assumes the thing its installing is intelligent and will do the right thing.
 
- 
 #### Stages
 
 Can be (de-)activated in the `stages` section of the `autoinstall` part of `user-data`
@@ -194,17 +185,14 @@ Can be (de-)activated in the `stages` section of the `autoinstall` part of `user
 - Final Commands: `late-commands`
 Easiest way to get a terminal in non-interactive stages (`early`, `late`): produce an error, for example run `false`.
 
- 
 #### Commands
 
 - `curtin block-discover`: print current storage information in the usual JSON format that translated to the YAML format used in the `storage` section in `user-data > autoinstall`. Doesn't report disk size and free space has to be calculated from "gaps" around partitions.
   [Work notes LWP: Remco's examples](https://git.lwp.rug.nl/lwp/unattended/lwp5/-/commit/d2b61dba51093790528bbdcf976614d42386fffc)
 - `curtin wipe --quick --all-unused-disks`
 
- 
 ### Modules
 
- 
 #### Storage module
 
 The section `storage: config` of the `autoinstall` section of the `user-data` file allows to specify which disk(s) to use for an installation and what to do with (existing) partitions. Generally the structure is
@@ -234,7 +222,6 @@ __Installation on a disk with existing partitions that should be reused or be le
 - `partition`: partition won't be resized
 - `format`:  content (files, folders, etc.) will be preserved
 
- 
 ## Changelog
 
 - [stop using apt-key](https://github.com/canonical/curtin/commit/1797204fd5df4e0a647d73734e2f47691828c0a1)

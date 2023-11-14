@@ -1,6 +1,8 @@
 ---
 title: Shorewall
-tags: security/firewall net/tools/iptables
+tags:
+  - security/firewall
+  - net/tools/iptables
 type: software
 category: firewall
 code: open source

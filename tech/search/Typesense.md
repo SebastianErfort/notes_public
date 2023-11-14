@@ -21,4 +21,5 @@ visibility: public
 `= ("> " + this.desc-short)`
 
 ## Caveats
+
 Only claims to be open source, not free. Current version is 0.24, so there might be licensing costs in the future?

@@ -7,6 +7,7 @@ desc-short: |
 tags: ""
 url: "https://get.mem.ai/"
 visibility: public
+title: Mem
 ---
 `= ("[Website](" + this.website + ")")`
 `= ("> " + this.desc-short)`

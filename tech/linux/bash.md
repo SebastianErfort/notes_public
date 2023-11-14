@@ -1,19 +1,29 @@
 ---
 title: bash
-tags: dev/programming dev/bash dev/shell dev/terminal dev/script dev/coding
+tags:
+  - dev/programming
+  - dev/bash
+  - dev/shell
+  - dev/terminal
+  - dev/script
+  - dev/coding
 visibility: public
+type: software
+category: shell
 ---
+
 [Linux Commands](linux.md#Commands) | [code snippets](file://src) |  [Jupyter-lab notebook](file://notes/life/tech/bash.ipynb)
+
 - [wooledge.org Wiki](https://mywiki.wooledge.org/EnglishFrontPage)
-  - [Bashim](https://mywiki.wooledge.org/Bashism)
-  - [Bash Sheet](https://mywiki.wooledge.org/BashSheet)
+    - [Bashim](https://mywiki.wooledge.org/Bashism)
+    - [Bash Sheet](https://mywiki.wooledge.org/BashSheet)
 - [Bash Bracket Quick Reference](https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/)
 
 # Options & Config
+
 [gnu.org: The Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
 
 # Command Line
-
 
 ## Completion
 
@@ -22,6 +32,7 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
 - [hostname completion](https://blog.sanctum.geek.nz/bash-hostname-completion/)
 
 ## History
+
   ```bash
   !!     # repeat last command
   !123   # repeat command 123 from history
@@ -30,8 +41,11 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
   ```
 
 # General
+
 ## Loops
+
 - iterate over list or array
+
   ```bash
   for f in $(ls *.jpg*); do
     # rename files to date_time.ext
@@ -41,7 +55,9 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
     echo $e
   done
   ```
+
 - Infinite loop (till broken)
+
   ```bash
   for (( ; ; )); do
     if condition
@@ -52,13 +68,17 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
     fi
   done
   ```
+
   or
+
   ```bash
   while true; do
     ...
   done
   ```
+
 - Three-expression loop
+
   ```bash
   for (( c=1 ; c<=5 ; c++ )); do
     ...
@@ -66,6 +86,7 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
   ```
 
 ## Arithmetics and logic
+
 ```bash
 n=0
 (( n++ ))
@@ -76,7 +97,9 @@ echo $n
 ```
 
 ## Variables
+
 ### Booleans: true and false
+
 ```bash
 for error in true false; do
     ! $error && echo not nope || echo not yep
@@ -84,8 +107,10 @@ done
 ```
 
 ### Strings
+
 - Length of a string `${#s}`
 - Substring accessing
+
   ```bash
   s='abcABC123ABCabc'
   echo ${s:3} ${s:6:3} ${s:(-3)} ${s: -6} # negative indices (position from end of string) need parentheses or space to be escaped
@@ -100,7 +125,9 @@ done
   # 2 3 4 5 6 7 8 9 10
   # 2 3 4 5
   ```
+
 - Deleting substrings
+
   ```bash
   s='abcABC123xyzABC456'
   echo ${s#a*C} # delete shortest match from beginning
@@ -108,7 +135,9 @@ done
   echo ${s%A*[0-9]} # delete shortest match from end
   echo ${s%%A*[0-9]} # delete longest match from end
   ```
+
 - Substring substitution
+
   ```bash
   stringZ=abcABC123ABCabc
   echo $stringZ
@@ -119,7 +148,9 @@ done
   echo ${stringZ//abc/XYZ} # replace all occurances
   echo ${stringZ//abc} # delete all occurances
   ```
+
 - String concatenation
+
   ```bash
   a='bla'
   b='blubb'
@@ -128,7 +159,9 @@ done
   b+=$a
   echo $b
   ```
+
 - To lower or upper case
+
   ```bash
   s='bla blubb'
   echo ${s^} # first upper case
@@ -138,17 +171,26 @@ done
   echo ${s,} # first lower case
   echo ${s,,} # all lower case
   ```
+
 - Sanitise a string
+
   ```bash
   s='abc123XYZ@troll_ol-!"§$%&/()=?'
   echo ${s//[^a-zA-Z0-9_@\\\-.]} # delete all characters not matching
   ```
-- Variable expansion, manipulation and interpolation #dev/bash
+
+### Variable Expansion
+
+or shell-parameter expansion, manipulation and interpolation #dev/bash, see [bash documentation on gnu.org](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html)
+
   ```bash
   fname=john
   john=thomas
   echo ${!fname} # returns thomas
-  myvar=${1:-Default} # assign default value if variable is undefined
+  # use default value if parameter is unset or null
+  myvar=${1:-Default}
+  # assign default to parameter if unset or null
+  : ${myvar:=Default}
   ```
 
 ### Arrays
@@ -167,6 +209,9 @@ echo ${arr3[-2]} # 2nd from back (since bash 4.2 - 4.3)
 echo ${arr[@]}
 # or
 echo ${arr[*]}
+# access slice/range
+echo ${arr[@]:2} # from element 2
+echo ${arr[@]::2} # up to, excluding element 2
 # add element
 arr1+=("new" "elements")
 # number of elements
@@ -174,14 +219,14 @@ ${#arr[@]}
 ```
 
 > The only difference between `@` and `*` is when the form `${my_array[x]}` is surrounded with double-quotes. In this case, `*` expands to a single word where array elements are separated with space. `@` expands each array element to a separate word. This is especially important when using the form to iterate through array elements.
-> https://linuxize.com/post/bash-arrays/
-
+> <https://linuxize.com/post/bash-arrays/>
 
 ### Special Variables
 
 [gnu.org: Bash Variables](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html)
 
 - special variables
+
   ```bash
   $0   # shell or script name
   $@   # arguments
@@ -193,13 +238,16 @@ ${#arr[@]}
   ${-} # current shell options
   ${_} # argument to previous command
   ```
+
 - environment variables
+
   ```bash
   $TERM # terminal type
   ```
 
 ## Regular Expressions
-#dev/regex
+
+# dev/regex
 
 Expression   | Description
 ------------|-----------
@@ -223,41 +271,48 @@ a\|d | One character out of the two (an alternative to using []), ‘a’ or ‘
 \S | One non-white space
 
 ## Functions
+
 ```bash
 # define a function
 function myfunction () {
-    # function content
     ${FUNCNAME[0]} # Last function on the function stack, inside a function its name
-    done && return
+    ...
 }
 ```
-References
+
 - bash function with array in-/output
 
 ## Arguments
 
 - special variables to access arguments
-    ```bash
-    $@   # all arguments, "$@" expands to separate, quoted entities
-    $*   # all arguments, "$*" expands to single, space-sep. entity
-    $#   # number of arguments
-    ```
+
+  ```bash
+  $@   # all arguments, "$@" expands to separate, quoted entities
+  $*   # all arguments, "$*" expands to single, space-sep. entity
+  $#   # number of arguments
+  ```
+
   For differences between  `$@` and `$*` see [[arguments|Bash: Arguments]]
 - update arguments
-    ```bash
-    # overwrite original positional parameters
-    set -- "${newparams[@]}"
-    # drop current first argument, can be used to iteratively reduce number of arguments
-    shift
-    ```
+
+  ```bash
+  # overwrite original positional parameters
+  set -- "${newparams[@]}"
+  # drop current first argument, can be used to iteratively reduce number of arguments
+  shift
+  ```
+
 - read arguments from STDIN/STDERR
+
   ```bash
   function myfunc () {
     declare args=${*:-$(</dev/stderr)} # use command arguments OR stderr
     # ...
   }
   ```
+
 - refer to previous command's arguments
+
   ```bash
   echo 1 2 3
   echo !:2 # previous 2nd argument
@@ -265,8 +320,11 @@ References
   echo !:^ # previous first argument
   echo !:$ # previous last argument
   ```
+
 # Commands
+
 - List (builtin) commands
+
   ```bash
   man shopt
   compgen -b              # list builtin bash commands from possible auto-completions
@@ -274,101 +332,126 @@ References
   enable                  # List bash builtins and whether they're enabled
   (IFS=': '; ls -1 $PATH) # list available commands from PATH environment variable
   ```
+
 - command grouping
+
   ```bash
   ( list ) # create subshell with subshell environment
   { list; } # executed in current shell context. semicolons required.
   ```
 
 # Input & Output
+
 ## STDIN, STDERR and exit codes
 
 - re-direct stderr to command and re-direct that command's stdout back to original stderr
-    ```
-    mycmd 2> >(myfunc >&2)
-    # redirect all output
-    exec 2> >(myfunc) # e.g. tee to file or log
-    # revert redirect
-    exec 2> $(tty)
-    ```
+
+  ```
+  mycmd 2> >(myfunc >&2)
+  # redirect all output
+  exec 2> >(myfunc) # e.g. tee to file or log
+  # revert redirect
+  exec 2> $(tty)
+  ```
+
 - output to STDERR
-    ```bash
-    echo error >&2
-    ```
+
+  ```bash
+  echo error >&2
+  ```
+
 - check whether there is stdin/stderr [Stackexchange](https://unix.stackexchange.com/a/388462/247791): `[[ ! -t 0 ]]`
 - Bash 4: just `&` is equivalent to `2>&1`
+
   ```bash
   cmd &>> outfile # redirect stdout and stderr to file
   mycmd |& othercmd # pipe both to command
   ```
 
 Collect exit codes of commands using trap, then unset it
+
 ```bash
 trap 'exs+=($?)' DEBUG; cmd1; cmd2; cmd3; trap - DEBUG
 ```
-
 
 ## Stream manipulation
 
 - *Here Documents*: inline files with optional variable substitution [TLDP](https://tldp.org/LDP/abs/html/here-docs.html) #dev/shell/heredoc
 
-    ```bash
-    # variable expansion
-    sed 's/\/.*\///' << EOF
-      Found your home directory, $HOME!
-    EOF
-    # literal, no variable expansion
-    sed 's/\/.*\///' << 'EOF'
-      I just checked $HOME.
-    EOF
-    # trim leading whitespace
-    sed 's/\/.*\///' <<- EOF
-      And this will remove leading whitespace, $HOME.
-    EOF
-    ```
+  ```bash
+  # variable expansion
+  sed 's/\/.*\///' << EOF
+    Found your home directory, $HOME!
+  EOF
+  # literal, no variable expansion
+  sed 's/\/.*\///' << 'EOF'
+    I just checked $HOME.
+  EOF
+  # trim leading whitespace
+  sed 's/\/.*\///' <<- EOF
+    And this will remove leading whitespace, $HOME.
+  EOF
+  ```
 
 - cut
 
-    ```bash
-    cut -d " " -f 2,3 # Cut fields from file/standard input if omitted. Delimiter " ", fields 2+3
+  ```bash
+  cut -d " " -f 2,3 # Cut fields from file/standard input if omitted. Delimiter " ", fields 2+3
   ```
-
 
 ## Permissions
 
 Grant execute permissions if on directories, but not files [@stackoverflow](https://stackoverflow.com/questions/17091300/linux-set-permission-only-to-directories)
+
 ```bash
 chmod -R X /path/to/file
 ```
 
 ## Formatting
-Overwrite previous line of output
+
+- overwrite previous line of output
+
 ```bash
 printf "\r $newline"
 ```
+
 - string formatting with `printf`
+
   ```bash
   printf '%s %04d %10.2f' 'string' 101 '3.14'
   ```
-Progress
-- [Pipe Viewer](https://www.ivarch.com/programs/pv.shtml): terminal-based tool for monitoring the progress of data through a pipeline
 
+Progress
+
+- [Pipe Viewer](https://www.ivarch.com/programs/pv.shtml): terminal-based tool for monitoring the progress of data through a pipeline
 
 # Scripts
 
 ## Control
+
 ### Traps
-trigger action upon pressing Ctrl+C,D, ..., on error or other
-### Error handling
-https://stackoverflow.com/questions/64786/error-handling-in-bash
+
+Trigger action upon pressing Ctrl+C,D, ..., on error or other.
+
+Examples
+
+```bash
+trap "unset ${myvars[@]}" SIGINT SIGQUIT SIGTERM
+```
+
+Error handling[^1]
+
 1. use a trap `trap 'cmd1; cmd2; ...' ERR`
 2. Use `errexit` option: `set -e` or `set -o errexit` or start bash with option `-e`
-   - Has some [gotchas](http://mywiki.wooledge.org/BashFAQ/105) though.
-   - Also consider option `set -o errtrace` (functions and subshells inherit `errexit` option). [StackExchange](https://stackoverflow.com/questions/25378845/what-does-set-o-errtrace-do-in-a-shell-script)
+    - Has some [gotchas](http://mywiki.wooledge.org/BashFAQ/105) though.
+    - Also consider option `set -o errtrace` (functions and subshells inherit `errexit` option). [StackExchange](https://stackoverflow.com/questions/25378845/what-does-set-o-errtrace-do-in-a-shell-script)
+
+[^1]: <https://stackoverflow.com/questions/64786/error-handling-in-bash>
 
 # Shell Expansion
 
-See https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expansion
+See <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expansion>
+
 - [Bash Error Handling @RedHat](https://www.redhat.com/sysadmin/bash-error-handling)
 - [Tilde Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Tilde-Expansion)
 - [Shell Parameter Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion)
@@ -378,7 +461,6 @@ See https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expan
 - [Word Splitting](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Word-Splitting)
 - [Filename Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Filename-Expansion)
 - [Quote Removal](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Quote-Removal)
-
 
 # References
 

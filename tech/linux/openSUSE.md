@@ -4,13 +4,14 @@ tags:
   - tech/distros/openSUSE
   - tech/distros/openSUSE/zypper
 visibility: public
+aliases:
+  - Tumbleweed
 ---
 
 - Codec H.264 problems, e.g. with Firefox: [install from Packman or VLC](https://en.opensuse.org/SDB:Firefox_MP4/H.264_Video_Support)
 - Firewall
-  - *firewalld*: [Set up firewalld @cyberciti.biz](https://www.cyberciti.biz/faq/set-up-a-firewall-using-firewalld-on-opensuse-linux/) #tech/firewall
-  - [NFTables](https://news.opensuse.org/2021/03/17/Playing-along-with-NFTables/)
-
+    - *firewalld*: [Set up firewalld @cyberciti.biz](https://www.cyberciti.biz/faq/set-up-a-firewall-using-firewalld-on-opensuse-linux/) #tech/firewall
+    - [NFTables](https://news.opensuse.org/2021/03/17/Playing-along-with-NFTables/)
 
 ## Zypper
 
@@ -20,7 +21,6 @@ sudo zypper dup -yl
 # find package providing file
 zypper se --provides [--match-exact]
 ```
-
 
 # Log
 

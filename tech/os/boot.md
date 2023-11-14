@@ -14,10 +14,10 @@ aliases:
 - [kernel.org: NFS root](https://www.kernel.org/doc/Documentation/filesystems/nfs/nfsroot.txt)
 - [Demo UEFI+Grub with DHCP, TFTP and HTTP server by Remco](https://git.lwp.rug.nl/rwouts/uefiboot) (private repo)
 
-
 ### (i)PXE
 
 [iPXE](https://ipxe.org): [Documentation](https://ipxe.org/docs)
+
 - [Configuration](https://ipxe.org/settings)
 - [iPXE EFI support](https://git.lwp.rug.nl/heiko/menudo/-/wikis/iPXE-EFI-support)
 - [Boot SCCM via HTTP](https://ipxe.org/howto/sccm)
@@ -25,12 +25,11 @@ aliases:
 [(U)EFI patch](https://github.com/wapolinar/ipxe)
 
 Windows
-- [load Windows PE from PXE server](https://learn.microsoft.com/en-us/windows/deployment/configure-a-pxe-server-to-load-windows-pe)
 
+- [load Windows PE from PXE server](https://learn.microsoft.com/en-us/windows/deployment/configure-a-pxe-server-to-load-windows-pe)
 
 # UEFI
 
 [shim @Github](https://github.com/rhboot/shim): a first-stage UEFI bootloader
-
 
 # Secure Boot

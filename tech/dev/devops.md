@@ -1,6 +1,11 @@
 ---
 title: DevOps
-tags: devops dev devops/agile devops/kanban devops/scrum
+tags:
+  - devops
+  - dev
+  - devops/agile
+  - devops/kanban
+  - devops/scrum
 visibility: public
 ---
 
@@ -9,6 +14,7 @@ visibility: public
 ## GitLab
 
 ## Jira
+
 by Atlassian
 
 ## Taiga

@@ -16,8 +16,9 @@ visibility: public
 
 ### Web/HTTP requests
 
-https://www.twilio.com/blog/5-ways-make-http-requests-ruby
+<https://www.twilio.com/blog/5-ways-make-http-requests-ruby>
 _Basic GET request_
+
 ```ruby
 # nethttp.rb
 require 'uri'
@@ -28,25 +29,30 @@ res = Net::HTTP.get_response(uri)
 puts res.body if res.is_a?(Net::HTTPSuccess)
 ```
 
-
 ## Packages & Repos
 
 ### Gemfile
+
 Install gem from Git repository
+
 ```ruby
 gem 'redcarpet', :git => 'git://github.com/tanoku/redcarpet.git', :branch => 'yourbranch'
 ```
 
 ### Bundle
+
 Install ruby gems locally (for project)
+
 ```bash
 bundle config set --local path '.bundle'
 bundle install
 ```
 
 ### RVM (Ruby Version Manager)
+
 2023-05-08:
 Failed to fetch a version of ruby for me
+
 ```bash
 rvm install ruby-3
 ```

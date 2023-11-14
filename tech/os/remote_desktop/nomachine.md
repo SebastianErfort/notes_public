@@ -5,9 +5,10 @@ category: remote-desktop
 url: ""
 docs: ""
 source: ""
-desc-short: ...
+desc-short: '...'
 tags:
-  - remote-desktop
+  - os/remote-desktop
+visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`

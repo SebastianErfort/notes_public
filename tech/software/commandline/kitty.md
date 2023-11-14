@@ -8,13 +8,17 @@ github: "https://github.com/kovidgoyal/kitty"
 developer: ""
 desc-short: |
   The fast, feature-rich, GPU based terminal emulator
-tags: tech/cli tech/terminal tech/terminal-emulator
+tags:
+  - tech/cli
+  - tech/terminal
+  - tech/terminal-emulator
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
 
 `= ("[Documentation](" + this.docs + ")")`
+
 - [Overview - kitty](https://sw.kovidgoyal.net/kitty/overview/#sessions)
 - [Terminal protocol extensions - kitty](https://sw.kovidgoyal.net/kitty/protocol-extensions/)
 - [Terminal graphics protocol - kitty](https://sw.kovidgoyal.net/kitty/graphics-protocol/)

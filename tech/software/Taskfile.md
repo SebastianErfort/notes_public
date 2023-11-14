@@ -11,33 +11,41 @@ tags: ""
 aliases:
   - Task
 img: "![|20](https://taskfile.dev/img/logo.svg)"
+visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
+
 ## Intallation
+
 - `snap install task --classic` (requires classic containment)
 - [completion](https://taskfile.dev/installation/#setup-completions): install correct [completion script](https://github.com/go-task/task/tree/master/completion) and make sure it's sourced
 
 ## Variables
-  [Example Taskfile.yml](file://rsc/bash/Taskfile.yml)
-  
-## Merge Taskfiles
-namespaces, subfolders, includes: combines Taskfiles by specifying a `Taskfile.yml`
-  ```
-  version: "3"
-  includes:
-    tf: ./taskfiles/terraform.yml
-    releases: ./taskfiles/helmfile.yml
-  ```
-  resulting in something like
-  ```
-  $ task --list
-  task: Available tasks for this project:
-  * releases:apply:   Apply releases
-  * releases:diff:    Show releases diff
-  * tf:apply:         Apply resources creation
-  ```
 
+[Example Taskfile.yml](file://rsc/bash/Taskfile.yml)
+
+## Merge Taskfiles
+
+namespaces, subfolders, includes: combines Taskfiles by specifying a `Taskfile.yml`
+
+```
+version: "3"
+includes:
+  tf: ./taskfiles/terraform.yml
+  releases: ./taskfiles/helmfile.yml
+```
+
+resulting in something like
+
+```
+$ task --list
+task: Available tasks for this project:
+* releases:apply:   Apply releases
+* releases:diff:    Show releases diff
+* tf:apply:         Apply resources creation
+```
 
 ## References
-  - [Introduction to Taskfile](https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92)
+
+- [Introduction to Taskfile](https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92)
