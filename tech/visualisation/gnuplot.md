@@ -3,6 +3,7 @@ title: Gnuplot
 type: software
 category: visualisation
 url: "http://gnuplot.info/"
+visibility: public
 ---
 
 [Documentation](http://gnuplot.info/documentation.html)

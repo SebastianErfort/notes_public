@@ -10,6 +10,7 @@ desc-short: The world's most popular network protocol analyzer
 tags:
   - networking/wireshark
 img: "<img src=\"https://www.wireshark.org/assets/img/wireshark-logo.png\" style=\"width: 80px;\"/>"
+visibility: public
 ---
 # `=this.title`
 

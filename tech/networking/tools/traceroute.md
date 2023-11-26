@@ -2,6 +2,7 @@
 title: traceroute
 type: tool
 category: networking
+visibility: public
 ---
 
 # Traceroute

@@ -2,7 +2,7 @@
 title: DHCP
 acronym: DHCP
 type: protocol
-desc: 
+desc:
 visibility: public
 category: networking
 ---

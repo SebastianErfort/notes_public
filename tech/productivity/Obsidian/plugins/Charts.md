@@ -7,7 +7,7 @@ docs: "https://charts.phibr0.de/Meta/Charts/Obsidian+Charts+Documentation"
 source: ""
 developer: ""
 desc-short: |
-   Obsidian Charts let's you create interactive Charts inside Obsidian
+  Obsidian Charts let's you create interactive Charts inside Obsidian
 tags:
   - tech/Obsdidian
   - Obsidian/plugin

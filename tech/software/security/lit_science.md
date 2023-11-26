@@ -6,6 +6,7 @@ publisher: ""
 year: ""
 isbn: ""
 doi: ""
+visibility: public
 ---
 
 ## `= this.title`

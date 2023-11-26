@@ -8,8 +8,9 @@ source: ""
 developer: ""
 desc-short: |
   ...
-tags: 
+tags:
 license: open-source
+visibility: public
 ---
 # `=this.title`
 

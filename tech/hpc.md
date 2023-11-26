@@ -1,5 +1,6 @@
 ---
 title: HPC
+visibility: public
 ---
 ## Workload Managers
 

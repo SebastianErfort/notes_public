@@ -1,6 +1,7 @@
 ---
 title: Open Source Program Office (OSPO)
 acronym: OSPO
+visibility: public
 ---
 ![](ospo_infographic.pdf)
 
