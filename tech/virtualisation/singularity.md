@@ -4,11 +4,6 @@ type: software
 category: container
 url: https://sylabs.io/
 docs: https://sylabs.io/docs/
-source: ""
-developer: ""
-desc-short: |
-  ...
-tags:
 license: open-source
 visibility: public
 ---

@@ -93,7 +93,19 @@ comment -->
 
 ## Labels
 
-Start typing `~` for available labels, for example ~"In progress" ~Ready ~Blocked. Use double ticks for labels with spaces, e.g. `~"In progress"`.
+See [GitLab documentation](https://docs.gitlab.com/ee/user/project/labels.html).
+
+Labels can be created for groups or projects and are useful to categorise issues, merge requests, etc.
+
+Start typing `~` for available labels, for example `~"In progress"` `~Ready` `~Blocked`. Use double ticks for labels with spaces, e.g. `~"In progress"`. This will render as
+
+<font class="gitlabel_inprogress">In Progress</font>
+<font class="gitlabel_ready">Ready</font>
+<font class="gitlabel_blocked">Blocked</font>
+
+With GitLab EE labels ass [scoped labels](https://docs.gitlab.com/ee/user/project/labels.html#scoped-labels), for example to designate a team.
+
+
 
 ## Emojis
 
