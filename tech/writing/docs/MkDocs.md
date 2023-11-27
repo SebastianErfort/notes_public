@@ -7,7 +7,7 @@ docs: "https://www.mkdocs.org/"
 source: "https://github.com/mkdocs/mkdocs"
 developer: "Copyright © 2014 [Tom Christie](https://twitter.com/starletdreaming), Maintained by the [MkDocs Team](https://www.mkdocs.org/about/release-notes/#maintenance-team)\n"
 desc-short: "MkDocs is a **fast**, **simple** and **downright gorgeous** static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file. Start by reading the [introductory tutorial](https://www.mkdocs.org/getting-started/), then check the [User Guide](https://www.mkdocs.org/user-guide/) for more information.\n"
-tags: ""
+tags: ["writing/docs", "docs/mkdocs"]
 docker-image: squidfunk/mkdocs-material
 visibility: public
 ---
@@ -28,11 +28,11 @@ visibility: public
     mkdocs new my-project
     ```
 
-    will result in files/folders
+    will create files/folders
 
     ```
-    .
-    ├── docs
+    my-project/
+    ├── docs/
     │   └── index.md
     └── mkdocs.yml
     ```
@@ -110,7 +110,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 
 - [TOC](https://python-markdown.github.io/extensions/toc/)
 - [Footnotes](https://python-markdown.github.io/extensions/footnotes/)
-- [Admonition](https://python-markdown.github.io/extensions/admonition/#admonition): not configurable, compatibility with Obsidian call-outs would require work
+- [Admonition](https://python-markdown.github.io/extensions/admonition/#admonition): not configurable, full compatibility with Obsidian call-outs would require work
 - [Definition Lists](https://python-markdown.github.io/extensions/definition_lists/)
 - [`mdx_truly_sane_lists`](https://github.com/radude/mdx_truly_sane_lists): `pip install mdx-truly-sane-lists`
   > Extension for Python-Markdown that makes lists truly sane. Custom indents for nested lists and fix for messy linebreaks and paragraphs between lists.
@@ -225,6 +225,21 @@ some_url: https://example.com
 > A search plugin is provided by default with MkDocs which uses [lunr.js](https://lunrjs.com/) as a search engine.[^1]
 
 [^1]: <https://www.mkdocs.org/user-guide/configuration/#search>
+
+
+## Compatibility
+
+### Obsidian
+
+As can be expected not all Markdown renders the same as different specifications are used.[^2] I have been working on a [MkDocs template] with some changes to the default Markdown config and adding some extensions/plugins to achieve as much as possible compatibility. The [list of to-dos] is getting shorter, but some critical features are yet missing.
+
+Then there are some quite helpful plugins in Obsidian, especially [[DataView]]. There have been requests in the forums, but no solution yet.
+Maybe one day there will be a MkDocs DataView plugin, or system-independent plugins. For now, [[DataView#Export|export rendered DataView results from Obsidian]].
+
+> [!todo] add missing links
+
+[^2]: [[Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
+
 
 ## References
 

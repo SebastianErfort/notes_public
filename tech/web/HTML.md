@@ -33,14 +33,9 @@ Character | Code | Description
       ```
 
 - overlay
-<<<<<<< HEAD
     - filter
         - blur
             - <https://stackoverflow.com/questions/27583937/how-can-i-make-a-css-glass-blur-effect-work-for-an-overlay>
-=======
-  - filter
-    - blur
-      - https://stackoverflow.com/questions/27583937/how-can-i-make-a-css-glass-blur-effect-work-for-an-overlay
 
 
 # References
