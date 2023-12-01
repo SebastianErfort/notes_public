@@ -3,15 +3,12 @@ url: "https://daringfireball.net/projects/markdown/"
 visibility: public
 title: Markdown
 ---
-## References
+Resource | Links
+-|-
+Related | [[YAML]]
+Cheatsheets | [Cheat Markdown cheatsheet](file://.config/cheat/cheatsheets/personal/markdown)</br>[Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)
 
-- [Cheat Markdown cheatsheet](file://.config/cheat/cheatsheets/personal/markdown)
-- [Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-- <https://www.markdownguide.org/>
-    - [Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-- [[YAML]]
-
-# Tools & Software
+## Tools & Software
 
 ```dataview
 TABLE WITHOUT ID
@@ -21,11 +18,11 @@ WHERE type = "software" AND category = "markdown"
 SORT title
 ```
 
-# Snippets
+## Snippets
 
 [Snippets folder](file://src)
 
-## Tables
+### Tables
 
 <div style="display: flex; justify-content: space-between; width: 100%">
 <div style="width: 45%">
@@ -51,17 +48,17 @@ SORT title
 - leading and closing `|` can be omitted (in some Markdown implementations?)
 - use `:` for alignment
 
-## Footnotes
+### Footnotes
 
 Example [^1]
 [^1]: Footnote text
 
-## Code blocks
+### Code blocks
 
 [_List of Markdown code block languages_](https://markdown.land/markdown-code-block)
 ![[list_markdown_codeblock_languages.txt]]
 
-## Columns
+### Columns
 
 Two fixed-width columns
 <div style="display: flex; justify-content: space-between; width: 100%">
@@ -73,15 +70,18 @@ Column 2
 </div>
 </div>
 
-## Custom CSS
+### Custom CSS
 
 <!-- Doesn't work atm
 Font Awesome icons: include relevant `.css` files, then use HTML
 <i class="fa-brands fa-linux"></i> -->
 
-# [[mermaid| Graphs: Mermaid]]
+## Mermaid Graphs
 
-# Flavours, Specifications and Implementations
+[[mermaid|See notes on Mermaid]]
+
+
+## Flavours, Specifications and Implementations
 
 - Python-Markdown: Python implementation of [John Gruber’s Markdown](https://daringfireball.net/projects/markdown/)
 - [Goldmark](https://github.com/yuin/goldmark/): CommonMark compliant
@@ -93,15 +93,15 @@ Discussion
 
 - [Blank lines before lists, revisited](https://talk.commonmark.org/t/blank-lines-before-lists-revisited/1990/5)
 
-## [CommonMark](http://commonmark.org/)
+### [CommonMark](http://commonmark.org/)
 
 used by [[Obsidian]], [[Pandoc]] mastermind John MacFarlane is one of the founders and maintainers
 [Specification](https://spec.commonmark.org/0.30/) | [Forum](https://talk.commonmark.org/) | [Tutorial](https://commonmark.org/help/tutorial/)
 
-# Presentations
+## Presentations
 
-## LaTeX Beamer
+### LaTeX Beamer
 
-## reveal.js
+### reveal.js
 
 See [[public/tech/software/Software#Pandoc|Software: Pandoc]] and [[public/tech/software/Software#reveal.js|Software: reveal.js]]

@@ -138,12 +138,6 @@ dateformat(field, "yyyy-MM-dd") # format dates
 
 [Dataview task and project examples](https://forum.obsidian.md/t/dataview-task-and-project-examples/17011)
 
-### List
-
-### Table
-
-### Task
-
 - [ ] a task
 
 Query for all tasks in this file

@@ -7,7 +7,7 @@ tags:
 visibility: public
 docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
 ---
- 
+
 See also [[rug/lwp/Puppet/Puppet|Work notes LWP: Puppet]]
 
 `=("[Documentation](" + this.docs + ")")`
@@ -27,7 +27,7 @@ See also [[rug/lwp/Puppet/Puppet|Work notes LWP: Puppet]]
 
 ## Resources
 
-- [Metaparameters](https://www.puppet.com/docs/puppet/7/metaparameter.html): attributes that work with any resource type
+- [Meta-parameters](https://www.puppet.com/docs/puppet/7/metaparameter.html): attributes that work with any resource type
 - [Resource Types](https://www.puppet.com/docs/puppet/7/resource_types.html)
     - [File](https://www.puppet.com/docs/puppet/7/types/file.html)
     - [Exec](https://www.puppet.com/docs/puppet/7/types/exec.html)

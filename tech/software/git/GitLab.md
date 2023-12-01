@@ -26,7 +26,8 @@ See also [[Gitlab_Agile|GitLab: Agile]]
 - Issues
     - [Tasks](https://docs.gitlab.com/ee/user/tasks.html) (type of [Work Items]())
     - [Description templates](https://docs.gitlab.com/ee/user/project/description_templates.html)
-        - [From URL: pre-filled values](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#using-a-url-with-prefilled-values)
+    - [By sending an email](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#by-sending-an-email): requires [incoming email](https://docs.gitlab.com/ee/administration/incoming_email.html)
+    - [From URL: pre-filled values](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#using-a-url-with-prefilled-values)
 
 > [!myidea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
 
@@ -221,6 +222,17 @@ Reset user password ^8cee12
 ```bash
 sudo gitlab-rake "gitlab:password:reset[sidneyjones]"
 ```
+
+
+## Elasticsearch (EE)
+
+<https://docs.gitlab.com/ee/integration/advanced_search/elasticsearch.html>
+
+
+## Service Desk
+
+<https://docs.gitlab.com/ee/user/project/service_desk/index.html>
+
 
 # Wiki
 
