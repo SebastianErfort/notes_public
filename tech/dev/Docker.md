@@ -4,8 +4,8 @@ type: software
 category: container
 tags:
   - dev/Docker
-url: https://docker.com
-docs: https://docs.docker.com/
+url: "https://docker.com"
+docs: "https://docs.docker.com/"
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")` | `= ("[Source](" + this.source + ")")`

@@ -2,8 +2,8 @@
 title: awk
 type: software
 category: cl-utility
-url: https://www.gnu.org/software/gawk
-docs: https://www.gnu.org/software/gawk/manual/gawk.html
+url: "https://www.gnu.org/software/gawk"
+docs: "https://www.gnu.org/software/gawk/manual/gawk.html"
 developer: ""
 desc-short: |
   The awk utility interprets a special-purpose programming language that makes it possible to handle simple data-reformatting jobs with just a few lines of code.
@@ -11,7 +11,7 @@ desc-short: |
 tags:
   - dev/awk
   - Linux/awk
-rsc: file://rsrc/awk
+rsc: "file://rsrc/awk"
 aliases:
   - gawk
 visibility: public
