@@ -11,12 +11,30 @@ tags: ["writing/docs", "docs/mkdocs"]
 docker-image: squidfunk/mkdocs-material
 visibility: public
 ---
+# MkDocs
+
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
 
+> [!warning] Caveats
+>
+> - use only relative links, not absolute links, for compatibility between different Markdown viewers/editors
+>     - easiest using Wiki-links `[[...]]` as files are automatically located
+>     - relative links without explicit `./` are relative to **base directory** (`docs`)
+>     - even worse with Wiki-links extension
+
+> [!tip] [[Obsidian]]
+> Activate shortest possible paths in settings to achieve compatible links.
+ 
 ## Getting Started
 
-1. install `mkdocs` package (from package repos or via [[Python#pip|pip]])
+1. install `mkdocs` package and other requirements (from package repos or via `pip`, consider creating a new Python virtual environment)
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+    or only MkDocs package
 
     ```bash
     pip install mkdocs
@@ -44,11 +62,14 @@ visibility: public
     ```
 
     or in separate subdirectories if we include more sources (adding submodules to our Wiki repo doesn't work for the GitLab Wiki as it doesn't pull submodules, **but** it sucks anyway)
-1. start server for local testing
+1. start server for local testing or build (output to `public/`)
 
     ```bash
     mkdocs serve
+    # or
+    mkdocs build
     ```
+
 
 ## Documentation
 
@@ -100,9 +121,15 @@ See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pyp
 
   ```
 
-### Markdown
+### Markdown in MkDocs
 
-To be rendered correctly, notes have to adhere MkDocs's Markdown parser's specification, see  [[Python-Markdown#Specifications|Python-Markdown Specifications]].
+To ensure compatibility between MkDocs and other Markdown renderers, try to stick to [[Python-Markdown#Specifications|Python-Markdown Specifications]].
+A number of Markdown extensions and MkDocs plugins is used, see `mkdocs.yml`. The script `util/markdown.sh` contains a number of functions to edit Markdown files in a batch to
+
+- `md_fix_lists_empty_line`: add empty lines before Markdown lists that wouldn't render as lists in MkDocs otherwise
+- `md_fix_linestart_obsidian-tag`: add text before Obsidian inline tage that would render as headings in MkDocs otherwise
+- `fm_fix_tags_format`: ensure tags in YAML front matter are proper YAML arrays (Obsidian accepts just a space as separator)
+
 
 #### Markdown Extensions
 
@@ -133,49 +160,49 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
         - [Embedding external files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files)
     - [Snippets](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets): adds the ability to embed content from arbitrary files into a document, including other documents or source files, by using a simple syntax
 
-Example
-
-```yaml
----
-# some sections error'd with 2 spaces indentation, keep 4!
-site_name:
-# site_url:
-repo_name: GitLab
-repo_url:
-edit_uri_template: '-/wikis/{path!q}/edit'  # doesn't work yet
-# dev_addr: '127.0.0.1:8000'  # address used when running mkdocs serve
-plugins:
-    - search:
-        lang: en
-theme:
-  name: material
-  palette:
-    primary: custom  # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors
-extra_css:
-  - stylesheets/extra.css
-markdown_extensions:
-    - pymdownx.tasklist
-    - footnotes
-    - toc:
-        permalink: "🔗"  # Generate permanent links at the end of each header
-        baselevel: 2
-        # marker: '[[_TOC_]]'  # no effect, material documentation doesn't mention this keyword
-        # permalink_title:  # can maybe used with variable/template to get heading text instead of icon?
-    - wikilinks  # see https://python-markdown.github.io/extensions/wikilinks/
-    - attr_list
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-    - pymdownx.superfences:
-        custom_fences:
-            - name: mermaid
-              class: mermaid
-              format: !!python/name:pymdownx.superfences.fence_code_format
-    - pymdownx.highlight:
-        linenums: true
-...
-
-```
+<!-- TODO link a file once there is a default MkDocs template -->
+> [!example]- Example `mkdocs.yml` configuration
+> ```yaml
+> ---
+> # some sections error'd with 2 spaces indentation, keep 4!
+> site_name:
+> # site_url:
+> repo_name: GitLab
+> repo_url:
+> edit_uri_template: '-/wikis/{path!q}/edit'  # doesn't work yet
+> # dev_addr: '127.0.0.1:8000'  # address used when running mkdocs serve
+> plugins:
+>     - search:
+>         lang: en
+> theme:
+>   name: material
+>   palette:
+>     primary: custom  # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors
+> extra_css:
+>   - stylesheets/extra.css
+> markdown_extensions:
+>     - pymdownx.tasklist
+>     - footnotes
+>     - toc:
+>         permalink: "🔗"  # Generate permanent links at the end of each header
+>         baselevel: 2
+>         # marker: '[[_TOC_]]'  # no effect, material documentation doesn't mention this keyword
+>         # permalink_title:  # can maybe used with variable/template to get heading text instead of icon?
+>     - wikilinks  # see https://python-markdown.github.io/extensions/wikilinks/
+>     - attr_list
+>     - pymdownx.emoji:
+>         emoji_index: !!python/name:materialx.emoji.twemoji
+>         emoji_generator: !!python/name:materialx.emoji.to_svg
+>     - pymdownx.superfences:
+>         custom_fences:
+>             - name: mermaid
+>               class: mermaid
+>               format: !!python/name:pymdownx.superfences.fence_code_format
+>     - pymdownx.highlight:
+>         linenums: true
+> ...
+> 
+> ```
 
 ## Plugins
 
@@ -193,10 +220,10 @@ markdown_extensions:
     ```
 
 - [mkdocs-macros](https://mkdocs-macros-plugin.readthedocs.io/en/latest/): A plugin for unleashing the power of Mkdocs, by using variables and macros
-- [mkdocs-gitlab-plugin](https://gitlab.inria.fr/vidjil/mkdocs-gitlab-plugin): MkDocs plugin to transform strings such as #1234, %56, or !789 into links to a Gitlab repository.
+- [mkdocs-gitlab-plugin](https://gitlab.inria.fr/vidjil/mkdocs-gitlab-plugin): MkDocs plugin to transform strings such as #1234, %56, or !789 into links to a GitLab repository.
 - [mkdocs-ezlinked-plugin](https://pypi.org/project/mkdocs-ezlinked-plugin/): enables easier linking between pages
 - [mkdocs-obsidian-support-plugin](https://github.com/ndy2/mkdocs-obsidian-support-plugin): convert Obsidian call-outs and wiki-link images to mkdocs-material compatible code
-    Problems
+    Issues:
     - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
 
 ## [YAML Metadata or Front Matter](https://www.mkdocs.org/user-guide/writing-your-docs/#yaml-style-meta-data)

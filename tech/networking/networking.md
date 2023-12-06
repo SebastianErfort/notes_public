@@ -22,14 +22,13 @@ Four 8-bit numbers `0-255.0-255.0-255.0-255`
 
 [IANA (Internet Assigned Numbers Authority): Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt) ^d2523a
 
-Excerpt
-
-```
-Service   Port    Transport   Description
-Name     Number   Protocol
-socks     1080        tcp       Socks
-socks     1080        udp       Socks
-```
+> [!example] Excerpt
+> ```
+> Service   Port    Transport   Description
+> Name     Number   Protocol
+> socks     1080        tcp       Socks
+> socks     1080        udp       Socks
+> ```
 
 ## Technologies and Protocols
 

@@ -100,11 +100,11 @@ find /var/log -type f -printf "%S\t%p\n" | gawk '$1 < 1.0 && $1 > 0.0 {print}'
 [wget vs. curl @howtogeek](https://www.howtogeek.com/816518/curl-vs-wget/)
 [[ssh]]
 
-# net/tools/arping similar to `ping`, but can give results when `ping` doesn't. Reports MAC address
+Tags: #net/tools/arping similar to `ping`, but can give results when `ping` doesn't. Reports MAC address
 
 [@howtogeek](https://www.howtogeek.com/813741/linux-arping-command/)
 
-# Linux/systemd network adapter naming: <https://systemd.io/PREDICTABLE_INTERFACE_NAMES/>)
+Tags: #Linux/systemd network adapter naming: <https://systemd.io/PREDICTABLE_INTERFACE_NAMES/>)
 
 - disable through kernel parameter ``net.ifnames=0``
 - [Netplan.io](https://netplan.io/)
@@ -317,6 +317,12 @@ Written in Python
 ## EFI
 
 if the directory `/sys/firmware/efi` exists, the system uses UEFI boot #tech/uefi
+
+
+# Security
+
+- <https://www.csoonline.com/article/567855/top-linux-antivirus-software.html>
+
 
 # [[Hardware]]
 

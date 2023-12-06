@@ -48,6 +48,12 @@ See `man systemd.directives` for available stanzas.
 - [Service unit configuration](https://www.freedesktop.org/software/systemd/man/systemd.service.html#)
 - [Exection environment configuration](https://www.freedesktop.org/software/systemd/man/systemd.exec.html)
 
+
+## Security
+
+[Hardening systemd - Ubuntu version](https://github.com/konstruktoid/hardening)
+
+
 ## References
 
 - [Create a Systemd service @linuxhandbook.com](https://linuxhandbook.com/create-systemd-services/)

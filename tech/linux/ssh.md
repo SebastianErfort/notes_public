@@ -12,7 +12,7 @@ visibility: public
 ```ssh_config
 Host xyz x* WhatEverYouWannaCallIt
   HostName 123.456.78.90
-  User Durp
+  User Picard
   IdentityFile ~/.ssh/super-secret-key
 ```
 
@@ -67,12 +67,13 @@ program scp://user@server[:port]//path/to/file
 # supported protocols depend on program: sftp, rsync, https, ...
 ```
 
-[Run local script on remote host (DaveMcKay@HowToGeek)](https://www.howtogeek.com/825102/how-to-run-a-local-script-on-a-remote-linux-server/)
+Run local script on remote host[^1]
 
 ```bash
 ssh user@host "bash -s" -- < local_script.sh arg1 arg2 ...
 ```
 
+[^1]: <https://www.howtogeek.com/825102/how-to-run-a-local-script-on-a-remote-linux-server/>
 
 ### SSH-Add
 
@@ -87,19 +88,22 @@ ssh-add -t 2h ~/.ssh/<key>
 
 [cheat cheatsheet](file://.config/cheat/cheatsheets/community/ssh-keygen)
 
-Algorithm recommendation[^1][^2]
+Algorithm recommendation[^2][^3]
 
 ```sh
 ssh-keygen -t ed25519 -a 100
 ```
 
-[^1]: https://security.stackexchange.com/a/144044
-[^2]: https://blog.stribik.technology/2015/01/04/secure-secure-shell.html
+[^2]: <https://security.stackexchange.com/a/144044>
+[^3]: <https://blog.stribik.technology/2015/01/04/secure-secure-shell.html>
 
 ## SOCKS proxy
 
 Tags: #tech/SSH/SOCKS
-[[networking#^d2523a|IANA port]]: 1080
+default port:[^4] 1080
+
+[^4]: [IANA: ports](networking#^d2523a)
+
 
 SSH config
 
@@ -112,9 +116,9 @@ Host hostname
     DynamicForward 1080 # corresponds to CL option -D
 ```
 
-then configure applications to use that proxy.[^1]
+then configure applications to use that proxy.[^5]
 
 For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs, e.g. using the [[Firefox#FoxyProxy|extension FoxyProxy]].
 
 [RedHat article]: https://www.redhat.com/sysadmin/ssh-dynamic-port-forwarding
-[^1]: [RedHat article]
+[^5]: [RedHat article]
