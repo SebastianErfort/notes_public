@@ -6,7 +6,7 @@ visibility: public
 ---
 See also
 [[public/tech/software/Software#Dev|My notes: Software - Dev]]
-[[Gitlab#CI/CD|GitLab CI/CD]]
+[[rug/lwp/GitLab#CI/CD|GitLab CI/CD]]
 
 ## Command Line
 
@@ -73,7 +73,7 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 ### Git
 
 - [[git|Notes on Git]]
-- [[Gitlab|Notes on GitLab]]
+- [[rug/lwp/GitLab|Notes on GitLab]]
 - [[Github|Notes on GitHub]]
 - [pre-commit](https://pre-commit.com/): [GitHub](https://github.com/pre-commit/pre-commit)
   > A framework for managing and maintaining multi-language pre-commit hooks.
@@ -109,19 +109,9 @@ See [[make]]
 ### [[Taskfile]]
 
 
-## CI/CD
+## DevOps and CI/CD
 
-### GitHub Actions
-
-Tools
-
-- [nektosact](https://nektosact.com/): [GitHub](https://github.com/nektos/act)
-    > Run your GitHub Actions locally 🚀
-
-## Dependencies
-
-- > [!info]- [FASTEN project](https://www.fasten-project.eu/) | [GitHub](https://github.com/fasten-project/fasten)
-  > > The FASTEN project partners are developing an intelligent software package management systems that will enhance robustness and security in software ecosystems. The research and development activities include innovative ecosystem analysis techniques, with C, Java and Python applications. Derived techniques will tackle the problems of security and risk evaluation, license compliance and change impact analysis. Moreover, a back-end service and a knowledge base will host the results of those analyses while the integration of those analyses will reach the developer’s workflow and Continuous Integration (CI) tool chains.
+See [[DevOps]]
 
 ## Code Testing
 
@@ -176,6 +166,16 @@ See [[databases|my notes on databases]]
 ![[Android]]
 
 ## [[design|UI and Design]]
+
+### TUIs
+
+- [Textualize:](https://www.textualize.io/): application framework for Python. Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser.
+  [Docs](https://textual.textualize.io/) | [GitHub](https://github.com/Textualize/textual)
+  Examples
+  
+    - [[rich|rich document viewer]]
+    - [Trogon](https://github.com/Textualize/trogon): Easily turn your [Click](https://click.palletsprojects.com) CLI into a powerful terminal application
+
 
 ## Misc
 

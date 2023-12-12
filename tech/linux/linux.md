@@ -15,7 +15,12 @@ Installation
 
 # Command Line
 
-[[UbuntuServerCLI_cheatsheet.pdf|Ubuntu Server CLI Cheatsheet]]
+See 
+
+- [[UbuntuServerCLI_cheatsheet.pdf|Ubuntu Server CLI Cheatsheet]]
+- shells: [[bash]], [[zsh]]
+- environment
+    - [Environment modules](https://modules.sourceforge.net/)
 
 | Shortcut | Description |
 |--|---|
@@ -144,7 +149,7 @@ CONFIG=$(base64 -w 0 config.yaml) # convert multi-line file to base64 string w/o
 echo $CONFIG | base64 -d # decode
 ```
 
-## Processes: monitoring and analysis
+## Processes: Monitoring and Analysis
 
 - `(h)top`
 - `ps`
@@ -152,6 +157,16 @@ echo $CONFIG | base64 -d # decode
   ```bash
   ps -fC cmd # find processes for command cmd
   ```
+
+- detach/disown a process from the current terminal (so it keeps running when you close it)
+  
+    ```bash
+    # ctrl+z to stop the process
+    bg %<job number> # continue job in background
+    disown %<job number> # detach from current terminal
+    ```
+
+    To move a process to a different terminal, consider [reptyr](https://github.com/nelhage/reptyr).
 
 - System Signals: [Snippets](file://rsc/bash/trap_signal.sh)
     - [Linux Signals davemckay@howtogeek](https://www.howtogeek.com/814925/linux-signals-bash/)

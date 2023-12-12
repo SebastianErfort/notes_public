@@ -1,7 +1,8 @@
 ---
-title: Shoes Lasportiva Katana Yellowblack
+title: Black
 type: software
-category: linter
+category:
+  - linter
 url: "https://black.readthedocs.io/en/stable/"
 docs: "https://black.readthedocs.io/en/stable/"
 source: "https://github.com/psf/black"
@@ -14,3 +15,9 @@ visibility: public
 
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
+
+[[pre-commit]] hooks ^13286c
+
+- [Black repo @GH](https://github.com/psf/black)
+- [Black pre-commit mirror repo @GH](https://github.com/psf/black-pre-commit-mirror) (faster, only pre-commit stuff)
+

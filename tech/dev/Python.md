@@ -8,7 +8,7 @@ visibility: public
 ---
 Category | Tools
 -|-
-Package managers | pip
+Package managers | pip, [[pipx]]
 Linting & syntax | [Black](black.md) - pycodestyle
 
 # References
@@ -105,11 +105,18 @@ Merge two dictionaries [stackoverflow](https://stackoverflow.com/a/26853961)
 
 See [documentation on the import system](https://docs.python.org/3/reference/import.html).
 
-## Sources
+## Package Sources and Managers
 
-[pip](https://pip.pypa.io/en/stable/): pip is the [package installer for Python](https://packaging.python.org/guides/tool-recommendations/). You can use it to install packages from the [Python Package Index](https://pypi.org/) and other indexes
+Package managers
+
+- [pip](https://pip.pypa.io/en/stable/): pip is the [package installer for Python](https://packaging.python.org/guides/tool-recommendations/). You can use it to install packages from the [Python Package Index](https://pypi.org/) and other indexes
+- [pipx](https://github.com/pypa/pipx): Install and Run Python Applications in Isolated Environments
 
 - [requirements file](https://pip.pypa.io/en/stable/reference/requirements-file-format/)
+
+Package sources
+
+- [PyPI](pypi.org)L Python Package Index
 
 _awesome-python:_ curated list of awesome Python frameworks, libraries, software and resources [Github](https://github.com/vinta/awesome-python)
 

@@ -2,12 +2,17 @@
 visibility: public
 title: Software Testing
 ---
-## Spec
+## ShellSpec
 
-# dev/test/InSpec #dev/test/spec #dev/test/rspec
+[ShellSpec Website](https://shellspec.info)
+
+
+## InSpec and RSpec
+
+Tags: #dev/test/InSpec #dev/test/spec #dev/test/rspec
 
 - [[InSpec|My notes on Chef InSpec]]
-- [[Code Testing|LWP: Code Testing > InSpec]]
+- [[Code Testing|Work notes LWP: Code Testing > InSpec]]
 - [![|20](github.png) InSpec](https://github.com/inspec/inspec)
 
 ### Methods

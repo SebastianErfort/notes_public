@@ -1,8 +1,8 @@
 ---
 visibility: public
-title: Web-dev
+title: Web Development
 ---
-Gatsby, Jekyll, Hugo, Middleman, Harp, Hexo, or Brunch[Gatsby, Jekyll, Hugo, Middleman, Harp, Hexo, or Brunch[HTML]]
+Gatsby, Jekyll, Hugo, Middleman, Harp, Hexo, or Brunch
 
 # References
 
@@ -36,11 +36,13 @@ Free $0
 - Unlimited static requests
 - Unlimited bandwidth
 
-### [[Gitlab#GitLab Pages|GitLab Pages]]
+### [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]
+
+See [[public/tech/software/git/GitLab#GitLab Pages|notes on GitLab Pages]].
 
 ## Static Site Frameworks
 
-### [[hugo]]
+### [[Hugo]]
 
 ### Hexo
 
@@ -80,6 +82,16 @@ Open Sustainable Goals (SDG)
 ## Frameworks
 
 [Jamstack: Themes for Hugo, Jekyll, ...](https://jamstackthemes.dev/)
+
+
+### Astro
+
+[Website](https://astro.build/) | [Documentation](https://docs.astro.build/en/getting-started/) | [Source](https://github.com/withastro/astro)
+
+Themes
+
+- [Astroplate](https://github.com/zeon-studio/astroplate)
+
 
 ### Gatsby
 

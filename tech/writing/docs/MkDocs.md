@@ -244,7 +244,7 @@ some_url: https://example.com
 
 ## Integrations
 
-- [[Gitlab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
+- [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
 - Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 
 ### Search

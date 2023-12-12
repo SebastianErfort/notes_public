@@ -25,6 +25,29 @@ category: shell
 
 # Command Line
 
+## Keyboard Shortcuts & Readline
+
+See [readline man page](https://www.man7.org/linux/man-pages/man3/readline.3.html).
+
+Shortcut | Description
+-|-
+<kbd>ctrl+x, ctrl+e</kbd> | editing mode in default editor to enter commands like you would in a script, executed upon save+close. Also great when pasting (longer) scripts into your terminal
+
+Customise in config::  `~/.inputrc`
+
+- enable <kbd>Pg up/down</kbd> to search command history, based on characters typed so far
+
+    ```config
+    "\e[5~": history-search-backward
+    "\e[6~": history-search-forward
+    ```
+- *bracketed paste*: encapsulate pasted content in special control characters to avoid command execution upon newline characters - this greatly enhances pasting commands into your commandline, especially if you're clumsy or don't trust your various copy buffers. 
+
+    ```config
+    set enable-bracketed-paste On
+    ```
+
+
 ## Completion
 
 See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-completion/completions) and `/etc/bash_completion.d/`
@@ -190,8 +213,20 @@ or shell-parameter expansion, manipulation and interpolation #dev/bash, see [bas
   # use default value if parameter is unset or null
   myvar=${1:-Default}
   # assign default to parameter if unset or null
-  : ${myvar:=Default}
+  [[ -f "${myfile:=/tmp/myfile}" ]] || touch "$myfile"
   ```
+  
+See also <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expansion>
+
+- [Bash Error Handling @RedHat](https://www.redhat.com/sysadmin/bash-error-handling)
+- [Tilde Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Tilde-Expansion)
+- [Shell Parameter Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion)
+- [Command Substitution](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Substitution)
+- [Arithmetic Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Arithmetic-Expansion)
+- [Process Substitution](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Process-Substitution)
+- [Word Splitting](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Word-Splitting)
+- [Filename Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Filename-Expansion)
+- [Quote Removal](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Quote-Removal)
 
 ### Arrays
 
@@ -247,7 +282,7 @@ ${#arr[@]}
 
 ## Regular Expressions
 
-# dev/regex
+Tags: #dev/regex
 
 Expression   | Description
 ------------|-----------
@@ -448,19 +483,6 @@ Error handling[^1]
 
 [^1]: <https://stackoverflow.com/questions/64786/error-handling-in-bash>
 
-# Shell Expansion
-
-See <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expansion>
-
-- [Bash Error Handling @RedHat](https://www.redhat.com/sysadmin/bash-error-handling)
-- [Tilde Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Tilde-Expansion)
-- [Shell Parameter Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Shell-Parameter-Expansion)
-- [Command Substitution](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Substitution)
-- [Arithmetic Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Arithmetic-Expansion)
-- [Process Substitution](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Process-Substitution)
-- [Word Splitting](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Word-Splitting)
-- [Filename Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Filename-Expansion)
-- [Quote Removal](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Quote-Removal)
 
 # References
 

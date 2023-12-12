@@ -35,6 +35,7 @@ Book | [GitHub](https://github.com/alex-shpak/hugo-book) [Demo](https://hugo-boo
 Clarity | [GitHub](https://github.com/chipzoller/hugo-clarity) [Demo](https://neonmirrors.net/) | A technology-minded theme for Hugo based on VMware's open-source [Clarity Design System](https://clarity.design/) featuring rich code support, dark/light mode, mobile support, and much more
 DocuAPI | [GitHub](https://github.com/bep/docuapi) [Demo](https://docuapi.netlify.app/) | **DocuAPI** is a beautiful multilingual API documentation theme for [Hugo](http://gohugo.io/). This theme is built on top of the beautiful work of [Robert Lord](https://github.com/lord) and others on the [Slate](https://github.com/slatedocs/slate) project ([Apache 2 License](https://github.com/slatedocs/slate/blob/master/LICENSE)). The JS part has recently been rewritten from Jquery to [AlpineJS](https://alpinejs.dev/).
 Doks |  [Website](https://getdoks.org/) | Modern Documentation Theme
+Hugoplate | [GH](https://github.com/zeon-studio/hugoplate) | free starter template built with Hugo and TailwindCSS that will save you hours of work
 LoveIt | [GitHub](https://github.com/dillonzq/LoveIt) | clean, elegant but advanced blog theme
 Stack | [GitHub](https://github.com/CaiJimmy/hugo-theme-stack) [Demo](https://demo.stack.jimmycai.com/) | Card-style blog, dark mode (switchable), tags, archives
 

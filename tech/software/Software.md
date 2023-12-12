@@ -2,6 +2,7 @@
 title: Software
 visibility: public
 ---
+> [!todo] clean up this mess
 
 # Package Repositories and Managers
 
@@ -90,6 +91,14 @@ npm list [-g] # list installed package(s) with version and dependencies
 ## Maths
 
 [SymPy](https://www.sympy.org/en/index.html): A computer algebra system written in pure Python
+
+
+# Organisation and Management
+
+## Events
+
+- [indico](https://getindico.io/): The effortless open-source tool for event organisation, archival and collaboration. Developed and used by [[CERN]], also used by United Nations.
+
 
 # Finance
 

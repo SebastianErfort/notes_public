@@ -44,7 +44,7 @@ Tags: #design/fonts
 - Feather icons: [GitHub](https://github.com/feathericons/feather) | <a href="https://feathericons.dev/">feathericons.dev</a>
 - [Icons8](https://icons8.com/)
 - <https://iconduck.com/>
-- GitLab: [[Gitlab#^8b2ea8|GitLab icon SVGs]]
+- GitLab: [[rug/lwp/GitLab#^8b2ea8|GitLab icon SVGs]]
 - [Lucide open source icons](https://lucide.dev/) [![|20](github.png)](https://github.com/lucide-icons/lucide)
     - used by [[Obsidian]]
 
@@ -61,6 +61,7 @@ Tags: #design/fonts
 
 ## Tools
 
+- [[Inkscape]]: free vector graphics program
 - [Figma](https://www.figma.com/): collaborative design tool (has free version)
 
 ## Help
