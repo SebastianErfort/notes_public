@@ -42,9 +42,9 @@ See also [presentation on GitLab](sebastian/2023_presentation_GitLab/slides.html
   }
 }%%
 graph LR
-  ni["<b>New Issue/MR</b><div style='text-align: left;'>From previous? Template?</br>Relevant info, link related</br>To-Dos and <em>Tasks</em></br>Label, assign, prioritise</br>Prioritise and schedule</br></div><em>Ready</em></br>_"]
-  --> ci["<b>Working on Issue/MR</b><div style='text-align: left'>and <em>update</em></div><em>In Progress</em></br>_"]
-  --> cc["<b>Close Issue/MR</b><div style='text-align: left;'>Review</br>Remaining To-Dos? New issue/MR?</br>(Announce 'problem solved')</br>update other systems</br></div>Close issue</br>_"]
+  ni["<b>New Issue/MR</b><div style='text-align: left;'>From previous? Template?</br>Relevant info, link related</br>To-Dos and <em>Tasks</em></br>Label, assign, prioritise</br>Prioritise and schedule</br></div><em>Ready</em></br>&nbsp;"]
+  --> ci["<b>Working on Issue/MR</b><div style='text-align: left'>and <em>update</em></div><em>In Progress</em></br>&nbsp;"]
+  --> cc["<b>Close Issue/MR</b><div style='text-align: left;'>Review</br>Remaining To-Dos? New issue/MR?</br>(Announce 'problem solved')</br>update other systems</br></div>Close issue</br>&nbsp;"]
   -->|"refine, link,</br>archive"| kms[(KMS)]
 ```
 
