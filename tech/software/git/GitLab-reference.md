@@ -2,10 +2,10 @@
 tags:
   - dev/GitLab
 visibility: public
-title: GitLab-reference
+title: GitLab Reference
 ---
 
-See also [[Gitlab|my notes on GitLab]] and [[rug/lwp/GitLab|Work notes LWP: GitLab]]
+See also [[Gitlab|my notes on GitLab]] and [[GitLab/GitLab|Work notes LWP: GitLab]].
 
 **Table of Contents**
 
@@ -88,6 +88,16 @@ Commenting: `<!-- ... -->`
 <!-- This is a
 comment -->
 ```
+
+Embed images
+
+```markdown
+<!-- since version 15.7 GitLab supports attributesin Markdown-esk syntax-->
+![test](http://trekmovie.com/wp-content/uploads/2017/03/facepalm-head.jpg){width=20%}
+<!-- HTML also works, but style attributes don't -->
+<img src="..." width="50%">
+```
+
 
 # GitLab Webinterface
 

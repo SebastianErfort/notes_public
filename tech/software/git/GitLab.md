@@ -28,8 +28,7 @@ See also [[Gitlab_Agile|GitLab: Agile]]
     - [Description templates](https://docs.gitlab.com/ee/user/project/description_templates.html)
     - [By sending an email](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#by-sending-an-email): requires [incoming email](https://docs.gitlab.com/ee/administration/incoming_email.html)
     - [From URL: pre-filled values](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#using-a-url-with-prefilled-values)
-
-> [!myidea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
+      > [!idea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
 
 ## Markdown/HTML
 

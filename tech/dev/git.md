@@ -7,6 +7,27 @@ tags:
   - dev/Github
 visibility: public
 ---
+| Resource | Reference                                                    |
+| -------- | ------------------------------------------------------------ |
+| Commands | [Cheatsheet](file://.config/cheat/cheatsheets/personal/git) |
+
+## Clone and Checkout
+
+### Sparse Checkout
+
+[Git documentation](https://git-scm.com/docs/sparse-checkout) |  [Git command sparse-checkout](https://git-scm.com/docs/git-sparse-checkout)
+
+Examples
+
+- [[README|Work RUG: LWP-Docs]]
+
+
+See also
+
+- <https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/>
+- <https://stackoverflow.com/questions/47541033/sparse-checkouts-how-does-it-works>
+
+
 ## Editing
 
 ```bash
@@ -18,7 +39,7 @@ git diff
 git diff <first branch>...<second branch>
 ```
 
-## Config
+## Repositories
 
 ```bash
 git config --global -e # Edit global git config file
@@ -56,6 +77,9 @@ echo <dirname> >> .git/info/sparse-checkout
 
 ### Authentication
 
+
+#### Git Credential Helpers
+
 [Git credential helpers](https://git-scm.com/docs/gitcredentials): Providing usernames and passwords to Git
 
 - [`credential-cache`](https://git-scm.com/docs/git-credential-cache): temporarily store passwords in memory
@@ -76,7 +100,10 @@ echo password=$GIT_PW
 
 [^1]: <https://alanedwardes.com/blog/posts/git-username-password-environment-variables/>
 
-Alternatively username and password can be provided through a HTTPS URL, e.g.
+
+#### Access Tokens and URL Credentials
+
+Alternatively username and password or an access token can be provided through a HTTPS URL, e.g.
 
 ```bash
 git clone https://$GIT_USER:$GIT_TOKEN@git-prodider.com/account-name/repo-name
@@ -93,43 +120,8 @@ gh auth login
 
 (not sure how this would be scripted though). GitLab offers [access token authentication through HTTPS requests](https://docs.gitlab.com/ee/api/rest/index.html#personalprojectgroup-access-tokens).
 
-## Commands
 
-TODO:: clean this mess up
-
-- _Show commits where a particular file was changed:_ `git log --follow -- <filename>`
-- _Show files changed in last 4 commits:_ `git log -4 --name-only`
-- _Undo last 3 unpushed commits to branch:_ `git reset HEAD~3`
-- _Undo last unpushed commit, keep changes staged:_ `git reset --soft HEAD^`
-- _Show changes in file over last 3 commits:_ `git diff HEAD~3 path/to/file`
-- _Remove untracked files (and directories `-d`, dry run `-n`):_ `git clean -f [-d] [-n]`
-- _Download specific folder from github.com_ `svn export https://github.com/user/repo/trunk/path/to/folder`, make sure to replace `tree/master` by `trunk` for subversion.
-
-## Repositories and Branches
-
-- [GitHub: Splitting a subfolder out into a new repository](https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository)
-- New branch from dir.(s)[^3]
-
-  ```bash
-  git branch subdir_branch HEAD
-  git filter-branch --subdirectory-filter dir/to/filter -- subdir_branch
-  git push git://.../new_repo.git subdir_branch:master
-  ```
-
-[^3]: <https://stackoverflow.com/questions/9971332/git-create-a-new-branch-with-only-a-specified-directory-and-its-history-then-pus>
-
-## Clone and Checkout
-
-### Sparse Checkout
-
-[Git documentation](https://git-scm.com/docs/sparse-checkout) |  [Git command sparse-checkout](https://git-scm.com/docs/git-sparse-checkout)
-
-See also
-
-- <https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/>
-- <https://stackoverflow.com/questions/47541033/sparse-checkouts-how-does-it-works>
-
-## Submodules
+### Submodules
 
 [Git Documentation](https://git-scm.com/docs/git-submodule) | [Documentation: Book](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
@@ -153,7 +145,7 @@ git submodule update [--init] [--recursive] --remote
 git pull --recurse-submodules
 ```
 
-### Toubleshooting
+#### Toubleshooting
 
 - Submodule HEAD is detatched/keepts becoming detatched: see [Stack Overflow question](https://stackoverflow.com/a/36375256/16096134)
 - fixing unrelated histories, e.g. when error `fatal: refusing to merge unrelated histories` occurs: <https://stackoverflow.com/a/39783462>
@@ -162,6 +154,20 @@ git pull --recurse-submodules
 References
 
 - [Git submodule fetch and update @stackoverflow](https://stackoverflow.com/questions/50254184/git-submodule-and-fetch)
+
+
+## Branches
+
+- [GitHub: Splitting a subfolder out into a new repository](https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository)
+- New branch from dir.(s)[^3]
+
+  ```bash
+  git branch subdir_branch HEAD
+  git filter-branch --subdirectory-filter dir/to/filter -- subdir_branch
+  git push git://.../new_repo.git subdir_branch:master
+  ```
+
+[^3]: <https://stackoverflow.com/questions/9971332/git-create-a-new-branch-with-only-a-specified-directory-and-its-history-then-pus>
 
 ## References
 
