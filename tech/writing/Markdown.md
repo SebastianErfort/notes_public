@@ -14,7 +14,7 @@ Cheatsheets | [Cheat Markdown cheatsheet](file://.config/cheat/cheatsheets/perso
 TABLE WITHOUT ID
   file.link AS "Name",
   desc-short AS "Description"
-WHERE type = "software" AND category = "markdown"
+WHERE type = "software" AND contains(category,"markdown")
 SORT title
 ```
 
@@ -105,3 +105,8 @@ used by [[Obsidian]], [[Pandoc]] mastermind John MacFarlane is one of the founde
 ### reveal.js
 
 See [[public/tech/software/Software#Pandoc|Software: Pandoc]] and [[public/tech/software/Software#reveal.js|Software: reveal.js]]
+
+
+## References
+
+- [Markdown-Cheatsheet markdown-here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

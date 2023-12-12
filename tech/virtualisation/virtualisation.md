@@ -4,7 +4,7 @@ title: Virtualisation
 ---
 # Oracle VirtualBox
 
-![[personal/tech/VirtualBox]]
+![[VirtualBox]]
 
 # Vagrant
 
@@ -12,4 +12,4 @@ title: Virtualisation
 
 # VMWare
 
-![[../../rug/cit/Virtualisation and Containers#VMware]]
+![[rug/cit/Virtualisation and Containers#VMware]]

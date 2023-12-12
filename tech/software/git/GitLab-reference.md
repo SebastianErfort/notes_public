@@ -5,7 +5,7 @@ visibility: public
 title: GitLab-reference
 ---
 
-See also [[Gitlab|my notes on GitLab]] and [[rug/lwp/GitLab|Work notes LWP: GitLab]]
+See also [[public/tech/software/git/GitLab|my notes on GitLab]] and [[rug/lwp/GitLab|Work notes LWP: GitLab]]
 
 **Table of Contents**
 

@@ -12,6 +12,25 @@ visibility: public
 ---
 # `=this.title`
 
+
+## Config
+
+Different *flavours*[^1]
+
+- **Krb5**: Uses the Kerberos version 5 protocol to authenticate users before granting them access to the file share.
+- **Krb5i**: Uses the Kerberos version 5 protocol to authenticate with integrity checking (checksums), which verifies that the data hasn't been altered.
+- **Krb5p**: Uses the Kerberos version 5 protocol, which authenticates NFS traffic with encryption for privacy. This option is the most secure Kerberos option.
+
+[^1]: https://learn.microsoft.com/en-us/windows-server/storage/nfs/deploy-nfs
+
+## Network Filesystems
+
+### Common Internet File System (CIFS)
+
+*Auto-mount*: [cifs.com](https://cifs.com/)
+
+[man page mount.cifs](https://linux.die.net/man/8/mount.cifs): use option `cruid` to specify which user's credentials to use for NFS (CIFS) authentication, e.g. `sec=krb5,cruid=${UID}`
+
 ## References
 
 [MIT Kerberos defaults @Documentation](https://web.mit.edu/kerberos/krb5-1.13/doc/mitK5defaults.html)

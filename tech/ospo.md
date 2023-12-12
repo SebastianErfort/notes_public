@@ -3,7 +3,28 @@ title: Open Source Program Office (OSPO)
 acronym: OSPO
 visibility: public
 ---
-![](ospo_infographic.pdf)
+> [!info]- OSPO infographic
+> ![](ospo_infographic.pdf)
+
+
+## Organisations
+
+See also [[public/tech/OpenSource#Organisations|OpenSource: Organisations]]
+
+- [[WHO#OSPO]]
+- [[GitHub]]
+- [[CERN]]
+ 
+## People
+
+- [[Samuel Mbuthia]]: leads the WHO [[OSPO]]
+
+
+## Events
+
+- [[2023-11-28]]: [CERN OSPO Inaugural Event](https://indico.cern.ch/event/1327562/timetable/?view=standard)
+  presentations: drive > tech/opensource: NVIDIA, OSHWA, WHO OSPO
+
 
 ## References
 
@@ -11,6 +32,7 @@ visibility: public
     - [OSPO++](https://ospoplusplus.org/): (US) network and a community of collaborative open source program offices in universities, governments, and civic institutions
     - [TODO group](https://todogroup.org/): extensive resources, mostly industry members
         - [Mindmap](https://ospomindmap.todogroup.org/): roles, ...
+        - [OSPO definition @GH](https://github.com/todogroup/ospodefinition.org)
         - [OSPOlogy @GH](https://github.com/todogroup/ospology): 📖 OSPOlogy - The Study of OSPOs
         - [Training](https://todogroup.org/resources/training/)
         - [Guides and resources](https://todogroup.org/resources/guides/)
@@ -22,3 +44,4 @@ visibility: public
         - [OSPO community @GitHub](https://github.com/community/OSPO)
         - [github-ospo](github.com/github/github-ospo): Helping open source program offices get started
           [Blog post](https://github.blog/2023-03-13-an-open-source-project-to-empower-ospos-everywhere/)
+- [RedHat article: guide to setting up your OSPO](https://opensource.com/article/20/5/open-source-program-office)

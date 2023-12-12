@@ -43,16 +43,34 @@ echo <dirname> >> .git/info/sparse-checkout
 
 [githooks](https://git-scm.com/docs/githooks)
 
+- [customising Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
+
+Available hooks
+
 - `prepare-commit-msg`: hook into git's default commit messages (merge etc.).
   Example: in `.git/hooks/prepare-commit-msg` and make sure that it is executable
 
-  ```
-  #!/bin/sh
+    ```bash
+    #!/bin/sh
 
-  if [ "$2" = "merge" ]; then
-          sed -i "1s/^/ʕ•ᴥ•ʔ /" "$1"
-  fi
-  ```
+    if [ "$2" = "merge" ]; then
+            sed -i "1s/^/ʕ•ᴥ•ʔ /" "$1"
+    fi
+    ```
+
+- `pre-commit`: helpful for example to run code formatters, linters, etc.  before every commit.
+
+
+### pre-commit Framework
+
+The [pre-commit framework](https://pre-commit.com) facilitates using and maintaining hooks. They can be downloaded e.g. from GitHub and re-used across projects.
+
+Examples
+
+- [pre-commit/pre-commit-hooks @GH](https://github.com/pre-commit/pre-commit-hooks)
+- [[black#^13286c|Black code formatter: pre-commit hooks]]
+- [CERN pre-commit hooks](https://gitlab.cern.ch/lhcb-core/pre-commit-hooks/): include in pipeline via HTTPS, run hooks, generate patch if code is changed that can be downloaded and applied locally
+
 
 ### Authentication
 
@@ -170,3 +188,4 @@ References
 - educational material
     - [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/index.html)
 - [whatthecommit.com](https://whatthecommit.com/) random terrible commit message generator
+- [Article: How I teach Git, T. Broyer @dev.to](https://dev.to/tbroyer/how-i-teach-git-3nj3) #cio/tech/git

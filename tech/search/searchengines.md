@@ -6,7 +6,7 @@ title: Searchengines
 TABLE WITHOUT ID
   file.link AS "Name",
   ("[Website](" + url + ")" + " | [Documentation](" + docs + ")" + " | [Source](" + source + ")") AS Links
-WHERE type = "software" and category = "search"
+WHERE type = "software" and contains(category, "search")
 ```
 
 [iresearch](https://github.com/iresearch-toolkit/iresearch): cross-platform, high-performance document oriented search engine library written entirely in C++ with the focus on a pluggability of different ranking/similarity models

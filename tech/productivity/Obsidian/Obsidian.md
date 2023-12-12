@@ -352,6 +352,7 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [Query Control](https://github.com/nothingislost/obsidian-query-control): add controls to embedded queries (exp./deprec.?)
 - Appearance/UI
     - [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
+    - [Obsidian-Code-Styler](https://github.com/mayurankv/Obsidian-Code-Styler): A plugin for Obsidian.md for styling codeblocks and inline code
 - Productivity
     - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Writing
@@ -381,11 +382,17 @@ SORT file.name
 
 # Publish
 
-- [[Gitlab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
+- [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
 - https://flowershow.app/ | [GitHub](https://github.com/datopian/obsidian-flowershow)
 - [[ObsidianGitHubPublisher|Obsidian GitHub Publisher]]
 - [obsidian-webpage-export](https://github.com/KosmosisDire/obsidian-webpage-export)
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
+
+
+# Debug
+
+- development tools: <kbd>ctrl + shit + i</kbd>
+
 
 # References
 
