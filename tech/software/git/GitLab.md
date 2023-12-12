@@ -63,6 +63,10 @@ See also [[Gitlab_Agile|GitLab: Agile]]
 
 ## Access Tokens
 
+There is a variety of different access tokens available in GitLab: groups, impersonation, projects, ... and each can be fine-grained, setting a role, permissions and an expiry date.
+
+For example, to give read access to a project an access token with role `Reporter`  (`Guest` can be insufficient) and permissions `read_repository` can be used. Navigate to the project and select `Access Tokens` from the settings menu.
+
 - [Personal](https://docs.gitlab.com/ee/user/profile/personal_access_tokens)
 - [Project](https://docs.gitlab.com/ee/user/project/settings/project_access_tokens)
   > Use a project access token to authenticate:

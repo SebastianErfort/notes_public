@@ -2,8 +2,8 @@
 title: Singularity
 type: software
 category: container
-url: https://sylabs.io/
-docs: https://sylabs.io/docs/
+url: "https://sylabs.io/"
+docs: "https://sylabs.io/docs/"
 license: open-source
 visibility: public
 ---

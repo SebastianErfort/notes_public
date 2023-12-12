@@ -1,9 +1,9 @@
 ---
 title: Ruby
 name: Ruby
-url: https://www.ruby-lang.org/en/
-docs: https://www.ruby-lang.org/en/documentation/
-github: https://github.com/ruby/ruby
+url: "https://www.ruby-lang.org/en/"
+docs: "https://www.ruby-lang.org/en/documentation/"
+github: "https://github.com/ruby/ruby"
 type: interpreted
 category: programming-language
 visibility: public

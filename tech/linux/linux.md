@@ -333,6 +333,12 @@ Written in Python
 
 if the directory `/sys/firmware/efi` exists, the system uses UEFI boot #tech/uefi
 
+
+# Security
+
+- <https://www.csoonline.com/article/567855/top-linux-antivirus-software.html>
+
+
 # [[Hardware]]
 
 ## Touchscreens

@@ -6,7 +6,7 @@ desc-short: builds a loop-free logical topology for Ethernet networks
 visibility: public
 category: networking
 full-name: Spanning Tree Protocol
-wikipedia: https://en.wikipedia.org/wiki/Spanning_Tree_Protocol
+wikipedia: "https://en.wikipedia.org/wiki/Spanning_Tree_Protocol"
 ---
 
 # Spanning Tree Protocol (STP)

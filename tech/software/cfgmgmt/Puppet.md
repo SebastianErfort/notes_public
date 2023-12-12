@@ -7,9 +7,6 @@ tags:
 visibility: public
 docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
 ---
-
-See also [[rug/lwp/Puppet/Puppet|Work notes LWP: Puppet]]
-
 `=("[Documentation](" + this.docs + ")")`
 
 - Resources
@@ -144,6 +141,11 @@ Hiera works like a pyramid and the higher up a data layer is, the higher its pri
     - `server`: modules for servers
 - The order of modules within one of these sets is important, if there are depedencies! For example the module `sshd` uses data from the module `mfa` and has thus to come after/below it
 - on top of that we have the node-level files (`node.yaml`), in our case in the directory `data/00_hosts/host.yaml`, role-assigments by IP-ranges in `data/10_roles` as well as external node classifiers (ENCs) in a separate repository [lwp/puppet-enc](https://git.lwp.rug.nl/lwp/puppet-enc).
+
+
+## External Node Classifiers (ENCs)
+
+[Puppet documentation on ENCs](https://www.puppet.com/docs/puppet/7/nodes_external.html)
 
 ## Lookup
 

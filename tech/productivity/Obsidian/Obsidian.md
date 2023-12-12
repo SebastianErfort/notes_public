@@ -28,17 +28,17 @@ visibility: public
 - [Getting comfortable with Obsidian CSS](https://forum.obsidian.md/t/getting-comfortable-with-obsidian-css/133)
 - Icons: [[dev#Icons|Lucide]]
 
-# Documentation
+## Documentation
 
 [Obsidian Markdown Support](https://www.markdownguide.org/tools/obsidian/#obsidian-markdown-support)
 
-## Markdown
+### Markdown
 
 See also [[Markdown|my notes on Markdown]]
 
 [Markdown Guide: Obsidian](https://www.markdownguide.org/tools/obsidian/) ^b8bff2
 
-# Config & Customisation
+## Config & Customisation
 
 [Obsidian URI set up for Linux / obsidian.desktop](https://forum.obsidian.md/t/obsidian-uri-set-up-for-linux-obsidian-desktop/7494)
 Create `desktop`file `$HOME/.local/share/applications/obsidian.desktop`
@@ -58,32 +58,35 @@ MimeType=text/html;x-scheme-handler/obsidian;
 
 See [[linux#Desktop files|Desktop Files]]
 
-## Themes
+### Themes
 
 - [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary)
 - [_Prism_](https://github.com/damiankorcz/Prism-Theme): very pretty with different light/dark versions, __but__ requires a community plugin
 - [CyberGlow](https://github.com/ArtexJay/Obsidian-CyberGlow)
+- Anapuccin
+- *Catpuccin*: current theme bc. of aesthetics and different colours for italic, bold, etc. text
 
-## [[CSS]]
+### [[CSS]]
 
+- [awesome-obsidian: css-snippets](https://github.com/kmaasrud/awesome-obsidian#css-snippets)
 - [obsidian-css-snippets @GitHub](https://github.com/Dmytro-Shulha/obsidian-css-snippets/tree/develop)
 - [Common Selectors for Custom CSS @Obsidian Forum](https://forum.obsidian.md/t/common-selectors-for-custom-css/1984/2)
 - [Meta Post - Common CSS Hacks @Obsidian Forum](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978)
     - [Add quotation mark before quote](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/39)
     - [“Naked” Embeds](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/19)
 
-# Features
+## Features
 
 See also [[features|summary of Obsidian features]]
 
-## Lists
+### Lists
 
 Unordered lists: use `-`, `*`, `+`.
 
 Ordered lists: use `1., 2., ...`  (or just use `1.` for all items, in Reading mode items will be numbered automatically).
 
 
-### Check-lists
+#### Check-lists
 
 Check-lists: `- [ ]` for unchecked and `- [x]` for checked items
 
@@ -121,7 +124,7 @@ Description lists: requires HTML
 </dl>
 ```
 
-## Links
+### Links
 
 - normal links: `[link text](URL)`
 - Wiki-Links: `[[file name|link text]]` ^cecfe6
@@ -142,7 +145,7 @@ Description lists: requires HTML
     - some websites won't let one enter non-HTTP(S) URIs, so a work-around is to have a webserver run that parses the Obsidian-URI part, allowing one to open Obsidian. See [x-redirect on GitHub](https://github.com/ewerx/x-redirect/)
     > [!idea] put on my website [[sebastianerfort.github.io]] or just in a different repo, that will appear under <https://sebastianerfort.github.io/redirect> anyway
 
-## Images
+### Images
 
 Markdown: ![tux|100](tux.png)
 Obsidian/Wiki: ![[tux.png|100]]
@@ -151,11 +154,11 @@ HTML: requires "link", can't use just (relative) file path
 
 - [centering images](https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/comment/iamghtr/)
 
-## Code Blocks
+### Code Blocks
 
 Obsidian uses Prism.js for syntax highlighting. For available languages see this [list of supported languages](https://prismjs.com/#supported-languages).
 
-## Embed
+### Embed
 
 (parts of) other notes
 
@@ -166,7 +169,7 @@ Obsidian uses Prism.js for syntax highlighting. For available languages see this
 
 ^646f6d
 
-## Footnotes
+### Footnotes
 
 ```markdown
 This needs explanation ^[Let me spare you the details]
@@ -179,13 +182,13 @@ Kirk to Enterprise![^1]
 
 [^1]: Beam me up, Scotty!
 
-## Canvas
+### Canvas
 
 [obsidian.md: Canvas](https://obsidian.md/canvas)
 
-## Call-outs
+### Call-outs
 
-### Supported types
+#### Supported types
 
 see [Obsidian Documentation](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types)
 
@@ -257,8 +260,8 @@ see [Obsidian Documentation](https://help.obsidian.md/Editing+and+formatting/Cal
 > [!quote]- Me
 > Clothes are for daytime.
 
-### Theme-specific
->
+#### Theme-specific
+
 > [!info]- [Theme: Primary](https://github.com/ceciliamay/obsidianmd-theme-primary)
 > > [!celebrate] `celebrate/success`  This changes colours! 🤯
 > > Let's party!
@@ -272,7 +275,7 @@ see [Obsidian Documentation](https://help.obsidian.md/Editing+and+formatting/Cal
 > > [!morning]
 > > “If you are irritated by every rub, how will your mirror be polished?”  ― Rumi
 
-### Custom
+#### Custom
 
 see CSS snippet `callouts.css`
 
@@ -299,22 +302,22 @@ Custom call-out: add CSS to `.obsidian/snippets` with
 
 See [CSS snippet file](file:///home/erfort/notes/life/.obsidian/snippets/callouts.css)
 
-## Search
+### Search
 
 [Obsidian Help](https://help.obsidian.md/Plugins/Search)
 
 - regex search, e.g. `/\d{4}-\d{2}-\d{2}/`
 - [search operators](https://help.obsidian.md/Plugins/Search#Search+operators)
 
-## Queries
+### Queries
 
 ```query
-#idea
+##idea
 ```
 
 These are {{author}}'s notes from {{date}}.
 
-## Metadata, YAML Frontmatter
+### Metadata, YAML Frontmatter
 
 From <https://rossgriffin.com/tutorials/obsidian-basics-guide/>
 By default obsidian supports the following YAML in this order:
@@ -327,22 +330,22 @@ See also <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20m
 
 Can be further extended by using the community plugin [[#DataView]].
 
-# [[HTML]]
+## [[HTML]]
 
 Since Markdown supports usage of most HTML, this can be used to extend the features of plain Markdown. Mixing is not a good idea though and renders in weird ways.
 
-# Integration
+## Integration
 
 - Zotero
     - <https://forum.obsidian.md/t/zotero-best-practices/164/57>
 
-### OCR
+#### OCR
 
 See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.obsidian.md/t/searchable-ocr-lets-get-it-built/28968)
 
-# Plugins
+## Plugins & Extensions
 
-## Community
+### Community
 
 - Editing
     - [vimrc support for VIM editing mode](obsidian://show-plugin?id=obsidian-vimrc-support)
@@ -350,6 +353,7 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
 - Functionality/UX
     - [Obsidian Advanced URI](https://vinzent03.github.io/obsidian-advanced-uri/)
     - [Query Control](https://github.com/nothingislost/obsidian-query-control): add controls to embedded queries (exp./deprec.?)
+    - [Embed Code File](https://github.com/almariah/embed-code-file): embed code files from Obsidian vault or remote file (eg., GitHub)
 - Appearance/UI
     - [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
     - [Obsidian-Code-Styler](https://github.com/mayurankv/Obsidian-Code-Styler): A plugin for Obsidian.md for styling codeblocks and inline code
@@ -373,14 +377,15 @@ WHERE contains(file.path,"tech/Obsidian/plugins")
 SORT file.name
 ```
 
-# Alternatives
+
+## Alternatives
 
 - Zettelkasten
 - Telekasten: Neovim plugin for Zettelkasten/Wiki/journal
 - Roam Research
 - [[foam]]
 
-# Publish
+## Publish
 
 - [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
 - https://flowershow.app/ | [GitHub](https://github.com/datopian/obsidian-flowershow)
@@ -389,12 +394,12 @@ SORT file.name
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
 
 
-# Debug
+## Debug
 
 - development tools: <kbd>ctrl + shit + i</kbd>
 
 
-# References
+## References
 
 [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
 

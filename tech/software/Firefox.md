@@ -1,14 +1,12 @@
 ---
 title: Firefox
 type: software
-category: ""
-# url: ""
-# docs: ""
-# source: ""
-# developer: ""
-# desc-short: |
-#   ...
-tags: []
+category: browser
+url: "https://www.mozilla.org/en-GB/firefox/"
+source: "https://searchfox.org/mozilla-central/source"
+developer: Mozilla
+desc-short: |
+  Firefox is the fast, lightweight, privacy-focused browser that works across all your devices.
 visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
@@ -17,6 +15,8 @@ visibility: public
 ## Extensions
 
 ### FoxyProxy
+
+Tags: #tech/firefox/extensions
 
 Allows to use multiple proxy servers, selected by wildcard or regex patterns.
 
