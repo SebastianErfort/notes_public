@@ -4,21 +4,20 @@ visibility: public
 tags:
   - dev/yaml
 type: language
-category: markup
-url: "https://yaml.org/"
+category:
+  - markup
+url: https://yaml.org/
 ---
+# YAML
 
-[YAML 1.2 Revision 1.2.2](https://yaml.org/spec/1.2.2/)
+`= ("[Website](" + this.url + ")")` | [YAML 1.2.2 Specification](https://yaml.org/spec/1.2.2/)
 
-```query
-#dev/yaml
-```
 
 ## Language
 
 ### Strings
 
-YAML multi-line string (block scalar)
+YAML multi-line string (block scalar), see <https://yaml-multiline.info/>: syntax explained, with examples
 
 ```yaml
 # Block scalars (extended, multi-line strings)
@@ -26,18 +25,7 @@ key: |
   Block scalars support extended escaping and 3 parameters to modify how white-space and newlines are treated.
 ```
 
-See <https://yaml-multiline.info/>: syntax explained, with examples
-
-## References
-
-## Linting
-
-- yamllint: [Documentation](https://yamllint.readthedocs.io/en/stable/index.html) | [![|20](github.png) GitHub](https://github.com/adrienverge/yamllint)
-    - supports extracting and processing of **YAML front matter in Markdown** files
-- yamlfmt: [Source: github.com/google/yamlfmt](https://github.com/google/yamlfmt) |
-- yamlfix: [GitHub](https://github.com/lyz-code/yamlfix) | [Documentation](https://lyz-code.github.io/yamlfix/)
-
-### Examples
+Example
 
 ```yaml
 # |2 will preserve leading white space by telling yaml there are 2 spaces of
@@ -49,3 +37,16 @@ description: >-
   Tasted a lot like banana
   with a slight sour note.
 ```
+
+
+## Linting
+
+- yamllint: [Documentation](https://yamllint.readthedocs.io/en/stable/index.html) | [![|20](github.png) GitHub](https://github.com/adrienverge/yamllint)
+    - supports extracting and processing of **YAML front matter in Markdown** files
+- yamlfmt: [Source: github.com/google/yamlfmt](https://github.com/google/yamlfmt) |
+- yamlfix: [GitHub](https://github.com/lyz-code/yamlfix) | [Documentation](https://lyz-code.github.io/yamlfix/)
+
+
+## Tools
+
+- [[yq]]: YAML parser, also supports front matter in (Markdown) files

@@ -38,7 +38,7 @@ Free $0
 
 ### [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]
 
-See [[public/tech/software/git/GitLab#GitLab Pages|notes on GitLab Pages]].
+See [[public/tech/dev/git/GitLab#GitLab Pages|notes on GitLab Pages]].
 
 ## Static Site Frameworks
 

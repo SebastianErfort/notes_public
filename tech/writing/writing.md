@@ -2,15 +2,9 @@
 title: Writing
 visibility: public
 ---
-
-[Designing with Libre Office](https://designingwithlibreoffice.com/)
-
 # Fonts
 
-[[design#Fonts|My notes on Design: Fonts]]
-
-- <https://home.unicode.org/>
-- <https://www.stixfonts.org/>: The mission of the Scientific and Technical Information Exchange (STIX) font creation project is the preparation of a comprehensive set of fonts that serve the scientific and engineering community in the process from manuscript creation through final publication, both in electronic and print formats
+See [[design#Fonts|my notes on Design: Fonts]]
 
 # Notes
 
@@ -36,3 +30,8 @@ See [[LaTeX]].
 # Tools
 
 - <https://tldrthis.com/>: article summary, human-like AI requires account (10 for free)
+
+
+# References
+
+- [Designing with Libre Office](https://designingwithlibreoffice.com/)

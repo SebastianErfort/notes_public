@@ -28,6 +28,8 @@ Tags: #design/fonts
   <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Font+Name">
   ```
 
+- <https://home.unicode.org/>
+- <https://www.stixfonts.org/>: The mission of the Scientific and Technical Information Exchange (STIX) font creation project is the preparation of a comprehensive set of fonts that serve the scientific and engineering community in the process from manuscript creation through final publication, both in electronic and print formats
 ### Icons
 
 - FontAwesome Icons: [Search free icons](https://fontawesome.com/search?o=r&m=free) | [Github](https://github.com/FortAwesome/Font-Awesome)
@@ -53,6 +55,10 @@ Tags: #design/fonts
 
 <https://coolors.co/?home>
 <https://www.colourlovers.com/>
+
+### Illustrations
+
+- [storyset](https://storyset.com/): free customizable illustrations
 
 ### Qt
 

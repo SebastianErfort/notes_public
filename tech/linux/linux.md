@@ -406,6 +406,10 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 ## Others
 
 - [OpenWrt](https://openwrt.org/): The OpenWrt Project is a Linux operating system targeting embedded devices. Instead of trying to create a single, static firmware, OpenWrt provides a fully writable filesystem with package management.
+- [Free GNU/Linux distributions](https://www.gnu.org/distros/free-distros.html)
+    - [Guix](https://guix.gnu.org/) (also a package and system manager): Guix System is a distribution of the [GNU operating system](https://gnu.org/). It uses the [Linux-libre](https://gnu.org/software/linux-libre) kernel, and support for [the Hurd](https://gnu.org/software/hurd) is being worked on. As a GNU distribution, it is committed to respecting and enhancing [the freedom of its users](https://gnu.org/philosophy/free-sw.html). As such, it adheres to the [GNU Free System Distribution Guidelines](https://gnu.org/distros/free-system-distribution-guidelines.html).
+      GNU Guix provides [state-of-the-art package management features](https://guix.gnu.org/manual/en/html_node/Features.html) such as transactional upgrades and roll-backs, reproducible build environments, unprivileged package management, and per-user profiles. It uses low-level mechanisms from the [Nix](https://nixos.org/nix/) package manager, but packages are [defined](https://guix.gnu.org/manual/en/html_node/Defining-Packages.html) as native [Guile](https://gnu.org/software/guile) modules, using extensions to the [Scheme](http://schemers.org) language—which makes it nicely hackable.
+
 
 # Desktops
 
