@@ -91,6 +91,7 @@ By default `.gitlab-ci.yml`
 - [GitLab CI/CD for external repositories](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/index.html)
   apparently it is possible to connect repositories, e.g. from Github, and use GitLab CI/CD
 - [Git submodules](https://docs.gitlab.com/ee/ci/git_submodules.html)
+- [Schedule pipelines](https://docs.gitlab.com/ee/ci/pipelines/schedules.html)
 - [GitLab development with Vagrant](https://gitlab.com/gitlab-org/gitlab-development-kit/-/blob/main/doc/howto/vagrant.md)
 - [Migrate from GitHub](https://docs.gitlab.com/ee/ci/migration/github_actions.html)
 

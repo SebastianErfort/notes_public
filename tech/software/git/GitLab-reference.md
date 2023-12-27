@@ -189,6 +189,9 @@ By default file `.gitlab-ci.yml`
 [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 
 - [Keyword reference](https://docs.gitlab.com/ee/ci/yaml/)
+- [Git submodules](https://docs.gitlab.com/ee/ci/git_submodules.html)
+- [Schedule pipelines](https://docs.gitlab.com/ee/ci/pipelines/schedules.html)
+- [GitLab CI/CD for external repositories](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/index.html)
 
 # Wiki
 

@@ -3,10 +3,11 @@ url: "https://daringfireball.net/projects/markdown/"
 visibility: public
 title: Markdown
 ---
-Resource | Links
--|-
-Related | [[YAML]]
-Cheatsheets | [Cheat Markdown cheatsheet](file://.config/cheat/cheatsheets/personal/markdown)</br>[Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)
+| Resource | Links |
+|-|-|
+| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian#^f0ca06) |
+| Cheatsheets | [Cheat Markdown cheatsheet](file://.config/cheat/cheatsheets/personal/markdown)</br>[Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet markdown-here] |
+| Related | [[YAML]] |
 
 ## Tools & Software
 
@@ -18,9 +19,29 @@ WHERE type = "software" AND contains(category,"markdown")
 SORT title
 ```
 
-## Snippets
+## Features
 
-[Snippets folder](file://src)
+There's a great number of cheatsheets and similar references for standard features, see the table at the beginning. The following only contains some additions and examples.
+
+### Links
+
+| Type                           | Description |
+| ------------------------------ | ----------- |
+| stand-alone URLs `https://...` |  should be inside `<...>` to be processed properly by some Markdown parsers |
+| regular inline links `[link text](url "alt text")` | `alt text` is optional, some viewers render it as a tooltip, to handle special characters that would require escaping, such as spaces, some parsers allow URLs in `<...>` again |
+| [Wiki-links] `[[url\|link text]]` | helpful extension in some parsers and can be used like `[[url\|link text]]`
+| HTML `<a href="url" title="alt text">link text</a>` | helpful when using HTML as mixing with Markdown is not a good idea |
+
+### Lists
+
+Description lists are non-standard in Markdown and require HTML
+
+```html
+<dl>
+<dt>Item</dt>
+<dd>Description</dd>
+</dl>
+```
 
 ### Tables
 
@@ -48,17 +69,13 @@ SORT title
 - leading and closing `|` can be omitted (in some Markdown implementations?)
 - use `:` for alignment
 
-### Footnotes
-
-Example [^1]
-[^1]: Footnote text
-
 ### Code blocks
 
-[_List of Markdown code block languages_](https://markdown.land/markdown-code-block)
-![[list_markdown_codeblock_languages.txt]]
+[List of Markdown code block languages](https://markdown.land/markdown-code-block)
 
 ### Columns
+
+Columns can be achieved with HTML, rendering is dependent on the reader/parser used though.
 
 Two fixed-width columns
 <div style="display: flex; justify-content: space-between; width: 100%">
@@ -72,13 +89,11 @@ Column 2
 
 ### Custom CSS
 
-<!-- Doesn't work atm
-Font Awesome icons: include relevant `.css` files, then use HTML
-<i class="fa-brands fa-linux"></i> -->
+Many Markdown viewers/parsers allow the inclusion of custom [[CSS]] code for styling. This can for example be used to set up classes with certain styles, to facilitate applying visual effects.
 
-## Mermaid Graphs
+### Mermaid Graphs
 
-[[mermaid|See notes on Mermaid]]
+See [[mermaid|notes on Mermaid]].
 
 
 ## Flavours, Specifications and Implementations
@@ -93,10 +108,11 @@ Discussion
 
 - [Blank lines before lists, revisited](https://talk.commonmark.org/t/blank-lines-before-lists-revisited/1990/5)
 
-### [CommonMark](http://commonmark.org/)
+### CommonMark
 
-used by [[Obsidian]], [[Pandoc]] mastermind John MacFarlane is one of the founders and maintainers
-[Specification](https://spec.commonmark.org/0.30/) | [Forum](https://talk.commonmark.org/) | [Tutorial](https://commonmark.org/help/tutorial/)
+[Website](http://commonmark.org/) | [Specification](https://spec.commonmark.org/0.30/) | [Forum](https://talk.commonmark.org/) | [Tutorial](https://commonmark.org/help/tutorial/)
+
+[[Pandoc]] mastermind John MacFarlane is one of the founders and maintainers. Used by [[Obsidian]].
 
 ## Presentations
 
@@ -109,4 +125,7 @@ See [[public/tech/software/Software#Pandoc|Software: Pandoc]] and [[public/tech/
 
 ## References
 
-- [Markdown-Cheatsheet markdown-here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Cheatsheet markdown-here]
+
+[Cheatsheet jonschlinkert]: <https://gist.github.com/jonschlinkert/5854601>
+[Cheatsheet markdown-here]: <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
