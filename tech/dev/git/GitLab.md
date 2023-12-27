@@ -33,8 +33,7 @@ See also [[Gitlab_Agile|GitLab: Agile]]
     - [Description templates](https://docs.gitlab.com/ee/user/project/description_templates.html)
     - [By sending an email](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#by-sending-an-email): requires [incoming email](https://docs.gitlab.com/ee/administration/incoming_email.html)
     - [From URL: pre-filled values](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#using-a-url-with-prefilled-values)
-
-> [!myidea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
+      > [!idea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
 
 ## Markdown/HTML
 
@@ -92,6 +91,7 @@ By default `.gitlab-ci.yml`
 - [GitLab CI/CD for external repositories](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/index.html)
   apparently it is possible to connect repositories, e.g. from Github, and use GitLab CI/CD
 - [Git submodules](https://docs.gitlab.com/ee/ci/git_submodules.html)
+- [Schedule pipelines](https://docs.gitlab.com/ee/ci/pipelines/schedules.html)
 - [GitLab development with Vagrant](https://gitlab.com/gitlab-org/gitlab-development-kit/-/blob/main/doc/howto/vagrant.md)
 - [Migrate from GitHub](https://docs.gitlab.com/ee/ci/migration/github_actions.html)
 

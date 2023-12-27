@@ -63,7 +63,7 @@ a(a) --> b[b]
 subgraph sg1[" "]
   direction TB
   c((c)) --> d[[d]]
-  sg1a{<a>yay</a>} <--> sg1b{{nay}}
+  sg1a{<a>Obsidian</a>} <--> sg1b{{DataView}}
 end
 a -.-> sg1
 sg1 --> e[(e)]

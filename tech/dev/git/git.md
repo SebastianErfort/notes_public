@@ -1,24 +1,70 @@
 ---
-title: Git
+title: git
 tags:
   - dev/git
   - dev/GitLab
   - dev/CICD
   - dev/Github
 visibility: public
+url: "https://git-scm.com/docs"
+docs: "https://git-scm.com/docs"
 ---
-## Editing
+| Resource      | Reference                                                   |
+| ------------- | ----------------------------------------------------------- |
+| Documentation | `= ( "[Documentation](" + this.docs + ")")`                 |
+| Commands      | [Cheatsheet](file://.config/cheat/cheatsheets/personal/git) |
+| My stuff      | [my Git resources]                                          |
 
-```bash
-# show changes since last commit
-git diff HEAD
-# show unstaged changes
-git diff
-# compare branches
-git diff <first branch>...<second branch>
-```
+## Clone and Checkout
 
-## Config
+### Sparse Checkout
+
+See also [Git documentation Sparse Checkout](https://git-scm.com/docs/sparse-checkout),  [Git command sparse-checkout](https://git-scm.com/docs/git-sparse-checkout) and [my Git resources] (helper scripts for Git submodules, sparse checkout and more.)
+
+Sparse checkout lets you check out only part of a repository. This can be helpful for example if you have a repository with both code and documentation or a monolithic repository, and only work on a part of it.
+
+In my experience so far this standard commands `git sparse-checkout ...` work fine if the repository is already checked out. Extraneous files are removed and you're left with the files and directories you specified to be checked out.
+
+> [!warning] 🚧 WIP
+However, I wanted to specify what to sparsely check out, before pulling anything. For this you require Git's infrastructure to be set up, usually the `.git` directory with Git's configuration etc. But as far as I understand these only get properly created when you perform the first checkout (pull). Before that, essential files are missing. Pre-creating those files containing the configuration for the sparse checkout only worked manually in my experiments.
+>
+> ```bash
+> git init 2>/dev/null
+> git remote add origin "$url"
+> git config core.sparseCheckout true
+> echo docs > .git/info/sparse-checkout
+>
+> # Attempt with proper Git commands:
+> # the following sets config.worktree instead and adds additional rules to
+> # info/sparse-checkout
+> # BUG: fails to checkout sparsely
+> # git sparse-checkout init --cone
+> # git sparse-checkout set "doc"
+>
+> git fetch -q
+> git checkout "$branch"
+> ```
+>
+> To add another layer, I was using this feature within a [[#Submodules|Git submodule]]. The steps described above create a proper repository that isn't integrated with the outer repository. Submodules have a reference to the parent Git directory, the `.git` is a file with a reference. To manually turn the sparsely checked out repository into a submodule again
+>
+> ```bash
+> # turn Git repo into submodule
+> mv ".git" "$parent_gitdir"
+> # this is how Git specifies path to .git dir in submodules
+> echo "gitdir: ../../${sm_gitdir}" > ".git"
+> ```
+>
+> where the parent repo's Git directory is for example `../../.git/modules/<submodule name/path>`.
+
+Examples and references
+
+- [my Git resources]
+- [[README|Work RUG: LWP-Docs]]
+- <https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/>
+- <https://stackoverflow.com/questions/47541033/sparse-checkouts-how-does-it-works>
+
+
+## Repositories
 
 ```bash
 git config --global -e # Edit global git config file
@@ -69,6 +115,9 @@ Available hooks
 
 ### Authentication
 
+
+#### Git Credential Helpers
+
 [Git credential helpers](https://git-scm.com/docs/gitcredentials): Providing usernames and passwords to Git
 
 - [`credential-cache`](https://git-scm.com/docs/git-credential-cache): temporarily store passwords in memory
@@ -89,7 +138,10 @@ echo password=$GIT_PW
 
 [^1]: <https://alanedwardes.com/blog/posts/git-username-password-environment-variables/>
 
-Alternatively username and password can be provided through a HTTPS URL, e.g.
+
+#### Access Tokens and URL Credentials
+
+Alternatively username and password or an access token can be provided through a HTTPS URL, e.g.
 
 ```bash
 git clone https://$GIT_USER:$GIT_TOKEN@git-prodider.com/account-name/repo-name
@@ -106,43 +158,8 @@ gh auth login
 
 (not sure how this would be scripted though). GitLab offers [access token authentication through HTTPS requests](https://docs.gitlab.com/ee/api/rest/index.html#personalprojectgroup-access-tokens).
 
-## Commands
 
-TODO:: clean this mess up
-
-- _Show commits where a particular file was changed:_ `git log --follow -- <filename>`
-- _Show files changed in last 4 commits:_ `git log -4 --name-only`
-- _Undo last 3 unpushed commits to branch:_ `git reset HEAD~3`
-- _Undo last unpushed commit, keep changes staged:_ `git reset --soft HEAD^`
-- _Show changes in file over last 3 commits:_ `git diff HEAD~3 path/to/file`
-- _Remove untracked files (and directories `-d`, dry run `-n`):_ `git clean -f [-d] [-n]`
-- _Download specific folder from github.com_ `svn export https://github.com/user/repo/trunk/path/to/folder`, make sure to replace `tree/master` by `trunk` for subversion.
-
-## Repositories and Branches
-
-- [GitHub: Splitting a subfolder out into a new repository](https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository)
-- New branch from dir.(s)[^3]
-
-  ```bash
-  git branch subdir_branch HEAD
-  git filter-branch --subdirectory-filter dir/to/filter -- subdir_branch
-  git push git://.../new_repo.git subdir_branch:master
-  ```
-
-[^3]: <https://stackoverflow.com/questions/9971332/git-create-a-new-branch-with-only-a-specified-directory-and-its-history-then-pus>
-
-## Clone and Checkout
-
-### Sparse Checkout
-
-[Git documentation](https://git-scm.com/docs/sparse-checkout) |  [Git command sparse-checkout](https://git-scm.com/docs/git-sparse-checkout)
-
-See also
-
-- <https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/>
-- <https://stackoverflow.com/questions/47541033/sparse-checkouts-how-does-it-works>
-
-## Submodules
+### Submodules
 
 [Git Documentation](https://git-scm.com/docs/git-submodule) | [Documentation: Book](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
@@ -166,15 +183,71 @@ git submodule update [--init] [--recursive] --remote
 git pull --recurse-submodules
 ```
 
-### Toubleshooting
+#### Toubleshooting
 
 - Submodule HEAD is detatched/keepts becoming detatched: see [Stack Overflow question](https://stackoverflow.com/a/36375256/16096134)
 - fixing unrelated histories, e.g. when error `fatal: refusing to merge unrelated histories` occurs: <https://stackoverflow.com/a/39783462>
-  
+
 
 References
 
 - [Git submodule fetch and update @stackoverflow](https://stackoverflow.com/questions/50254184/git-submodule-and-fetch)
+
+
+### Branches
+
+- [GitHub: Splitting a subfolder out into a new repository](https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository)
+- New branch from dir.(s)[^3]
+
+  ```bash
+  git branch subdir_branch HEAD
+  git filter-branch --subdirectory-filter dir/to/filter -- subdir_branch
+  git push git://.../new_repo.git subdir_branch:master
+  ```
+
+[^3]: <https://stackoverflow.com/questions/9971332/git-create-a-new-branch-with-only-a-specified-directory-and-its-history-then-pus>
+
+
+## Editing
+
+```bash
+## show changes since last commit
+git diff HEAD
+## show unstaged changes
+git diff
+## compare branches
+git diff <first branch>...<second branch>
+```
+
+
+
+## Committing
+
+### Guidelines and Rules
+
+Suggested commit message structure
+
+```text
+<type>[(<scope>)][!]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+where
+
+```text
+<type>: fix, feat, build, chore, ci, docs, style, refactor, perf, test
+and optionally
+(<scope>): (api), ...
+!: breaking change
+```
+
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
+  > A specification for adding human and machine readable meaning to commit messages
+- [Angular contributing rules](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
+
 
 ## References
 
@@ -184,3 +257,5 @@ References
     - [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/index.html)
 - [whatthecommit.com](https://whatthecommit.com/) random terrible commit message generator
 - [Article: How I teach Git, T. Broyer @dev.to](https://dev.to/tbroyer/how-i-teach-git-3nj3) #cio/tech/git
+
+[my Git resources]: <>

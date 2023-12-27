@@ -22,9 +22,7 @@ visibility: public
 >     - easiest using Wiki-links `[[...]]` as files are automatically located
 >     - relative links without explicit `./` are relative to **base directory** (`docs`)
 >     - even worse with Wiki-links extension
-
-> [!tip] [[Obsidian]]
-> Activate shortest possible paths in settings to achieve compatible links.
+>     - [[Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
  
 ## Getting Started
 
@@ -61,7 +59,7 @@ visibility: public
     git submodule add URL docs
     ```
 
-    or in separate subdirectories if we include more sources (adding submodules to our Wiki repo doesn't work for the GitLab Wiki as it doesn't pull submodules, **but** it sucks anyway)
+    or in separate subdirectories if you include more sources. [[git#Sparse Checkout|Git's sparse checkout]] can be helpful if you want to integrate repos containing more than documentation as this lets you chose which files and directories you want to have present.
 1. start server for local testing or build (output to `public/`)
 
     ```bash
@@ -70,13 +68,6 @@ visibility: public
     mkdocs build
     ```
 
-
-## Documentation
-
-- [Writing with Markdown](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown)
-    - [Internal Links](https://www.mkdocs.org/user-guide/writing-your-docs/#internal-links)
-
-> MkDocs uses the [Python Markdown](https://python-markdown.github.io/) library to translate Markdown files into HTML
 
 ## Config
 
@@ -204,7 +195,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 > 
 > ```
 
-## Plugins
+### Plugins
 
 - [tags](https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags)
 - [exclude](https://github.com/apenwarr/mkdocs-exclude): mkdocs plugin that lets you exclude files or trees from your output
@@ -226,7 +217,17 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
     Issues:
     - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
 
-## [YAML Metadata or Front Matter](https://www.mkdocs.org/user-guide/writing-your-docs/#yaml-style-meta-data)
+
+## Writing
+
+See also [[Markdown]].
+
+- [Writing with Markdown](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown)
+    - [Internal Links](https://www.mkdocs.org/user-guide/writing-your-docs/#internal-links)
+
+> MkDocs uses the [Python Markdown](https://python-markdown.github.io/) library to translate Markdown files into HTML
+
+[YAML Metadata or Front Matter](https://www.mkdocs.org/user-guide/writing-your-docs/#yaml-style-meta-data)
 
 Example
 
@@ -244,11 +245,11 @@ some_url: https://example.com
 
 ## Integrations
 
-- [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
+- [[tech/software/git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
 - Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 
 ### Search
->
+
 > A search plugin is provided by default with MkDocs which uses [lunr.js](https://lunrjs.com/) as a search engine.[^1]
 
 [^1]: <https://www.mkdocs.org/user-guide/configuration/#search>

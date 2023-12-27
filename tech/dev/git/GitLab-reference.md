@@ -2,14 +2,14 @@
 tags:
   - dev/GitLab
 visibility: public
-title: GitLab-reference
+title: GitLab Reference
 ---
 
-See also [[public/tech/dev/git/GitLab|my notes on GitLab]] and [[rug/lwp/GitLab|Work notes LWP: GitLab]]
+See also [[Gitlab|my notes on GitLab]] and [[GitLab/GitLab|Work notes LWP: GitLab]].
 
 **Table of Contents**
 
-<!-- This automatically creates a Table of Contents. Unfortunately there doesn't seem to be a way to exlude headings from it, so if one creates a heading for the ToC, it shows up in the ToC itself. -->
+<!-- This automatically creates a Table of Contents. Unfortunately there doesn't seem to be a way to exclude headings from it, so if one creates a heading for the ToC, it shows up in the ToC itself. -->
 [[_TOC_]]
 
 To automatically create a table of contents for a page just add the following line
@@ -42,9 +42,9 @@ See also [presentation on GitLab](sebastian/2023_presentation_GitLab/slides.html
   }
 }%%
 graph LR
-  ni["<b>New Issue/MR</b><div style='text-align: left;'>From previous? Template?</br>Relevant info, link related</br>To-Dos and <em>Tasks</em></br>Label, assign, prioritise</br>Prioritise and schedule</br></div><em>Ready</em></br>_"]
-  --> ci["<b>Working on Issue/MR</b><div style='text-align: left'>and <em>update</em></div><em>In Progress</em></br>_"]
-  --> cc["<b>Close Issue/MR</b><div style='text-align: left;'>Review</br>Remaining To-Dos? New issue/MR?</br>(Announce 'problem solved')</br>update other systems</br></div>Close issue</br>_"]
+  ni["<b>New Issue/MR</b><div style='text-align: left;'>From previous? Template?</br>Relevant info, link related</br>To-Dos and <em>Tasks</em></br>Label, assign, prioritise</br>Prioritise and schedule</br></div><em>Ready</em></br>&nbsp;"]
+  --> ci["<b>Working on Issue/MR</b><div style='text-align: left'>and <em>update</em></div><em>In Progress</em></br>&nbsp;"]
+  --> cc["<b>Close Issue/MR</b><div style='text-align: left;'>Review</br>Remaining To-Dos? New issue/MR?</br>(Announce 'problem solved')</br>update other systems</br></div>Close issue</br>&nbsp;"]
   -->|"refine, link,</br>archive"| kms[(KMS)]
 ```
 
@@ -88,6 +88,16 @@ Commenting: `<!-- ... -->`
 <!-- This is a
 comment -->
 ```
+
+Embed images
+
+```markdown
+<!-- since version 15.7 GitLab supports attributesin Markdown-esk syntax-->
+![test](http://trekmovie.com/wp-content/uploads/2017/03/facepalm-head.jpg){width=20%}
+<!-- HTML also works, but style attributes don't -->
+<img src="..." width="50%">
+```
+
 
 # GitLab Webinterface
 
@@ -179,6 +189,9 @@ By default file `.gitlab-ci.yml`
 [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 
 - [Keyword reference](https://docs.gitlab.com/ee/ci/yaml/)
+- [Git submodules](https://docs.gitlab.com/ee/ci/git_submodules.html)
+- [Schedule pipelines](https://docs.gitlab.com/ee/ci/pipelines/schedules.html)
+- [GitLab CI/CD for external repositories](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/index.html)
 
 # Wiki
 
