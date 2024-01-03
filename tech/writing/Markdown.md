@@ -1,20 +1,30 @@
 ---
-url: "https://daringfireball.net/projects/markdown/"
+url: https://daringfireball.net/projects/markdown/
 visibility: public
 title: Markdown
+related:
+  - "[[dev/YAML|YAML]]"
+  - "[[Obsidian]]"
+  - "[[obsidian/features|Obsidian features]]"
 ---
+
+# Markdown
+
 | Resource | Links |
 |-|-|
 | Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian#^f0ca06) |
-| Cheatsheets | [Cheat Markdown cheatsheet](file://.config/cheat/cheatsheets/personal/markdown)</br>[Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet markdown-here] |
-| Related | [[YAML]] |
+| Cheatsheets | [Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet markdown-here]</br>[Cheatsheet jonschlinkert] |
+| Related | `=(join(this.related, ", "))` |
+| My stuff | [Cheat Markdown cheatsheet (local)](file://.config/cheat/cheatsheets/personal/markdown) |
+
 
 ## Tools & Software
 
 ```dataview
 TABLE WITHOUT ID
   file.link AS "Name",
-  desc-short AS "Description"
+  desc-short AS "Description",
+  (join(category)) AS "Category"
 WHERE type = "software" AND contains(category,"markdown")
 SORT title
 ```
@@ -91,18 +101,42 @@ Column 2
 
 Many Markdown viewers/parsers allow the inclusion of custom [[CSS]] code for styling. This can for example be used to set up classes with certain styles, to facilitate applying visual effects.
 
+
+### (YAML) Front Matter
+
+Many parsers support a block of metadata at the beginning of a Markdown file, usually written in [[dev/YAML|YAML]], sometimes in [[TOML]]. What keys are accepted/used by the parsers varies, but a lot of useful things can be achieved with this.
+
+Example
+
+```yaml
+---
+title: My Document
+date: 2024-01-01
+---
+```
+
+Parsers
+
+- [gray-matter](https://github.com/jonschlinkert/gray-matter)
+- [[yq]]: YAML parser that can be used to extract and process YAML front matter
+
 ### Mermaid Graphs
 
 See [[mermaid|notes on Mermaid]].
 
 
-## Flavours, Specifications and Implementations
+## Specifications, Implementations and Parsers
 
 - Python-Markdown: Python implementation of [John Gruber’s Markdown](https://daringfireball.net/projects/markdown/)
 - [Goldmark](https://github.com/yuin/goldmark/): CommonMark compliant
 - Kramdown: [Website](https://kramdown.gettalong.org/) | [Documentation](https://kramdown.gettalong.org/documentation.html) | [Quick reference](https://kramdown.gettalong.org/quickref.html) | [Github](https://github.com/gettalong/kramdown)
 - [GitLab Flavored Markdown (GLFM)](https://docs.gitlab.com/ee/user/markdown.html)
 - [GitHub Markdown Specs](https://github.github.com/gfm/)
+
+Parsers
+
+- [remarkable](https://github.com/jonschlinkert/remarkable)
+  > Markdown parser, done right. Commonmark support, extensions, syntax plugins, high speed - all in one. Gulp and metalsmith plugins available. Used by Facebook, Docusaurus and many others! Use [https://github.com/breakdance/breakdance](https://github.com/breakdance/breakdance) for HTML-to-markdown conversion. Use [https://github.com/jonschlinkert/markdown-toc](https://github.com/jonschlinkert/markdown-toc) to generate a table of contents.
 
 Discussion
 
@@ -129,3 +163,4 @@ See [[public/tech/software/Software#Pandoc|Software: Pandoc]] and [[public/tech/
 
 [Cheatsheet jonschlinkert]: <https://gist.github.com/jonschlinkert/5854601>
 [Cheatsheet markdown-here]: <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+[Cheatsheet jonschlinkert]: <https://gist.github.com/jonschlinkert/5854601>

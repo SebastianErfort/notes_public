@@ -12,7 +12,7 @@ title: Features
 ## Writing: Markdown Editor
 
 - editing mode: WYSISYG Markdown rendered (or legacy plain editor)
-- [Markdown flavour](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown): mostly [[docs/seb_public/tech/writing/Markdown#[CommonMark](http //commonmark.org/)|Markdown]], some custom features, a lot of HTML supported
+- [Markdown flavour](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown): mostly [[writing/Markdown#CommonMark|CommonMark]], some custom features, a lot of HTML supported
 - file preview on <kbd>ctrl+mouse hover</kbd>
 - Spellcheck (multiple languages/dictionaries)
 - [Canvas](https://obsidian.md/canvas): freely arrange notes and other content on a workspace
@@ -126,7 +126,7 @@ See [Obsidian Documentation](https://help.obsidian.md/Editing+and+formatting/Cal
 Syntax:
 
 ```markdown
-> [!<type>] <title>
+> [!<type>] <title> 
 > <content>
 ```
 
@@ -150,7 +150,7 @@ Syntax:
 
 `todo`
 > [!todo]- You shouldn't leave this until last minute!
-> Maybe start by making youself a coffee.
+> Maybe start by making yourself a coffee.
 
 `warning`, `caution`, `attention`
 > [!warning]- Warning!

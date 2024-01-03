@@ -1,7 +1,7 @@
 ---
 title: Zettlr
 type: software
-category: markdown
+category: markdown/editor
 url: "https://www.zettlr.com/"
 docs: "https://docs.zettlr.com/en/"
 source: "https://github.com/Zettlr/Zettlr"

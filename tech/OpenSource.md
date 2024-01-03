@@ -91,7 +91,10 @@ Term/Acronym | Description
 DPG | Digital Public Good
 
 
-## References
+## News
+
+- [Article ](https://www.theregister.com/2023/12/27/bruce_perens_post_open/) by (people:: [[Bruce Perensen]]) @TheRegister
+
 
 - https://opensource.guide/
 - [gnu.org: What is Free Software?](https://www.gnu.org/philosophy/free-sw.html)

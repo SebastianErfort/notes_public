@@ -8,27 +8,28 @@ url: https://obsidian.md/
 docs: https://help.obsidian.md/Home
 syntax: markdown
 type: software
-category: markdown
+category:
+  - markdown/editor
+  - markdown/reader
 desc-short: |
   Obsidian is the private and flexible note‑taking app that adapts to the way you think.
 visibility: public
 related:
-  - "[[features]]"
-  - "[[docs/seb_public/tech/writing/Markdown|Markdown]]"
-  - "[[DataView]]"
+  - "[[features|Obsidian features]]"
+  - "[[Dataview|Dataview plugin]]"
+  - "[[public/tech/writing/Markdown|Markdown]]"
 ---
 > [!warning] Obsidian is not open-source, but there seems to be a pretty large community of users who would boycott it if they decided to charge money. See [[#Alternatives]] if you want to consider a different software, I have yet to explore alternatives. For now I'd try not to rely too much on Markdown extensions and fancy features.
 
 # Obsidian
 
-`= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")`
-
 | Resource    | References                                                                                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Websites | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
 | Collections | [Awesome Obsidian]                                                                                                                                                                   |
 | Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian#^f0ca06) |
 | My 🌐 stuff | [Notes](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/) (using [[MkDocs]]), [Obsidian Features](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/), [Template vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
-| My notes    | [DataView plugin](DataView), [Markdown](Markdown)                                                                                                                                                                                     |
+| My notes | `=(join(this.related, ", "))` |
 
 ## Config & Customisation
 
@@ -67,7 +68,7 @@ related:
 
 ## Features
 
-See [[features|summary of Obsidian features]] and [[docs/seb_public/tech/writing/Markdown|Markdown]].
+See [[features|summary of Obsidian features]] and [[writing/Markdown|Markdown]].
 
 
 #### Custom
@@ -95,7 +96,7 @@ Custom call-out: add CSS to `.obsidian/snippets` with
 }
 ```
 
-See [CSS snippet file](file:///home/erfort/notes/life/.obsidian/snippets/callouts.css)
+See [CSS snippet file (local)](file://rsrc/obsidian/css-snippets/callouts.css).
 
 ### Search
 
@@ -106,25 +107,21 @@ See [CSS snippet file](file:///home/erfort/notes/life/.obsidian/snippets/callout
 
 ### Queries
 
-```query
-##idea
-```
-
-These are {{author}}'s notes from {{date}}.
+<pre><code>```query
+#idea
+```</code></pre>
 
 ### Metadata, YAML Frontmatter
 
-From <https://rossgriffin.com/tutorials/obsidian-basics-guide/>
-By default obsidian supports the following YAML in this order:
+By default Obsidian supports the following YAML in this order[^1]
 
-1. alias
-2. tags
-3. cssclass
+1. title
+1. alias(es)
+1. tags
+1. cssclass
 
-You are can add more YAML metadata but it’s not natively processed by obsidian. However, this can still be useful if you’re using plugins like _Dataview_ or other programs like Pandoc.
-See also <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20matter/>
+You are can add more YAML metadata but it’s not natively processed by Obsidian. However, this can still be useful if you’re using plugins like [[Dataview]] or other programs like [[Pandoc]].[^2]
 
-Can be further extended by using the community plugin [[#DataView]].
 
 ## [[HTML]]
 
@@ -135,9 +132,11 @@ Since Markdown supports usage of most HTML, this can be used to extend the featu
 - Zotero
     - <https://forum.obsidian.md/t/zotero-best-practices/164/57>
 
-#### OCR
+#### Optical Character Recognition ([[OCR]])
 
-See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.obsidian.md/t/searchable-ocr-lets-get-it-built/28968)
+This would allow integration of hand-written notes.
+
+See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.obsidian.md/t/searchable-ocr-lets-get-it-built/28968).
 
 ## Plugins & Extensions
 
@@ -152,9 +151,12 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [Obsidian Advanced URI](https://vinzent03.github.io/obsidian-advanced-uri/)
     - [Query Control](https://github.com/nothingislost/obsidian-query-control): add controls to embedded queries (exp./deprec.?)
     - [Embed Code File](https://github.com/almariah/embed-code-file): embed code files from Obsidian vault or remote file (eg., GitHub)
+    - [breadcrumbs](https://github.com/SkepticMystic/breadcrumbs): Visualise a custom hierarchy in your Obsidian vault
+      [GitHub](https://github.com/SkepticMystic/breadcrumbs)
 - Appearance/UI
     - [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
-    - [Obsidian-Code-Styler](https://github.com/mayurankv/Obsidian-Code-Styler): A plugin for Obsidian.md for styling codeblocks and inline code
+    - [Obsidian-Code-Styler](https://github.com/mayurankv/Obsidian-Code-Styler): styling codeblocks and inline code
+    - [obsidian-banners](https://github.com/noatpad/obsidian-banners): adds banners to your notes
 - Productivity
     - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Writing
@@ -210,6 +212,12 @@ SORT file.name
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
     - Obsidian + Zotero
     - [[Pandoc#pandoc-crossref|pandoc-crossref]]-like references (citations, figures, equations, ...)
+- templates
+    - [obsidian-starter-templates](https://github.com/masonlr/obsidian-starter-templates)
 
 [Awesome Obsidian]: <https://gitlab.com/treetanium1/resources/obsidian/obsidian-template>
 [obsidian-linter]: <https://github.com/platers/obsidian-linter>
+[Griffin - Obsidian Basics]:  <https://rossgriffin.com/tutorials/obsidian-basics-guide/>
+[Young - YAML front matter]: <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20matter/>
+[^1]: [Griffin - Obsidian Basics]
+[^2]: [Young - YAML front matter]

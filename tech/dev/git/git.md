@@ -1,5 +1,5 @@
 ---
-title: git
+title: Git
 tags:
   - dev/git
   - dev/GitLab
