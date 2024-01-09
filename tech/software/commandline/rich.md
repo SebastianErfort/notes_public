@@ -9,7 +9,6 @@ docs: https://rich.readthedocs.io/en/stable/
 source: https://github.com/Textualize/rich
 developer: Textualize
 desc-short: Rich is a Python library for rich text and beautiful formatting in the terminal.
-tags: 
 visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

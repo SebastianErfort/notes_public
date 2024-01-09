@@ -101,8 +101,8 @@ See [[mermaid|notes on Mermaid]].
 - Python-Markdown: Python implementation of [John Gruber’s Markdown](https://daringfireball.net/projects/markdown/)
 - [Goldmark](https://github.com/yuin/goldmark/): CommonMark compliant
 - Kramdown: [Website](https://kramdown.gettalong.org/) | [Documentation](https://kramdown.gettalong.org/documentation.html) | [Quick reference](https://kramdown.gettalong.org/quickref.html) | [Github](https://github.com/gettalong/kramdown)
+- [GitHub Flavored Markdown Spec (GFM)](https://github.github.com/gfm/): based on [[#CommonMark]]
 - [GitLab Flavored Markdown (GLFM)](https://docs.gitlab.com/ee/user/markdown.html)
-- [GitHub Markdown Specs](https://github.github.com/gfm/)
 
 Discussion
 
@@ -116,11 +116,9 @@ Discussion
 
 ## Presentations
 
-### LaTeX Beamer
-
 ### reveal.js
 
-See [[public/tech/software/Software#Pandoc|Software: Pandoc]] and [[public/tech/software/Software#reveal.js|Software: reveal.js]]
+See notes on [[Pandoc]] and [[revealjs|reveal.js]].
 
 
 ## References

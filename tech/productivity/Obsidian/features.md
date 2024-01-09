@@ -4,14 +4,14 @@ tags:
 visibility: public
 title: Features
 ---
-| Resource | References                         |
-| -------- | ---------------------------------- |
+| Resource | References |
+| ---- | ---- |
 | Obsidian | [[Obsidian\|My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
 | Related | [[Markdown]] |
 
 ## Writing: Markdown Editor
 
-- editing mode: WYSISYG Markdown rendered (or legacy plain editor)
+- editing mode: WYSISYG Markdown rendered
 - [Markdown flavour](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown): mostly [[docs/seb_public/tech/writing/Markdown#[CommonMark](http //commonmark.org/)|Markdown]], some custom features, a lot of HTML supported
 - file preview on <kbd>ctrl+mouse hover</kbd>
 - Spellcheck (multiple languages/dictionaries)
