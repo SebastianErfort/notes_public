@@ -12,8 +12,9 @@ visibility: public
 See also [[public/tech/OpenSource#Organisations|OpenSource: Organisations]]
 
 - [[WHO#OSPO]]
-- [[GitHub]]
+- [[Github]]
 - [[CERN]]
+
  
 ## People
 
@@ -24,6 +25,11 @@ See also [[public/tech/OpenSource#Organisations|OpenSource: Organisations]]
 
 - [[2023-11-28]]: [CERN OSPO Inaugural Event](https://indico.cern.ch/event/1327562/timetable/?view=standard)
   presentations: drive > tech/opensource: NVIDIA, OSHWA, WHO OSPO
+
+
+## Compliance
+
+![[OpenSource#^1a1526]]
 
 
 ## References
@@ -45,3 +51,4 @@ See also [[public/tech/OpenSource#Organisations|OpenSource: Organisations]]
         - [github-ospo](github.com/github/github-ospo): Helping open source program offices get started
           [Blog post](https://github.blog/2023-03-13-an-open-source-project-to-empower-ospos-everywhere/)
 - [RedHat article: guide to setting up your OSPO](https://opensource.com/article/20/5/open-source-program-office)
+- [awesome-ospo @GH](https://github.com/todogroup/awesome-ospo)

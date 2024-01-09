@@ -23,9 +23,11 @@ Linting & syntax | [Black](black.md) - pycodestyle
 
 # Installation and Versions
 
-Change system python version ![[linux#^eb9a0b]]
-
-[2to3 converter](https://docs.python.org/3/library/2to3.html): Automated Python 2 to 3 code translation
+- change system python version: [[linux#^eb9a0b|Linux: default applications]]
+- (virtual) environments
+    - Python module `venv`
+    - [virtualenv](https://virtualenv.pypa.io/en/latest/#)
+- [2to3 converter](https://docs.python.org/3/library/2to3.html): Automated Python 2 to 3 code translation
 
 # Functions/methods
 
@@ -280,10 +282,13 @@ Linters
     - Config: `~/.pylintrc`
 - autopep8: automatically apply (specific) PEP8 rules
 
-Testing
+Testing #dev/build/python
 
-- [tox](https://tox.wiki/en/latest/):  generic virtual environment management and test command line tool
-  #dev/build/python
+- [virtualenvwrapper](https://pypi.org/project/virtualenvwrapper) - a useful set of scripts for creating and deleting virtual environments
+- [pew](https://pypi.org/project/pew) - provides a set of commands to manage multiple virtual environments
+- [tox](https://pypi.org/project/tox) - a generic virtualenv management and test automation command line tool, driven by a `tox.ini` configuration file
+- [nox](https://pypi.org/project/nox) - a tool that automates testing in multiple Python environments, similar to tox, driven by a `noxfile.py` configuration file
+
 
 # Project Guidelines
 

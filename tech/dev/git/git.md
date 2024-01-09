@@ -1,5 +1,5 @@
 ---
-title: git
+title: Git
 tags:
   - dev/git
   - dev/GitLab
@@ -13,7 +13,7 @@ docs: "https://git-scm.com/docs"
 | ------------- | ----------------------------------------------------------- |
 | Documentation | `= ( "[Documentation](" + this.docs + ")")`                 |
 | Commands      | [Cheatsheet](file://.config/cheat/cheatsheets/personal/git) |
-| My stuff      | [my Git resources]                                          | 
+| My stuff      | [my Git resources]                                          |
 
 ## Clone and Checkout
 
@@ -27,33 +27,33 @@ In my experience so far this standard commands `git sparse-checkout ...` work fi
 
 > [!warning] 🚧 WIP
 However, I wanted to specify what to sparsely check out, before pulling anything. For this you require Git's infrastructure to be set up, usually the `.git` directory with Git's configuration etc. But as far as I understand these only get properly created when you perform the first checkout (pull). Before that, essential files are missing. Pre-creating those files containing the configuration for the sparse checkout only worked manually in my experiments.
-> 
+>
 > ```bash
 > git init 2>/dev/null
 > git remote add origin "$url"
 > git config core.sparseCheckout true
 > echo docs > .git/info/sparse-checkout
-> 
+>
 > # Attempt with proper Git commands:
 > # the following sets config.worktree instead and adds additional rules to
 > # info/sparse-checkout
 > # BUG: fails to checkout sparsely
 > # git sparse-checkout init --cone
 > # git sparse-checkout set "doc"
-> 
+>
 > git fetch -q
 > git checkout "$branch"
 > ```
-> 
+>
 > To add another layer, I was using this feature within a [[#Submodules|Git submodule]]. The steps described above create a proper repository that isn't integrated with the outer repository. Submodules have a reference to the parent Git directory, the `.git` is a file with a reference. To manually turn the sparsely checked out repository into a submodule again
-> 
+>
 > ```bash
 > # turn Git repo into submodule
 > mv ".git" "$parent_gitdir"
 > # this is how Git specifies path to .git dir in submodules
 > echo "gitdir: ../../${sm_gitdir}" > ".git"
 > ```
-> 
+>
 > where the parent repo's Git directory is for example `../../.git/modules/<submodule name/path>`.
 
 Examples and references
@@ -107,15 +107,10 @@ Available hooks
 - `pre-commit`: helpful for example to run code formatters, linters, etc.  before every commit.
 
 
-### Pre-commit Framework
+#### Tools and Frameworks
 
-The [pre-commit framework](https://pre-commit.com) facilitates using and maintaining hooks. They can be downloaded e.g. from GitHub and re-used across projects.
-
-Examples
-
-- [pre-commit/pre-commit-hooks @GH](https://github.com/pre-commit/pre-commit-hooks)
-- [[black#^13286c|Black code formatter: pre-commit hooks]]
-- [CERN pre-commit hooks](https://gitlab.cern.ch/lhcb-core/pre-commit-hooks/): include in pipeline via HTTPS, run hooks, generate patch if code is changed that can be downloaded and applied locally
+- [[pre-commit]]
+- [lefthook](https://github.com/evilmartians/lefthook)
 
 
 ### Authentication
@@ -192,7 +187,7 @@ git pull --recurse-submodules
 
 - Submodule HEAD is detatched/keepts becoming detatched: see [Stack Overflow question](https://stackoverflow.com/a/36375256/16096134)
 - fixing unrelated histories, e.g. when error `fatal: refusing to merge unrelated histories` occurs: <https://stackoverflow.com/a/39783462>
-  
+
 
 References
 

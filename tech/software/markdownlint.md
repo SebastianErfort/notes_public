@@ -1,11 +1,8 @@
 ---
 title: Markdownlint
 type: software
-category: markdown
-url: ""
-docs: ""
+category: markdown/linter
 source: "https://github.com/DavidAnson/markdownlint"
-developer: ""
 desc-short: |
   A Node.js style checker and lint tool for Markdown/CommonMark files.
 tags:
@@ -30,6 +27,8 @@ See also: [[Markdown]]
 
 ## Configuration
 
+- sets of rules can be collected in a style, e.g. `relaxed.json` , see [example styles](https://github.com/DavidAnson/markdownlint/tree/main/style)
+
 ### markdownlint-cli
 
 For defaults see [example YAML config file on GitHub](https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml).
@@ -40,17 +39,20 @@ Config files: `~/.mdlrc` or specify through argument
 markdownlint -c markdownlint.yml
 ```
 
+Does support overrides, e.g. for sub-dirs to some extent.^[https://github.com/igorshubovych/markdownlint-cli/issues/53]
+
 ### markdownlint-cli2
 
-[markdownlint-cli2 on GitHub](https://github.com/DavidAnson/markdownlint-cli2)
+- [markdownlint-cli2 on GitHub](https://github.com/DavidAnson/markdownlint-cli2)
+- [markdownlint-cli2-formatter-summarize](https://www.npmjs.com/package/markdownlint-cli2-formatter-summarize): An output formatter for markdownlint-cli2 that summarizes the results
 
 ## Essential Fixes
 
 Especially relevant for publishing Markdown notes, for example with [[MkDocs]]
 
 - indentation: notes don't render correctly if indent is wrong
-- newlines around certain elements: lists, fenced code blocks, ...
-- frontmatter: some Markdown parsers choke on empty keys or strings with colons, such as URLs `https:...`
+- newlines around certain elements required for proper rendering: lists, fenced code blocks, ...
+- frontmatter: some Markdown parsers choke on invalid YAML syntax, e.g. empty keys or strings with colons, such as URLs `https:...`
 
 ## Integrations
 

@@ -14,6 +14,8 @@ visibility: public
 
 ## Extensions
 
+- [GNUzilla's list of free addons](http://www.gnu.org/software/gnuzilla/addons.html)
+
 ### FoxyProxy
 
 Tags: #tech/firefox/extensions
@@ -33,3 +35,8 @@ For example set up usage of a (SSH) SOCKS proxy[^1]
 ![|200](FoxyProxy_extension_popup.png "FoxyProxy extension pop-up")
 
 [^1]: [[ssh#SOCKS proxy]]
+
+
+## Alternatives
+
+- [GNUzilla IceCat (formerly IceWeasel)](https://www.gnu.org/software/gnuzilla/)

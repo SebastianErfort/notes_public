@@ -4,9 +4,9 @@ tags:
   - dev
 visibility: public
 ---
-See also
-[[public/tech/software/Software#Dev|My notes: Software - Dev]]
-[[rug/lwp/GitLab#CI/CD|GitLab CI/CD]]
+| Resource | References                                                    |
+| -------- | ------------------------------------------------------------- |
+| My notes | [Software Dev](public/tech/software/Software#Dev), [GitLab CI/CD](public/tech/dev/git/GitLab#CI/CD) |
 
 ## Command Line
 
@@ -46,6 +46,11 @@ See also
 - [haylxon](https://github.com/pwnwriter/haylxon): grab screenshots from terminal
 
 
+#### Licensing
+
+
+
+
 ### Shells
 
 ```dataview
@@ -75,8 +80,11 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 - [[git|Notes on Git]]
 - [[rug/lwp/GitLab|Notes on GitLab]]
 - [[Github|Notes on GitHub]]
-- [pre-commit](https://pre-commit.com/): [GitHub](https://github.com/pre-commit/pre-commit)
-  > A framework for managing and maintaining multi-language pre-commit hooks.
+- [[pre-commit]]: framework for managing and maintaining multi-language pre-commit hooks
+- [lefthook]: Fast and powerful Git hooks manager for any type of projects
+
+[lefthook]: <https://github.com/evilmartians/lefthook>
+
 
 ## Syntax Check, Formatting, Linting
 

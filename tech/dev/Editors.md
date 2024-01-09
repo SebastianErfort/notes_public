@@ -2,6 +2,11 @@
 visibility: public
 title: Editors
 ---
+# Editors
+
+- Atom (deprecated): developed by GitHub
+- [Pulsar](https://pulsar-edit.dev/): community-led continuation of Atom
+
 ## Autocompletion etc
 
 [Microsoft: LSP implementations](https://microsoft.github.io/language-server-protocol/implementors/servers/)
