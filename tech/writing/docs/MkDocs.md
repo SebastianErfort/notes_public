@@ -170,7 +170,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 >   palette:
 >     primary: custom  # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors
 > extra_css:
->   - stylesheets/extra.css
+>   - assets/css/extra.css
 > markdown_extensions:
 >     - pymdownx.tasklist
 >     - footnotes
