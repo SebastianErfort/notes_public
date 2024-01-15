@@ -4,7 +4,7 @@ title: Demo
 ---
 This is a little demo to showcase the features of Obsidian.
 
-Obsidian mostly uses the CommonMark Markdown flavour. For a list of supported Markdown features, see [[Obsidian#Markdown]].
+Obsidian mostly uses the CommonMark Markdown flavour. For a list of supported Markdown features, see [[docs/seb_public/tech/productivity/Obsidian/Obsidian#Markdown]].
 
 ## Heading 2
 
@@ -30,7 +30,7 @@ supports most HTML tags, some are sanitised
 
 Obsidian adds
 
-- Wiki-links: see [[Obsidian#^cecfe6|Obsidian: Wiki-links]] `[[...]]`
+- Wiki-links: see [[docs/seb_public/tech/productivity/Obsidian/Obsidian#^cecfe6|Obsidian: Wiki-links]] `[[...]]`
 - comments by using `%%` %% like this %%
 - call-outs
   > [!info]

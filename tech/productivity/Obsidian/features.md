@@ -6,7 +6,7 @@ title: Features
 ---
 | Resource | References |
 | ---- | ---- |
-| Obsidian | [[Obsidian\|My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
+| Obsidian | [[docs/seb_public/tech/productivity/Obsidian/Obsidian|My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
 | Related | [[Markdown]] |
 
 ## Writing: Markdown Editor

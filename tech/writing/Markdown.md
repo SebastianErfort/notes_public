@@ -4,7 +4,7 @@ visibility: public
 title: Markdown
 related:
   - "[[dev/YAML|YAML]]"
-  - "[[Obsidian]]"
+  - "[[docs/seb_public/tech/productivity/Obsidian/Obsidian]]"
   - "[[obsidian/features|Obsidian features]]"
 ---
 
@@ -12,7 +12,7 @@ related:
 
 | Resource | Links |
 |-|-|
-| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian#^f0ca06) |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](docs/seb_public/tech/productivity/Obsidian/Obsidian.md#^f0ca06) |
 | Cheatsheets | [Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet markdown-here]</br>[Cheatsheet jonschlinkert] |
 | Related | `=(join(this.related, ", "))` |
 | My stuff | [Cheat Markdown cheatsheet (local)](file://.config/cheat/cheatsheets/personal/markdown) |
@@ -146,7 +146,7 @@ Discussion
 
 [Website](http://commonmark.org/) | [Specification](https://spec.commonmark.org/0.30/) | [Forum](https://talk.commonmark.org/) | [Tutorial](https://commonmark.org/help/tutorial/)
 
-[[Pandoc]] mastermind John MacFarlane is one of the founders and maintainers. Used by [[Obsidian]].
+[[Pandoc]] mastermind John MacFarlane is one of the founders and maintainers. Used by [[docs/seb_public/tech/productivity/Obsidian/Obsidian]].
 
 ## Presentations
 

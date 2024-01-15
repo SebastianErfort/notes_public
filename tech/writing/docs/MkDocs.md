@@ -22,7 +22,7 @@ visibility: public
 >     - easiest using Wiki-links `[[...]]` as files are automatically located
 >     - relative links without explicit `./` are relative to **base directory** (`docs`)
 >     - even worse with Wiki-links extension
->     - [[Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
+>     - [[docs/seb_public/tech/productivity/Obsidian/Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
  
 ## Getting Started
 
@@ -246,7 +246,7 @@ some_url: https://example.com
 ## Integrations
 
 - [[tech/software/git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
-- Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- Obsidian: [[docs/seb_public/tech/productivity/Obsidian/Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 
 ### Search
 
@@ -266,7 +266,7 @@ Maybe one day there will be a MkDocs DataView plugin, or system-independent plug
 
 > [!todo] add missing links
 
-[^2]: [[Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
+[^2]: [[docs/seb_public/tech/productivity/Obsidian/Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
 
 
 ## References

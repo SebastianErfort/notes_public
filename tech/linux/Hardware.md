@@ -124,7 +124,7 @@ visibility: public
 
 Examples
 
-- [[Yubikey]]: lock/unlock computer when removing/inserting key
+- [[docs/seb/Yubikey]]: lock/unlock computer when removing/inserting key
 
 ## MAC Address
 
