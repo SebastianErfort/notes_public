@@ -4,15 +4,15 @@ visibility: public
 title: Markdown
 related:
   - "[[dev/YAML|YAML]]"
-  - "[[docs/seb_public/tech/productivity/Obsidian/Obsidian]]"
-  - "[[obsidian/features|Obsidian features]]"
+  - "[[Obsidian]]"
+  - "[[features|Obsidian features]]"
 ---
 
 # Markdown
 
 | Resource | Links |
 |-|-|
-| Linting & Style | [[markdownlint]], [Obsidian Linter](docs/seb_public/tech/productivity/Obsidian/Obsidian.md#^f0ca06) |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian.md#^f0ca06) |
 | Cheatsheets | [Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet markdown-here]</br>[Cheatsheet jonschlinkert] |
 | Related | `=(join(this.related, ", "))` |
 | My stuff | [Cheat Markdown cheatsheet (local)](file://.config/cheat/cheatsheets/personal/markdown) |

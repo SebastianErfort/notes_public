@@ -16,7 +16,7 @@ desc-short: |
 visibility: public
 related:
   - "[[features|Obsidian features]]"
-  - "[[Dataview|Dataview plugin]]"
+  - "[[DataView|Dataview plugin]]"
   - "[[public/tech/writing/Markdown|Markdown]]"
 ---
 > [!warning] Obsidian is not open-source, but there seems to be a pretty large community of users who would boycott it if they decided to charge money. See [[#Alternatives]] if you want to consider a different software, I have yet to explore alternatives. For now I'd try not to rely too much on Markdown extensions and fancy features.
@@ -27,7 +27,7 @@ related:
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Websites | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
 | Collections | [Awesome Obsidian]                                                                                                                                                                   |
-| Linting & Style | [[markdownlint]], [Obsidian Linter](docs/seb_public/tech/productivity/Obsidian/Obsidian.md#^f0ca06) |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian.md#^f0ca06) |
 | My 🌐 stuff | [Notes](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/) (using [[MkDocs]]), [Obsidian Features](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/), [Template vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
 | My notes | `=(join(this.related, ", "))` |
 
@@ -120,7 +120,7 @@ By default Obsidian supports the following YAML in this order[^1]
 1. tags
 1. cssclass
 
-You are can add more YAML metadata but it’s not natively processed by Obsidian. However, this can still be useful if you’re using plugins like [[Dataview]] or other programs like [[Pandoc]].[^2]
+You are can add more YAML metadata but it’s not natively processed by Obsidian. However, this can still be useful if you’re using plugins like [[DataView]] or other programs like [[Pandoc]].[^2]
 
 
 ## [[HTML]]
@@ -177,6 +177,12 @@ WHERE contains(file.path,"tech/Obsidian/plugins")
 SORT file.name
 ```
 
+
+## Tools
+
+- [obsidiantools](https://github.com/mfarragher/obsidiantools): Python package for analysing an Obsidian.md vault
+    - connections with meta data
+    - network, graph, (back) links
 
 ## Alternatives
 
