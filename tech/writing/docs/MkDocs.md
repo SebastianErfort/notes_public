@@ -19,10 +19,8 @@ visibility: public
 > [!warning] Caveats
 >
 > - use only relative links, not absolute links, for compatibility between different Markdown viewers/editors
->     - easiest using Wiki-links `[[...]]` as files are automatically located
->     - relative links without explicit `./` are relative to **base directory** (`docs`)
->     - even worse with Wiki-links extension
->     - [[docs/seb_public/tech/productivity/Obsidian/Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
+>     - using Markdown extensions such as mkdocs-ezlinked locate files and make it significantly easier to use links
+>     - [[obsidian/Obsidian|Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
  
 ## Getting Started
 
@@ -68,6 +66,10 @@ visibility: public
     mkdocs build
     ```
 
+
+## CLI
+
+[MkDocs documentation: CLI](https://www.mkdocs.org/user-guide/cli)
 
 ## Config
 
@@ -218,7 +220,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
     - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
 
 
-## Writing
+## Editing
 
 See also [[Markdown]].
 
@@ -242,6 +244,10 @@ date: 2018-07-10
 some_url: https://example.com
 ---
 ```
+
+> [!tip] Live-reload running `mkdocs serve`
+> This command by default rebuilds every page, without caching. When editing a single page this can be very frustrating as it may take a while until the results are rendered. With certain caveats,[^dirty] `mkdocs serve --dirty` can be used, to only rebuild pages that were changed.
+
 
 ## Integrations
 
@@ -273,3 +279,5 @@ Maybe one day there will be a MkDocs DataView plugin, or system-independent plug
 
 - [catalog](https://github.com/mkdocs/catalog): A list of awesome MkDocs projects and plugins.
 - [Blog: Create a Personal Site](https://www.codeinsideout.com/blog/site-setup/create-site-project)
+
+[^dirty]: <https://github.com/mkdocs/mkdocs/issues/2384>

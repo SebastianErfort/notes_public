@@ -6,10 +6,11 @@ tags:
   - dev/coding
 visibility: public
 ---
-Category | Tools
--|-
-Package managers | pip, [[pipx]]
-Linting & syntax | [Black](black.md) - pycodestyle
+| Category           | Tools                           |
+| ------------------ | ------------------------------- |
+| Package versioning | venv, (Ana)Conda                |
+| Package managers   | pip, [[pipx]]                   |
+| Linting & syntax   | [Black](black.md) - pycodestyle |
 
 # References
 
@@ -290,7 +291,12 @@ Testing #dev/build/python
 - [nox](https://pypi.org/project/nox) - a tool that automates testing in multiple Python environments, similar to tox, driven by a `noxfile.py` configuration file
 
 
-# Project Guidelines
+# Projects
+
+## Project Managers
+
+- [Hatch](https://hatch.pypa.io/)
+    > Hatch is a modern, extensible Python project manager. See the [Why Hatch?](https://hatch.pypa.io/latest/why/) page for more information.
 
 ## Virtual Environment
 

@@ -4,10 +4,10 @@ tags:
 visibility: public
 title: Features
 ---
-| Resource | References |
-| ---- | ---- |
-| Obsidian | [[docs/seb_public/tech/productivity/Obsidian/Obsidian|My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
-| Related | [[Markdown]] |
+| Resource | References |  |
+| ---- | ---- | ---- |
+| Obsidian | [[docs/seb_public/tech/productivity/Obsidian/Obsidian | My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
+| Related | [[Markdown]] |  |
 
 ## Writing: Markdown Editor
 
@@ -45,6 +45,17 @@ Markdown: ![tux|100](tux.png)
 Obsidian/Wiki: ![[tux.png|100]]
 HTML: requires "link", can't use just (relative) file path
 <img src="file:///home/erfort/journal/life/tux.png" width="100">
+
+HTML figure: offers caption, contents and caption can be centered (not working reader mode)
+
+<figure style="text-align: center;">
+
+  <img src="https://cdn.pixabay.com/photo/2023/11/22/15/20/books-8405721_1280.jpg"  width="400" style="align: center;">
+
+  <figcaption><a class="external-link" href="https://pixabay.com/photos/books-leather-old-antique-binding-8405721/">Leather-bound Books (Joa 70 via Pixabay)</a></figcaption>
+</figure>
+
+References
 
 - [centering images](https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/comment/iamghtr/)
 

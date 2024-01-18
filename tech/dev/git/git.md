@@ -26,7 +26,7 @@ Sparse checkout lets you check out only part of a repository. This can be helpfu
 In my experience so far this standard commands `git sparse-checkout ...` work fine if the repository is already checked out. Extraneous files are removed and you're left with the files and directories you specified to be checked out.
 
 > [!warning] 🚧 WIP
-However, I wanted to specify what to sparsely check out, before pulling anything. For this you require Git's infrastructure to be set up, usually the `.git` directory with Git's configuration etc. But as far as I understand these only get properly created when you perform the first checkout (pull). Before that, essential files are missing. Pre-creating those files containing the configuration for the sparse checkout only worked manually in my experiments.
+However, I wanted to specify what to sparsely check out, before pulling anything. For this Git's infrastructure needs to be set up, usually the `.git` directory with Git's configuration etc. But as far as I understand these only get properly created when the first checkout (pull) is performed. Before that, essential files are missing. Pre-creating those files containing the configuration for the sparse checkout only worked manually in my experiments.
 >
 > ```bash
 > git init 2>/dev/null

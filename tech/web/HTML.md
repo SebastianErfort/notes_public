@@ -9,6 +9,16 @@ See also my notes on [[CSS|CSS]] | [[Markdown|Markdown]]
 
 ## Language
 
+
+### Tags
+
+References
+
+- [tag id vs name](https://stackoverflow.com/questions/5319754/cross-reference-named-anchor-in-markdown/7335259#7335259)
+
+
+### Special Characters - Entities
+
 HTML entities: reserved characters in HTML must be replaced with entities[^1]
 
 > [!info]- [HTML Characters Entities cheatsheet (QuickRef.ME)](https://quickref.me/html-char.html#html-character-entity-references)
