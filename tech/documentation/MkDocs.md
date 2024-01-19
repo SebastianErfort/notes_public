@@ -19,10 +19,8 @@ visibility: public
 > [!warning] Caveats
 >
 > - use only relative links, not absolute links, for compatibility between different Markdown viewers/editors
->     - easiest using Wiki-links `[[...]]` as files are automatically located
->     - relative links without explicit `./` are relative to **base directory** (`docs`)
->     - even worse with Wiki-links extension
->     - [[public/tech/productivity/Obsidian/Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
+>     - using Markdown extensions such as mkdocs-ezlinked locate files and make it significantly easier to use links
+>     - [[Obsidian|Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
  
 ## Getting Started
 
@@ -69,6 +67,10 @@ visibility: public
     ```
 
 
+## CLI
+
+[MkDocs documentation: CLI](https://www.mkdocs.org/user-guide/cli)
+
 ## Config
 
 In file `mkdocs.yml`.
@@ -112,10 +114,10 @@ See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pyp
 
   ```
 
-### Markdown in MkDocs
+## Markdown in MkDocs
 
 To ensure compatibility between MkDocs and other Markdown renderers, try to stick to [[Python-Markdown#Specifications|Python-Markdown Specifications]].
-A number of Markdown extensions and MkDocs plugins is used, see `mkdocs.yml`. The script `util/markdown.sh` contains a number of functions to edit Markdown files in a batch to
+A number of Markdown extensions and MkDocs plugins is used, see `mkdocs.yml`. The script `util/markdown.sh` contains a number of functions to edit Markdown files in a batch
 
 - `md_fix_lists_empty_line`: add empty lines before Markdown lists that wouldn't render as lists in MkDocs otherwise
 - `md_fix_linestart_obsidian-tag`: add text before Obsidian inline tage that would render as headings in MkDocs otherwise
@@ -123,6 +125,9 @@ A number of Markdown extensions and MkDocs plugins is used, see `mkdocs.yml`. Th
 
 
 #### Markdown Extensions
+
+> [!todo] Clean
+> - [ ] categorise extensions/plugins
 
 See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions), [list of Python-Markdown extensions](https://python-markdown.github.io/extensions/) and [[Python-Markdown]]
 
@@ -170,7 +175,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 >   palette:
 >     primary: custom  # see https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors
 > extra_css:
->   - stylesheets/extra.css
+>   - assets/css/extra.css
 > markdown_extensions:
 >     - pymdownx.tasklist
 >     - footnotes
@@ -217,12 +222,16 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 - [mkdocs-table-reader-plugin](https://github.com/timvink/mkdocs-table-reader-plugin
 - [mkdocs-redirects](https://github.com/datarobot/mkdocs-redirects): Page redirects for moved/renamed pages
 - [mkdocs-macros](https://mkdocs-macros-plugin.readthedocs.io/en/latest/): A plugin for unleashing the power of Mkdocs, by using variables and macros
-- [mkdocs-obsidian-support-plugin](https://github.com/ndy2/mkdocs-obsidian-support-plugin): convert Obsidian call-outs and wiki-link images to mkdocs-material compatible code
-    :bug: callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
 - [mkdocs-gitlab-plugin](https://gitlab.inria.fr/vidjil/mkdocs-gitlab-plugin): MkDocs plugin to transform strings such as #1234, %56, or !789 into links to a GitLab repository.
+- [mkdocs-ezlinked-plugin](https://pypi.org/project/mkdocs-ezlinked-plugin/): enables easier linking between pages
+- Obsidian compatibility: (Wiki-)links, admonitions/callouts, (nested) tags
+    - [mkdocs-obsidian-support-plugin](https://github.com/ndy2/mkdocs-obsidian-support-plugin): convert Obsidian call-outs and wiki-link images to mkdocs-material compatible code
+        Issues:
+        - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
+    - [mkdocs-obsidian-bridge](https://github.com/GooRoo/mkdocs-obsidian-bridge): currently only handling links (allow partial path, selecting file with shortest match, style dead links)
 
 
-## Writing
+## Editing
 
 See also [[Markdown]].
 
@@ -247,34 +256,48 @@ some_url: https://example.com
 ---
 ```
 
+> [!tip] Live-reload running `mkdocs serve`
+> This command by default rebuilds every page, without caching. When editing a single page this can be very frustrating as it may take a while until the results are rendered. With certain caveats,[^dirty] `mkdocs serve --dirty` can be used, to only rebuild pages that were changed.
+
+
+## Features
+
+- [embedding external files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files): [pymdown-extension snippets](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/) (Obsidian syntax for embedding other notes could be translated to use this, see [[mkdocs_obsidian_compatibility|project MkDocs-Obsidian compatibility]] #idea/tech/mkdocs #idea/tech/obsidian)
+    - [snippets notation](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation)
+    - can be used to keep a central file of references, e.g. a glossary, that can be included and things like hyperlinks defined therein can be accessed
+    
+
+
 ## Integrations
 
-- [[tech/software/git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
-- Obsidian: [[public/tech/productivity/Obsidian/Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- [[git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
+- Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 - [[mkdocstrings]]
 
 ### Search
 
-> A search plugin is provided by default with MkDocs which uses [lunr.js](https://lunrjs.com/) as a search engine.[^1]
+> A search plugin is provided by default with MkDocs which uses [lunr.js](https://lunrjs.com/) as a search engine.[^search]
 
-[^1]: <https://www.mkdocs.org/user-guide/configuration/#search>
+[^search]: <https://www.mkdocs.org/user-guide/configuration/#search>
 
 
 ## Compatibility
 
 ### Obsidian
 
-As can be expected not all Markdown renders the same as different specifications are used.[^2] I have been working on a [MkDocs template] with some changes to the default Markdown config and adding some extensions/plugins to achieve as much as possible compatibility. The [list of to-dos] is getting shorter, but some critical features are yet missing.
+As can be expected not all Markdown renders the same as different specifications are used.[^markdown-specs] I have been working on a [MkDocs template] with some changes to the default Markdown config and adding some extensions/plugins to achieve as much as possible compatibility. The [list of to-dos] is getting shorter, but some critical features are yet missing.
 
 Then there are some quite helpful plugins in Obsidian, especially [[Dataview]]. There have been requests in the forums, but no solution yet.
 Maybe one day there will be a MkDocs DataView plugin, or system-independent plugins. For now, [[Dataview#Export|export rendered DataView results from Obsidian]].
 
 > [!todo] add missing links
 
-[^2]: [[public/tech/productivity/Obsidian/Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
+[^markdown-specs]: [[Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
 
 
 ## References
 
 - [catalog](https://github.com/mkdocs/catalog): A list of awesome MkDocs projects and plugins.
 - [Blog: Create a Personal Site](https://www.codeinsideout.com/blog/site-setup/create-site-project)
+
+[^dirty]: <https://github.com/mkdocs/mkdocs/issues/2384>

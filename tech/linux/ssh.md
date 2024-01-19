@@ -21,6 +21,46 @@ Host xyz x* WhatEverYouWannaCallIt
 - `User` is the username for this connection
 - `IdentityFile` is the SSH private key for this connection
 
+
+### Forwarding
+
+forward private keys, so they can be used on the remote host
+
+```ssh_config
+Host xyz
+  ForwardAgent yes
+```
+
+### Proxy Command
+
+SSH-tunneling through intermediate host (jumphost). Outdated and vulnerable,[^7] use `ProxyJump` instead[^6]
+
+```
+Host xyz
+  ProxyCommand ssh proxy.host nc -w1 %h %p
+```
+
+### ProxyJump
+
+Preferred way of connecting to host through intermedia host(s), which are called jump hosts or bastions (as they often are security-hardened entry points to networks)[^6]
+
+```bash
+ssh -J jumphost1[,jumphost2,...] remotehost
+```
+
+or configure
+
+```
+Host jumphost
+    HostName <IP address or hostname>
+
+# remote host only accessible through jumphost
+Host remotehost
+    HostName <IP address or hostname>
+    ProxyJump jumphost
+```
+
+
 ### ControlMaster
 
 use an open connection for subsequent connections, so you don't have to enter credentials again and it's faster
@@ -40,23 +80,6 @@ Check status
 ssh -S /path/to/socket -O check <bogus arg>
 ```
 
-### Forwarding
-
-forward private keys, so they can be used on the remote host
-
-```ssh_config
-Host xyz
-  ForwardAgent yes
-```
-
-### Proxy Command
-
-SSH-tunneling through intermediate host
-
-```
-Host xyz
-  ProxyCommand ssh proxy.host nc -w1 %h %p
-```
 
 ## Commands
 
@@ -120,5 +143,6 @@ then configure applications to use that proxy.[^5]
 
 For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs, e.g. using the [[Firefox#FoxyProxy|extension FoxyProxy]].
 
-[RedHat article]: https://www.redhat.com/sysadmin/ssh-dynamic-port-forwarding
-[^5]: [RedHat article]
+[^5]: [RedHat article SSH dynamic Port-Forwarding](https://www.redhat.com/sysadmin/ssh-dynamic-port-forwarding)
+[^6]: [RedHat article SSH ProxyJump](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump)
+[^7]: CVE-2023-51385

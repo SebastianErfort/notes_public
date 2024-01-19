@@ -6,12 +6,12 @@ title: Features
 ---
 | Resource | References |  |
 | ---- | ---- | ---- |
-| Obsidian | [[public/tech/productivity/Obsidian/Obsidian | My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
+| Obsidian | [[obsidian/Obsidian | My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
 | Related | [[Markdown]] |  |
 
 ## Writing: Markdown Editor
 
-- editing mode: WYSISYG Markdown rendered (or legacy plain editor)
+- editing mode: WYSISYG Markdown rendered
 - [Markdown flavour](https://help.obsidian.md/Editing+and+formatting/Obsidian+Flavored+Markdown): mostly [[writing/Markdown#CommonMark|CommonMark]], some custom features, a lot of HTML supported
 - file preview on <kbd>ctrl+mouse hover</kbd>
 - Spellcheck (multiple languages/dictionaries)
@@ -46,10 +46,20 @@ Obsidian/Wiki: ![[tux.png|100]]
 HTML: requires "link", can't use just (relative) file path
 <img src="file:///home/erfort/journal/life/tux.png" width="100">
 
-Using CSS snippets, the alt text can be overloaded to modify image properties, e.g. to center images, see `image_center.css` in snippets folder. Example:
+Using CSS snippets, the alt text can be overloaded to modify image properties.[^center_images]
+
+For example center images, see `image_center.css` in snippets folder. Usage:
 
 ![tux | center | 50](tux.png)
 
+HTML figure: offers caption, contents and caption can be centered (not working reader mode)
+
+<figure style="text-align: center;">
+
+  <img src="https://cdn.pixabay.com/photo/2023/11/22/15/20/books-8405721_1280.jpg"  width="400" style="align: center;">
+
+  <figcaption><a class="external-link" href="https://pixabay.com/photos/books-leather-old-antique-binding-8405721/">Leather-bound Books (Joa 70 via Pixabay)</a></figcaption>
+</figure>
 
 ### Code Blocks
 
@@ -129,7 +139,7 @@ See [Obsidian Documentation](https://help.obsidian.md/Editing+and+formatting/Cal
 Syntax:
 
 ```markdown
-> [!<type>] <title> 
+> [!<type>] <title>
 > <content>
 ```
 
@@ -203,6 +213,7 @@ Syntax:
 
 Some themes or CSS snippets add further call-outs.
 
+
 ## Knowledge Management System (KMS)
 
 - search: content across files, search modifiers `file`, `path`, `tag`, `line()`, `section()`, ...
@@ -223,11 +234,13 @@ Some themes or CSS snippets add further call-outs.
 
 - graph view
 
+
 ### Obsidian Canvas
 
 [Obsidian Website: Canvas](https://obsidian.md/canvas)
 
 <iframe name="myIFrame" id="myIFrame" src="https://obsidian.md/images/canvas/canvas-hero.mp4" style="width: 600; height: 400;"></iframe>
+
 
 ## GUI
 
@@ -238,10 +251,12 @@ Some themes or CSS snippets add further call-outs.
 - quick commands: `/`
 - command palette: <kbd>ctrl+p</kbd>
 
+
 ### Customisation
 
 - themes: Settings > Appearance > Themes
 - CSS: snippets to enhance and customise rendering of
+
 
 ## Integration
 
@@ -249,6 +264,12 @@ If sticking to core Markdown, notes can be processed by any other software that 
 
 Most Markdown extensions by Obsidian and its Plugins use syntax that doesn't break rendering of files in other Markdown parsers, but might just render to gibberish. Call-outs for example would just look like odd quotes.
 
+
 ## Plugins
 
 - [[Dataview]]: live index and query engine
+
+
+## References
+
+[^center_images]: <https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/comment/iamghtr/>
