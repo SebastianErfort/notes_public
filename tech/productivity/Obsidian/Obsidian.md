@@ -19,7 +19,7 @@ related:
   - "[[Dataview|Dataview plugin]]"
   - "[[public/tech/writing/Markdown|Markdown]]"
 ---
-> [!warning] Obsidian is not open-source, but there seems to be a pretty large community of users who would boycott it if they decided to charge money. See [[#Alternatives]] if you want to consider a different software, I have yet to explore alternatives. For now I'd try not to rely too much on Markdown extensions and fancy features.
+> [!warning] Obsidian is not open-source, but there seems to be a pretty large community of users who would boycott it if they decided to charge money. See [[#Alternatives]] if you want to consider a different software, I have yet to explore them. For now I'd try not to rely too much on Markdown extensions and fancy features to be future-proof in case of a migration.
 
 # Obsidian
 
@@ -27,8 +27,8 @@ related:
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Websites | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
 | Collections | [Awesome Obsidian]                                                                                                                                                                   |
-| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian#^f0ca06) |
-| My 🌐 stuff | [Notes](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/) (using [[MkDocs]]), [Obsidian Features](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/), [Template vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](public/tech/productivity/Obsidian/Obsidian.md#^f0ca06) |
+| My 🌐 stuff | [Notes](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/) (using [[public/tech/documentation/MkDocs]]), [Obsidian Features](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/), [Template vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
 | My notes | `=(join(this.related, ", "))` |
 
 ## Config & Customisation
@@ -51,13 +51,13 @@ related:
 
 ### Themes
 
-- Anapuccin
-- **Catpuccin**: current theme bc. of aesthetics and different colours for italic, bold, etc. text
-- [CyberGlow](https://github.com/ArtexJay/Obsidian-CyberGlow)
-- [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary)
-- [_Prism_](https://github.com/damiankorcz/Prism-Theme): very pretty with different light/dark versions, __but__ requires a community plugin for additional styling of the UI
+Browse Appearance > Themes, there's a lot of community-made choices.
 
-### [[CSS]]
+I use **Catpuccin** because of aesthetics and different colours for italic/bold text, internal/external links, etc.
+
+### Styling
+
+Further customisation and extension can be done using [[CSS]]. Obsidian supports a snippets folder for custom CSS files that can be activated separately.
 
 - [awesome-obsidian: css-snippets](https://github.com/kmaasrud/awesome-obsidian#css-snippets)
 - [obsidian-css-snippets @GitHub](https://github.com/Dmytro-Shulha/obsidian-css-snippets/tree/develop)
@@ -151,8 +151,12 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [Obsidian Advanced URI](https://vinzent03.github.io/obsidian-advanced-uri/)
     - [Query Control](https://github.com/nothingislost/obsidian-query-control): add controls to embedded queries (exp./deprec.?)
     - [Embed Code File](https://github.com/almariah/embed-code-file): embed code files from Obsidian vault or remote file (eg., GitHub)
-    - [breadcrumbs](https://github.com/SkepticMystic/breadcrumbs): Visualise a custom hierarchy in your Obsidian vault
-      [GitHub](https://github.com/SkepticMystic/breadcrumbs)
+    - [breadcrumbs](https://github.com/SkepticMystic/breadcrumbs): [GitHub](https://github.com/SkepticMystic/breadcrumbs)
+      > Visualise a custom hierarchy in your Obsidian vault
+    - Markdown Attributes: use widely used[^mkdocs-attrlist] syntax with curly braces `{}` to add (HTML) attributes to Markdown elements (development currently down to maintenance mode)
+        > [!idea] this should make it possible to give elements a certain HTML id and link to them. Hasn't worked in my test though.
+
+    - Supercharged links: add attributes to internal links using the target file's properties, e.g. a certain icon if the linked note if of a specific type
 - Appearance/UI
     - [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
     - [Obsidian-Code-Styler](https://github.com/mayurankv/Obsidian-Code-Styler): styling codeblocks and inline code
@@ -172,10 +176,19 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
 ```dataview
 TABLE WITHOUT ID
   file.link AS "Plugin",
-  (join(file.tags)) AS "Tags"
-WHERE contains(file.path,"tech/Obsidian/plugins")
+  (join(file.tags)) AS "Tags",
+  desc-short AS "Description"
+WHERE contains(file.path,"Obsidian/plugins")
 SORT file.name
 ```
+
+
+## Workflow
+
+References
+
+- [obsidian-workflow-template]
+  > Obsidian vault template from workflow with tasks and project management, journaling, media tracking, offline read-it-later and bookmark management, note-taking and note-sharing on own website
 
 
 ## Alternatives
@@ -187,9 +200,9 @@ SORT file.name
 
 ## Publish
 
+- [[ObsidianGitHubPublisher|Obsidian GitHub Publisher]]
 - [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
 - https://flowershow.app/ | [GitHub](https://github.com/datopian/obsidian-flowershow)
-- [[ObsidianGitHubPublisher|Obsidian GitHub Publisher]]
 - [obsidian-webpage-export](https://github.com/KosmosisDire/obsidian-webpage-export)
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
 
@@ -221,3 +234,5 @@ SORT file.name
 [Young - YAML front matter]: <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20matter/>
 [^1]: [Griffin - Obsidian Basics]
 [^2]: [Young - YAML front matter]
+[obsidian-workflow-template]: <https://github.com/mathisgauthey/obsidian-workflow-template>
+[^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`

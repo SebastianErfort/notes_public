@@ -20,9 +20,9 @@ docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
 - Programs
     - `agent`: [man page](https://www.puppet.com/docs/puppet/7/man/agent.html)
 
-# Puppet language
+## Puppet language
 
-## Resources
+### Resources
 
 - [Meta-parameters](https://www.puppet.com/docs/puppet/7/metaparameter.html): attributes that work with any resource type
 - [Resource Types](https://www.puppet.com/docs/puppet/7/resource_types.html)
@@ -35,28 +35,28 @@ docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
         - function: [search work GitLab LWP](https://git.lwp.rug.nl/search?search=ensure_packages&group_id=214&project_id=424&scope=&search_code=true&snippets=false&repository_ref=production&nav_source=navbar)
     - [Exported Resources](https://www.puppet.com/docs/puppet/7/lang_exported.html)
 
-### Dependencies
+#### Dependencies
 
 There are mutiple ways to declare dependencies between resources to ensure they are run in a certain order. With newer version Puppet should also adhere to the order in which resources are stated in the manifest. This can save code repetition if many resources depend on one resource or the other way around.
 
 ```Puppet
-# direct sequential dependency
+## direct sequential dependency
 file { 'resource1': }
 ~> exec { 'resource2': }
-# from earlier resource to later
+## from earlier resource to later
 file { 'resource1':
   notify => [Exec['resource2'], Service['resource3']],
 }
 exec { 'resource2': }
 service { 'resource3': }
-# from later resource to earlier
+## from later resource to earlier
 file { 'resource1': }
 service { 'resource2':
   require => File['resource2'],
 }
 ```
 
-## Logging
+### Logging
 
 Examples: <https://stackoverflow.com/a/16671685>
 *Notify resource*
@@ -92,7 +92,7 @@ node default {
 <img src="https://i.stack.imgur.com/gdRjh.png" alt="different log levels colors" style="zoom:80%">
 </a></center>
 
-## Strings
+### Strings
 
 Operations can be performed on strings using Puppet's builtin functionalities. For example
 
@@ -101,11 +101,11 @@ Operations can be performed on strings using Puppet's builtin functionalities. F
 
 Most of these also work within variable substitution `${var}`, such as `${var.strip}`.
 
-# Data and variables: Facter and Hiera
+## Data and variables: Facter and Hiera
 
 [Hiera, data and Puppet code: your path to the right data decisions @Puppet blog](https://puppet.com/blog/hiera-data-and-puppet-code-your-path-right-data-decisions/)
 
-## Facter
+### Facter
 
 [Facter](https://puppet.com/docs/puppet/7/facter.html) | [Custom facts](https://puppet.com/docs/puppet/7/custom_facts.html)
 Puppet uses Facter to collect various information on the system and provides them as "facts".
@@ -128,7 +128,7 @@ Puppet uses Facter to collect various information on the system and provides the
 
 [Remco's Ruby tutorial including Puppet facts](file://edu/ruby/remco/programming-in-ruby/Ruby%20Session4.ipynb)
 
-## Hiera
+### Hiera
 
 [Documentation](https://puppet.com/docs/puppet/7/hiera.html) | [Hiera config](https://puppet.com/docs/puppet/7/hiera_config_yaml_5.html)
 Hiera works like a pyramid and the higher up a data layer is, the higher its priority. At the top is usually node-level data, that can overwrite profile/role/lower data such as defaults.
@@ -143,11 +143,11 @@ Hiera works like a pyramid and the higher up a data layer is, the higher its pri
 - on top of that we have the node-level files (`node.yaml`), in our case in the directory `data/00_hosts/host.yaml`, role-assigments by IP-ranges in `data/10_roles` as well as external node classifiers (ENCs) in a separate repository [lwp/puppet-enc](https://git.lwp.rug.nl/lwp/puppet-enc).
 
 
-## External Node Classifiers (ENCs)
+### External Node Classifiers (ENCs)
 
 [Puppet documentation on ENCs](https://www.puppet.com/docs/puppet/7/nodes_external.html)
 
-## Lookup
+### Lookup
 
 Hiera data can be accesses through a "look-up", using the `lookup` function. A hiera data element in `moduleA.yaml` with content
 
@@ -157,7 +157,7 @@ moduleA::config: value
 
 for example can be accessed in module B throught `lookup('moduleA::config.value')`, see the [Puppet documentation](https://puppet.com/docs/puppet/7/hiera_automatic.html#access_hash_array-elements_keysubkey_notation).
 
-## Template files
+### Template files
 
 [Documentation](https://puppet.com/docs/puppet/5.5/lang_template.html) | [EPP](https://puppet.com/docs/puppet/5.5/lang_template_epp.html) | [ERB](https://puppet.com/docs/puppet/5.5/lang_template_erb.html)
 In a template file (within hiera/yaml) there are several ways
@@ -168,11 +168,11 @@ In a template file (within hiera/yaml) there are several ways
 
 Mind when puppet does the variable substitution though. To use hiera data within a template that is stored in hiera data again one might have to use `@var`. Also there's a zoo of different ways to achieve the same here. Sometimes the syntax is `$array['key']`, in other contexts it might be `$array[key]` without ticks, etc.
 
-## Examples
+### Examples
 
 [[rug/lwp/Puppet/Puppet|Work notes LWP: Puppet]]
 
-# Config
+## Config
 
 Change default environment (branch): edit `/etc/puppetlabs/puppet/puppet.conf`
 
@@ -185,7 +185,7 @@ ca_server = fqdn.puppet.ca
 environment = my_branch
 ```
 
-# Documentation
+## Documentation
 
 Documentation of self-written modules can be automatically created if certain formats for comments and descriptions are used, see [Puppet Strings](https://www.puppet.com/docs/puppet/7/puppet_strings.html).
 
@@ -193,12 +193,12 @@ Using [Puppet Strings](https://www.puppet.com/docs/puppet/7/puppet_strings.html#
 
 - [Publish to GitHub Pages](https://www.puppet.com/docs/puppet/6/puppet_strings.html#puppet_strings_github_pages)
 
-# Modules, Puppet Forge
+## Modules, Puppet Forge
 
 - [apt module](https://forge.puppet.com/modules/puppetlabs/apt) | [Github](https://github.com/puppetlabs/puppetlabs-apt)
 - [debconf community module](https://forge.puppet.com/modules/stm/debconf)
 
-# Testing
+## Testing
 
 [Jacob on testing @GitLab Wiki](https://git.lwp.rug.nl/lwp/wiki/-/wikis/jacob/Testing-Procedure)
 

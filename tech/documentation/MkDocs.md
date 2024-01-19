@@ -22,7 +22,7 @@ visibility: public
 >     - easiest using Wiki-links `[[...]]` as files are automatically located
 >     - relative links without explicit `./` are relative to **base directory** (`docs`)
 >     - even worse with Wiki-links extension
->     - [[Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
+>     - [[public/tech/productivity/Obsidian/Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
  
 ## Getting Started
 
@@ -143,7 +143,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 - [Formatting](https://squidfunk.github.io/mkdocs-material/reference/formatting/): strikeout, highlight, underline, sub- and super-script, keyboard keys (short-code for HTML tag `<kbd>`)
 - [Table of Contents](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=#table-of-contents)
 - [Emoji](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#emoji)
-- [Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/): Superfences for [[Markdown#Graphs Mermaid]]
+- [Diagrams](https://squidfunk.github.io/mkdocs-material/reference/diagrams/): Superfences for [[Markdown#Graphs Mermaid]] (there is also [[#^9b0fb2|mkdocs-mermaid2-plugin]]) ^4d7ac7
 - [Annotations](https://squidfunk.github.io/mkdocs-material/reference/annotations/#usage)
     - [Code blocks](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/): different ways to set up syntax highlighting for code blocks, either during build time using [Pygments](https://pygments.org) or during runtime using a JavaScript syntax highlighter
         - [Code copy button](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-copy-button)
@@ -151,7 +151,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
         - [Embedding external files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files)
     - [Snippets](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#snippets): adds the ability to embed content from arbitrary files into a document, including other documents or source files, by using a simple syntax
 
-<!-- TODO link a file once there is a default MkDocs template -->
+<!-- TODO embed a file once I created a [[templates/mkdocs|MkDocs template]] -->
 > [!example]- Example `mkdocs.yml` configuration
 > ```yaml
 > ---
@@ -197,7 +197,10 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 
 ### Plugins
 
+- [mkdocs-ezlinked-plugin](https://pypi.org/project/mkdocs-ezlinked-plugin/): enables easier linking between pages
+- [mkdocs-autolinks-plugin](https://github.com/midnightprioriem/mkdocs-autolinks-plugin): Simplified relative linking between chapters.
 - [tags](https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags)
+- [mkdocs-mermaid2-plugin](https://github.com/fralau/mkdocs-mermaid2-plugin): A Mermaid graphs plugin for mkdocs (difference to [[#^4d7ac7|Diagrams superfences]]?) ^9b0fb2
 - [exclude](https://github.com/apenwarr/mkdocs-exclude): mkdocs plugin that lets you exclude files or trees from your output
 
     ```yaml
@@ -210,12 +213,13 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
           - '.*\.(tmp|bin|tar)$'
     ```
 
+- [mkdocs-exclude-search](https://github.com/chrieke/mkdocs-exclude-search): Exclude selected files or sections from the search index.
+- [mkdocs-table-reader-plugin](https://github.com/timvink/mkdocs-table-reader-plugin
+- [mkdocs-redirects](https://github.com/datarobot/mkdocs-redirects): Page redirects for moved/renamed pages
 - [mkdocs-macros](https://mkdocs-macros-plugin.readthedocs.io/en/latest/): A plugin for unleashing the power of Mkdocs, by using variables and macros
-- [mkdocs-gitlab-plugin](https://gitlab.inria.fr/vidjil/mkdocs-gitlab-plugin): MkDocs plugin to transform strings such as #1234, %56, or !789 into links to a GitLab repository.
-- [mkdocs-ezlinked-plugin](https://pypi.org/project/mkdocs-ezlinked-plugin/): enables easier linking between pages
 - [mkdocs-obsidian-support-plugin](https://github.com/ndy2/mkdocs-obsidian-support-plugin): convert Obsidian call-outs and wiki-link images to mkdocs-material compatible code
-    Issues:
-    - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
+    :bug: callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
+- [mkdocs-gitlab-plugin](https://gitlab.inria.fr/vidjil/mkdocs-gitlab-plugin): MkDocs plugin to transform strings such as #1234, %56, or !789 into links to a GitLab repository.
 
 
 ## Writing
@@ -246,7 +250,8 @@ some_url: https://example.com
 ## Integrations
 
 - [[tech/software/git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
-- Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- Obsidian: [[public/tech/productivity/Obsidian/Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- [[mkdocstrings]]
 
 ### Search
 
@@ -261,12 +266,12 @@ some_url: https://example.com
 
 As can be expected not all Markdown renders the same as different specifications are used.[^2] I have been working on a [MkDocs template] with some changes to the default Markdown config and adding some extensions/plugins to achieve as much as possible compatibility. The [list of to-dos] is getting shorter, but some critical features are yet missing.
 
-Then there are some quite helpful plugins in Obsidian, especially [[DataView]]. There have been requests in the forums, but no solution yet.
-Maybe one day there will be a MkDocs DataView plugin, or system-independent plugins. For now, [[DataView#Export|export rendered DataView results from Obsidian]].
+Then there are some quite helpful plugins in Obsidian, especially [[Dataview]]. There have been requests in the forums, but no solution yet.
+Maybe one day there will be a MkDocs DataView plugin, or system-independent plugins. For now, [[Dataview#Export|export rendered DataView results from Obsidian]].
 
 > [!todo] add missing links
 
-[^2]: [[Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
+[^2]: [[public/tech/productivity/Obsidian/Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
 
 
 ## References

@@ -49,7 +49,7 @@ See [[public/tech/dev/git/GitLab#GitLab Pages|notes on GitLab Pages]].
 - uses [[Markdown|Markdown]], [[Liquid]] templating language, [[HTML]] & [[CSS]]
 - [Showcases](https://jekyllrb.com/showcase/)
 
-#### [[MkDocs|MkDocs]]
+#### [[public/tech/documentation/MkDocs|MkDocs]]
 
 #### Wowchemy
 

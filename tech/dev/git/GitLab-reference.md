@@ -195,7 +195,7 @@ By default file `.gitlab-ci.yml`
 
 # Wiki
 
-GitLab CE doesn't allow for group Wikis. The GitLab Wiki Webinterface is very limited. The only way to browse pages is by manually creating references, for example on a and in the sidebar. The latter is the same for any page visited, so a fairly good place to have a general table of contents. It is reommenced to edit and view the Wiki with external tools such as [[Obsidian]].
+GitLab CE doesn't allow for group Wikis. The GitLab Wiki Webinterface is very limited. The only way to browse pages is by manually creating references, for example on a and in the sidebar. The latter is the same for any page visited, so a fairly good place to have a general table of contents. It is reommenced to edit and view the Wiki with external tools such as [[public/tech/productivity/Obsidian/Obsidian]].
 
 # Activity
 

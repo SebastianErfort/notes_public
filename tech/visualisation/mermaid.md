@@ -95,4 +95,4 @@ gitGraph
 ## Integration
 
 - [[Pandoc]]: requires (lua) filter [[Pandoc#^959dc1|Pandoc Mermaid filter]]
-- [[MkDocs]] theme [[MkDocs#mkdocs-material|material]] through [[Python-Markdown#Extensions|Python-Markdown extension]]
+- [[public/tech/documentation/MkDocs]] theme [[public/tech/documentation/MkDocs#mkdocs-material|material]] through [[Python-Markdown#Extensions|Python-Markdown extension]]

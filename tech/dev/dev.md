@@ -3,15 +3,19 @@ title: Development
 tags:
   - dev
 visibility: public
+related:
+  - "[[tech/software/Software#Dev|Software Dev]]"
+  - "[[git/GitLab#CI/CD|GitLab CICD]]"
 ---
-| Resource | References                                                    |
-| -------- | ------------------------------------------------------------- |
-| My notes | [Software Dev](public/tech/software/Software#Dev), [GitLab CI/CD](public/tech/dev/git/GitLab#CI/CD) |
+| Resource     | References                    |
+| ------------ | ----------------------------- |
+| My notes     | `=(join(this.related, ", "))` |
+| My resources | [sw project template]()       |
 
 ## Command Line
 
 - education
-    - [Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/index.html) | [![|20](github.png)](https://github.com/swcarpentry/shell-novice)
+    - [Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/index.html) | [![|20](github.png "GitHub logo") GitHub](https://github.com/swcarpentry/shell-novice)
 
 ### Software
 
@@ -90,11 +94,12 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 
 Tags: #dev/linting
 
+- [textlint](https://github.com/textlint/textlint): pluggable natural language linter for text and markdown
 - [prettier](https://prettier.io/): an opinionated code formatter supporting many languages (Markdown, JS, HTML, CSS, ...)
   Issues: for Markdown some problem as with [[markdownlint|markdownlint-cli]], indents under-indented content left, removing indentation
 - Markdown
     - [[markdownlint]] (node.js)
-- [[YAML#Linting|YAML]]
+- [[YAML#Linting|YAML linters]]
 
 ## Build
 
@@ -166,12 +171,35 @@ See [[databases|my notes on databases]]
 
 ### OpenStack
 
-## Project Management
+## Projects
+
+See also [sw project template]
+
+- Changelogs
+    - [keepchangelog.com](https://keepachangelog.com): motivation and guidelines for changelogs
+    - [gnu.org: Style of Change Logs](https://www.gnu.org/prep/standards/html_node/Style-of-Change-Logs.html)
+- Readme's
+    - [[writing#READMEs|my notes on writing Readme's]]
+
+Suggested files and directories
+
+```tree
+./
+├── CHANGELOG
+├── .editorconfig
+└── README
+```
+
+
+### Management
 
 [Contributer Covenant: Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
 [[eScienceCenter]]: [[Practical guide to Software Management Plans.pdf|Practical guide to Software Management Plans]]
 
-![[Android]]
+
+## Operating Systems
+
+- [[Android]]
 
 ## [[design|UI and Design]]
 
@@ -184,7 +212,18 @@ See [[databases|my notes on databases]]
     - [[rich|rich document viewer]]
     - [Trogon](https://github.com/Textualize/trogon): Easily turn your [Click](https://click.palletsprojects.com) CLI into a powerful terminal application
 
+### Media
 
+Hosting
+
+- https://imageshack.com/
+- https://www.flickr.com/
+- https://imgur.com/
+- https://web.500px.com/
+
+Free stock media
+
+- [pixabay](https://pixabay.com): royalty-free images & stock (images, videos, music)
 ## Misc
 
 - [Smallstep: automated certificate management for DevOps](https://smallstep.com/)
@@ -193,3 +232,5 @@ See [[databases|my notes on databases]]
 - [Example files for testing and dev](https://file-examples.com/)
 - <https://m2.material.io/>
 - [ntfy.sh](https://ntfy.sh/): simple HTTP-based [pub-sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) notification service. It allows you to send notifications to your phone or desktop via scripts from any computer, entirely **without signup, cost or setup**. It's also [open source](https://github.com/binwiederhier/ntfy) if you want to run your own.
+
+[sw project template]: <>

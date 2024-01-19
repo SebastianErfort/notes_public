@@ -48,7 +48,7 @@ Does support overrides, e.g. for sub-dirs to some extent.^[https://github.com/ig
 
 ## Essential Fixes
 
-Especially relevant for publishing Markdown notes, for example with [[MkDocs]]
+Especially relevant for publishing Markdown notes, for example with [[public/tech/documentation/MkDocs]]
 
 - indentation: notes don't render correctly if indent is wrong
 - newlines around certain elements required for proper rendering: lists, fenced code blocks, ...

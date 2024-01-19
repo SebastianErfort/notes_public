@@ -313,6 +313,7 @@ Testing #dev/build/python
   > Sphinx makes it easy to create intelligent and beautiful documentation ^e526ca
 - <https://realpython.com/documenting-python-code>
 - [Google Python Styleguide](https://google.github.io/styleguide/pyguide.html) | [Example Documentation Strings from Google](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
+- [[mkdocstrings]]
 
 ## Creating a Package
 

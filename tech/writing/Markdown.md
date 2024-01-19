@@ -4,19 +4,19 @@ visibility: public
 title: Markdown
 related:
   - "[[dev/YAML|YAML]]"
-  - "[[Obsidian]]"
+  - "[[public/tech/productivity/Obsidian/Obsidian]]"
   - "[[obsidian/features|Obsidian features]]"
 ---
 
 # Markdown
 
 | Resource | Links |
-|-|-|
-| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian#^f0ca06) |
-| Cheatsheets | [Markdown Cheatsheet AdamP@MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)</br>[Cheat Sheet www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet markdown-here]</br>[Cheatsheet jonschlinkert] |
+| ---- | ---- |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](public/tech/productivity/Obsidian/Obsidian.md#^f0ca06) |
+| Cheatsheets | [MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)<br>[www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet jonschlinkert] |
 | Related | `=(join(this.related, ", "))` |
 | My stuff | [Cheat Markdown cheatsheet (local)](file://.config/cheat/cheatsheets/personal/markdown) |
-
+| References | [markdownguide.org] |
 
 ## Tools & Software
 
@@ -138,6 +138,10 @@ Parsers
 - [remarkable](https://github.com/jonschlinkert/remarkable)
   > Markdown parser, done right. Commonmark support, extensions, syntax plugins, high speed - all in one. Gulp and metalsmith plugins available. Used by Facebook, Docusaurus and many others! Use [https://github.com/breakdance/breakdance](https://github.com/breakdance/breakdance) for HTML-to-markdown conversion. Use [https://github.com/jonschlinkert/markdown-toc](https://github.com/jonschlinkert/markdown-toc) to generate a table of contents.
 
+References
+
+- [MkDocs-Material: Markdown Extensions](https://squidfunk.github.io/mkdocs-material/setup/extensions/?h=exten)
+
 Discussion
 
 - [Blank lines before lists, revisited](https://talk.commonmark.org/t/blank-lines-before-lists-revisited/1990/5)
@@ -146,7 +150,7 @@ Discussion
 
 [Website](http://commonmark.org/) | [Specification](https://spec.commonmark.org/0.30/) | [Forum](https://talk.commonmark.org/) | [Tutorial](https://commonmark.org/help/tutorial/)
 
-[[Pandoc]] mastermind John MacFarlane is one of the founders and maintainers. Used by [[Obsidian]].
+[[Pandoc]] mastermind John MacFarlane is one of the founders and maintainers. Used by [[public/tech/productivity/Obsidian/Obsidian]].
 
 ## Presentations
 
@@ -163,4 +167,4 @@ See [[public/tech/software/Software#Pandoc|Software: Pandoc]] and [[public/tech/
 
 [Cheatsheet jonschlinkert]: <https://gist.github.com/jonschlinkert/5854601>
 [Cheatsheet markdown-here]: <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
-[Cheatsheet jonschlinkert]: <https://gist.github.com/jonschlinkert/5854601>
+[markdownguide.org]: <https://www.markdownguide.org>

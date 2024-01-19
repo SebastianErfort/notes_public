@@ -12,7 +12,6 @@ source: https://github.com/blacksmithgu/obsidian-dataview
 developer: ""
 visibility: public
 ---
-
 # `= this.title`
 
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
@@ -73,36 +72,30 @@ Automatically added fields, collected under `file`[^1]
 
 ### Queries
 
-Fields
-
-- simple metadata `myfield AS "Field"`
-- use [functions](https://blacksmithgu.github.io/obsidian-dataview/reference/functions/) `("[[" + dateformat(date,"yyyy-MM-dd") + "]]") AS "Date"`
-- tags: use `join` to merge tags array into one string and prevent each showing up on a separate line (in a table): `(join(file.tags)) AS "Tags"`
-
-Note source: `FROM`
-
-- tags: `FROM #tag`
-- folders: `FROM "mydir"`
-- incoming link: `FROM [[Note 1]]`
-- outgoing link: `FROM outgoing([[Note1]])`
-- exclude notes: `FROM "dir1" AND -"dir1/subdir"`
-- issues
-    - relative paths not yet supported without JS, see [issue](https://github.com/blacksmithgu/obsidian-dataview/issues/517), but this should work
-
-    ```
-    WHERE file.folder = this.file.folder
-    ```
-
-Filter metadata: `WHERE`
-
-- partial match: `WHERE contains(field,"value)"`
-- created within last dat: `WHERE file.ctime >= date(today) - dur(1 day)`
-
-Sort results: `SORT`
-
-- by modification date: `Sort file.mtime DESC`
-
-Limit results: `LIMIT value`
+- Types: `LIST`, `TABLE`, `TASK` and `CALENDAR`, see [query types](https://blacksmithgu.github.io/obsidian-dataview/queries/query-types/).
+- Fields
+    - simple metadata `myfield AS "Field"`
+    - use [functions](https://blacksmithgu.github.io/obsidian-dataview/reference/functions/) `("[[" + dateformat(date,"yyyy-MM-dd") + "]]") AS "Date"`
+    - tags: use `join` to merge tags array into one string and prevent each showing up on a separate line (in a table): `(join(file.tags)) AS "Tags"`
+- Note source: `FROM`
+    - tags: `FROM #tag`
+    - folders: `FROM "mydir"`
+    - incoming link: `FROM [[Note 1]]`
+    - outgoing link: `FROM outgoing([[Note1]])`
+    - exclude notes: `FROM "dir1" AND -"dir1/subdir"`
+    - issues
+        - relative paths not yet supported without JS, see [issue](https://github.com/blacksmithgu/obsidian-dataview/issues/517), but this should work
+    
+        ```
+        WHERE file.folder = this.file.folder
+        ```
+- Filter metadata: `WHERE`
+    - partial match: `WHERE contains(field,"value)"`
+    - created within last dat: `WHERE file.ctime >= date(today) - dur(1 day)`
+- Sort results: `SORT`
+    - by modification date: `Sort file.mtime DESC`
+- Group results: `GROUP BY`
+- Limit results: `LIMIT value`
 
 [Example vault with queries](https://github.com/s-blu/obsidian_dataview_example_vault/)
 

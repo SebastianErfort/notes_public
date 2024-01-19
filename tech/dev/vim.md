@@ -1,15 +1,24 @@
 ---
 title: VIM
-aliases: vim
+aliases:
+  - vim
 tags:
   - dev/vim
   - dev/programming
   - dev/editor
 visibility: public
+related:
+  - "[[Neovim]]"
+  - "[[editors]]"
 ---
+# VIM
 
-[<img src="file:///home/erfort/rsrc/VIM_reference_poster.png" style="width:80%"/>](file:///home/erfort/rsrc/VIM_reference_poster.png)
-See also [[neovim|my notes on neovim]] and [[Editors]].
+|            |                                                                   |
+| ---------- | ----------------------------------------------------------------- |
+| Related    | `=(join(this.related, ", "))`                                     |
+| References | [Best cheatsheet](https://thingsfittogether.com/product/vim-cheat-sheet-advanced-digital-download/), [Cheat cheatsheet](file://.config/cheat/cheatsheets/personal/vim) |
+
+![[VIM_reference_poster.png|200]]
 
 # Basics
 

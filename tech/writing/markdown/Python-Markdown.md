@@ -22,4 +22,4 @@ visibility: public
 
 ## Extensions
 
-![[MkDocs#Markdown Extensions]]
+![[public/tech/documentation/MkDocs#Markdown Extensions]]

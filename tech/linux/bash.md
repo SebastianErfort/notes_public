@@ -12,6 +12,8 @@ type: software
 category: shell
 ---
 
+# Bash
+
 [Linux Commands](linux.md#Commands) | [code snippets](file://src) |  [Jupyter-lab notebook](file://notes/life/tech/bash.ipynb)
 
 - [wooledge.org Wiki](https://mywiki.wooledge.org/EnglishFrontPage)
@@ -19,13 +21,13 @@ category: shell
     - [Bash Sheet](https://mywiki.wooledge.org/BashSheet)
 - [Bash Bracket Quick Reference](https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/)
 
-# Options & Config
+## Options & Config
 
 [gnu.org: The Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
 
-# Command Line
+## Command Line
 
-## Keyboard Shortcuts & Readline
+### Keyboard Shortcuts & Readline
 
 See [readline man page](https://www.man7.org/linux/man-pages/man3/readline.3.html).
 
@@ -48,13 +50,13 @@ Customise in config::  `~/.inputrc`
     ```
 
 
-## Completion
+### Completion
 
 See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-completion/completions) and `/etc/bash_completion.d/`
 
 - [hostname completion](https://blog.sanctum.geek.nz/bash-hostname-completion/)
 
-## History
+### History
 
   ```bash
   !!     # repeat last command
@@ -63,9 +65,9 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
   !cmd:p # print command but don't execute
   ```
 
-# General
+## General
 
-## Loops
+### Loops
 
 - iterate over list or array
 
@@ -108,20 +110,20 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
   done
   ```
 
-## Arithmetics and logic
+### Arithmetics and logic
 
 ```bash
 n=0
 (( n++ ))
 echo $n
-# 1
+## 1
 (( n==1 )) && echo 'y' || echo 'n'
-# y
+## y
 ```
 
-## Variables
+### Variables
 
-### Booleans: true and false
+#### Booleans: true and false
 
 ```bash
 for error in true false; do
@@ -129,7 +131,7 @@ for error in true false; do
 done
 ```
 
-### Strings
+#### Strings
 
 - Length of a string `${#s}`
 - Substring accessing
@@ -202,7 +204,7 @@ done
   echo ${s//[^a-zA-Z0-9_@\\\-.]} # delete all characters not matching
   ```
 
-### Variable Expansion
+#### Variable Expansion
 
 or shell-parameter expansion, manipulation and interpolation #dev/bash, see [bash documentation on gnu.org](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html)
 
@@ -228,35 +230,35 @@ See also <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace
 - [Filename Expansion](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Filename-Expansion)
 - [Quote Removal](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Quote-Removal)
 
-### Arrays
+#### Arrays
 
 Can be declared or instantiated like
 
 ```bash
-# explicit declaration (can also be done implicitely, on-the-fly)
+## explicit declaration (can also be done implicitely, on-the-fly)
 declare -a arr1 # indexed array
 declare -A arr2 # associative array
 arr3=("derp" "schlerp" 123)
-# access elements
+## access elements
 echo ${arr3[0]} # first, starting at 0
 echo ${arr3[-2]} # 2nd from back (since bash 4.2 - 4.3)
-# access entire array
+## access entire array
 echo ${arr[@]}
-# or
+## or
 echo ${arr[*]}
-# access slice/range
+## access slice/range
 echo ${arr[@]:2} # from element 2
 echo ${arr[@]::2} # up to, excluding element 2
-# add element
+## add element
 arr1+=("new" "elements")
-# number of elements
+## number of elements
 ${#arr[@]}
 ```
 
 > The only difference between `@` and `*` is when the form `${my_array[x]}` is surrounded with double-quotes. In this case, `*` expands to a single word where array elements are separated with space. `@` expands each array element to a separate word. This is especially important when using the form to iterate through array elements.
 > <https://linuxize.com/post/bash-arrays/>
 
-### Special Variables
+#### Special Variables
 
 [gnu.org: Bash Variables](https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html)
 
@@ -280,7 +282,7 @@ ${#arr[@]}
   $TERM # terminal type
   ```
 
-## Regular Expressions
+### Regular Expressions
 
 Tags: #dev/regex
 
@@ -305,10 +307,10 @@ a\|d | One character out of the two (an alternative to using []), ‘a’ or ‘
 \s or [:space:] | One white space
 \S | One non-white space
 
-## Functions
+### Functions
 
 ```bash
-# define a function
+## define a function
 function myfunction () {
     ${FUNCNAME[0]} # Last function on the function stack, inside a function its name
     ...
@@ -317,7 +319,7 @@ function myfunction () {
 
 - bash function with array in-/output
 
-## Arguments
+### Arguments
 
 - special variables to access arguments
 
@@ -356,7 +358,7 @@ function myfunction () {
   echo !:$ # previous last argument
   ```
 
-# Commands
+## Commands
 
 - List (builtin) commands
 
@@ -375,9 +377,9 @@ function myfunction () {
   { list; } # executed in current shell context. semicolons required.
   ```
 
-# Input & Output
+## Input & Output
 
-## STDIN, STDERR and exit codes
+### STDIN, STDERR and exit codes
 
 - re-direct stderr to command and re-direct that command's stdout back to original stderr
 
@@ -409,7 +411,7 @@ Collect exit codes of commands using trap, then unset it
 trap 'exs+=($?)' DEBUG; cmd1; cmd2; cmd3; trap - DEBUG
 ```
 
-## Stream manipulation
+### Stream manipulation
 
 - *Here Documents*: inline files with optional variable substitution [TLDP](https://tldp.org/LDP/abs/html/here-docs.html) #dev/shell/heredoc
 
@@ -434,7 +436,7 @@ trap 'exs+=($?)' DEBUG; cmd1; cmd2; cmd3; trap - DEBUG
   cut -d " " -f 2,3 # Cut fields from file/standard input if omitted. Delimiter " ", fields 2+3
   ```
 
-## Permissions
+### Permissions
 
 Grant execute permissions if on directories, but not files [@stackoverflow](https://stackoverflow.com/questions/17091300/linux-set-permission-only-to-directories)
 
@@ -442,7 +444,7 @@ Grant execute permissions if on directories, but not files [@stackoverflow](http
 chmod -R X /path/to/file
 ```
 
-## Formatting
+### Formatting
 
 - overwrite previous line of output
 
@@ -460,11 +462,21 @@ Progress
 
 - [Pipe Viewer](https://www.ivarch.com/programs/pv.shtml): terminal-based tool for monitoring the progress of data through a pipeline
 
-# Scripts
+## Scripts
 
-## Control
+### Arguments
 
-### Traps
+Parsers
+
+- `getopt`: external command, not portable (POSIX-compliant)
+- `getopts`: shell builtin, POSIX-compliant, **no long options**
+    - examples: [rsrc/bash/getopts.sh](https://gitlab.com/treetanium1/resources/bash/-/raw/main/getopts.sh?ref_type=heads)
+- [getoptions](https://github.com/ko1nksm/getoptions): shell script, versatile and portable, less overhead
+    > An elegant option/argument parser for shell scripts (full support for bash and all POSIX shells)
+
+### Control
+
+#### Traps
 
 Trigger action upon pressing Ctrl+C,D, ..., on error or other.
 
@@ -483,8 +495,15 @@ Error handling[^1]
 
 [^1]: <https://stackoverflow.com/questions/64786/error-handling-in-bash>
 
+## Testing
 
-# References
+- [[ShellSpec]]
+- [shUnit2](https://github.com/kward/shunit2)
+- [BATS (Bash Automated Testing System)](https://github.com/sstephenson/bats)
+- [BATS-core](https://github.com/bats-core/bats-core)
+
+
+## References
 
 - `set -e`: [caveats and why it is crap](https://mywiki.wooledge.org/BashFAQ/105/Answers)
 [bash: silently kill background function process](https://stackoverflow.com/questions/5719030/bash-silently-kill-background-function-process)

@@ -48,7 +48,7 @@ Tags: #design/fonts
 - <https://iconduck.com/>
 - GitLab: [[rug/lwp/GitLab#^8b2ea8|GitLab icon SVGs]]
 - [Lucide open source icons](https://lucide.dev/) [![|20](github.png)](https://github.com/lucide-icons/lucide)
-    - used by [[Obsidian]]
+    - used by [[public/tech/productivity/Obsidian/Obsidian]]
 - <https://super.so/icons>
 
  

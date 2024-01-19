@@ -4,10 +4,10 @@ tags:
 visibility: public
 title: Features
 ---
-| Resource | References                         |
-| -------- | ---------------------------------- |
-| Obsidian | [[Obsidian\|My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
-| Related | [[Markdown]] |
+| Resource | References |  |
+| ---- | ---- | ---- |
+| Obsidian | [[public/tech/productivity/Obsidian/Obsidian | My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
+| Related | [[Markdown]] |  |
 
 ## Writing: Markdown Editor
 
@@ -46,7 +46,10 @@ Obsidian/Wiki: ![[tux.png|100]]
 HTML: requires "link", can't use just (relative) file path
 <img src="file:///home/erfort/journal/life/tux.png" width="100">
 
-- [centering images](https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/comment/iamghtr/)
+Using CSS snippets, the alt text can be overloaded to modify image properties, e.g. to center images, see `image_center.css` in snippets folder. Example:
+
+![tux | center | 50](tux.png)
+
 
 ### Code Blocks
 
@@ -92,8 +95,8 @@ Or with an inline footnote ^[without a need to specify the text separately]
 ```
 
 - [call-outs](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types)
-  > [!idea] Why don't we ...?
-- check-lists: special bullet points: theme feature, support and meaning varies. If unsupported, items show up as checked. Alternatively use CSS to get this function (see `.obsidian/snippets/checkboxes.css`,[^2] some icons might be difficult to see, depending on theme)
+    > [!idea] Why don't we ...?
+- special bullet points for check lists: theme feature, support and meaning varies. If unsupported, items show up as checked. Alternatively use CSS to get this function (see `.obsidian/snippets/checkboxes.css`,[^2] some icons might be difficult to see, depending on theme)
 > [!tip]- Alternative Checkboxes
 >
 > - [ ] Unchecked
@@ -248,4 +251,4 @@ Most Markdown extensions by Obsidian and its Plugins use syntax that doesn't bre
 
 ## Plugins
 
-- [[DataView]]: live index and query engine
+- [[Dataview]]: live index and query engine

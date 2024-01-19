@@ -261,7 +261,7 @@ Examples and References
 - [General](https://docs.gitlab.com/ee/user/project/pages/)
 - [Getting Started](https://docs.gitlab.com/ee/user/project/pages/#getting-started)
 - static site generators: Gatsby, Jekyll, Hugo, Middleman, Harp, Hexo, or Brunch
-    - MkDocs: [[MkDocs#Integrations|my notes]]
+    - MkDocs: [[public/tech/documentation/MkDocs#Integrations|my notes]]
 - [Examples](https://gitlab.com/groups/pages)
     - [[Python#^e526ca|Sphinx]]: [example documentation website](http://www.sphinx-doc.org/) | [GitLab](https://gitlab.com/pages/sphinx)
     - [Obsidian](https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/)
