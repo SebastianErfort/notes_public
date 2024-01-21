@@ -98,29 +98,33 @@ Custom call-out: add CSS to `.obsidian/snippets` with
 
 See [CSS snippet file (local)](file://rsrc/obsidian/css-snippets/callouts.css).
 
-### Search
+### Search and Queries
 
 [Obsidian Help](https://help.obsidian.md/Plugins/Search)
 
 - regex search, e.g. `/\d{4}-\d{2}-\d{2}/`
 - [search operators](https://help.obsidian.md/Plugins/Search#Search+operators)
 
-### Queries
+Queries allow to embed a search in your notes, rendering the results as a part of them
+
+Example:
 
 <pre><code>```query
 #idea
 ```</code></pre>
 
-### Metadata, YAML Frontmatter
+### Properties: Front Matter and Meta Data
 
-By default Obsidian supports the following YAML in this order[^1]
+Obsidian started using the term *properties* for what many other applications call the *front matter*. This is a special file header, usually in the language [[YAML]], where meta data for a note can be stored.
+
+By default Obsidian supports the following YAML in this order[^griffin]
 
 1. title
 1. alias(es)
 1. tags
 1. cssclass
 
-You are can add more YAML metadata but it’s not natively processed by Obsidian. However, this can still be useful if you’re using plugins like [[DataView]] or other programs like [[Pandoc]].[^2]
+You are can add more YAML metadata but it’s not natively processed by Obsidian. However, this can still be useful if you’re using plugins like [[DataView]] or other programs like [[Pandoc]].[^young]
 
 
 ## [[HTML]]
@@ -222,7 +226,7 @@ References
 
 ## References
 
-- [Awesome Obsidian](https://github.com/kmaasrud/awesome-obsidian): resources, plugins, tools, templates, CSS snippets, ...
+- [Awesome Obsidian]: resources, plugins, tools, templates, CSS snippets, ...
 - [Markdown Guide: Obsidian](https://www.markdownguide.org/tools/obsidian/) ^b8bff2
 - Blogs and unofficial guides
     - [Ross Griffin Basics Guide](https://rossgriffin.com/tutorials/obsidian-basics-guide/) | [Demo Owen Young](https://demo-obsidian.owenyoung.com/)
@@ -238,9 +242,7 @@ References
 
 [Awesome Obsidian]: <https://gitlab.com/treetanium1/resources/obsidian/obsidian-template>
 [obsidian-linter]: <https://github.com/platers/obsidian-linter>
-[Griffin - Obsidian Basics]:  <https://rossgriffin.com/tutorials/obsidian-basics-guide/>
-[Young - YAML front matter]: <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20matter/>
-[^1]: [Griffin - Obsidian Basics]
-[^2]: [Young - YAML front matter]
+[^griffin]:  <https://rossgriffin.com/tutorials/obsidian-basics-guide/> "Griffin - Obsidian Basics"
+[^young]: <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20matter/> "Young - YAML front matter"
 [obsidian-workflow-template]: <https://github.com/mathisgauthey/obsidian-workflow-template>
 [^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`

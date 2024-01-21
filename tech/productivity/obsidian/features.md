@@ -21,38 +21,48 @@ title: Features
 
 ### Links
 
-- normal links: `[link text](URL)`
+Link types
+
+- regular Markdown links: `[link text](URI)`
+    - Link with separate definition (only reading mode, URL has to be valid format, else it won't be rendered)
+    
+      ```markdown
+      [Link text][link-key]
+    
+      [link-key]: URL
+      ```
+   
 - Wiki-Links: `[[file name|link text]]` ^cecfe6
-- Link with separate definition (only reading mode, URL has to be valid format, else it won't be rendered)
+- HTML links using the anchor tag: `<a href="URI">link text</a>` ^html-link
 
-  ```markdown
-  [Link text][link-key]
-
-  [link-key]: URL
-  ```
+How to use
 
 - Link specific heading: `[[filename#heading|link text]]`
-- Link specific block/paragraph: `[[filename^block-id|link text]]` where Obsidian automatically creates a block-id for you
-- Avoid having to use `%20` in Links with `<>` escape: `[Text](<file:///path to file.pdf>)`
-- Obsidian URLs: `obsidian://vault/vault_name/path/to/file` ^a45f2b
+- Link specific block/paragraph: `[[filename^block-id|link text]]` where Obsidian automatically creates a block-id for you, e.g. `^a8575e`, or you can create them yourself
+- links with spaces: in HTML spaces have to be escaped with the special entity `%20`, but you can use `<>` to avoid this: `[link text](URI)`
+- Obsidian URIs: `obsidian://vault/vault_name/path/to/file` ^a45f2b
     - start with `vault/` to specify a (different) vault
     - omit vault, don't specify full path `<a href="obsidian://vault//note#heading">item</a>`
-    - some websites won't let one enter non-HTTP(S) URIs, so a work-around is to have a webserver run that parses the Obsidian-URI part, allowing one to open Obsidian. See [x-redirect on GitHub](https://github.com/ewerx/x-redirect/)
+    - some websites won't let one enter non-HTTP(S) URIs, so a work-around is to have a webserver run that parses the Obsidian-URI part, allowing one to open Obsidian. Use for example [x-redirect on GitHub](https://github.com/ewerx/x-redirect/).
+
+> [!tip] Compatibility
+> Wiki-links are a Markdown extension, albeit widely supported one. To ensure portability it's better to use standard Markdown links `[]()`. Obsidian has a setting to automatically convert Wiki-links to Markdown links.
+> Another case where Wiki-links are unsuitable is in tables, if you want to use `|` to specify a link text. This (currently) is interpreted as a column separator and doesn't render properly. Use Markdown or HTML links to work around this.
 
 ### Images
 
-Markdown: ![tux|100](tux.png)
-Obsidian/Wiki: ![[tux.png|100]]
-HTML: requires "link", can't use just (relative) file path
-<img src="file:///home/erfort/journal/life/tux.png" width="100">
+- Markdown: ![tux|20](tux.png)
+- Obsidian/Wiki: ![[tux.png|20]]
+- HTML: requires `file://...` URL, can't use just (relative) file path, absolute path required (I swear just using `file://path/to/file` worked sometime, relative to the user's home directory)
+<img src="file://.../journal/personal/tux.png" width="20">
 
 Using CSS snippets, the alt text can be overloaded to modify image properties.[^center_images]
 
 For example center images, see `image_center.css` in snippets folder. Usage:
 
-![tux | center | 50](tux.png)
+![tux | center | 20](tux.png)
 
-HTML figure: offers caption, contents and caption can be centered (not working reader mode)
+HTML figure: offers caption, contents and caption can be centered (not working in reader mode)
 
 <figure style="text-align: center;">
 
