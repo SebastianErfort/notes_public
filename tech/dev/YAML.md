@@ -25,6 +25,8 @@ key: |
   Block scalars support extended escaping and 3 parameters to modify how white-space and newlines are treated.
 ```
 
+^7903df
+
 Example
 
 ```yaml
@@ -45,6 +47,8 @@ description: >-
     - supports extracting and processing of **YAML front matter in Markdown** files
 - yamlfmt: [Source: github.com/google/yamlfmt](https://github.com/google/yamlfmt) |
 - yamlfix: [GitHub](https://github.com/lyz-code/yamlfix) | [Documentation](https://lyz-code.github.io/yamlfix/)
+
+YAML front matter in Markdown files: see [[public/tech/writing/Markdown#Linting and Style|Markdown: Linting and Style]].
 
 
 ## Tools

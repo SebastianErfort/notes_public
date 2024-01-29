@@ -32,7 +32,6 @@ docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
     - [`Package`](https://puppet.com/docs/puppet/7/types/package.html)
         - doesn't support #Linux/snap [see](https://tickets.puppetlabs.com/browse/PUP-7435) other than through a community/Forge module <https://forge.puppet.com/modules/rootexpert/snap>
     - [`ensure_packages`](https://doc.wikimedia.org/puppet/puppet_functions_ruby3x/ensure_packages.html)
-        - function: [search work GitLab LWP](https://git.lwp.rug.nl/search?search=ensure_packages&group_id=214&project_id=424&scope=&search_code=true&snippets=false&repository_ref=production&nav_source=navbar)
     - [Exported Resources](https://www.puppet.com/docs/puppet/7/lang_exported.html)
 
 #### Dependencies
@@ -136,11 +135,10 @@ Hiera works like a pyramid and the higher up a data layer is, the higher its pri
 - The main file for this is the file `hiera.yaml` in the base of the repository.
 - Hierarchy between modules is usually set in a file `common.yaml`, in our case `data/99_config.yaml`.  The section `profile::config:` contains the different sets of `modules` to be used in our different profiles
     - `base`: comon to all profiles
-    - `lwp`: modules for LWP workspaces
-    - `awp`: modules for AWP workspaces
+    - ...
     - `server`: modules for servers
-- The order of modules within one of these sets is important, if there are depedencies! For example the module `sshd` uses data from the module `mfa` and has thus to come after/below it
-- on top of that we have the node-level files (`node.yaml`), in our case in the directory `data/00_hosts/host.yaml`, role-assigments by IP-ranges in `data/10_roles` as well as external node classifiers (ENCs) in a separate repository [lwp/puppet-enc](https://git.lwp.rug.nl/lwp/puppet-enc).
+- The order of modules within one of these sets is important, if there are dependencies! For example the module `sshd` uses data from the module `mfa` and has thus to come after/below it
+- on top of that we have the node-level files (`node.yaml`), in our case in the directory `data/00_hosts/host.yaml`, role-assignments by IP-ranges in `data/10_roles` as well as external node classifiers (ENCs) in a separate repository [lwp/puppet-enc](https://git.lwp.rug.nl/lwp/puppet-enc).
 
 
 ### External Node Classifiers (ENCs)
@@ -155,7 +153,7 @@ Hiera data can be accesses through a "look-up", using the `lookup` function. A h
 moduleA::config: value
 ```
 
-for example can be accessed in module B throught `lookup('moduleA::config.value')`, see the [Puppet documentation](https://puppet.com/docs/puppet/7/hiera_automatic.html#access_hash_array-elements_keysubkey_notation).
+for example can be accessed in module B through `lookup('moduleA::config.value')`, see the [Puppet documentation](https://puppet.com/docs/puppet/7/hiera_automatic.html#access_hash_array-elements_keysubkey_notation).
 
 ### Template files
 

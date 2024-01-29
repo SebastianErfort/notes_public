@@ -16,7 +16,6 @@ tags:
 
 - [Disk Setup](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#disk-setup)
 - [Set Hostname](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#set-hostname) and [Update Hostname](https://cloudinit.readthedocs.io/en/latest/topics/modules.html#update-hostname)
-- [Work notes LWP: Remco's notes on Cloud-Init](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/cloud-init)
 - [Customize Cloud-init autoinstall Ubuntu @GoLinuxCloud](https://www.golinuxcloud.com/customize-cloud-init-user-data-ubuntu/)
 
 <details><summary>[Boot stages](https://cloudinit.readthedocs.io/en/latest/topics/boot.html)</summary>
@@ -188,7 +187,7 @@ Easiest way to get a terminal in non-interactive stages (`early`, `late`): produ
 #### Commands
 
 - `curtin block-discover`: print current storage information in the usual JSON format that translated to the YAML format used in the `storage` section in `user-data > autoinstall`. Doesn't report disk size and free space has to be calculated from "gaps" around partitions.
-  [Work notes LWP: Remco's examples](https://git.lwp.rug.nl/lwp/unattended/lwp5/-/commit/d2b61dba51093790528bbdcf976614d42386fffc)
+  [Work LWP: Remco's examples](https://git.lwp.rug.nl/lwp/unattended/lwp5/-/commit/d2b61dba51093790528bbdcf976614d42386fffc)
 - `curtin wipe --quick --all-unused-disks`
 
 ### Modules

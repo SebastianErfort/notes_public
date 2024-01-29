@@ -89,7 +89,7 @@ By default `.gitlab-ci.yml`
 - [Keyword reference](https://docs.gitlab.com/ee/ci/yaml/)
 - [GitLab CI/CD variables](https://docs.gitlab.com/ee/ci/variables/) | [predefined variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
 - [GitLab CI/CD for external repositories](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/index.html)
-  apparently it is possible to connect repositories, e.g. from Github, and use GitLab CI/CD
+    apparently it is possible to connect repositories, e.g. from Github, and use GitLab CI/CD
 - [Git submodules](https://docs.gitlab.com/ee/ci/git_submodules.html)
 - [Schedule pipelines](https://docs.gitlab.com/ee/ci/pipelines/schedules.html)
 - [GitLab development with Vagrant](https://gitlab.com/gitlab-org/gitlab-development-kit/-/blob/main/doc/howto/vagrant.md)
@@ -109,7 +109,6 @@ variables:
 
 Custom commands to be executed during stage
 
--
 - [before_script](https://docs.gitlab.com/ee/ci/yaml/?query=before_script): run before every command in `script` section. Per stage or globally defined.
 
 ### Docker Images

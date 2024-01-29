@@ -22,7 +22,7 @@ Free $0
 - Unlimited static requests
 - Unlimited bandwidth
 
-#### [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]
+#### GitLab Pages
 
 See [[public/tech/dev/git/GitLab#GitLab Pages|notes on GitLab Pages]].
 

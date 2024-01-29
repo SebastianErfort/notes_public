@@ -20,7 +20,7 @@ visibility: public
 >
 > - use only relative links, not absolute links, for compatibility between different Markdown viewers/editors
 >     - using Markdown extensions such as mkdocs-ezlinked locate files and make it significantly easier to use links
->     - [[Obsidian|Obsidian]]: activate shortest possible paths in settings to achieve compatible links.
+>     - [[personal/projects/templates/obsidian|obsidian]]: activate shortest possible paths in settings to achieve compatible links.
  
 ## Getting Started
 
@@ -271,7 +271,7 @@ some_url: https://example.com
 ## Integrations
 
 - [[git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
-- Obsidian: [[Obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- Obsidian: [[personal/projects/templates/obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 - [[mkdocstrings]]
 
 ### Search
@@ -292,7 +292,7 @@ Maybe one day there will be a MkDocs DataView plugin, or system-independent plug
 
 > [!todo] add missing links
 
-[^markdown-specs]: [[Obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
+[^markdown-specs]: [[personal/projects/templates/obsidian#Markdown|Obsidian: mostly CommonMark]] vs [[#Markdown|MkDocs: Python-Markdown]]
 
 
 ## References

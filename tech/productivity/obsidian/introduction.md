@@ -16,11 +16,11 @@ docs: "https://help.obsidian.md/Home"
 | Resource        | References                                                                                                                                                                                                                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Websites        | [Website], [Documentation] |
-| Templates       | [Template vault] |
+| Templates       | [Template vault], [Obsidian Workflow][obsidian-workflow-template] (if you want to organise your entire life) |
 | Collections     | [Awesome Obsidian] |
-| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian.md#^f0ca06) |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](public/tech/productivity/obsidian/Obsidian.md#^f0ca06) |
 | My notes        | [Obsidian features](obsidian/features), [Obsidian](productivity/obsidian/Obsidian) |
-| My 🌐 stuff     | [Obsidian] (using [[MkDocs]]), [Obsidian features], [Template vault] |
+| My 🌐notes      | [Obsidian][Notes: Obsidian], [Obsidian features][Note: Obsidian features] |
 
 > [!info] What is Obsidian?
 > Mainly, Obsidian is a Markdown editor and viewer. There are plenty of such programs, but Obsidian brings a lot of features that make it a full-fledged Personal Knowledge Management System (PKMS). It emphasises heavily on connecting notes and making these connections visible.
@@ -43,7 +43,7 @@ To try the application, start by opening a vault.
 
 ## Features
 
-For details, see [[Obsidian]] and [[features|Obsidian features]]
+For details, see [[public/tech/productivity/obsidian/Obsidian]] and [[features|Obsidian features]]
 
 - [[obsidian/features#Obsidian Canvas|Canvas]]: workspace to collect and connect notes, media, documents and more
 
@@ -69,8 +69,24 @@ To summarise and extend upon this, Obsidian offers
 
 ![[features#GUI]]
 
+
+### Keyboard Shortcuts
+
+A lot of shortcuts are similar to other programs, such as <kbd>ctrl+n</kbd> to create a new file. Try it, they're very intuitive.
+
+| Shortcut | Description |
+| ---- | ---- |
+| <kbd>ctrl+p</kbd> | command palette: access most functions, from moving a file to templates |
+| <kbd>ctrl+,</kbd> | open settings |
+| <kbd>ctrl+shift+f</kbd> | search vault |
+| <kbd>ctrl+l</kbd> | create a check list item and toggle checked |
+| <kbd>ctrl+enter</kbd> | open link under cursor in new tab |
+
+
 ### Search and Queries
+ 
  ![[obsidian/Obsidian#Search and Queries|Obsidian]]
+
 
 ## Writing
 
@@ -119,6 +135,7 @@ For example ![|20](tux.png) or ![[tux.png|20]]
 
 ## References
 
+- [Awesome Obsidian]
 - [Griffin - Obsidian Basics][griffin]
 
 [Website]: <https://obsidian.md/>
@@ -128,8 +145,8 @@ For example ![|20](tux.png) or ![[tux.png|20]]
 [griffin]:  <https://rossgriffin.com/tutorials/obsidian-basics-guide/> "Griffin - Obsidian Basics"
 [^griffin]:  [griffin]
 [^young]: <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20matter/> Young, YAML front matter
-[obsidian-workflow-template]: <https://github.com/mathisgauthey/obsidian-workflow-template>
 [^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`
-[Obsidian]: <https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/>
-[Obsidian features]: <https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/>
+[Notes: Obsidian]: <https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/>
+[Notes: Obsidian features]: <https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/>
 [Template vault]: <https://gitlab.com/treetanium1/resources/obsidian/obsidian-template>
+[obsidian-workflow-template]: <https://github.com/mathisgauthey/obsidian-workflow-template>
