@@ -2,6 +2,9 @@
 visibility: public
 title: HTML
 desc-short: HTML (Hyper Text Markup Language)
+related:
+  - "[[CSS]]"
+  - "[[writing/Markdown|Markdown]]"
 ---
 
 See also my notes on [[CSS|CSS]] | [[Markdown|Markdown]]
