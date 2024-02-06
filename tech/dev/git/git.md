@@ -55,6 +55,9 @@ However, I wanted to specify what to sparsely check out, before pulling anything
 > ```
 >
 > where the parent repo's Git directory is for example `../../.git/modules/<submodule name/path>`.
+>
+> - [ ] update with this info
+>     - [ ] https://stackoverflow.com/a/63786181/16096134
 
 Examples and references
 

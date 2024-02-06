@@ -15,7 +15,7 @@ desc-short: |
   Obsidian is the private and flexible note‑taking app that adapts to the way you think.
 visibility: public
 related:
-  - "[[features|Obsidian features]]"
+  - "[[obsidian_features|Obsidian features]]"
   - "[[DataView|Dataview plugin]]"
   - "[[public/tech/writing/Markdown|Markdown]]"
 ---
@@ -68,7 +68,7 @@ Further customisation and extension can be done using [[CSS]]. Obsidian supports
 
 ## Features
 
-See [[features|summary of Obsidian features]] and [[writing/Markdown|Markdown]].
+See [[obsidian_features|summary of Obsidian features]] and [[writing/Markdown|Markdown]].
 
 
 #### Custom
@@ -239,6 +239,8 @@ References
     - [[Pandoc#pandoc-crossref|pandoc-crossref]]-like references (citations, figures, equations, ...)
 - templates
     - [obsidian-starter-templates](https://github.com/masonlr/obsidian-starter-templates)
+- Javascript
+    - [JS in Obsidian]
 
 [Awesome Obsidian]: <https://gitlab.com/treetanium1/resources/obsidian/obsidian-template>
 [obsidian-linter]: <https://github.com/platers/obsidian-linter>
@@ -246,3 +248,4 @@ References
 [^young]: <https://demo-obsidian.owenyoung.com/Advanced%20topics/YAML%20front%20matter/> "Young - YAML front matter"
 [obsidian-workflow-template]: <https://github.com/mathisgauthey/obsidian-workflow-template>
 [^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`
+[JS in Obsidian]: <https://www.reddit.com/r/ObsidianMD/comments/xal0c7/comment/jccdv0i/>

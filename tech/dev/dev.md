@@ -93,6 +93,8 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 ## Code Quality and Static Analysis
 
 - [analysis-tools.dev]: compare tools and linters, filter by open-source and more, user reviews
+- [[codeql]]
+- [Sonarqube](https://www.sonarsource.com/products/sonarqube/): has an open-source community edition
 
 ### Syntax Check, Formatting, Linting
 
@@ -102,6 +104,14 @@ Tags: #dev/linting
 - [[prettier]]: "opinionated" formatter for different languages
 - [[writing/Markdown#Linting and Style|Markdown Linters and Style]]
 - [[YAML#Linting|YAML linters]]
+
+```dataview
+TABLE WITHOUT ID
+("[" + title + "](" + file.path + ")") AS "Name",
+"[Website](" + this.url + ")" AS "Links",
+desc-short AS "Description"
+WHERE contains(file.path,"lint")
+```
 
 ## Build
 
@@ -128,23 +138,11 @@ See [[make]]
 
 See [[DevOps]]
 
-## Code Testing
-
-- [CodeQL](https://codeql.github.com/) | [Docs](https://codeql.github.com/docs/)
-  > Discover vulnerabilities across a codebase with CodeQL, our industry-leading semantic code analysis engine. CodeQL lets you query code as though it were data. Write a query to find all variants of a vulnerability, eradicating it forever. Then share your query to help others do the same.
-
-    - [codeql-action](https://github.com/github/codeql-action)
-      > This action runs GitHub's industry-leading semantic code analysis engine, [CodeQL](https://codeql.github.com/), against a repository's source code to find security vulnerabilities
-
-CodeQL is free for research and open source.
-
-- [Code Quality @GitLab](https://gitlab.com/gitlab-org/ci-cd/codequality): determine code quality using Docker image with various tools
 
 ## Linux
 
 - [KIWI: command line utility to build Linux system appliances](https://osinside.github.io/kiwi/)
 - [openQA: automated tests (for OSs)](command line utility to build Linux system appliances)
-- [Semantic Versioning: conventions for version numbers and changes](https://semver.org/)
 - [Appstream](https://www.freedesktop.org/software/appstream/docs/): Infrastructure for distro-agnostic software-centers and universal software component metadata
 
 ## Databases
@@ -180,10 +178,10 @@ See also [sw project template]
 - Changelogs
     - [keepchangelog.com](https://keepachangelog.com): motivation and guidelines for changelogs
     - [gnu.org: Style of Change Logs](https://www.gnu.org/prep/standards/html_node/Style-of-Change-Logs.html)
+- [Semantic Versioning: conventions for version numbers and changes](https://semver.org/)
 - Readme's
     - [[writing#READMEs|my notes on writing Readme's]]
-- Code quality and static analysis
-    - [analysis-tools.dev]
+- [[#Code Quality and Static Analysis]]
 
 Suggested files and directories
 
