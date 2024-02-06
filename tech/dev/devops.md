@@ -26,7 +26,7 @@ Tools
 
 ### GitLab
 
-See [[rug/lwp/GitLab]]
+See [[git/GitLab]]
 
 ### GrimoireLab
 

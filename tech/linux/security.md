@@ -1,6 +1,6 @@
 ---
-visibility: public
 title: Security
+visibility: public
 ---
 # Links
 
@@ -96,4 +96,4 @@ Seems not be available in default Ubuntu PAM installation and has to be compiled
 
 Package: `libpam-ssh-agent-auth`
 
-See [[rug/projects/PAM_SSH-agent|Work notes LWP: project sudo with SSH agent PAM]]
+See [[rug/projects/PAM_SSH-agent|Work LWP: project sudo with SSH agent PAM]]

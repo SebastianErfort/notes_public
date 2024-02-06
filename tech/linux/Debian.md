@@ -22,7 +22,7 @@ title: Debian
 
 `reprepro`: produce, manage and sync a local repository of Debian packages
 
-See also [Jurjen's notes for packages on deb.rug.nl in Obsidian](obsidian://vault/lwp-docs/wiki/software/adding-a-package-to-deb.rug.nl) and [Jurjen's notes for packages on deb.rug.nl in LWP Docs](https://lwp.pages-817d151d.nip.io/documentation/wiki/wiki/software/adding-a-package-to-deb.rug.nl/)
+See also [RUG: Jurjen's notes on Debian packages].
 
 ```bash
 # add package to repository
@@ -83,7 +83,7 @@ Speed up downloads by using multiple parallel connections: (unofficial) [package
 
 #### Packages
 
-Pin/hold a package version, for example Kernel version (see [Work notes LWP > Puppet > module Kernel Maintenance](obsidian://vault/rug/lwp/Puppet/modules/kernel_maintenance) and [code](file://git/puppetserver/our-modules/kernel_maintenance/manifests/init.pp))
+Pin/hold a package version, for example Kernel version (see [Work notes LWP > Puppet > module Kernel Maintenance](obsidian://vault/lwp-docs/lwp/Puppet/modules/kernel_maintenance) and [code](file://git/puppetserver/our-modules/kernel_maintenance/manifests/init.pp))
 
 ```bash
 apt-mark showhold | grep -q -e '^linux-headers-${pin}' -e '^linux-image-${pin}' -e '^linux-modules-${pin}' -e '^linux-modules-extra-${pin}'
@@ -96,3 +96,5 @@ apt-mark hold linux-headers-${pin}-generic linux-image-${pin}-generic linux-modu
 > Nala is a front-end for `libapt-pkg`. Specifically we interface using the `python-apt` api.
 ![|400](https://github.com/volitank/nala/raw/main/imgs/nala-install-2.png)
 <https://trendoceans.com/nala-package-manager/>
+
+

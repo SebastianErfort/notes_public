@@ -23,7 +23,7 @@ title: Features
 
 Link types
 
-- regular Markdown links: `[link text](URI)`
+- regular Markdown links: `[link text|alt link text](URI "link title")` (linkt title and alt link text are optional)
     - Link with separate definition (only reading mode, URL has to be valid format, else it won't be rendered)
     
       ```markdown

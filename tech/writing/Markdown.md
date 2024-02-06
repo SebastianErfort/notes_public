@@ -13,7 +13,7 @@ related:
 | Resource | Links |
 | ---- | ---- |
 | Cheatsheets | [MarkdownHere](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)<br>[www.markdownguide.org](https://www.markdownguide.org/cheat-sheet/)<br>[Cheatsheet jonschlinkert] |
-| Linting & Style | [[markdownlint]], [Obsidian Linter](projects/templates/obsidian#^f0ca06) |
+| [[#Linting and Style\|Linting & Style]] | [[markdownlint]], [Obsidian Linter](personal/projects/templates/obsidian.md#^f0ca06) |
 | Related | `=(join(this.related, ", "))` |
 | My stuff | [Cheat Markdown cheatsheet (local)](file://.config/cheat/cheatsheets/personal/markdown) |
 | References | [markdownguide.org] |
@@ -130,9 +130,10 @@ See [[mermaid|notes on Mermaid]].
 ## Specifications, Implementations and Parsers
 
 - [[CommonMark]]
+    - [MyST]: extension on CommonMark aimed at scientific writing
 - [GitHub Flavored Markdown Spec (GFM)](https://github.github.com/gfm/): based on [[#CommonMark]]
 - [GitLab Flavored Markdown (GLFM)](https://docs.gitlab.com/ee/user/markdown.html)
-- [[Python-Markdown]]: Python implementation of [John Gruber’s Markdown](https://daringfireball.net/projects/markdown/), used e.g. in [[MkDocs]]
+- [[Python-Markdown]]: Python implementation of [John Gruber’s Markdown](https://daringfireball.net/projects/markdown/), used e.g. in [[public/tech/documentation/MkDocs]]
 - [Goldmark](https://github.com/yuin/goldmark/): CommonMark compliant
 - Kramdown: [Website](https://kramdown.gettalong.org/) | [Documentation](https://kramdown.gettalong.org/documentation.html) | [Quick reference](https://kramdown.gettalong.org/quickref.html) | [Github](https://github.com/gettalong/kramdown)
 
@@ -157,6 +158,31 @@ Discussion
 [[Pandoc]] developer John MacFarlane is one of the founders and maintainers. Used by [[obsidian/Obsidian]].
 
 
+### Linting and Style
+
+⚠ Linting Markdown satisfyingly, including the front matter, is a pile of wank. Tons of packages and giant mess.
+
+- [[markdownlint]]
+    - markdownlint-cli: CLI  for markdownlint with fixing capabilities
+    - markdownlint-cli2: CLI  for markdownlint with fixing capabilities
+- [[prettier]]
+- [[mdformat]]
+    - [mdformat-toc](https://github.com/hukkin/mdformat-toc): Mdformat plugin to generate a table of contents (last commit 2022)
+    - [mdformat-frontmatter]
+
+Front matter
+
+| Package | Description | Language |
+| ---- | ---- | ---- |
+| [mdformat-frontmatter] |  |  |
+| [[dev/YAML#Linting\|YAML > Linting]] (no fixing) | ignores body, treating everything between `---` as YAML (except code blocks with `---`) |  |
+| [remark-lint-frontmatter-schema](https://github.com/JulianCataldo/remark-lint-frontmatter-schema) | from JavaScript and VSCode ecosystems 🤮 Didn't get it to run, some shit about [pnpm](javascript#pnpm) failing to install crap after moving tons of [npm](javascript#npm)-installed packages into the void ✨ | JavaScript |
+| [yaml-fm-lint](https://github.com/leneti/yaml-fm-lint) | "A NodeJS script, which extracts yaml front matter from markdown files and lints the extracted data" |  |
+| [spatie/yaml-front-matter](https://github.com/spatie/yaml-front-matter) | "A to the point yaml front matter parser" | PHP |
+| [YAML linters](dev/YAML#Linting) | YAML only (extract and pass front matter manually) |  |
+
+All of these seem to fail on ill-formatted [[public/tech/dev/YAML#^7903df|YAML block scalars]]. If the content is under-indented they just die on a missing colon 🤦‍♂
+
 ## Presentations
 
 ### reveal.js
@@ -172,3 +198,5 @@ See notes on [[Pandoc]] and [[revealjs|reveal.js]].
 [Cheatsheet markdown-here]: <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
 [markdownguide.org]: <https://www.markdownguide.org>
 [Wiki-links]: <https://python-markdown.github.io/extensions/wikilinks/>
+[mdformat-frontmatter]: <https://github.com/butler54/mdformat-frontmatter>
+[MyST]: <https://myst-parser.readthedocs.io/en/latest/index.html>

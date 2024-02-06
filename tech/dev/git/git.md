@@ -26,7 +26,7 @@ Sparse checkout lets you check out only part of a repository. This can be helpfu
 In my experience so far this standard commands `git sparse-checkout ...` work fine if the repository is already checked out. Extraneous files are removed and you're left with the files and directories you specified to be checked out.
 
 > [!warning] 🚧 WIP
-However, I wanted to specify what to sparsely check out, before pulling anything. For this Git's infrastructure needs to be set up, usually the `.git` directory with Git's configuration etc. But as far as I understand these only get properly created when the first checkout (pull) is performed. Before that, essential files are missing. Pre-creating those files containing the configuration for the sparse checkout only worked manually in my experiments.
+However, I wanted to specify what to sparsely check out, before pulling anything. For this, Git's infrastructure needs to be set up, usually the `.git` directory with Git's configuration etc. But as far as I understand these only get properly created when the first checkout (pull) is performed. Before that, essential files are missing. Pre-creating those files containing the configuration for the sparse checkout only worked manually in my experiments.
 >
 > ```bash
 > git init 2>/dev/null
@@ -87,7 +87,7 @@ echo <dirname> >> .git/info/sparse-checkout
 
 ### Hooks
 
-[githooks](https://git-scm.com/docs/githooks)
+[Git hooks]
 
 - [customising Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
@@ -163,7 +163,7 @@ gh auth login
 
 [Git Documentation](https://git-scm.com/docs/git-submodule) | [Documentation: Book](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
-Nest git projects, for example adding some required library to your project.
+Nest Git repositories, for example adding some required library to your project.
 
 - will by default not be pulled, instead need to be initialised (fetched) and updated (pulled)
 - update submodules on pull: <https://stackoverflow.com/questions/4611512/is-there-a-way-to-make-git-pull-automatically-update-submodules>
@@ -183,15 +183,20 @@ git submodule update [--init] [--recursive] --remote
 git pull --recurse-submodules
 ```
 
+Git submodules are generally checked out in a detached-HEAD state, at a specific commit. For most submodules this is the desired mode, often they are libraries and for the stability of the parent repository it is desirable to not automatically check out the latest changes in the dependencies (submodules). There might be cases though, when you want to track the latest changes on a branch.
+
+For example, I've been using Git submodules to split my notes into pluggable blobs. There is no code to break here, I always want the latest changes. It should be possible to check out a submodule by branch instead of by commit by now.[^sm-track-branch] Didn't work for me in a first attempt (existing submodule)
+
+References
+
+- [Git submodule fetch and update @stackoverflow](https://stackoverflow.com/questions/50254184/git-submodule-and-fetch)
+- [Git submodule track branch @stackoverflow][stackoverflow: sm track branch]
+
 #### Toubleshooting
 
 - Submodule HEAD is detatched/keepts becoming detatched: see [Stack Overflow question](https://stackoverflow.com/a/36375256/16096134)
 - fixing unrelated histories, e.g. when error `fatal: refusing to merge unrelated histories` occurs: <https://stackoverflow.com/a/39783462>
 
-
-References
-
-- [Git submodule fetch and update @stackoverflow](https://stackoverflow.com/questions/50254184/git-submodule-and-fetch)
 
 
 ### Branches
@@ -258,4 +263,7 @@ and optionally
 - [whatthecommit.com](https://whatthecommit.com/) random terrible commit message generator
 - [Article: How I teach Git, T. Broyer @dev.to](https://dev.to/tbroyer/how-i-teach-git-3nj3) #cio/tech/git
 
-[my Git resources]: <>
+[my Git resources]: <https://gitlab.com/treetanium1/resources/git>
+[stackoverflow: sm track branch]: <https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule/18799234#18799234>
+[^sm-track-branch]: [Git submodule track branch @stackoverflow][stackoverflow: sm track branch]
+[Git hooks]: <https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks>

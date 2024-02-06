@@ -90,15 +90,17 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 [lefthook]: <https://github.com/evilmartians/lefthook>
 
 
-## Syntax Check, Formatting, Linting
+## Code Quality and Static Analysis
+
+- [analysis-tools.dev]: compare tools and linters, filter by open-source and more, user reviews
+
+### Syntax Check, Formatting, Linting
 
 Tags: #dev/linting
 
 - [textlint](https://github.com/textlint/textlint): pluggable natural language linter for text and markdown
-- [prettier](https://prettier.io/): an opinionated code formatter supporting many languages (Markdown, JS, HTML, CSS, ...)
-  Issues: for Markdown some problem as with [[markdownlint|markdownlint-cli]], indents under-indented content left, removing indentation
-- Markdown
-    - [[markdownlint]] (node.js)
+- [[prettier]]: "opinionated" formatter for different languages
+- [[writing/Markdown#Linting and Style|Markdown Linters and Style]]
 - [[YAML#Linting|YAML linters]]
 
 ## Build
@@ -180,6 +182,8 @@ See also [sw project template]
     - [gnu.org: Style of Change Logs](https://www.gnu.org/prep/standards/html_node/Style-of-Change-Logs.html)
 - Readme's
     - [[writing#READMEs|my notes on writing Readme's]]
+- Code quality and static analysis
+    - [analysis-tools.dev]
 
 Suggested files and directories
 
@@ -234,3 +238,4 @@ Free stock media
 - [ntfy.sh](https://ntfy.sh/): simple HTTP-based [pub-sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) notification service. It allows you to send notifications to your phone or desktop via scripts from any computer, entirely **without signup, cost or setup**. It's also [open source](https://github.com/binwiederhier/ntfy) if you want to run your own.
 
 [sw project template]: <>
+[analysis-tools.dev]: <https://analysis-tools.dev/> 

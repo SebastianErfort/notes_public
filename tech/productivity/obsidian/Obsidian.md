@@ -27,8 +27,8 @@ related:
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Websites | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
 | Collections | [Awesome Obsidian]                                                                                                                                                                   |
-| Linting & Style | [[markdownlint]], [Obsidian Linter](Obsidian.md#^f0ca06) |
-| My 🌐 stuff | [Notes](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/) (using [[MkDocs]]), [Obsidian Features](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/), [Template vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](public/tech/productivity/obsidian/Obsidian.md#^f0ca06) |
+| My 🌐 stuff | [Notes](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/) (using [[public/tech/documentation/MkDocs]]), [Obsidian Features](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/), [Template vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
 | My notes | `=(join(this.related, ", "))` |
 
 ## Config & Customisation

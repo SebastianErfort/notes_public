@@ -1,7 +1,8 @@
 ---
 title: AppArmor
 ---
-# `=this.title`
+
+# AppArmor
 
 [AppArmor Wiki](https://gitlab.com/apparmor/apparmor/-/wikis/home) | [AppArmor Documentation](https://gitlab.com/apparmor/apparmor/-/wikis/Documentation)
 
@@ -200,7 +201,7 @@ Once we have identified some program that we want to confine or files/diretories
 ### 1. Programs and files to be managed
 
 - we could activate more distro package profiles in enforce mode
-- CIS security benchmarks as an *extensive* reference (see [our gitlab](https://git.lwp.rug.nl/lwp/lwp-overleg/-/tree/master/security) | [local file](file:///home/erfort/manuals/security/CIS_Ubuntu_Linux_18.04_LTS_Benchmark_v2.0.1.pdf))
+- CIS security benchmarks as an *extensive* reference (see [our GitLab](https://git.lwp.rug.nl/lwp/lwp-overleg/-/tree/master/security) | [local file](file:///home/erfort/manuals/security/CIS_Ubuntu_Linux_18.04_LTS_Benchmark_v2.0.1.pdf))
 - > [!example]- `aa-unconfined` on my laptop
   >
   > ```bash

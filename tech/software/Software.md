@@ -73,7 +73,7 @@ npm list [-g] # list installed package(s) with version and dependencies
 
 # Backup, file-transfer, synchronisation
 
-- Unison: [Wiki](https://en.wikipedia.org/wiki/Unison_(software)) | [LWP Wiki](https://lwpwiki.webhosting.rug.nl/index.php/Syncing_files_with_unison)
+- Unison: [Wiki](https://en.wikipedia.org/wiki/Unison_(software))
 - Borg: [Website](https://www.borgbackup.org/) | [Github](https://github.com/borgbackup/borg)
   Deduplicating archiver with compression and encryption, supports remote locations (SSH)
 
