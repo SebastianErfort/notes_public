@@ -5,10 +5,10 @@ aliases:
 author: Sebastian Erfort
 date: 2024-01-19
 related:
-  - "[[obsidian/features|Obsidian features]]"
+  - "[[obsidian_features|Obsidian features]]"
   - "[[productivity/obsidian/Obsidian|Obsidian]]"
-url: "https://obsidian.md/"
-docs: "https://help.obsidian.md/Home"
+url: https://obsidian.md/
+docs: https://help.obsidian.md/Home
 ---
 
 # Introduction to Obsidian
@@ -19,7 +19,7 @@ docs: "https://help.obsidian.md/Home"
 | Templates       | [Template vault], [Obsidian Workflow][obsidian-workflow-template] (if you want to organise your entire life) |
 | Collections     | [Awesome Obsidian] |
 | Linting & Style | [[markdownlint]], [Obsidian Linter](public/tech/productivity/obsidian/Obsidian.md#^f0ca06) |
-| My notes        | [Obsidian features](obsidian/features), [Obsidian](productivity/obsidian/Obsidian) |
+| My notes        | [Obsidian features](obsidian_features.md), [Obsidian](productivity/obsidian/Obsidian) |
 | My 🌐notes      | [Obsidian][Notes: Obsidian], [Obsidian features][Note: Obsidian features] |
 
 > [!info] What is Obsidian?
@@ -43,9 +43,9 @@ To try the application, start by opening a vault.
 
 ## Features
 
-For details, see [[public/tech/productivity/obsidian/Obsidian]] and [[features|Obsidian features]]
+For details, see [[public/tech/productivity/obsidian/Obsidian]] and [[obsidian_features|Obsidian features]]
 
-- [[obsidian/features#Obsidian Canvas|Canvas]]: workspace to collect and connect notes, media, documents and more
+- [[obsidian_features#Obsidian Canvas|Canvas]]: workspace to collect and connect notes, media, documents and more
 
 ### User Interface
 
@@ -67,7 +67,7 @@ The user interface can be customised with community-made themes (Settings: Appea
 
 To summarise and extend upon this, Obsidian offers
 
-![[features#GUI]]
+![[obsidian_features#GUI]]
 
 
 ### Keyboard Shortcuts
@@ -92,16 +92,16 @@ A lot of shortcuts are similar to other programs, such as <kbd>ctrl+n</kbd> to c
 
 For a mostly complete demo of the Markdown available in Obsidian, see [[markdown_benchmark|Markdown benchmark]].
 
-See also [[obsidian/features|Obsidian features]]
+See also [[obsidian_features|Obsidian features]]
 
-- [[obsidian/features#Code Blocks|code blocks]]
-- [[obsidian/features#Footnotes|footnotes]]
-- [[obsidian/features#Call-outs|Call-outs]]: colourful boxes to highlight content, can collapse/expand
-- [[obsidian/features#Knowledge Management System (KMS)|Knowledge Management]]: **tags**, search and queries (extended)
+- [[obsidian_features#Code Blocks|code blocks]]
+- [[obsidian_features#Footnotes|footnotes]]
+- [[obsidian_features#Call-outs|Call-outs]]: colourful boxes to highlight content, can collapse/expand
+- [[obsidian_features#Knowledge Management System (KMS)|Knowledge Management]]: **tags**, search and queries (extended)
 
 ### Links and Images
 
-See also [[obsidian/features#Links|Obsidian features: links]] and [[obsidian/features#Images|Obsidian features: images]] for more details.
+See also [[obsidian_features#Links|Obsidian features: links]] and [[obsidian_features#Images|Obsidian features: images]] for more details.
 
 Links are an essential feature for any personal knowledge management system, allowing you to create important connections and helping to make information findable.
 

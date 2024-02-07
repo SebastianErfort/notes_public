@@ -24,7 +24,7 @@ img: "<img src=\"https://docs.gitlab.com/assets/images/gitlab-logo-header.svg\" 
 
 See also [[git]] | [[rug/lwp/GitLab|Work notes LWP: GitLab]] | [[2023_GitLab/presentation|Presentation for LWP]]
 
-# Issues, Boards, Project Management
+## Issues, Boards, Project Management
 
 See also [[Gitlab_Agile|GitLab: Agile]]
 
@@ -35,7 +35,7 @@ See also [[Gitlab_Agile|GitLab: Agile]]
     - [From URL: pre-filled values](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#using-a-url-with-prefilled-values)
         > [!idea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
 
-## Markdown/HTML
+### Markdown/HTML
 
 [HTML style guide](https://docs.gitlab.com/ee/development/fe_guide/style/html.html)
 
@@ -45,7 +45,7 @@ See also [[Gitlab_Agile|GitLab: Agile]]
     <a href="url" target="_blank" rel="noopener noreferrer"></a>
     ```
 
-# Web UI
+## Web Interface
 
 - [Quick Actions](https://docs.gitlab.com/ee/user/project/quick_actions): text-based shortcuts for common actions
 - [gitlab-svgs: GitLab icons](https://gitlab.com/gitlab-org/gitlab-svgs) ^8b2ea8
@@ -53,14 +53,19 @@ See also [[Gitlab_Agile|GitLab: Agile]]
     - [Sprite icons](https://gitlab.com/gitlab-org/gitlab-svgs/-/tree/main/sprite_icons)
 - [GitLab logos](https://about.gitlab.com/press/press-kit/)
 
-## Projects
+### Snippets
+
+[GitLab documentation: Snippets]
+
+
+### Projects
 
 - [Project and group visibility](https://docs.gitlab.com/ee/user/public_access.html)
 - [Badges](https://docs.gitlab.com/ee/user/project/badges)
 
-# Authentication
+## Authentication
 
-## Access Tokens
+### Access Tokens
 
 There is a variety of different access tokens available in GitLab: groups, impersonation, projects, ... and each can be fine-grained, setting a role, permissions and an expiry date.
 
@@ -78,9 +83,9 @@ For example, to give read access to a project an access token with role `Reporte
 - [Group](https://docs.gitlab.com/ee/user/group/settings/group_access_tokens)
 - [API: personal/project/group tokens](https://docs.gitlab.com/ee/api/rest/index.html#personalprojectgroup-access-tokens)
 
-# Automation
+## Automation
 
-## CI/CD
+### CI/CD
 
 By default `.gitlab-ci.yml`
 
@@ -101,17 +106,17 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive  # init/update/pull SMs recursively
 ```
 
-### Stages
+#### Stages
 
 - `pages`: special and activated for projects where [[#GitLab Pages]] feature is enabled. After `build` stage artifacts (default `public/`) are deployed to configured destination
 
-### `script`
+#### `script`
 
 Custom commands to be executed during stage
 
 - [before_script](https://docs.gitlab.com/ee/ci/yaml/?query=before_script): run before every command in `script` section. Per stage or globally defined.
 
-### Docker Images
+#### Docker Images
 
 - [Access image from private Container Registry](https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#access-an-image-from-a-private-container-registry)
 
@@ -122,23 +127,23 @@ build:trusty:
   image: trusty:base
 ```
 
-Triggers and connecting pipelines
+Triggers and connecting pipelines (e.g. from another project's pipeline)
 
-- <https://docs.gitlab.com/ee/ci/triggers/>
-- <https://docs.gitlab.com/ee/api/pipeline_triggers.html>
-- <https://docs.gitlab.com/ee/ci/pipelines/downstream_pipelines.html>: multi-project pipelines, parent-child pipelines
+- [GitLab documentation: Triggers](https://docs.gitlab.com/ee/ci/triggers/)
+- [GitLab documentation: Pipeline Triggers](https://docs.gitlab.com/ee/api/pipeline_triggers.html)
+- [GitLab documentation: Downstream pipelines](https://docs.gitlab.com/ee/ci/pipelines/downstream_pipelines.html): multi-project pipelines, parent-child pipelines
 
-## Webhooks
+### Webhooks
 
 There's a number of events to chose from as webhooks, for example `Wiki page events`, that can be used e.g. to trigger a pipeline (in a different project). The GitLab webinterface discourages the use of Webhooks, suggesting Integrations instead.
 
 - `Wiki page events`: ⚠ only triggers when changes are done through the GitLab Wiki webinterface, not when pushing changes to the GitLab Wiki repository.
 
-## Auto DevOps
+### Auto DevOps
 
 <https://docs.gitlab.com/ee/topics/autodevops/index.md>
 
-# Server
+## Server
 
 - [Install GitLab](https://docs.gitlab.com/ee/install/)
     Debian package didn't work for me, but their [GitLab installation script](https://about.gitlab.com/install/#debian) did,
@@ -147,24 +152,24 @@ There's a number of events to chose from as webhooks, for example `Wiki page eve
 - [Security](https://docs.gitlab.com/ee/security/index.html)
 - [Database](https://docs.gitlab.com/omnibus/settings/database.html): only PostgreSQL
 
-## Console
+### Console
 
 Fixing requirement of both MFA *and* password some users experience
 
 ```ruby
-# gitlab-rails console
+## gitlab-rails console
 user = User.find_by(email: 'a.b.lastname@student.rug.nl')
 user.password_automatically_set = true
 user.save
 ```
 
-## LDAP
+### LDAP
 
 See also [[rug/lwp/GitLab#LDAP|Work notes LWP: GitLab > LDAP]]
 
 <https://docs.gitlab.com/ee/administration/auth/ldap/index.html>
 
-## Rake tasks
+### Rake tasks
 
 <https://docs.gitlab.com/ee/raketasks/>
 
@@ -181,13 +186,13 @@ See also [[rug/lwp/GitLab#LDAP|Work notes LWP: GitLab > LDAP]]
     1. with admin rights: go to **Admin Area** > *project* > **Gitaly relative path**
     2. ...
 
-## Enterprise Edition (EE)
+### Enterprise Edition (EE)
 
 [Convert Community Edition to Enterprise Edition](https://docs.gitlab.com/ee/update/package/convert_to_ee.html)
 [Trial License](https://about.gitlab.com/handbook/support/license-and-renewals/workflows/self-managed/trials.html)
 [Activate](https://docs.gitlab.com/ee/user/admin_area/license_file.html)
 
-## Rails Console
+### Rails Console
 
 [Documentation](https://docs.gitlab.com/ee/administration/operations/rails_console.html)
 
@@ -223,7 +228,7 @@ Or use a [Rails Runner](https://docs.gitlab.com/ee/administration/operations/rai
 sudo gitlab-rails runner "RAILS_COMMAND"
 ```
 
-## Rake Tasks
+### Rake Tasks
 
 Reset user password ^8cee12
 
@@ -232,17 +237,17 @@ sudo gitlab-rake "gitlab:password:reset[sidneyjones]"
 ```
 
 
-## Elasticsearch (EE)
+### Elasticsearch (EE)
 
 <https://docs.gitlab.com/ee/integration/advanced_search/elasticsearch.html>
 
 
-## Service Desk
+### Service Desk
 
 <https://docs.gitlab.com/ee/user/project/service_desk/index.html>
 
 
-# Wiki
+## Wiki
 
 [GitLab Documentation: Wiki](https://docs.gitlab.com/ee/user/project/wiki/)
 
@@ -252,7 +257,7 @@ sudo gitlab-rake "gitlab:password:reset[sidneyjones]"
     - currently not possible to hide/exclude something from the TOC
 - [Link an external Wiki](https://docs.gitlab.com/ee/user/project/wiki/#link-an-external-wiki)
 
-# GitLab Pages
+## GitLab Pages
 
 Examples and References
 
@@ -266,3 +271,8 @@ Examples and References
     - [Obsidian](https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/)
 - <https://gitlab.gnome.org/Infrastructure/gtk-web>
 - Artifact size: if the artifact is too large to be deployed there are two settings. First the maximum artifact size can be set per instance, group and project in the admin settings. Second the maximum size for a page can be set in the admin settings under Preferences > Pages
+
+
+## References
+
+[GitLab documentation: Snippets]: <https://docs.gitlab.com/ee/user/snippets.html>

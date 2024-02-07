@@ -12,6 +12,9 @@ url: "https://yaml.org/"
 
 `= ("[Website](" + this.url + ")")` | [YAML 1.2.2 Specification](https://yaml.org/spec/1.2.2/)
 
+| Resource | References |
+| ---- | ---- |
+| Cheatsheets and Quick References | [yaml.org refcard](https://yaml.org/refcard.html) |
 
 ## Language
 

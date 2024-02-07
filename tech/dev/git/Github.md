@@ -41,9 +41,9 @@ Examples
 
 ## GitLab Actions
 
-# dev/CICD
+Tags: #dev/CICD
 
-- [Depedabot](https://docs.github.com/en/code-security/dependabot): Monitor vulnerabilities in dependencies used in your project and keep your dependencies up-to-date #security
+- [Dependabot](https://docs.github.com/en/code-security/dependabot): Monitor vulnerabilities in dependencies used in your project and keep your dependencies up-to-date #dev/security
 
 # Github Pages
 

@@ -9,7 +9,7 @@ aliases:
 See also
 
 - [[openscience|Open Science]]
-- [[ospo]]
+- [[OSPO]]
 
 
 ## Motivation
