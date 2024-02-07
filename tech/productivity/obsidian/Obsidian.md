@@ -4,8 +4,8 @@ tags:
   - dev/markdown
   - obsidian
 author: Sebastian Erfort
-url: https://obsidian.md/
-docs: https://help.obsidian.md/Home
+url: "https://obsidian.md/"
+docs: "https://help.obsidian.md/Home"
 syntax: markdown
 type: software
 category:
@@ -110,7 +110,7 @@ Queries allow to embed a search in your notes, rendering the results as a part o
 Example:
 
 <pre><code>```query
-#idea
+Tags: #idea
 ```</code></pre>
 
 ### Properties: Front Matter and Meta Data
@@ -171,17 +171,17 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [Article LaTeX-like figures and section referencing](https://www.reddit.com/r/ObsidianMD/comments/10lp7e0/latexlike_figures_and_section_referencing_in/):
       similar to [[Pandoc#pandoc-crossref|pandoc-crossref]] like
 
-      ```markdown
-        ![your nice caption](your_img_path.png){#fig:your_fig_name}
-        ```
+```markdown
+![your nice caption](your_img_path.png){#fig:your_fig_name}
+```
 
-        [Step-by-step-guide](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
+[Step-by-step-guide](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
 
 ```dataview
 TABLE WITHOUT ID
-  file.link AS "Plugin",
-  (join(file.tags)) AS "Tags",
-  desc-short AS "Description"
+file.link AS "Plugin",
+(join(file.tags)) AS "Tags",
+desc-short AS "Description"
 WHERE contains(file.path,"Obsidian/plugins")
 SORT file.name
 ```
@@ -214,7 +214,7 @@ References
 
 - [[ObsidianGitHubPublisher|Obsidian GitHub Publisher]]
 - [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
-- https://flowershow.app/ | [GitHub](https://github.com/datopian/obsidian-flowershow)
+- <https://flowershow.app/> | [GitHub](https://github.com/datopian/obsidian-flowershow)
 - [obsidian-webpage-export](https://github.com/KosmosisDire/obsidian-webpage-export)
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
 

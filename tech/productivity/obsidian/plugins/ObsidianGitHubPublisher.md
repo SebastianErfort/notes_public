@@ -1,7 +1,7 @@
 ---
 title: Obsidian GitHub Publisher
-url: https://obsidian-publisher.netlify.app/
-source: https://github.com/ObsidianPublisher/obsidian-github-publisher
+url: "https://obsidian-publisher.netlify.app/"
+source: "https://github.com/ObsidianPublisher/obsidian-github-publisher"
 type: publishing
 category:
   - Obsidian

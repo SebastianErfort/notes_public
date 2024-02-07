@@ -3,9 +3,9 @@ title: Frogmouth
 type: software
 category:
   - markdown
-url: https://www.textualize.io/
+url: "https://www.textualize.io/"
 docs: ""
-source: https://github.com/Textualize/frogmouth
+source: "https://github.com/Textualize/frogmouth"
 developer: Textualize
 desc-short: Frogmouth is a Markdown viewer / browser for your terminal, built with [[Textual]].
 visibility: public

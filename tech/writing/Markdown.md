@@ -1,5 +1,5 @@
 ---
-url: https://daringfireball.net/projects/markdown/
+url: "https://daringfireball.net/projects/markdown/"
 visibility: public
 title: Markdown
 related:
@@ -140,7 +140,7 @@ See [[mermaid|notes on Mermaid]].
 Parsers/processors
 
 - [remarkable](https://github.com/jonschlinkert/remarkable)
-  > Markdown parser, done right. Commonmark support, extensions, syntax plugins, high speed - all in one. Gulp and metalsmith plugins available. Used by Facebook, Docusaurus and many others! Use [https://github.com/breakdance/breakdance](https://github.com/breakdance/breakdance) for HTML-to-markdown conversion. Use [https://github.com/jonschlinkert/markdown-toc](https://github.com/jonschlinkert/markdown-toc) to generate a table of contents.
+    > Markdown parser, done right. Commonmark support, extensions, syntax plugins, high speed - all in one. Gulp and metalsmith plugins available. Used by Facebook, Docusaurus and many others! Use [https://github.com/breakdance/breakdance](https://github.com/breakdance/breakdance) for HTML-to-markdown conversion. Use [https://github.com/jonschlinkert/markdown-toc](https://github.com/jonschlinkert/markdown-toc) to generate a table of contents.
 
 References
 

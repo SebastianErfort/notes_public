@@ -3,12 +3,12 @@ title: Obsidian DataView
 tags:
   - Obsidian
   - Obsidian/DataView
-desc-short: Dataview is a live index and query engine over your personal knowledge base. You can [**add metadata**](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/) to your notes and **query** them with the [**Dataview Query Language**](https://blacksmithgu.github.io/obsidian-dataview/queries/structure/) to list, filter, sort or group your data. Dataview keeps your queries always up to date and makes data aggregation a breeze.
+desc-short: "Dataview is a live index and query engine over your personal knowledge base. You can [**add metadata**](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/) to your notes and **query** them with the [**Dataview Query Language**](https://blacksmithgu.github.io/obsidian-dataview/queries/structure/) to list, filter, sort or group your data. Dataview keeps your queries always up to date and makes data aggregation a breeze."
 type: software
 category: ""
-url: https://blacksmithgu.github.io/obsidian-dataview/
-docs: https://blacksmithgu.github.io/obsidian-dataview/
-source: https://github.com/blacksmithgu/obsidian-dataview
+url: "https://blacksmithgu.github.io/obsidian-dataview/"
+docs: "https://blacksmithgu.github.io/obsidian-dataview/"
+source: "https://github.com/blacksmithgu/obsidian-dataview"
 developer: ""
 visibility: public
 ---
@@ -20,11 +20,11 @@ visibility: public
 - [Obsidian Example Vault for Dataview Queries](https://github.com/s-blu/obsidian_dataview_example_vault) | [Demo Website](https://s-blu.github.io/obsidian_dataview_example_vault/)
 - [Omit "File" Column in TABLE results @ObsidianForum](https://github.com/blacksmithgu/obsidian-dataview/issues/102)
 
-  ```
-  TABLE WITHOUT ID
-    col1, col2, ...
-  ...
-  ```
+    ```
+    TABLE WITHOUT ID
+      col1, col2, ...
+    ...
+    ```
 
 ### Metadata
 
@@ -85,10 +85,11 @@ Automatically added fields, collected under `file`[^1]
     - exclude notes: `FROM "dir1" AND -"dir1/subdir"`
     - issues
         - relative paths not yet supported without JS, see [issue](https://github.com/blacksmithgu/obsidian-dataview/issues/517), but this should work
-    
-        ```
-        WHERE file.folder = this.file.folder
-        ```
+
+            ```
+            WHERE file.folder = this.file.folder
+            ```
+
 - Filter metadata: `WHERE`
     - partial match: `WHERE contains(field,"value)"`
     - created within last dat: `WHERE file.ctime >= date(today) - dur(1 day)`

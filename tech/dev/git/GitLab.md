@@ -8,13 +8,13 @@ category:
   - git
   - agile
   - devops
-url: https://gitlab.com/
-docs: https://docs.gitlab.com/
+url: "https://gitlab.com/"
+docs: "https://docs.gitlab.com/"
 source: ""
 developer: ""
 desc-short: GitLab is the most comprehensive AI-powered DevSecOps Platform.
 visibility: public
-img: '<img src="https://docs.gitlab.com/assets/images/gitlab-logo-header.svg" style="width: 80px;"/>'
+img: "<img src=\"https://docs.gitlab.com/assets/images/gitlab-logo-header.svg\" style=\"width: 80px;\"/>"
 ---
 # GitLab
 
@@ -33,7 +33,7 @@ See also [[Gitlab_Agile|GitLab: Agile]]
     - [Description templates](https://docs.gitlab.com/ee/user/project/description_templates.html)
     - [By sending an email](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#by-sending-an-email): requires [incoming email](https://docs.gitlab.com/ee/administration/incoming_email.html)
     - [From URL: pre-filled values](https://docs.gitlab.com/ee/user/project/issues/create_issues.html#using-a-url-with-prefilled-values)
-      > [!idea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
+        > [!idea] #idea/cit Could be used to import e-mails (TopDesk calls, customer problems, ...) into GitLab as issues
 
 ## Markdown/HTML
 
@@ -41,9 +41,9 @@ See also [[Gitlab_Agile|GitLab: Agile]]
 
 - open link in new tab (`target="_blank"`) is unsafe, use instead, see [GitLab Documentation](https://docs.gitlab.com/ee/development/fe_guide/style/html.html#blank-target)
 
-  ```html
-  <a href="url" target="_blank" rel="noopener noreferrer"></a>
-  ```
+    ```html
+    <a href="url" target="_blank" rel="noopener noreferrer"></a>
+    ```
 
 # Web UI
 
@@ -68,13 +68,13 @@ For example, to give read access to a project an access token with role `Reporte
 
 - [Personal](https://docs.gitlab.com/ee/user/profile/personal_access_tokens)
 - [Project](https://docs.gitlab.com/ee/user/project/settings/project_access_tokens)
-  > Use a project access token to authenticate:
-  >
-  > - With the [GitLab API](https://docs.gitlab.com/ee/api/index.html).
-  > - With Git, when using HTTP Basic Authentication, use:
-  >     - Any non-blank value as a username.
-  >     - The project access token as the password.
-  >
+    > Use a project access token to authenticate:
+    >
+    > - With the [GitLab API](https://docs.gitlab.com/ee/api/index.html).
+    > - With Git, when using HTTP Basic Authentication, use:
+    >     - Any non-blank value as a username.
+    >     - The project access token as the password.
+    >
 - [Group](https://docs.gitlab.com/ee/user/group/settings/group_access_tokens)
 - [API: personal/project/group tokens](https://docs.gitlab.com/ee/api/rest/index.html#personalprojectgroup-access-tokens)
 
@@ -141,8 +141,8 @@ There's a number of events to chose from as webhooks, for example `Wiki page eve
 # Server
 
 - [Install GitLab](https://docs.gitlab.com/ee/install/)
-  Debian package didn't work for me, but their [GitLab installation script](https://about.gitlab.com/install/#debian) did,
-  `curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash`
+    Debian package didn't work for me, but their [GitLab installation script](https://about.gitlab.com/install/#debian) did,
+    `curl -s https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash`
 - [Configuring Omnibus GitLab](https://docs.gitlab.com/omnibus/settings/)
 - [Security](https://docs.gitlab.com/ee/security/index.html)
 - [Database](https://docs.gitlab.com/omnibus/settings/database.html): only PostgreSQL
@@ -170,16 +170,16 @@ See also [[rug/lwp/GitLab#LDAP|Work notes LWP: GitLab > LDAP]]
 
 - [LDAP](https://docs.gitlab.com/ee/administration/raketasks/ldap.html)
 
-  ```bash
-  sudo gitlab-rake gitlab:ldap:check # test bind_dn and pw, print 100 users as sample
-  sudo gitlab-rake gitlab:ldap:check[5] # print only 5 users
-  ```
+    ```bash
+    sudo gitlab-rake gitlab:ldap:check # test bind_dn and pw, print 100 users as sample
+    sudo gitlab-rake gitlab:ldap:check[5] # print only 5 users
+    ```
 
 - reset password: [[#^8cee12|Rake Task]], [[#^1b2997|Rails console]]
 - [Server Hooks @GitLab Documentation](https://docs.gitlab.com/ee/administration/server_hooks.html)
 - [Repository Storage Types > Translate Hashed Storage Paths](https://docs.gitlab.com/ee/administration/repository_storage_types.html#translate-hashed-storage-paths)
-  1. with admin rights: go to **Admin Area** > *project* > **Gitaly relative path**
-  2. ...
+    1. with admin rights: go to **Admin Area** > *project* > **Gitaly relative path**
+    2. ...
 
 ## Enterprise Edition (EE)
 
@@ -193,29 +193,29 @@ See also [[rug/lwp/GitLab#LDAP|Work notes LWP: GitLab > LDAP]]
 
 - look up user info
 
-  ```ruby
-  u = User.find_by_username('someuser')
-  pp u.attributes
-  # send test email to user
-  Notify.test_email(u.email, "Test email for #{u.name}", 'Test email').deliver_now
+    ```ruby
+    u = User.find_by_username('someuser')
+    pp u.attributes
+    # send test email to user
+    Notify.test_email(u.email, "Test email for #{u.name}", 'Test email').deliver_now
 
 ```
 - 2FA, MFA
-  ```ruby
-  User.find_each(&:disable_two_factor!) # disable for all users (reset if enforced by admin settings)
-  User.where(username: "username_goes_here").each(&:disable_two_factor!) # disable for certain user
-  ```
+    ```ruby
+    User.find_each(&:disable_two_factor!) # disable for all users (reset if enforced by admin settings)
+    User.where(username: "username_goes_here").each(&:disable_two_factor!) # disable for certain user
+    ```
 
 - (Re-)Set password ^1b2997
 
-  ```ruby
-  new_password = 'examplepassword'
-  user.password = new_password
-  user.password_confirmation = new_password
-  user.send_only_admin_changed_your_password_notification!
-  user.save!
-  # root: usually UID 1, else search for root
-  ```
+    ```ruby
+    new_password = 'examplepassword'
+    user.password = new_password
+    user.password_confirmation = new_password
+    user.send_only_admin_changed_your_password_notification!
+    user.save!
+    # root: usually UID 1, else search for root
+    ```
 
 Or use a [Rails Runner](https://docs.gitlab.com/ee/administration/operations/rails_console.html#using-the-rails-runner) to execute commands non-interactively
 

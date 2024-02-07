@@ -1,5 +1,5 @@
 ---
-title: Bash: Arguments
+title: Bash Arguments
 tags: [dev/bash/args]
 ---
 
