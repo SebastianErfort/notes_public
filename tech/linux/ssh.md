@@ -10,17 +10,21 @@ visibility: public
 ### General
 
 ```ssh_config
-Host xyz x* WhatEverYouWannaCallIt
+Host xyz x* Enterprise
   HostName 123.456.78.90
   User Picard
   IdentityFile ~/.ssh/super-secret-key
+
+# for patterns beyond simple wildcards
+Match exec "echo %h | grep -E '<regex>'"
+  ...
 ```
 
 - `Host` can be any identifier, even regular expressions
 - `HostName` is the public hostname or IP address of your remote machine
 - `User` is the username for this connection
 - `IdentityFile` is the SSH private key for this connection
-
+- `Match` can be used to execute shell commands for extended pattern matching[^config_match]
 
 ### Forwarding
 
@@ -143,6 +147,15 @@ then configure applications to use that proxy.[^5]
 
 For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs, e.g. using the [[Firefox#FoxyProxy|extension FoxyProxy]].
 
+
+## Tools
+
+[assh](https://github.com/moul/assh) (I haven't tested it, didn't have the need yet)
+> A transparent wrapper that adds support for regex, aliases, gateways, dynamic hostnames, graphviz, json output, yaml configuration, and more to SSH.
+
+## References
+
 [^5]: [RedHat article SSH dynamic Port-Forwarding](https://www.redhat.com/sysadmin/ssh-dynamic-port-forwarding)
 [^6]: [RedHat article SSH ProxyJump](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump)
 [^7]: CVE-2023-51385
+[^config_match]: <https://unix.stackexchange.com/a/528212>

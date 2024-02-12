@@ -1,8 +1,8 @@
 ---
 title: pre-commit Framework
 visibility: public
-source: https://github.com/pre-commit/pre-commit
-url:
+source: "https://github.com/pre-commit/pre-commit"
+url: ""
 ---
 # pre-commit Framework
 

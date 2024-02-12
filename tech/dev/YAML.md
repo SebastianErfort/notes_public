@@ -6,12 +6,15 @@ tags:
 type: language
 category:
   - markup
-url: https://yaml.org/
+url: "https://yaml.org/"
 ---
 # YAML
 
 `= ("[Website](" + this.url + ")")` | [YAML 1.2.2 Specification](https://yaml.org/spec/1.2.2/)
 
+| Resource | References |
+| ---- | ---- |
+| Cheatsheets and Quick References | [yaml.org refcard](https://yaml.org/refcard.html) |
 
 ## Language
 

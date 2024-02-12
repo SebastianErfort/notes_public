@@ -1,8 +1,8 @@
 ---
 title: mkdocstrings
-url: https://mkdocstrings.github.io/
+url: "https://mkdocstrings.github.io/"
 desc-short: Automatic documentation from sources, currently supporting Python and Crystal, but technically language-agnostic
-source: https://github.com/mkdocstrings/mkdocstrings
+source: "https://github.com/mkdocstrings/mkdocstrings"
 ---
 # `=this.title`
 

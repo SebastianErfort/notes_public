@@ -1,10 +1,10 @@
 ---
 title: Wazuh
-url: https://wazuh.com/
+url: "https://wazuh.com/"
 type: software
 category: security
-docs: https://documentation.wazuh.com
-source: https://github.com/wazuh/wazuh
+docs: "https://documentation.wazuh.com"
+source: "https://github.com/wazuh/wazuh"
 desc-short: The Open SourceSecurity Platform. Unified XDR and SIEM protection for endpointsand cloud workloads.
 tags:
   - Linux/security

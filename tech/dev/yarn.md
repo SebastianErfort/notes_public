@@ -6,10 +6,10 @@ url: "https://classic.yarnpkg.com/en/"
 docs: "https://classic.yarnpkg.com/en/docs"
 source: "https://github.com/yarnpkg"
 desc-short: |
-Fast, reliable, and secure dependency management
+  Fast, reliable, and secure dependency management
 tags:
-    - dev/javascript
-    - dev/nodejs
+  - dev/javascript
+  - dev/nodejs
 visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

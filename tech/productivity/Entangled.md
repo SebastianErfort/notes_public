@@ -1,8 +1,8 @@
 ---
 name: Entangled
 type: software
-source: https://github.com/entangled/entangled
-url: https://entangled.github.io/
+source: "https://github.com/entangled/entangled"
+url: "https://entangled.github.io/"
 visibility: public
 title: Entangled
 desc-short: Embed (partial) files in other files and allow for bidirectional editing. Also allows code execution in the spirit of [[literate_programming|literate programming]].
