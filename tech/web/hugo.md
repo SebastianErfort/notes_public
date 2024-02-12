@@ -52,6 +52,7 @@ Stack | [GitHub](https://github.com/CaiJimmy/hugo-theme-stack) [Demo](https://de
 - [Add scrolling TOC to sidebar](https://www.nodinrogers.com/post/2023-04-06-add-floating-toc-in-hugo-clarity-theme/)
 - <https://hugocodex.org/add-ons/>
     - [Breadcrumbs](https://hugocodex.org/add-ons/breadcrumbs/)
+- [Floating sidebar table of contents][Floating TOC] through HTML and SASS
 
 
 ## Writing Pages
@@ -94,3 +95,5 @@ Stack | [GitHub](https://github.com/CaiJimmy/hugo-theme-stack) [Demo](https://de
 
 - [roneo.org](https://roneo.org/en/): Thinking out loud about Linux, Git, Hugo and the Jamstack.
     - [Edit YAML Front Matter of multiple Markdown files](https://roneo.org/en/hugo-edit-yaml-files-from-the-cli-with-yq/) using [[yq]]
+
+[Floating TOC]: [https://www.nodinrogers.com/post/2023-04-06-add-floating-toc-in-hugo-clarity-theme/#modify-the-singlehtml-file](Blog nodinrogers: Adding a floating TOC to the Hugo-Clarity theme) (4 February 2024)
