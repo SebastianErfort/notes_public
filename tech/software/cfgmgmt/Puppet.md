@@ -30,7 +30,7 @@ docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
     - [Exec](https://www.puppet.com/docs/puppet/7/types/exec.html)
     - [Service](https://www.puppet.com/docs/puppet/7/types/service.html)
     - [`Package`](https://puppet.com/docs/puppet/7/types/package.html)
-        - doesn't support #Linux/snap [see](https://tickets.puppetlabs.com/browse/PUP-7435) other than through a community/Forge module <https://forge.puppet.com/modules/rootexpert/snap>
+        - doesn't support #linux/snap [see](https://tickets.puppetlabs.com/browse/PUP-7435) other than through a community/Forge module <https://forge.puppet.com/modules/rootexpert/snap>
     - [`ensure_packages`](https://doc.wikimedia.org/puppet/puppet_functions_ruby3x/ensure_packages.html)
     - [Exported Resources](https://www.puppet.com/docs/puppet/7/lang_exported.html)
 

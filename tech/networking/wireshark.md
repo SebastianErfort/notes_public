@@ -45,7 +45,7 @@ Structural approach
 ![[networking#Packet Priority]]
 
 
-### Ping and ICMP (layer 3)
+### Ping and ICMP (Layer 3)
 
 ![[ICMP]]
 

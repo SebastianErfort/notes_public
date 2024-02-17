@@ -29,7 +29,7 @@ sudo cryptsetup luksClose cr_dev
 
 # PAM (Pluggable Authentication Module)
 
-Tags: #Linux/PAM
+Tags: #linux/PAM
 
 - [Arch Wiki: PAM](https://wiki.archlinux.org/title/PAM)
 - [RedHat article: PAM](https://www.redhat.com/sysadmin/pluggable-authentication-modules-pam)

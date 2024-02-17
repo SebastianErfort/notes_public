@@ -59,7 +59,7 @@ broken because category now array?
 
 ## Organisations
 
-Tags: #cio/opensource
+Tags: #check/opensource
 
 - [Free Software Foundation (FSF)](https://www.fsf.org)
     - [Protest Against DRM](https://www.fsf.org/news/worldwide-community-of-activists-protest-overdrive-and-others-forcing-drm-upon-libraries): [https://defectivebydesign.org](https://defectivebydesign.org/) #tech/drm

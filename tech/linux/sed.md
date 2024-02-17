@@ -3,7 +3,7 @@ title: sed
 type: software
 category: stream-manipulation
 tags:
-  - Linux/sed
+  - linux/sed
 visibility: public
 ---
 [Cheatsheet: personal](file://.config/cheat/cheatsheets/personal/sed)

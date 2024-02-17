@@ -56,8 +56,7 @@ However, I wanted to specify what to sparsely check out, before pulling anything
 >
 > where the parent repo's Git directory is for example `../../.git/modules/<submodule name/path>`.
 >
-> - [ ] update with this info
->     - [ ] https://stackoverflow.com/a/63786181/16096134
+> - [ ] update with this info: https://stackoverflow.com/a/63786181/16096134
 
 Examples and references
 
@@ -264,7 +263,7 @@ and optionally
 - educational material
     - [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/index.html)
 - [whatthecommit.com](https://whatthecommit.com/) random terrible commit message generator
-- [Article: How I teach Git, T. Broyer @dev.to](https://dev.to/tbroyer/how-i-teach-git-3nj3) #cio/tech/git
+- [Article: How I teach Git, T. Broyer @dev.to](https://dev.to/tbroyer/how-i-teach-git-3nj3) #check/tech/git
 
 [my Git resources]: <https://gitlab.com/treetanium1/resources/git>
 [stackoverflow: sm track branch]: <https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule/18799234#18799234>
