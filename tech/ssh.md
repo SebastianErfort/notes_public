@@ -4,6 +4,7 @@ tags:
   - tech/SSH
 visibility: public
 ---
+# SSH
 
 ## Config
 
@@ -152,6 +153,17 @@ For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs
 
 [assh](https://github.com/moul/assh) (I haven't tested it, didn't have the need yet)
 > A transparent wrapper that adds support for regex, aliases, gateways, dynamic hostnames, graphviz, json output, yaml configuration, and more to SSH.
+
+
+## Issues and Alternatives
+
+> [!tip]- For flaky connections or if changing networks in something you regular do, consider [mosh (mobile shell)](https://mosh.org/). 
+> >Remote terminal application that allows **roaming**, supports **intermittent connectivity**, and provides intelligent **local echo** and line editing of user keystrokes.
+> >
+> >Mosh is a replacement for interactive SSH terminals. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links.
+> >
+> >Mosh is free software, available for GNU/Linux, BSD, macOS, Solaris, Android, Chrome, and iOS.
+
 
 ## References
 

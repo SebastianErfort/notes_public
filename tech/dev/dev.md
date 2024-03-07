@@ -4,7 +4,7 @@ tags:
   - dev
 visibility: public
 related:
-  - "[[tech/software/Software#Dev|Software Dev]]"
+  - "[[_software#Dev|Software Dev]]"
   - "[[git/GitLab#CI/CD|GitLab CICD]]"
 ---
 | Resource     | References                    |
@@ -28,7 +28,7 @@ related:
 - [cheat](https://github.com/cheat/cheatsheets): Community-sourced cheatsheets
   Example:
 
-  ```
+  ```markdown
   ---
   syntax: bash
   tags: [ vcs, development ]
@@ -76,6 +76,11 @@ file.link AS "Name",
 url AS "Website"
 WHERE contains(type,"software") and category = "terminal-emulator"
 ```
+
+
+## Config and Environment
+
+- [Unofficial dotfiles documentation][dotfiles-github]
 
 ## Version Control
 
@@ -182,14 +187,18 @@ See also [sw project template]
 - Readme's
     - [[writing#READMEs|my notes on writing Readme's]]
 - [[#Code Quality and Static Analysis]]
+- `gitignore` file: [templates on GitHub](https://github.com/github/gitignore)
 
 Suggested files and directories
 
 ```tree
 ./
 ├── CHANGELOG
+├── docs/
+├── example/
 ├── .editorconfig
-└── README
+├── README
+└── src/
 ```
 
 
@@ -201,18 +210,21 @@ Suggested files and directories
 
 ## Operating Systems
 
+- [[Debian]]
+- [[Ubuntu]]
+
+### Mobile
+
 - [[Android]]
 
 ## [[design|UI and Design]]
 
 ### TUIs
 
-- [Textualize:](https://www.textualize.io/): application framework for Python. Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser.
-  [Docs](https://textual.textualize.io/) | [GitHub](https://github.com/Textualize/textual)
-  Examples
-  
-    - [[rich|rich document viewer]]
-    - [Trogon](https://github.com/Textualize/trogon): Easily turn your [Click](https://click.palletsprojects.com) CLI into a powerful terminal application
+- [Textualize](https://www.textualize.io/): [Docs](https://textual.textualize.io/) | [GitHub](https://github.com/Textualize/textual)
+    Application framework for Python. Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser.
+- [[rich|rich document viewer]]
+- [Trogon](https://github.com/Textualize/trogon): Easily turn your [Click](https://click.palletsprojects.com) CLI into a powerful terminal application
 
 ### Media
 
@@ -226,6 +238,8 @@ Hosting
 Free stock media
 
 - [pixabay](https://pixabay.com): royalty-free images & stock (images, videos, music)
+
+
 ## Misc
 
 - [Smallstep: automated certificate management for DevOps](https://smallstep.com/)
@@ -237,3 +251,4 @@ Free stock media
 
 [sw project template]: <>
 [analysis-tools.dev]: <https://analysis-tools.dev/> 
+[dotfiles-github]: <https://dotfiles.github.io/>

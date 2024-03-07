@@ -39,6 +39,9 @@ Examples
 
 # CI/CD
 
+- [Article: Provisioning self-hosted GitHub Actions runners on demand ](https://github.com/readme/guides/github-runners-philips)
+    GitHub repo [terraform-aws-github-runner](https://github.com/philips-labs/terraform-aws-github-runner) | [Docs](https://philips-labs.github.io/terraform-aws-github-runner/)
+
 ## GitLab Actions
 
 Tags: #dev/CICD

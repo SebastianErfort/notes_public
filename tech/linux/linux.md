@@ -199,8 +199,8 @@ echo $CONFIG | base64 -d # decode
 
 ## Software
 >
-> [!info]- [[public/tech/software/Software#Linux|Linux Software]]
-> ![[public/tech/software/Software#Linux]]
+> [!info]- [[_software#Linux|Linux Software]]
+> ![[_software#Linux]]
 
 # System
 

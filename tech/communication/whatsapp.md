@@ -1,11 +1,13 @@
 ---
 title: Whattsapp
 type: software
-category: communication
-model: ""
-url: "https://whatsapp.com"
+category:
+  - communication
+url: https://whatsapp.com
 visibility: public
 ---
+# WhatsApp
+
 `= ( "[Website](" + this.url + ")")`
 
 ## Messaging

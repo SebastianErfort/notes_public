@@ -19,7 +19,7 @@ visibility: public
 `= ("> " + this.desc-short)`
 See also [[GK_Wireshark|my notes from a Wireshark course]].
 
-Command line interface: [tshark](https://tshark.dev/)
+Command line interface: [tshark](https://tshark.dev/). 
 
 
 ## Principles
@@ -86,3 +86,4 @@ Name resolution
     - Chris Greer: security-focused
     - David Bombai: uses Wireshark to demonstrate things
     - Sake Blok
+- [tshark.dev](https://tshark.dev/)

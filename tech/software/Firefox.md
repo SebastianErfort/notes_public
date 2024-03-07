@@ -9,6 +9,8 @@ desc-short: |
   Firefox is the fast, lightweight, privacy-focused browser that works across all your devices.
 visibility: public
 ---
+# Firefox
+
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
 

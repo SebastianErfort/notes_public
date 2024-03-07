@@ -256,6 +256,15 @@ and optionally
 - [Angular contributing rules](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
 
 
+## Providers and Servers
+
+- [[GitHub]]
+- [[dev/git/GitLab|GitLab]]: self-hosting possible, extensive server with webinterface, work-management tools, CI/CD capabilities, ...
+- Gitea
+- [Forgejo](https://forgejo.org): self-hosted lightweight software forge, Gitea-compatible, FOSS promise
+- [Codeberg](https://codeberg.org/)
+    > Codeberg is a collaboration platform providing Git hosting and services for free and open source software, content and projects.
+
 ## References
 
 - [Environment variables](https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables)
@@ -264,6 +273,7 @@ and optionally
     - [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/index.html)
 - [whatthecommit.com](https://whatthecommit.com/) random terrible commit message generator
 - [Article: How I teach Git, T. Broyer @dev.to](https://dev.to/tbroyer/how-i-teach-git-3nj3) #check/tech/git
+- [Article Remove Sensitive Data from Repo](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository)
 
 [my Git resources]: <https://gitlab.com/treetanium1/resources/git>
 [stackoverflow: sm track branch]: <https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule/18799234#18799234>

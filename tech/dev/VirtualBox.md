@@ -1,20 +1,23 @@
 ---
 title: Virtual Box
 type: software
-category: ""
+category:
+  - virtualisation
 url: ""
 docs: ""
 source: ""
 developer: Oracle
 desc-short: |
   ...
-tags: [sw/virtualBox]
+tags:
+  - sw/virtualBox
 visibility: public
 ---
+# Oracle VirtualBox
+
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
 
-# Oracle VirtualBox
 
 ## Configuration and Settings
 

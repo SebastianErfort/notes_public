@@ -8,7 +8,7 @@ title: Go
 
 # Tools
 
-[[public/tech/software/Software#^247416|Charm CL tools]]
+[[_software#^247416|Charm CL tools]]
 
 # Built-ins
 
