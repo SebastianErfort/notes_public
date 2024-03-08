@@ -3,17 +3,16 @@ title: tmux
 type: software
 category:
   - ""
-url: https://github.com/tmux/tmux/wiki
-docs: https://github.com/tmux/tmux/wiki
-source: https://github.com/tmux/tmux
+url: "https://github.com/tmux/tmux/wiki"
+docs: "https://github.com/tmux/tmux/wiki"
+source: "https://github.com/tmux/tmux"
 developer: ""
-desc-short: |
-  tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background, then later reattached.
-tags: 
+desc-short: "tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background, then later reattached.\n"
+tags: ""
 config:
   path: ~/.tmux.conf
   url: file://.tmux.conf
-img: '<img src="https://avatars.githubusercontent.com/u/12054114?s=48&v=4" style="width: 20px; vertical-align: middle;"/>'
+img: "<img src=\"https://avatars.githubusercontent.com/u/12054114?s=48&v=4\" style=\"width: 20px; vertical-align: middle;\"/>"
 visibility: public
 ---
 # `=this.title`

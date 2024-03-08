@@ -1,7 +1,7 @@
 ---
 title: Vagrant
-website: https://www.vagrantup.com/
-source: https://github.com/hashicorp/vagrant
+website: "https://www.vagrantup.com/"
+source: "https://github.com/hashicorp/vagrant"
 code: open source
 company: Hashicorp
 type: software

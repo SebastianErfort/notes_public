@@ -3,7 +3,7 @@ title: Whattsapp
 type: software
 category:
   - communication
-url: https://whatsapp.com
+url: "https://whatsapp.com"
 visibility: public
 ---
 # WhatsApp
