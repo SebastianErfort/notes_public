@@ -276,7 +276,7 @@ setxkbdmap <locale> # for X
 
 See also [[design#Fonts]].
 
-Custom fonts can be put for example in `~/.local/share/fonts`, then edit/create file ~/.fonts.conf with content
+Custom fonts can be put for example in `~/.local/share/fonts`, then edit/create file `~/.fonts.conf` with content
 
 ```xml
 <?xml version="1.0"?><!DOCTYPE fontconfig SYSTEM "fonts.dtd">
@@ -288,7 +288,7 @@ Custom fonts can be put for example in `~/.local/share/fonts`, then edit/create 
 Commands
 
 ```bash
-fc-list [: family] # list available fonts
+fc-list        # list available fonts
 fc-cache -f -v # refresh fonts
 ```
 

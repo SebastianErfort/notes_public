@@ -12,7 +12,7 @@ visibility: public
 See also [[public/tech/OpenSource#Organisations|OpenSource: Organisations]]
 
 - [[WHO#OSPO]]
-- [[Github]]
+- [[github]]
 - [[CERN]]
 
  
