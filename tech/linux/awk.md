@@ -10,7 +10,7 @@ desc-short: |
   The original version of UNIX awk was designed and implemented by Alfred Aho, Peter Weinberger, and Brian Kernighan of Bell Laboratories.
 tags:
   - dev/awk
-  - Linux/awk
+  - linux/awk
 rsc: "file://rsrc/awk"
 aliases:
   - gawk

@@ -1,6 +1,8 @@
 ---
 title: Linux - Hardware
 visibility: public
+related:
+  - "[[partitions_filesystems_swap]]"
 ---
 # Hardware
 

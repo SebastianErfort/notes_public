@@ -42,10 +42,10 @@ Examples
 
 ## CI/CD
 
-### GitLab Actions
-
 Tags: #dev/CICD
 
+- [Article: Provisioning self-hosted GitHub Actions runners on demand ](https://github.com/readme/guides/github-runners-philips)
+    GitHub repo [terraform-aws-github-runner](https://github.com/philips-labs/terraform-aws-github-runner) | [Docs](https://philips-labs.github.io/terraform-aws-github-runner/)
 - [Dependabot](https://docs.github.com/en/code-security/dependabot): Monitor vulnerabilities in dependencies used in your project and keep your dependencies up-to-date #dev/security
 
 ## READMEs and Markdown

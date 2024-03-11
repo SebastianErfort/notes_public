@@ -5,9 +5,9 @@ date: 2022-01-03
 theme: metropolis
 output: AppArmor_vs_SELinux
 tags:
-  - Linux/security
-  - Linux/AppArmor
-  - Linux/SELinux
+  - linux/security
+  - linux/AppArmor
+  - linux/SELinux
 ---
 
 ## Motivation

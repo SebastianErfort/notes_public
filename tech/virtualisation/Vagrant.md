@@ -1,10 +1,12 @@
 ---
 title: Vagrant
-type: software
 website: "https://www.vagrantup.com/"
 source: "https://github.com/hashicorp/vagrant"
 code: open source
 company: Hashicorp
+type: software
+category:
+  - virtualisation
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[GitHub](" + this.source + ")")`

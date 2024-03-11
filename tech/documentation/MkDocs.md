@@ -131,9 +131,10 @@ A number of Markdown extensions and MkDocs plugins is used, see `mkdocs.yml`. Th
 
 See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions), [list of Python-Markdown extensions](https://python-markdown.github.io/extensions/) and [[Python-Markdown]]
 
+<!-- TODO clean-up -->
 - [TOC](https://python-markdown.github.io/extensions/toc/)
 - [Footnotes](https://python-markdown.github.io/extensions/footnotes/)
-- [Admonition](https://python-markdown.github.io/extensions/admonition/#admonition): not configurable, full compatibility with Obsidian call-outs would require work
+- [Admonition](https://python-markdown.github.io/extensions/admonition/#admonition): not configurable, full compatibility with Obsidian call-outs would require work (open/closed with `> [!info]-`) #todo/contrib
 - [Definition Lists](https://python-markdown.github.io/extensions/definition_lists/)
 - [`mdx_truly_sane_lists`](https://github.com/radude/mdx_truly_sane_lists): `pip install mdx-truly-sane-lists`
   > Extension for Python-Markdown that makes lists truly sane. Custom indents for nested lists and fix for messy linebreaks and paragraphs between lists.

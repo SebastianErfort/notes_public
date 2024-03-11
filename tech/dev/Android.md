@@ -15,7 +15,7 @@ Tags: #dev/app #dev/os/android
 
 ### Productivity
 
-- [Termux](https://github.com/termux/termux-app): Terminal emulator and Linux environment. Provides #Linux/apt, so even things like [[git]] can be installed
+- [Termux](https://github.com/termux/termux-app): Terminal emulator and Linux environment. Provides #linux/apt, so even things like [[git]] can be installed
 
 
 ## Development

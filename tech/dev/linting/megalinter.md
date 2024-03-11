@@ -12,7 +12,7 @@ desc-short: MegaLinter is an Open-Source tool for CI/CD workflows that analyzes 
 tags:
   - dev/linting
   - dev/style
-  - cio/tech
+  - check/tech
 ---
 # `=this.title`
 

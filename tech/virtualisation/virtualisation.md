@@ -2,14 +2,18 @@
 visibility: public
 title: Virtualisation
 ---
-# Oracle VirtualBox
+# Virtualization
 
-![[VirtualBox]]
+Determine CPU virtualisation support
 
-# Vagrant
+```bash
+lscpu | grep Virtualization
+egrep "svm|vmx" /proc/cpuinfo
+```
 
-![[public/tech/virtualisation/Vagrant]]
+## Hypervisors
 
-# VMWare
-
-![[rug/cit/Virtualisation and Containers#VMware]]
+- [[KVM]]
+- [[Vagrant]]
+-  [[VirtualBox]]
+- [[VMware]]

@@ -30,6 +30,14 @@ Tags: #design/fonts
 
 - <https://home.unicode.org/>
 - <https://www.stixfonts.org/>: The mission of the Scientific and Technical Information Exchange (STIX) font creation project is the preparation of a comprehensive set of fonts that serve the scientific and engineering community in the process from manuscript creation through final publication, both in electronic and print formats
+
+Tools
+
+- font identification
+    - [Font finder](https://www.fontspring.com/matcherator): Upload an image of text, find what the font is
+    - <https://www.myfonts.com/pages/whatthefont>
+
+
 ### Icons
 
 - FontAwesome Icons: [Search free icons](https://fontawesome.com/search?o=r&m=free) | [Github](https://github.com/FortAwesome/Font-Awesome)

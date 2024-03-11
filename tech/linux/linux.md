@@ -109,7 +109,7 @@ Tags: #net/tools/arping similar to `ping`, but can give results when `ping` does
 
 [@howtogeek](https://www.howtogeek.com/813741/linux-arping-command/)
 
-Tags: #Linux/systemd network adapter naming: <https://systemd.io/PREDICTABLE_INTERFACE_NAMES/>)
+Tags: #linux/systemd network adapter naming: <https://systemd.io/PREDICTABLE_INTERFACE_NAMES/>)
 
 - disable through kernel parameter ``net.ifnames=0``
 - [Netplan.io](https://netplan.io/)
@@ -199,8 +199,8 @@ echo $CONFIG | base64 -d # decode
 
 ## Software
 >
-> [!info]- [[public/tech/software/Software#Linux|Linux Software]]
-> ![[public/tech/software/Software#Linux]]
+> [!info]- [[_software#Linux|Linux Software]]
+> ![[_software#Linux]]
 
 # System
 
@@ -521,7 +521,7 @@ run '~/.tmux/plugins/tpm/tpm'
 
 # Misc
 
-Reset root password by changing #Linux/Grub entry, booting into single-user mode
+Reset root password by changing #linux/Grub entry, booting into single-user mode
 <https://www.layerstack.com/resources/tutorials/Resetting-root-password-for-Linux-Cloud-Servers-by-booting-into-Single-User-Mode#Debian&Ubuntu>
 
 1. add `init=/bin/bash` to kernel parameters to get a (root) shell

@@ -1,8 +1,8 @@
 ---
 tags:
-  - Linux
-  - Linux/Debian
-  - Linux/Ubuntu
+  - linux
+  - linux/Debian
+  - linux/Ubuntu
 visibility: public
 title: Debian
 ---

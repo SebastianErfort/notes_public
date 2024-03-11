@@ -242,7 +242,7 @@ nc -z -v <IP-ADDRESS> 1-65535 2>&1 | grep -v refused
 # -z: scan without sending data to port
 ```
 
-Tags: #Linux/tools/lsof: list open (network) files, show ports and mappings
+Tags: #linux/tools/lsof: list open (network) files, show ports and mappings
 
 ```bash
 lsof -i -P -n
@@ -289,7 +289,7 @@ Tags: #net/tools/dig (Domain Information Groper): DNS lookup utility
   dig google.com [@1.0.0.1] # optionally specify DNS server with @
   ```
 
-Tags: #net/tools/resolvctl: #Linux/systemd (not present on openSUSE)
+Tags: #net/tools/resolvctl: #linux/systemd (not present on openSUSE)
 
 > Send control commands to the network name resolution manager, or resolve domain names, IPv4 and IPv6 addresses, DNS records, and services.
 
