@@ -43,7 +43,7 @@ Clone [template repo] and configure manually (all `$` variables in `mkdocs.yml`)
 
 Drop notes in directory `docs/`.
 
-Run `mkdocs serve` for local editing or push to repository with [[public/tech/dev/git/Github#Github Pages|Github Pages]] set up to build pages in a pipeline and publish them to GitHub Pages.
+Run `mkdocs serve` for local editing or push to repository with [[github#Github Pages|Github Pages]] set up to build pages in a pipeline and publish them to GitHub Pages.
 
 ## References
 

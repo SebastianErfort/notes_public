@@ -110,11 +110,28 @@ variables:
 
 - `pages`: special and activated for projects where [[#GitLab Pages]] feature is enabled. After `build` stage artifacts (default `public/`) are deployed to configured destination
 
-#### `script`
+#### Script
 
-Custom commands to be executed during stage
+Custom commands to be executed in `script` section
 
 - [before_script](https://docs.gitlab.com/ee/ci/yaml/?query=before_script): run before every command in `script` section. Per stage or globally defined.
+
+
+#### Artifacts
+
+Projects settings
+
+- maximum artifact size
+- expiration and keeping artifacts of last successful pipeline
+
+If deleting artifacts through the webinterface doesn't reduce the storage consumption, you can use an [API call to delete project artifacts](https://docs.gitlab.com/ee/api/job_artifacts.html#delete-project-artifacts)
+
+```sh
+curl --request DELETE --header "PRIVATE-TOKEN: <your_access_token>" "https://gitlab.example.com/api/v4/projects/1/artifacts"
+```
+
+If old pipelines and jobs keep taking up too much storage, consider API calls to delete these.[^so-api-delete-pipelines][^medium-api-delete-pipelines]
+
 
 #### Docker Images
 
@@ -165,7 +182,7 @@ user.save
 
 ### LDAP
 
-See also [[rug/lwp/GitLab#LDAP|Work notes LWP: GitLab > LDAP]]
+See also [[wiki/GitLab/GitLab#LDAP|LWP: GitLab > LDAP]]
 
 <https://docs.gitlab.com/ee/administration/auth/ldap/index.html>
 
@@ -261,8 +278,8 @@ sudo gitlab-rake "gitlab:password:reset[sidneyjones]"
 
 Examples and References
 
-- [Website](https://about.gitlab.com/stages-devops-lifecycle/pages/)
-- [General](https://docs.gitlab.com/ee/user/project/pages/)
+- [GL Website: Pages](https://about.gitlab.com/stages-devops-lifecycle/pages/)
+- [GL Documentation: Pages](https://docs.gitlab.com/ee/user/project/pages/)
 - [Getting Started](https://docs.gitlab.com/ee/user/project/pages/#getting-started)
 - static site generators: Gatsby, Jekyll, Hugo, Middleman, Harp, Hexo, or Brunch
     - MkDocs: [[public/tech/documentation/MkDocs#Integrations|my notes]]
@@ -276,3 +293,5 @@ Examples and References
 ## References
 
 [GitLab documentation: Snippets]: <https://docs.gitlab.com/ee/user/snippets.html>
+[^so-api-delete-pipelines]: <https://stackoverflow.com/a/73820571> (2024-03-08)
+[^medium-api-delete-pipelines]: <https://benlobaugh.medium.com/how-to-clean-up-gitlab-artifacts-c7ce34c70213> (2024-03-08)

@@ -9,7 +9,7 @@ source: ""
 developer: ""
 desc-short: |
   ...
-tags: 
+tags: []
 visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
