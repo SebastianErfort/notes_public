@@ -119,9 +119,14 @@ Package managers
 
 Package sources
 
-- [PyPI](pypi.org)L Python Package Index
+- [PyPI](pypi.org) Python Package Index
 
 _awesome-python:_ curated list of awesome Python frameworks, libraries, software and resources [Github](https://github.com/vinta/awesome-python)
+
+> [!warning]- Why Python packaging sucks (minor rant)
+> - PyPI search sucks: query for `jupyter-lab` doesn't return `jupyterlab` (why do I have to guess packager's use of hyphens?!)
+> - not obvious how to have pip upgrade installed packages (version not pinned by me, e.g. in `requirements.txt`)
+
 
 ## Technical
 

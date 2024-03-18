@@ -86,11 +86,9 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 
 - [[git|Notes on Git]]
 - [[rug/lwp/GitLab|Notes on GitLab]]
-- [[Github|Notes on GitHub]]
-- [[pre-commit]]: framework for managing and maintaining multi-language pre-commit hooks
-- [lefthook]: Fast and powerful Git hooks manager for any type of projects
-
-[lefthook]: <https://github.com/evilmartians/lefthook>
+- [[github|Notes on GitHub]]
+- [[pre-commit]] framework for managing and maintaining multi-language pre-commit hooks
+- [lefthook] Fast and powerful Git hooks manager for any type of projects
 
 
 ## Code Quality and Static Analysis
@@ -247,6 +245,10 @@ Free stock media
 - <https://m2.material.io/>
 - [ntfy.sh](https://ntfy.sh/): simple HTTP-based [pub-sub](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) notification service. It allows you to send notifications to your phone or desktop via scripts from any computer, entirely **without signup, cost or setup**. It's also [open source](https://github.com/binwiederhier/ntfy) if you want to run your own.
 
+
+## References
+
 [sw project template]: <>
 [analysis-tools.dev]: <https://analysis-tools.dev/> 
+[lefthook]: <https://github.com/evilmartians/lefthook>
 [dotfiles-github]: <https://dotfiles.github.io/>

@@ -27,7 +27,7 @@ Using an image checksum in the definition can be used to verify integrity and do
 
 [^1]: <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#use-checksum-to-keep-your-image-secure>
 
-- [[Github#GitHub packages|Publish image as GitHub Package]]
+- [[github#GitHub packages|Publish image as GitHub Package]]
 
 
 ## Rootless
