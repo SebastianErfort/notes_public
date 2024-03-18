@@ -2,7 +2,7 @@
 title: GitLab
 tags:
   - dev/git
-  - devops/Agile
+  - dev/devops/Agile
 type: software
 category:
   - git

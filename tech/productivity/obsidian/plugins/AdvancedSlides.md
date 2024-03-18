@@ -11,7 +11,7 @@ desc-short: |
 tags:
   - tech/presentation/revealjs
   - tech/Obsdidian
-  - Obsidian/plugin
+  - obsidian/plugin
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`

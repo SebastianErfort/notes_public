@@ -119,13 +119,15 @@ What to keep in mind
 You can embed an image and even videos and other notes, by adding an exclamation mark before a link, e.g. `![[tux.png]]`. Images can be scaled by specifying a size (in pixels) like
 
 ```markdown
-![[tux.png|20]]
-<!-- or (this is a (HTML) comment) -->
 ![](personal/tux.png)
+<!-- or (this is a (HTML) comment) -->
+![[tux.png|20]]
 ```
 
-For example ![|20](tux.png) or ![[tux.png|20]]
-
+For example
+![|20](Tux_simple_bw.svg)
+or
+![[Tux_simple_bw.svg|20]]
 
 ## Plugins
 

@@ -1,8 +1,10 @@
 ---
 visibility: public
 title: LDAP
-category: networking/protocol
-type: directory-service
+category:
+  - directory-service
+  - authentication
+type: networking/protocol
 ports:
   - 636 (Secure LDAP)
 ---

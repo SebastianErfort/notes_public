@@ -3,7 +3,7 @@ title: NoMachine
 type: software
 category: remote-desktop
 tags:
-  - os/remote-desktop
+  - tech/os/remote-desktop
 visibility: public
 ---
 

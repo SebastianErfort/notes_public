@@ -7,7 +7,7 @@ docs: "https://wiki.x2go.org/doku.php"
 desc-short: |
   X2Go is a Remote Desktop solution, which some vendors vaguely call Remote Control.
 tags:
-  - os/remote-desktop
+  - tech/os/remote-desktop
 visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

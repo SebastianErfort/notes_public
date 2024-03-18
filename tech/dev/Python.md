@@ -228,7 +228,7 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 
 ## Hardware, DIY, IoT
 
-- _home-assistant core:_ Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a #hw/RaspberryPi or a local server
+- _home-assistant core:_ Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a #tech/hw/RaspberryPi or a local server
   [Website](https://www.home-assistant.io/) | [Github](https://github.com/home-assistant/core)
 
 ## Obscure

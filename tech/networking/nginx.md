@@ -6,10 +6,10 @@ desc-short: nginx [engine x] is an HTTP and reverse proxy server, a mail proxy s
 url: "https://nginx.org/en"
 tags:
   - software/nginx
-  - networking/HTTP
+  - tech/networking/HTTP
   - sw/mail
-  - net/TCP
-  - net/UDP
+  - tech/networking/TCP
+  - tech/networking/UDP
 visibility: public
 title: Nginx
 ---

@@ -1,14 +1,16 @@
 ---
 title: Smallstep
 type: software
-category: ""
+category:
+  - certificates
+  - authentication
 url: ""
 docs: ""
 github: ""
 developer: ""
 desc-short: |
   ...
-tags: ""
+tags: 
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`
