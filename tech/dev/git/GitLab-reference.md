@@ -9,7 +9,9 @@ See also [[docs/seb_public/tech/dev/git/GitLab|my notes on GitLab]] and [[GitLab
 
 **Table of Contents**
 
-<!-- This automatically creates a Table of Contents. Unfortunately there doesn't seem to be a way to exclude headings from it, so if one creates a heading for the ToC, it shows up in the ToC itself. -->
+<!-- In GitLab Wikis, this automatically creates a Table of Contents.
+Unfortunately there doesn't seem to be a way to exclude headings from it,
+so if one creates a heading for the ToC, it shows up in the ToC itself. -->
 [[_TOC_]]
 
 To automatically create a table of contents for a page just add the following line
