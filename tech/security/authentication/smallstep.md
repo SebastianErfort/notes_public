@@ -10,7 +10,7 @@ github: ""
 developer: ""
 desc-short: |
   ...
-tags: 
+tags: ""
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`

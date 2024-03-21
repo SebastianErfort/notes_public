@@ -2,7 +2,7 @@
 title: Authentication
 aliases:
   - Authentication
-category:
+category: ""
 ---
 # Authentication
 
