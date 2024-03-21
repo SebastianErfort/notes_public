@@ -7,11 +7,9 @@ related:
   - "[[_software#Dev|Software Dev]]"
   - "[[git/GitLab#CI/CD|GitLab CICD]]"
 ---
-| Resource     | References                    |
-| ------------ | ----------------------------- |
-| My notes     | `=(join(this.related, ", "))` |
-| My resources | [sw project template]()       |
-
+| Resource | References                    |
+| -------- | ----------------------------- |
+| My notes | `=(join(this.related, ", "))` |
 ## Command Line
 
 - education

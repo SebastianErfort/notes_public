@@ -4,7 +4,7 @@ visibility: public
 ---
 ## Workload Managers
 
-Tags: #hpc/queue
+Tags: #tech/hpc/queue
 
 - [SLURM](https://slurm.schedmd.com/)
 - Grid Engine

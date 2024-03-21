@@ -8,7 +8,7 @@ visibility: public
 
 # TFTP
 
-Tags: #net/TFTP
+Tags: #tech/networking/TFTP
 
 [fbtftp](https://github.com/facebookarchive/fbtftp): Facebook implementation of a TFTP server in Python3
 [hooktftp](https://github.com/tftp-go-team/hooktftp): dynamic read-only TFTP server written in Go

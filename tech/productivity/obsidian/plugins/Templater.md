@@ -10,7 +10,7 @@ desc-short: |
   A template plugin for obsidian
 tags:
   - tech/Obsdidian
-  - Obsidian/plugin
+  - obsidian/plugin
 visibility: public
 ---
 # `=this.title`

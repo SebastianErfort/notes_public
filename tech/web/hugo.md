@@ -67,15 +67,29 @@ Stack | [GitHub](https://github.com/CaiJimmy/hugo-theme-stack) [Demo](https://de
 ### Pages
 
 
-### Site
+### Page Resources
 
-- [Page bundles](https://gohugo.io/content-management/page-bundles/)
+- [Blog post on Page Resources and Page Bundles](https://www.regisphilibert.com/blog/2018/01/hugo-page-resources-and-how-to-use-them/) (2024-03-17)
+
+[Page bundles](https://gohugo.io/content-management/page-bundles/)
   > Page Bundles are a way to group Page Resources.
   > A Page Bundle can be one of:
   >
   > - Leaf Bundle (leaf means it has no children)
   > - Branch Bundle (home page, section, taxonomy terms, taxonomy list)
 
+### Templates and Partials
+
+> [!tip]- [resize image](https://discourse.gohugo.io/t/resize-images-in-partial-html-file/22811/3)
+>
+> ```css
+> {{ range (where .Pages “Section” “gallery”) }}
+>   {{ range .Resources.ByType "image" }}
+>     {{ $resized_image := .Resize "400x" }}
+>     <img src="{{ $resized_image.RelPermalink }}" />
+>   {{ end }}
+> {{ end }}
+> ```
 
 
 ## Hosting and Deployment

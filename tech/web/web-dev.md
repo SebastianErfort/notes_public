@@ -2,10 +2,12 @@
 visibility: public
 title: Web Development
 ---
+# Web Development
+
 | Resource    | References                                                    |
 | ----------- | ------------------------------------------------------------- |
 | Design      | [notes](design), [icons](design#icons), [fonts](design#fonts) |
-| Development | [[HTML]], [[CSS]]                                                              |
+| Development | [[HTML]], [[CSS]]                                             |
 
 ## Website
 
@@ -94,6 +96,17 @@ Based on: Python
 [Website](https://getbootstrap.com/)
 > Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.
 
+
+## Assets
+
+- [favicon.io](https://favicon.io/)
+  > Quickly generate your favicon from an image by uploading your image below. Download your favicon in the most up to date formats.
+
+
+## Embed
+
+- [oEmbed format](https://oembed.com/): format for API supported by a number of websites, e.g. Flickr. Get standard reply with data required for embedding.
+
 ## Security
 
 ### Authentication
@@ -117,6 +130,6 @@ Based on: Python
 > The OWASP Zed Attack Proxy (ZAP) is one of the world’s most popular free security tools and is actively maintained by a dedicated international team of volunteers. It can help you automatically find security vulnerabilities in your web applications while you are developing and testing your applications. It's also a great tool for experienced pentesters to use for manual security testing.
 
 
-### References
+## References
 
 - [*js-cookie*](https://github.com/js-cookie/js-cookie): A simple, lightweight JavaScript API for handling browser cookies

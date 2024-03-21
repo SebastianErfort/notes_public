@@ -9,9 +9,9 @@ docker-image: postgres
 desc-short: |
   PostgreSQL, often simply "Postgres", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
 tags:
-  - db
-  - db/PostgreSQL
-  - db/Postgres
+  - tech/db
+  - tech/db/PostgreSQL
+  - tech/db/Postgres
 wikipedia: "https://en.wikipedia.org/wiki/PostgreSQL"
 visibility: public
 title: PostgreSQL

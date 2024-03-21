@@ -14,12 +14,14 @@ aliases:
 
 ### Fonts
 
-Tags: #design/fonts
+Tags: #dev/design/fonts
+See also (related:: [[linux#Fonts]])
 
 - [Nerd Fonts](https://www.nerdfonts.com)
     - [Cheatsheet](https://www.nerdfonts.com/cheat-sheet): find symbols/glyphs
-- [JetBrains](https://www.jetbrains.com/lp/mono/) | [Nerd Font Patch](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono) (see [[git#Commands]])
+- [JetBrains](https://www.jetbrains.com/lp/mono/) | [Nerd Font Patch](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
 - Futura
+- Alegreya: [typographica.org review](https://typographica.org/typeface-reviews/alegreya-ht/)
 - https://www.cufonfonts.com/
 - [Google API: Fonts](https://developers.google.com/fonts/docs/getting_started)
   for example add stylesheet link to request web font(s)

@@ -1,9 +1,9 @@
 ---
 tags:
-  - devops
-  - devops/Agile
-  - devops/Kanban
-  - devops/Scrum
+  - dev/devops
+  - dev/devops/Agile
+  - dev/devops/kanban
+  - dev/devops/scrum
 visibility: public
 title: Gitlab Agile
 ---

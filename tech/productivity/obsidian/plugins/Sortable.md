@@ -4,7 +4,7 @@ type: software
 category: obsidian/plugin
 tags:
   - tech/Obsdidian
-  - Obsidian/plugin
+  - obsidian/plugin
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`

@@ -6,7 +6,7 @@ url: "https://apps.nextcloud.com/apps/deck"
 desc-short: |
   ...
 tags:
-  - devops/agile/Kanban
+  - dev/devops/agile/Kanban
   - software/agile
 visibility: public
 ---
