@@ -139,7 +139,7 @@ See [[make]]
 
 ## DevOps and CI/CD
 
-See [[DevOps]]
+See [[docs/seb_public/tech/dev/devops]]
 
 
 ## Linux

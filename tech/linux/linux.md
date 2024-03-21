@@ -308,8 +308,8 @@ fc-cache -f -v # refresh fonts
 
 ## Systemd
 >
-> [!info]- [[systemd]]
-> ![[systemd]]
+> [!info]- [[docs/seb_public/tech/linux/systemd]]
+> ![[docs/seb_public/tech/linux/systemd]]
 
 ## supervisord
 
