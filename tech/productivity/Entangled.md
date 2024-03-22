@@ -16,4 +16,4 @@ tags:
 >[!tip] Description
 > `=this.desc-short`
 
-[[20230510]]: first contact in talk at DCC event from developer
+[[2023-05-10]]: first contact in talk at DCC event from developer

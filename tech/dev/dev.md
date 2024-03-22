@@ -7,6 +7,8 @@ related:
   - "[[_software#Dev|Software Dev]]"
   - "[[git/GitLab#CI/CD|GitLab CICD]]"
 ---
+# Development
+
 | Resource | References                    |
 | -------- | ----------------------------- |
 | My notes | `=(join(this.related, ", "))` |
@@ -137,7 +139,12 @@ See [[make]]
 
 ## DevOps and CI/CD
 
-See [[docs/seb_public/tech/dev/devops]]
+See also [[dev/devops|DevOps]].
+
+### Platforms
+
+- [Tekton](https://tekton.dev/) : [docs](https://tekton.dev/docs/) | [source](https://github.com/tektoncd)
+  > Cloud Native CI/CD
 
 
 ## Linux

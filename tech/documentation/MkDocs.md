@@ -230,6 +230,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
         Issues:
         - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
     - [mkdocs-obsidian-bridge](https://github.com/GooRoo/mkdocs-obsidian-bridge): currently only handling links (allow partial path, selecting file with shortest match, style dead links)
+- [mkdocs-magiclinks-plugin](): using [[pymarkdown#MagicLink|PyMarkdown extension MagicLink]]
 
 
 ## Editing

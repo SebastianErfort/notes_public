@@ -1,10 +1,12 @@
 ---
 title: Kubernetes
 visibility: public
+tags:
+  - dev/kubernetes
+  - dev/k8s
+  - dev/k3s
 ---
-## Kubernetes
-
-# dev/kubernetes
+# Kubernetes
 
 aka K8s (K-8 letters-s)
 [Documentation](https://kubernetes.io/docs/home/)
@@ -28,3 +30,4 @@ aka K8s (K-8 letters-s)
 ## References
 
 - [Canoncial: Kubernetes at the edge](file://edu/kubernetes/MicroK8s+Strict+Confinement+Whitepaper.pdf) #dev/iot #dev/edge
+- [Guide/Blog FaaS cluster on RPi's with Kubernetes](https://rpi4cluster.com/)
