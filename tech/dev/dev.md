@@ -6,6 +6,7 @@ visibility: public
 related:
   - "[[_software#Dev|Software Dev]]"
   - "[[git/GitLab#CI/CD|GitLab CICD]]"
+  - "[[dev/Design|Design]]"
 ---
 | Resource     | References                    |
 | ------------ | ----------------------------- |
@@ -120,21 +121,18 @@ WHERE contains(file.path,"lint")
 
 Tags: #dev/build
 
-- [Meson build system](https://mesonbuild.com/)
+- [[make]]
 - [CMake](https://cmake.org/)
     - [CMake repo UCL](https://github.com/UCL/GreatCMakeCookOff)
+- [[Taskfile]]
+- [Meson build system](https://mesonbuild.com/)
 - [Ninja](https://ninja-build.org/)
 - [Heroku](https://www.heroku.com/): infrastructure for developers
 
 Watch files/dirs for changes
 
+- `inotify`
 - [Watchman](https://facebook.github.io/watchman/) | [Github](https://github.com/facebook/watchman)
-
-### Make
-
-See [[make]]
-
-### [[Taskfile]]
 
 
 ## DevOps and CI/CD
@@ -150,7 +148,7 @@ See [[DevOps]]
 
 ## Databases
 
-See [[databases|my notes on databases]]
+See [[public/tech/data/databases/index|my notes on databases]]
 
 ### Automation
 

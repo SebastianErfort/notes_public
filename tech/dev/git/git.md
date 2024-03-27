@@ -9,6 +9,8 @@ visibility: public
 url: "https://git-scm.com/docs"
 docs: "https://git-scm.com/docs"
 ---
+# Git
+
 | Resource      | Reference                                                   |
 | ------------- | ----------------------------------------------------------- |
 | Documentation | `= ( "[Documentation](" + this.docs + ")")`                 |
@@ -61,7 +63,7 @@ However, I wanted to specify what to sparsely check out, before pulling anything
 Examples and references
 
 - [my Git resources]
-- [[README|Work RUG: LWP-Docs]]
+- [[rsrc/README|Work RUG: LWP-Docs]]
 - <https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/>
 - <https://stackoverflow.com/questions/47541033/sparse-checkouts-how-does-it-works>
 
@@ -193,6 +195,14 @@ References
 
 - [Git submodule fetch and update @stackoverflow](https://stackoverflow.com/questions/50254184/git-submodule-and-fetch)
 - [Git submodule track branch @stackoverflow][stackoverflow: sm track branch]
+
+
+#### Commands
+
+```bash
+git subodule foreach <command> # runs command in each submodule directory
+# offers variables $name, $path and $toplevel (parent repo absolute path), see help page
+```
 
 #### Toubleshooting
 

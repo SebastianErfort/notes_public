@@ -106,6 +106,9 @@ variables:
   GIT_SUBMODULE_STRATEGY: recursive  # init/update/pull SMs recursively
 ```
 
+[To Be Continuous][tbc]: [GitLab CI templates][tbc-templates]
+> _to be continuous_ proposes a set of GitLab CI templates developed and maintained by DevOps and technology experts to build state-of-the-art CI/CD pipelines in minutes.
+
 #### Stages
 
 - `pages`: special and activated for projects where [[#GitLab Pages]] feature is enabled. After `build` stage artifacts (default `public/`) are deployed to configured destination
@@ -295,3 +298,5 @@ Examples and References
 [GitLab documentation: Snippets]: <https://docs.gitlab.com/ee/user/snippets.html>
 [^so-api-delete-pipelines]: <https://stackoverflow.com/a/73820571> (2024-03-08)
 [^medium-api-delete-pipelines]: <https://benlobaugh.medium.com/how-to-clean-up-gitlab-artifacts-c7ce34c70213> (2024-03-08)
+[tbc]: <https://to-be-continuous.gitlab.io/>
+[tbc-templates]: <https://gitlab.com/to-be-continuous>

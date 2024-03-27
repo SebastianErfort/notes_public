@@ -171,9 +171,9 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [Article LaTeX-like figures and section referencing](https://www.reddit.com/r/ObsidianMD/comments/10lp7e0/latexlike_figures_and_section_referencing_in/):
       similar to [[Pandoc#pandoc-crossref|pandoc-crossref]] like
 
-```markdown
-![your nice caption](your_img_path.png){#fig:your_fig_name}
-```
+    ```markdown
+    ![your nice caption](your_img_path.png){#fig:your_fig_name}
+    ```
 
 [Step-by-step-guide](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
 
@@ -182,7 +182,7 @@ TABLE WITHOUT ID
 file.link AS "Plugin",
 (join(file.tags)) AS "Tags",
 desc-short AS "Description"
-WHERE contains(file.path,"Obsidian/plugins")
+WHERE contains(file.path,"obsidian/plugins")
 SORT file.name
 ```
 
@@ -213,10 +213,12 @@ References
 ## Publish
 
 - [[ObsidianGitHubPublisher|Obsidian GitHub Publisher]]
-- [[rug/lwp/GitLab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
+- [[git/GitLab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
 - <https://flowershow.app/> | [GitHub](https://github.com/datopian/obsidian-flowershow)
 - [obsidian-webpage-export](https://github.com/KosmosisDire/obsidian-webpage-export)
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
+- [quartz](https://quartz.jzhao.xyz/) | [Docs](https://github.com/jackyzha0/quartz)
+  > a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites
 
 
 ## Debug
@@ -233,7 +235,7 @@ References
     - [Blog obsidian.rocks](https://obsidian.rocks/)
 - [Slides: simple presentations](https://demo-obsidian.owenyoung.com/Plugins/Slides/)
 - [Getting comfortable with Obsidian CSS](https://forum.obsidian.md/t/getting-comfortable-with-obsidian-css/133)
-- Icons: [[dev#Icons|Lucide]]
+- Icons: [[dev/design#Icons|Lucide]]
 - [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
     - Obsidian + Zotero
     - [[Pandoc#pandoc-crossref|pandoc-crossref]]-like references (citations, figures, equations, ...)

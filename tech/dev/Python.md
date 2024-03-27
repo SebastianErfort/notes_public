@@ -6,11 +6,12 @@ tags:
   - dev/coding
 visibility: public
 ---
-| Category           | Tools                           |
-| ------------------ | ------------------------------- |
-| Package versioning | venv, (Ana)Conda                |
-| Package managers   | pip, [[pipx]]                   |
-| Linting & syntax   | [Black](black.md) - pycodestyle |
+| Category           | Tools                          |
+| ------------------ | ------------------------------ |
+| Package versioning | venv module, (Ana)Conda        |
+| Package managers   | pip, [[pipx]]                  |
+| Package sources    | [PyPI](https://pypi.org)       |
+| Linting & syntax   | [Black](black.md), pycodestyle |
 
 # References
 

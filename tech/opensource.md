@@ -7,7 +7,9 @@ aliases:
 related:
   - "[[OSPO]]"
   - "[[openscience|Open Science]]"
+  - "[[data/index|Data]]"
 ---
+
 |           |                                                             |
 | --------- | ----------------------------------------------------------- |
 | See also  | [[OSPO]], [Open Science](openscience)                       |
@@ -44,13 +46,9 @@ related:
 TABLE WITHOUT ID
 file.link AS "Name",
 url AS "Website",
-category AS "Category"
+(join(category,", ")) AS "Category"
 WHERE type = "software" AND (contains(license,"opensource") OR contains(license,"open-source"))
 ```
-<!--
-GROUP BY category
-broken because category now array?
--->
 
 
 ### Contributing
@@ -89,6 +87,7 @@ See also [awesome-open-source] > organisations.
     - https://socialimpact.github.com/insights/what-are-digital-public-goods-and-DPGA/
 - [Open Source Initiative](https://opensource.org/osd/)
 - [disroot.org](https://disroot.org): platform providing online services based on principles of freedom, privacy, federation and decentralization
+- [GOV.UK Open Standards principles](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles)
 
 
 ## People

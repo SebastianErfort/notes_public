@@ -1,7 +1,6 @@
 ---
 title: Sebastian's notes
 author: Sebastian Erfort
-license: ""
 visibility: public
 ---
 
@@ -12,3 +11,7 @@ Best browsed using [[public/tech/productivity/Obsidian/Obsidian|Obsidian Markdow
 Online version available at <https://sebastianerfort.github.io/notes>.
 
 [^1]: [[public/tech/documentation/MkDocs#Obsidian|Compatibility MkDocs - Obsidian]]
+
+## TODO
+
+- [ ] copyright and licensing
