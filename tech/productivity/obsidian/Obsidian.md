@@ -19,9 +19,10 @@ related:
   - "[[DataView|Dataview plugin]]"
   - "[[public/tech/writing/Markdown|Markdown]]"
 ---
-> [!warning] Obsidian is not open-source, but there seems to be a pretty large community of users who would boycott it if they decided to charge money. See [[#Alternatives]] if you want to consider a different software, I have yet to explore them. For now I'd try not to rely too much on Markdown extensions and fancy features to be future-proof in case of a migration.
-
 # Obsidian
+
+
+> [!warning] Obsidian is not open-source, but there seems to be a pretty large community of users who would boycott it if they decided to charge money. See [[#Alternatives]] if you want to consider a different software, I have yet to explore them. For now I'd try not to rely too much on Markdown extensions and fancy features to be future-proof in case of a migration.
 
 | Resource    | References                                                                                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -53,7 +54,7 @@ related:
 
 Browse Appearance > Themes, there's a lot of community-made choices.
 
-I use **Catpuccin** because of aesthetics and different colours for italic/bold text, internal/external links, etc.
+I use **Catppuccin** because of aesthetics and different colours for italic/bold text, internal/external links, etc.
 
 ### Styling
 

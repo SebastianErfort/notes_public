@@ -8,11 +8,11 @@ related:
   - "[[git/GitLab#CI/CD|GitLab CICD]]"
   - "[[dev/Design|Design]]"
 ---
-| Resource     | References                    |
-| ------------ | ----------------------------- |
-| My notes     | `=(join(this.related, ", "))` |
-| My resources | [sw project template]()       |
+# Development
 
+| Resource | References                    |
+| -------- | ----------------------------- |
+| My notes | `=(join(this.related, ", "))` |
 ## Command Line
 
 - education
@@ -137,7 +137,12 @@ Watch files/dirs for changes
 
 ## DevOps and CI/CD
 
-See [[DevOps]]
+See also [[dev/devops|DevOps]].
+
+### Platforms
+
+- [Tekton](https://tekton.dev/) : [docs](https://tekton.dev/docs/) | [source](https://github.com/tektoncd)
+  > Cloud Native CI/CD
 
 
 ## Linux

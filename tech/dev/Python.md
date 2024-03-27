@@ -6,24 +6,17 @@ tags:
   - dev/coding
 visibility: public
 ---
-| Category           | Tools                          |
-| ------------------ | ------------------------------ |
-| Package versioning | venv module, (Ana)Conda        |
-| Package managers   | pip, [[pipx]]                  |
-| Package sources    | [PyPI](https://pypi.org)       |
-| Linting & syntax   | [Black](black.md), pycodestyle |
+# Python
 
-# References
+| Category           | Tools                                                       |
+| ------------------ | ----------------------------------------------------------- |
+| Package versioning | venv module, (Ana)Conda                                     |
+| Package managers   | pip, [[pipx]]                                               |
+| Package sources    | [PyPI](https://pypi.org)                                    |
+| Linting & syntax   | [Black](black.md), pycodestyle                              |
+| References         | [Standard Library][stdlib], [W3C Python Reference][w3c-ref] |
 
-[Standard Library](https://docs.python.org/3/library/) |  [W3schools Python Reference](https://www.w3schools.com/python/python_reference.asp) |  [PythonPackageIndex](https://pypi.org/)
-[Jupyter-lab notebook](file://notes/life/tech/python.ipynb)
-[Essential Python Tools](https://books.agiliq.com/projects/essential-python-tools/en/latest/index.html)
-[awesome-python-applications](https://github.com/mahmoud/awesome-python-applications): Free software that works great, and also happens to be open-source Python.
-
-- educational
-    - [Software Carpentry: Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/index.html)
-
-# Installation and Versions
+## Installation and Versions
 
 - change system python version: [[linux#^eb9a0b|Linux: default applications]]
 - (virtual) environments
@@ -31,9 +24,9 @@ visibility: public
     - [virtualenv](https://virtualenv.pypa.io/en/latest/#)
 - [2to3 converter](https://docs.python.org/3/library/2to3.html): Automated Python 2 to 3 code translation
 
-# Functions/methods
+## Functions/methods
 
-## Docstrings
+### Docstrings
 
 Convention for argument description:
 
@@ -45,11 +38,11 @@ This function handles x.
 '''
 ```
 
-## Decorators
+### Decorators
 
 [Article intro @towardsdatascience](https://towardsdatascience.com/why-decorators-in-python-are-pure-genius-1e812949a81e)
 
-## Annotate: Argument Metadata
+### Annotate: Argument Metadata
 
 Introduced with Python 3.9
 
@@ -59,7 +52,7 @@ Example
 from typing import Annotated
 def get_velocity(distance: Annotated[float,'meters'], time: Annotated[float,'seconds']) -> float:
   return distance/time
-# or (possibly in another file/module)
+## or (possibly in another file/module)
 Meters = Annotated[float,'meters']
 Seconds = Annotated[float,'seconds']
 MeterPerSecond = Annotated[float,'meter per second']
@@ -67,7 +60,7 @@ def get_velocity(distance: Meters, time: Seconds) -> MeterPerSecond:
   return distance/time
 ```
 
-# Files
+## Files
 
 The `with` statement
 
@@ -80,9 +73,9 @@ The `with` statement
     data = file.read()
   ```
 
-# Data Types
+## Data Types
 
-## Dictionaries
+### Dictionaries
 
 [W3schools Dictionaries Reference](https://www.w3schools.com/python/python_ref_dictionary.asp) |  [RealPython on Dictionaries (iteration)](https://realpython.com/iterate-through-dictionary-python/)
 
@@ -99,17 +92,17 @@ Merge two dictionaries [stackoverflow](https://stackoverflow.com/a/26853961)
       return z
   ```
 
-### Pictures
+#### Pictures
 
 [Simple edits with pillow library](https://python.plainenglish.io/10-python-automation-scripts-for-everyday-problems-3ca0f2011282)
 
-# Libraries, packages and modules
+## Libraries, packages and modules
 
-## Importing Modules
+### Importing Modules
 
 See [documentation on the import system](https://docs.python.org/3/reference/import.html).
 
-## Package Sources and Managers
+### Package Sources and Managers
 
 Package managers
 
@@ -129,12 +122,12 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 > - not obvious how to have pip upgrade installed packages (version not pinned by me, e.g. in `requirements.txt`)
 
 
-## Technical
+### Technical
 
 *argparse*: parse command line arguments and create help page
 [Documentation](https://docs.python.org/3/library/argparse.html) |  [@golinuxcloud](https://www.golinuxcloud.com/python-argparse/)
 
-## Visualisation, GUI, visuals
+### Visualisation, GUI, visuals
 
 - _curses_: "supplies a terminal-independent screen-painting and keyboard-handling facility for text-based terminals"
 - [_Python GUI with Qt_](file://rsc/python_gui.py)
@@ -145,13 +138,13 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
   ![Example KDE plot|300](https://media.geeksforgeeks.org/wp-content/uploads/20190318125853/Screenshot-5681.png)
 - [PyTorch3D](https://github.com/facebookresearch/pytorch3d): efficient, reusable components for 3D Computer Vision research with [PyTorch](https://pytorch.org)
 
-## Python Enhancements, Coding, Optimisation
+### Python Enhancements, Coding, Optimisation
 
 - _functools_: implements decorator `cache` that can significantly speed up things like recursive function calls
 - _Colander:_ dictionary/JSON/YAML data validation
   [Example](https://towardsdatascience.com/do-not-use-if-else-for-validating-data-objects-in-python-anymore-colander-7dd66c435118)
 
-## Image Processing, Data Extraction and Processing
+### Image Processing, Data Extraction and Processing
 
 - _camelot-py:_ table data extraction: library Camelot
     - can be tweaked to influence extraction quality
@@ -200,7 +193,7 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
   </details>
 - [LayoutParser](https://layout-parser.github.io/) | [![|20](github.png)](https://github.com/Layout-Parser/layout-parser)
 
-## Web Stuff
+### Web Stuff
 
 - _Requests:_ HTML requests and parsing responses
 - _Smtplib:_ E-mail automation [Resource 1](https://youtu.be/JRCJ6RtE3xU) | [Resource 2](https://youtu.be/Oz3W-LKfafE?t=2532)
@@ -232,12 +225,12 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
     - Colormind API: can be used to generate gorgeous colour codes that potentially can be used in our data visualisation
     - Government APIs
 
-## Hardware, DIY, IoT
+### Hardware, DIY, IoT
 
-- _home-assistant core:_ Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a #hw/RaspberryPi or a local server
+- _home-assistant core:_ Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a #tech/hw/RaspberryPi or a local server
   [Website](https://www.home-assistant.io/) | [Github](https://github.com/home-assistant/core)
 
-## Obscure
+### Obscure
 
 - _real-time-voice-cloning_
 - _face_recognition:_ The world's simplest facial recognition api for Python and the command line [Github](https://github.com/ageitgey/face_recognition)
@@ -260,9 +253,9 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 
   </details>
 
-# Advanced
+## Advanced
 
-### Decorators
+#### Decorators
 
 - [`@lru_cache()`](https://docs.python.org/3/library/functools.html#functools.lru_cache) built-in since Python 3.2
 
@@ -272,11 +265,11 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 
   > Simple lightweight unbounded function cache. Sometimes called [“memoize”](https://en.wikipedia.org/wiki/Memoization).
 
-# Filetypes
+## Filetypes
 
-## YAML
+### YAML
 
-# Testing, Linters
+## Testing, Linters
 
 [Essential Python Tools: Linters and formatters](https://books.agiliq.com/projects/essential-python-tools/en/latest/linters.html#)
 
@@ -297,14 +290,14 @@ Testing #dev/build/python
 - [nox](https://pypi.org/project/nox) - a tool that automates testing in multiple Python environments, similar to tox, driven by a `noxfile.py` configuration file
 
 
-# Projects
+## Projects
 
-## Project Managers
+### Project Managers
 
 - [Hatch](https://hatch.pypa.io/)
     > Hatch is a modern, extensible Python project manager. See the [Why Hatch?](https://hatch.pypa.io/latest/why/) page for more information.
 
-## Virtual Environment
+### Virtual Environment
 
 1. create: `python3 -m venv .venv`
 2. activate: `source .venv/bin/activate`
@@ -313,13 +306,13 @@ Testing #dev/build/python
 5. Save them: `pip freeze > requirements.txt`
    Can then be installed again
 
-## Tests
+### Tests
 
 1. by convention start filenames with prefix `test_`, followed by name of script, same for test functions
 2. can be run with `pytest` (`pip install pytest`)
 3. can be used from sub-directory if empty file `__init__.py` is created (used to mark directories as Python package directories
 
-## Documentation
+### Documentation
 
 - [Sphinx](https://www.sphinx-doc.org/en/master/): Python Documentation Generator
   > Sphinx makes it easy to create intelligent and beautiful documentation ^e526ca
@@ -327,18 +320,34 @@ Testing #dev/build/python
 - [Google Python Styleguide](https://google.github.io/styleguide/pyguide.html) | [Example Documentation Strings from Google](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
 - [[mkdocstrings]]
 
-## Creating a Package
+### Creating a Package
 
 [[Cookiecutter]]: there are several templates out there for Python packages to help one get started with authorship, licensing, etc.
 
-# Data Science: Pandas etc
+## Data Science: Pandas etc
 
 [Medium: # 5 Python Libraries That Will Help Automate Your Life](https://medium.com/geekculture/5-python-libraries-that-will-help-automate-your-life-34aa91d93b9b)
 
 [Python Automation Tutorial - Extracting Table from PDF](https://www.youtube.com/watch?v=s8XjEuplx_U&t=3229s)
 Using Camelot to extract data into Pandas dataframe from PDF with multiple tables
 
-# Jupyter: Notebook, Lab
+## Jupyter: Notebook, Lab
 
-<https://jupyter.org/> | [Jupyter Notebook documentation](https://ipython.org/notebook) |  [Built-in magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
-[Remco's notes @Wiki: conda env, kernel installation](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/Jupyter) | ![[rug/lwp/Software#Python|Obsidian notes]] #dev/python/jupyter #dev/python/conda #dev/python/Anaconda #dev/python/miniconda
+Tags: #dev/python/jupyter #dev/python/conda #dev/python/Anaconda #dev/python/miniconda
+
+- <https://jupyter.org/> | [Jupyter Notebook documentation](https://ipython.org/notebook) |  [Built-in magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
+[Remco's notes @Wiki: conda env, kernel installation](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/Jupyter) 
+- [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
+  > Build beautiful, publication-quality books and documents from computational content.
+
+
+## References
+
+[Essential Python Tools](https://books.agiliq.com/projects/essential-python-tools/en/latest/index.html)
+[awesome-python-applications](https://github.com/mahmoud/awesome-python-applications): Free software that works great, and also happens to be open-source Python.
+
+- educational
+    - [Software Carpentry: Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/index.html)
+
+[stdlib]: <https://docs.python.org/3/library/>
+[w3c-ref]: <https://www.w3schools.com/python/python_reference.asp>

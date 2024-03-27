@@ -7,7 +7,7 @@ docs: "https://www.mkdocs.org/"
 source: "https://github.com/mkdocs/mkdocs"
 developer: "Copyright © 2014 [Tom Christie](https://twitter.com/starletdreaming), Maintained by the [MkDocs Team](https://www.mkdocs.org/about/release-notes/#maintenance-team)\n"
 desc-short: "MkDocs is a **fast**, **simple** and **downright gorgeous** static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file. Start by reading the [introductory tutorial](https://www.mkdocs.org/getting-started/), then check the [User Guide](https://www.mkdocs.org/user-guide/) for more information.\n"
-tags: ["writing/docs", "docs/mkdocs"]
+tags: ["writing/docs", "tech/docs/mkdocs"]
 docker-image: squidfunk/mkdocs-material
 visibility: public
 ---
@@ -232,6 +232,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
         Issues:
         - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
     - [mkdocs-obsidian-bridge](https://github.com/GooRoo/mkdocs-obsidian-bridge): currently only handling links (allow partial path, selecting file with shortest match, style dead links)
+- [mkdocs-magiclinks-plugin](): using [[pymarkdown#MagicLink|PyMarkdown extension MagicLink]]
 
 
 ## Editing

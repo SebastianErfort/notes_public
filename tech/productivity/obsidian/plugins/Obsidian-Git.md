@@ -9,7 +9,7 @@ desc-short: |
   Backup your Obsidian.md vault with git
 tags:
   - tech/Obsdidian
-  - Obsidian/plugin
+  - obsidian/plugin
 visibility: public
 ---
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`

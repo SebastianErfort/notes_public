@@ -83,6 +83,13 @@ item
     ![Books Leather|400](https://cdn.pixabay.com/photo/2023/11/22/15/20/books-8405721_1280.jpg "Free Books Leather photo and picture")
 
 
+## Block Quotes
+
+Pre-pended with `>␣`
+
+> Don’t walk behind me; I may not lead. Don’t walk in front of me; I may not follow. Just walk beside me and be my friend.
+> – Albert Camus
+
 ## Code
 
 inline `code`: <code>&grave;code&grave;</code>
@@ -105,7 +112,7 @@ title: Example Code Block
 &grave;&grave;&grave;
 </code></pre>
 
-Some Markdown processors allow for additional specifications beside a syntax language. Whether this results in unrendered crap if unsupported depends on your Markdown reader. Obsidian just ignores it. Some processors, such as Pandoc, use curly braces `{}` to specify options for fenced code blocks. Generally be aware of incompatibilities or stick to one Markdown implementation/reader.
+Some Markdown processors allow for additional specifications beside a syntax language. Whether this results in unrendered crap if unsupported depends on your Markdown reader. Obsidian just ignores it. Some processors, such as Pandoc, use curly braces `{}` to specify options for fenced code blocks. Generally be aware of incompatibilities or stick to one Markdown implementation/reader, ideally one with high compatibility such as [[CommonMark]].
 
 An alternative syntax for code blocks is simply by indentation. However this syntax is highly ambiguous,[^indentedcodeblock] does not have a way of specifying a code language for syntax highlighting and is therefore not recommended.
 

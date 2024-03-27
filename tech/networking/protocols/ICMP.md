@@ -11,7 +11,7 @@ full-name: Internet Control Message Protocol
 desc-short: Supporting protocol, send error messages and operational information
 ---
 
-Tags: #net/icmp
+Tags: #tech/networking/icmp
 [ICMP @Wikipedia](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol)
 
 - diagnostic and error reports

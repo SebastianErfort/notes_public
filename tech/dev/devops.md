@@ -1,11 +1,11 @@
 ---
 title: DevOps
 tags:
-  - devops
+  - dev/devops
   - dev
-  - devops/agile
-  - devops/kanban
-  - devops/scrum
+  - dev/devops/Agile
+  - dev/devops/kanban
+  - dev/devops/scrum
 visibility: public
 ---
 ## Dependencies

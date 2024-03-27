@@ -3,10 +3,10 @@ title: Alacritty
 type: software
 category:
   - terminal-emulator
-url: https://alacritty.org/
-docs: https://github.com/alacritty/alacritty/blob/master/docs/features.md
-github: https://github.com/alacritty/alacritty
-logo: https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png
+url: "https://alacritty.org/"
+docs: "https://github.com/alacritty/alacritty/blob/master/docs/features.md"
+github: "https://github.com/alacritty/alacritty"
+logo: "https://raw.githubusercontent.com/alacritty/alacritty/master/extra/logo/compat/alacritty-term%2Bscanlines.png"
 desc-short: |
   A cross-platform, OpenGL terminal emulator.
 tags:

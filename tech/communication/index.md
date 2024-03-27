@@ -1,3 +1,15 @@
+---
+title: Communication Technologies
+type: meta
+category:
+  - communication
+tags:
+  - tech/communication
+aliases:
+  - Communication
+---
+# Communication Technologies
+
 ## Protocols
 
 - (acronym:: Internet Relay Chat (IRC))
@@ -19,6 +31,16 @@
 | ------------------------------------------ | -------------- | ------------------------ |
 | element                                    | IRC and Matrix | quite bloated with dep.s |
 | [Conversations](https://conversations.im/) | Jabber/XMPP    | Android app              |
+
+
+## Software
+
+```dataview
+TABLE WITHOUT ID
+title AS "Name",
+("[Website](" + this.url + ")") AS "Links"
+WHERE type = "software" AND category = "communication"
+```
 
 
 ## References

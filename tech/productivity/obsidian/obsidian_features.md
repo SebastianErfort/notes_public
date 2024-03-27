@@ -1,13 +1,15 @@
 ---
 tags:
-  - Obsidian
+  - obsidian
 visibility: public
 title: Features
 ---
-| Resource | References |  |
-| ---- | ---- | ---- |
+# Obsidian Features
+
+| Resource | References          |                                                                                                                      |
+| -------- | ------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Obsidian | [[obsidian/Obsidian | My notes on Obsidian]], [Template/sample vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
-| Related | [[Markdown]] |  |
+| Related  | [[Markdown]]        |                                                                                                                      |
 
 ## Writing: Markdown Editor
 
@@ -18,6 +20,7 @@ title: Features
 - [Canvas](https://obsidian.md/canvas): freely arrange notes and other content on a workspace
 - Templates: select folder in settings, supports variables
 - VIM editor mode (many commands supported besides e.g. buffer interaction)
+
 
 ### Links
 
@@ -51,10 +54,10 @@ How to use
 
 ### Images
 
-- Markdown: ![tux|20](tux.png)
-- Obsidian/Wiki: ![[tux.png|20]]
+- Markdown: ![tux|20](Tux_simple_bw.svg)
+- Obsidian/Wiki: ![[Tux_simple_bw.svg|20]]
 - HTML: requires `file://...` URL, can't use just (relative) file path, absolute path required (I swear just using `file://path/to/file` worked sometime, relative to the user's home directory)
-<img src="file://.../journal/personal/tux.png" width="20">
+<img src="file:///home/user/journal/rsrc/icons/tux.png" width="20">
 
 Using CSS snippets, the alt text can be overloaded to modify image properties.[^center_images]
 
@@ -65,9 +68,7 @@ For example center images, see `image_center.css` in snippets folder. Usage:
 HTML figure: offers caption, contents and caption can be centered (not working in reader mode)
 
 <figure style="text-align: center;">
-
   <img src="https://cdn.pixabay.com/photo/2023/11/22/15/20/books-8405721_1280.jpg"  width="400" style="align: center;">
-
   <figcaption><a class="external-link" href="https://pixabay.com/photos/books-leather-old-antique-binding-8405721/">Leather-bound Books (Joa 70 via Pixabay)</a></figcaption>
 </figure>
 
@@ -153,20 +154,21 @@ Syntax:
 > <content>
 ```
 
-> [!note] Supported types
-> `note` (default if unsupported), `todo`, `success`, `failure`, `danger`, `hint`, `important`, `check`, `done`, `help`, `warning/caution/attention`
+> [!note] Default supported types
+> `note` (default if unsupported), `todo`, `success`, `failure`, `danger`, `tip/hint`, `important`, `check`, `done`, `help`, `warning/caution/attention`
 
 `info`
-> [!info] Python
-> A programming language.
-
-`tip`
-> [!tip]- Call-outs can fold!
+> [!info]- Call-outs can fold!
 > Just add a `-` to the call-out specifier
 
-`idea`
-> [!idea]- Epiphany!
-> Immediately write this down!
+`tip/hint`
+> [!tip] You can create your own using CSS snippets (Settings: Appearance > CSS snippets), for example. Obsidian is using [Lucide icons][lucide-icons], search there for the name of your desired icon.
+> ```css
+> .callout[data-callout="event"] {
+>     --callout-color: 102, 153, 204;
+>     --callout-icon: calendar;
+> }
+> ```
 
 `important`
 > [!important]- NOTE!!!11
@@ -213,10 +215,6 @@ Syntax:
 > [!example]- Click for more
 > Read some very instructive examples to illustrate this topic.
 
-`hint`
-> [!hint]- Look at this
-> It'll save you tons of time and effort
-
 `quote/cite`
 > [!quote]- Me
 > Clothes are for daytime.
@@ -227,7 +225,8 @@ Some themes or CSS snippets add further call-outs.
 ## Knowledge Management System (KMS)
 
 - search: content across files, search modifiers `file`, `path`, `tag`, `line()`, `section()`, ...
-- tags: quick and easy way to set bookmarks #Obsidian
+- tags: quick and easy way to set bookmarks and categories
+    - inline: #obsidian
     - YAML frontmatter:
 
   ```yaml
@@ -283,3 +282,4 @@ Most Markdown extensions by Obsidian and its Plugins use syntax that doesn't bre
 ## References
 
 [^center_images]: <https://www.reddit.com/r/ObsidianMD/comments/v1fs0f/comment/iamghtr/>
+[lucide-icons]: <https://lucide.dev/>
