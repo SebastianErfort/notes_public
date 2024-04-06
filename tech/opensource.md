@@ -9,6 +9,7 @@ related:
   - "[[openscience|Open Science]]"
   - "[[data/index|Data]]"
 ---
+# Open Source
 
 |           |                                                             |
 | --------- | ----------------------------------------------------------- |
@@ -107,14 +108,14 @@ See also [awesome-open-source] > organisations.
 ## News and Events
 
 - https://foss.events/
-
-
-- [Article ](https://www.theregister.com/2023/12/27/bruce_perens_post_open/) by (people:: [[Bruce Perensen]]) @TheRegister
-- https://opensource.guide/
-- [gnu.org: What is Free Software?](https://www.gnu.org/philosophy/free-sw.html)
 - [LibrePlanet 2024 event by FSF](https://libreplanet.org/2024/): May 4 & 5, 2024
 
+- [Article ](https://www.theregister.com/2023/12/27/bruce_perens_post_open/) by (people:: [[Bruce Perensen]]) @TheRegister
+
 ## References
+
+- https://opensource.guide/
+- [gnu.org: What is Free Software?](https://www.gnu.org/philosophy/free-sw.html)
 
 [first-os-contrib]: <https://github.com/readme/guides/first-oss-contribution>
 [awesome-open-source]: <https://github.com/cornelius/awesome-open-source>
