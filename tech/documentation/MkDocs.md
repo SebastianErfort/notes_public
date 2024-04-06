@@ -90,7 +90,7 @@ Examples
 - [Cinder](https://sourcefoundry.org/cinder/)
 - [mkdocs-terminal](https://ntno.github.io/mkdocs-terminal/)
 
-#### mkdocs-material
+#### Mkdocs-Material
 
 See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pypi.org/project/mkdocs-material/)
 
@@ -105,6 +105,8 @@ See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pyp
     - [[#Markdown Extensions]]
 - Navigation/sidebar
     - [Navigation Tabs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs)
+- [Setting up a blog](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/)
+- [versioning using mike](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
 
   ```yaml
   theme:
@@ -273,7 +275,7 @@ some_url: https://example.com
 ## Integrations
 
 - [[git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
-- Obsidian: [[personal/projects/templates/obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- Obsidian: [[obsidian/obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 - [[mkdocstrings]]
 
 ### Search

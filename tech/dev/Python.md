@@ -8,13 +8,13 @@ visibility: public
 ---
 # Python
 
-| Category           | Tools                                                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Package versioning | venv, (Ana)Conda                                                                                                                            |
-| Package managers   | pip, [[pipx]]                                                                                                                               |
-| Package sources    | [PyPI](https://pypi.org/)                                                                                                                   |
-| Linting & syntax   | [Black](black.md) - pycodestyle                                                                                                             |
-| References         | [Standard Library](https://docs.python.org/3/library/), [W3schools Python Reference](https://www.w3schools.com/python/python_reference.asp) |
+| Category           | Tools                                                       |
+| ------------------ | ----------------------------------------------------------- |
+| Package versioning | venv module, (Ana)Conda                                     |
+| Package managers   | pip, [[pipx]]                                               |
+| Package sources    | [PyPI](https://pypi.org)                                    |
+| Linting & syntax   | [Black](black.md), pycodestyle                              |
+| References         | [Standard Library][stdlib], [W3C Python Reference][w3c-ref] |
 
 ## Installation and Versions
 
@@ -348,3 +348,6 @@ Tags: #dev/python/jupyter #dev/python/conda #dev/python/Anaconda #dev/python/min
 
 - educational
     - [Software Carpentry: Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/index.html)
+
+[stdlib]: <https://docs.python.org/3/library/>
+[w3c-ref]: <https://www.w3schools.com/python/python_reference.asp>

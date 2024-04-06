@@ -16,7 +16,7 @@ related:
 
 ## Organisations
 
-See also [[opensource#Organisations|OpenSource: Organisations]]
+See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
 
 [OSPO Landscape](https://landscape.todogroup.org/) ![](https://landscape.todogroup.org/)
 
