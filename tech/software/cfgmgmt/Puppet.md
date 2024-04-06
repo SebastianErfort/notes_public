@@ -198,8 +198,6 @@ Using [Puppet Strings](https://www.puppet.com/docs/puppet/7/puppet_strings.html#
 
 ## Testing
 
-[Jacob on testing @GitLab Wiki](https://git.lwp.rug.nl/lwp/wiki/-/wikis/jacob/Testing-Procedure)
-
 - linting and syntax
     - `puppet-lint`
         - [list of checks and how to ignore them](http://puppet-lint.com/checks/)

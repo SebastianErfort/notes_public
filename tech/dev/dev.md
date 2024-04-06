@@ -141,6 +141,10 @@ See [[make]]
 
 See also [[dev/devops|DevOps]].
 
+- [to be continuous](https://to-be-continuous.gitlab.io/): [docs](https://to-be-continuous.gitlab.io/doc/)
+  Guides on building (GitLab) CI/CD pipelines, e.g. suggested stages
+
+
 ### Platforms
 
 - [Tekton](https://tekton.dev/) : [docs](https://tekton.dev/docs/) | [source](https://github.com/tektoncd)

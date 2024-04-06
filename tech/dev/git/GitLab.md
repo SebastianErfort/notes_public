@@ -8,21 +8,25 @@ category:
   - git
   - agile
   - devops
-url: "https://gitlab.com/"
-docs: "https://docs.gitlab.com/"
-source: ""
+url: https://gitlab.com/
+docs: https://docs.gitlab.com/
 developer: ""
 desc-short: GitLab is the most comprehensive AI-powered DevSecOps Platform.
 visibility: public
-img: "<img src=\"https://docs.gitlab.com/assets/images/gitlab-logo-header.svg\" style=\"width: 80px;\"/>"
+img: '<img src="https://docs.gitlab.com/assets/images/gitlab-logo-header.svg" style="width: 80px;"/>'
+related:
+  - "[[Git]]"
 ---
 # GitLab
 
 `=this.img`
-`= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
 
-See also [[git]] | [[rug/lwp/GitLab|Work notes LWP: GitLab]] | [[2023_GitLab/presentation|Presentation for LWP]]
+| Item        | References                    |
+| ----------- | ----------------------------- |
+| Links       | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
+| Related     | `=(join(this.related, ", "))` |
+| GitLab docs | [GL Markdown][gl-md]          |
 
 ## Issues, Boards, Project Management
 
@@ -292,6 +296,7 @@ Examples and References
 
 ## References
 
+[gl-md]: <https://docs.gitlab.com/ee/user/markdown.html>
 [GitLab documentation: Snippets]: <https://docs.gitlab.com/ee/user/snippets.html>
 [^so-api-delete-pipelines]: <https://stackoverflow.com/a/73820571> (2024-03-08)
 [^medium-api-delete-pipelines]: <https://benlobaugh.medium.com/how-to-clean-up-gitlab-artifacts-c7ce34c70213> (2024-03-08)
