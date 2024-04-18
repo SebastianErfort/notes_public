@@ -266,6 +266,15 @@ and optionally
 - [Angular contributing rules](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
 
 
+## Tools
+
+- [lazygit]
+- [[sublimemerge|Sublime Merge]]
+
+Helpful
+
+- [[bat]]
+
 ## Providers and Servers
 
 - [[GitHub]]
@@ -289,3 +298,4 @@ and optionally
 [stackoverflow: sm track branch]: <https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule/18799234#18799234>
 [^sm-track-branch]: [Git submodule track branch @stackoverflow][stackoverflow: sm track branch]
 [Git hooks]: <https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks>
+[lazygit]: <https://github.com/jesseduffield/lazygit>

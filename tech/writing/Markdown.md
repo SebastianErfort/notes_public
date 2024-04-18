@@ -20,12 +20,17 @@ related:
 
 ## Tools & Software
 
+- command line viewers
+    - [[bat]]
+    - [[glow]]
+    - [[rich]]
+
 ```dataview
 TABLE WITHOUT ID
   file.link AS "Name",
   desc-short AS "Description",
   (join(category)) AS "Category"
-WHERE type = "software" AND contains(category,"markdown")
+WHERE type = "software" AND (contains(category,"markdown") OR contains(tags,"markdown"))
 SORT title
 ```
 
