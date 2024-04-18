@@ -3,8 +3,7 @@ title: Hugo
 visibility: public
 url: "https://gohugo.io/"
 ---
-
-## Hugo
+# Hugo
 
 [Installation](https://gohugo.io/installation/linux/)
 ```sh
@@ -23,6 +22,12 @@ Documentation
 
 ## Configuration
 
+### Taxonomies, Categories and Tags
+
+[Keep taxonomy case](https://discourse.gohugo.io/t/issue-with-preservetaxonomynames-and-capitalization/5717)
+```toml
+preserveTaxonomyNames = true
+```
 
 ### Themes
 

@@ -1,21 +1,30 @@
 ---
 title: Virtualisation and Containerisation
 visibility: public
-aliases: [Virtualisation, Containers]
+aliases:
+  - Virtualisation
+  - Containers
+related:
+  - "[[containerisation]]"
+  - "[[virtualisation]]"
 ---
+## Hardware
 
-# Oracle VirtualBox
+Determine CPU virtualisation support
 
-![[VirtualBox]]
+```bash
+lscpu | grep Virtualization
+egrep "svm|vmx" /proc/cpuinfo
+```
 
-# Vagrant
+## Hypervisors
 
-![[Vagrant]]
+- [[KVM]]
+- [[VirtualBox]]
+- [[Vagrant]]
+- [[VMware]]
+- [[Xen]]
 
-# VMWare
-
-![[rug/cit/Virtualisation and Containers#VMware]]
-
-# References
+## References
 
 - [OCI: Open Container Initative](https://opencontainers.org/): open governance structure for the express purpose of creating open industry standards around container formats and runtimes

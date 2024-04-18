@@ -11,7 +11,6 @@ visibility: public
 type: software
 category: shell
 ---
-
 # Bash
 
 [Linux Commands](linux.md#Commands) | [code snippets](file://src) |  [Jupyter-lab notebook](file://notes/life/tech/bash.ipynb)
@@ -31,9 +30,9 @@ category: shell
 
 See [readline man page](https://www.man7.org/linux/man-pages/man3/readline.3.html).
 
-Shortcut | Description
--|-
-<kbd>ctrl+x, ctrl+e</kbd> | editing mode in default editor to enter commands like you would in a script, executed upon save+close. Also great when pasting (longer) scripts into your terminal
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>ctrl+x, ctrl+e</kbd> | editing mode in default editor to enter commands like you would in a script, executed upon save+close. Also great when pasting (longer) scripts into your terminal |
 
 Customise in config::  `~/.inputrc`
 
@@ -122,6 +121,18 @@ echo $n
 ```
 
 ### Variables
+
+### Declaration
+
+```bash
+local -a # local array
+global -A # global associative array
+# declare and typeset create local var.s unless -g is specified
+declare -r # read-only
+declare -x # mark for export
+declare -g # global variable in function
+typeset -i i # integer, faster arithmetic and operations such as let y=x**2
+```
 
 #### Booleans: true and false
 
@@ -494,6 +505,13 @@ Error handling[^1]
     - Also consider option `set -o errtrace` (functions and subshells inherit `errexit` option). [StackExchange](https://stackoverflow.com/questions/25378845/what-does-set-o-errtrace-do-in-a-shell-script)
 
 [^1]: <https://stackoverflow.com/questions/64786/error-handling-in-bash>
+
+
+## Best Practices and Conventions
+
+- Portability: stick to [POSIX Portable Character Set](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap06.html#tag_06_01)
+- [Styleguide by Google](https://google.github.io/styleguide/shellguide.html) ^143a88
+    - functions: lower case, separate words with underscores, use `::` to separate packages/libraries (avoid duplicate names)
 
 ## Testing
 
