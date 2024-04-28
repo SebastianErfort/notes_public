@@ -98,7 +98,7 @@ find /var/log -type f -printf "%S\t%p\n" | gawk '$1 < 1.0 && $1 > 0.0 {print}'
 
 ## Partitions, File Systems and Swap
 
-![[partitions_filesystems_swap]]
+![[partitions_filesystems]]
 
 ## Network, remote
 

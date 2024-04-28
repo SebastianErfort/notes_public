@@ -25,6 +25,13 @@ egrep "svm|vmx" /proc/cpuinfo
 - [[VMware]]
 - [[Xen]]
 
+
+## Containerisation
+
+### [[dev/Docker|Docker]]
+
+### [[LXC]]
+
 ## References
 
 - [OCI: Open Container Initative](https://opencontainers.org/): open governance structure for the express purpose of creating open industry standards around container formats and runtimes

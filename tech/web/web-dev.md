@@ -126,6 +126,8 @@ Based on: Python
 
 ### Tools
 
+[Can I use _ ?][can-i-use] check availability of features for different browsers
+
 [OWASP ZAP](https://www.zaproxy.org) | [Github]((<https://github.com/zaproxy/zaproxy>)
 > The OWASP Zed Attack Proxy (ZAP) is one of the world’s most popular free security tools and is actively maintained by a dedicated international team of volunteers. It can help you automatically find security vulnerabilities in your web applications while you are developing and testing your applications. It's also a great tool for experienced pentesters to use for manual security testing.
 
@@ -133,3 +135,5 @@ Based on: Python
 ## References
 
 - [*js-cookie*](https://github.com/js-cookie/js-cookie): A simple, lightweight JavaScript API for handling browser cookies
+
+[can-i-use]: <https://caniuse.com/>

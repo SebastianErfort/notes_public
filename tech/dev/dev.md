@@ -13,6 +13,15 @@ related:
 | Resource | References                    |
 | -------- | ----------------------------- |
 | My notes | `=(join(this.related, ", "))` |
+
+**Table of Contents**
+
+[[#Command Line|⌨️ Command Line]]
+[[#Version Control]]
+[[#build|🛠️ Build]]
+
+---
+
 ## Command Line
 
 - education
@@ -26,20 +35,7 @@ related:
 
 #### Quick Reference and Cheatsheets
 
-- [cheat](https://github.com/cheat/cheatsheets): Community-sourced cheatsheets
-  Example:
-
-  ```markdown
-  ---
-  syntax: bash
-  tags: [ vcs, development ]
-  ---
-  # To stage all changes in the current directory:
-  git add --all
-
-  # To commit staged changes:
-  git commit -m <message>
-  ```
+- [[Cheat]]
 
 #### Files and Directories
 
@@ -128,12 +124,21 @@ Tags: #dev/build
 - [Meson build system](https://mesonbuild.com/)
 - [Ninja](https://ninja-build.org/)
 - [Heroku](https://www.heroku.com/): infrastructure for developers
+- [Shake]
 
 Watch files/dirs for changes
 
 - `inotify`
 - [Watchman](https://facebook.github.io/watchman/) | [Github](https://github.com/facebook/watchman)
 
+
+## Languages
+
+
+### Templating
+
+- Jinja
+- [Tera]: "A powerful, easy to use template engine for Rust"
 
 ## DevOps and CI/CD
 
@@ -148,12 +153,6 @@ See also [[dev/devops|DevOps]].
 - [Tekton](https://tekton.dev/) : [docs](https://tekton.dev/docs/) | [source](https://github.com/tektoncd)
   > Cloud Native CI/CD
 
-
-## Linux
-
-- [KIWI: command line utility to build Linux system appliances](https://osinside.github.io/kiwi/)
-- [openQA: automated tests (for OSs)](command line utility to build Linux system appliances)
-- [Appstream](https://www.freedesktop.org/software/appstream/docs/): Infrastructure for distro-agnostic software-centers and universal software component metadata
 
 ## Databases
 
@@ -176,6 +175,21 @@ See [[public/tech/data/databases/index|my notes on databases]]
 ### [[VMWare]]
 
 ### [[VirtualBox]]
+
+## Linux
+
+- [KIWI: command line utility to build Linux system appliances](https://osinside.github.io/kiwi/)
+- [openQA: automated tests (for OSs)](command line utility to build Linux system appliances)
+- [Appstream](https://www.freedesktop.org/software/appstream/docs/): Infrastructure for distro-agnostic software-centers and universal software component metadata
+
+## Operating Systems
+
+- [[Debian]]
+- [[Ubuntu]]
+
+### Mobile
+
+- [[Android]]
 
 ## Infrastructure
 
@@ -209,18 +223,12 @@ Suggested files and directories
 
 ### Management
 
-[Contributer Covenant: Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
-[[eScienceCenter]]: [[Practical guide to Software Management Plans.pdf|Practical guide to Software Management Plans]]
+- versioning
+    - [asdf](https://asdf-vm.com/): multiple runtime version manager
+- contributing
+    - [Contributer Covenant: Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
+    - [[eScienceCenter]]: [[Practical guide to Software Management Plans.pdf|Practical guide to Software Management Plans]]
 
-
-## Operating Systems
-
-- [[Debian]]
-- [[Ubuntu]]
-
-### Mobile
-
-- [[Android]]
 
 ## [[design|UI and Design]]
 
@@ -261,3 +269,5 @@ Free stock media
 [analysis-tools.dev]: <https://analysis-tools.dev/> 
 [lefthook]: <https://github.com/evilmartians/lefthook>
 [dotfiles-github]: <https://dotfiles.github.io/>
+[shake]: <https://shakebuild.com/>
+[tera]: <https://keats.github.io/tera/>

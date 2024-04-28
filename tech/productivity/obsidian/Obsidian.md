@@ -209,6 +209,8 @@ References
 - Telekasten: Neovim plugin for Zettelkasten/Wiki/journal
 - Roam Research
 - [[foam]]
+- [[zk]] (more of a helper, *not an editor*)
+- [[Emanote]]
 
 
 ## Publish
