@@ -24,6 +24,16 @@ Tags: #tech/hpc/queue
 - [[gpfs|GPFS]]
 
 
+## Software Builds
+
+- [[EasyBuild]]
+
+## Package Repositories and Management
+
+See [[packaging]].
+
+- [[EESSI]]
+
 ## References
 
 - [Optical interconnection networks for high-performance systems, Cheng et al., chapter 18][cheng_optical_interconnection]
