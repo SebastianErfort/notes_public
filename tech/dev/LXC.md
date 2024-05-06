@@ -5,9 +5,9 @@ category:
   - container
 tags:
   - dev/containerisation
-url: https://linuxcontainers.org/lxc
-docs: https://linuxcontainers.org/lxc/documentation/
-source: https://github.com/lxc/lxc
+url: "https://linuxcontainers.org/lxc"
+docs: "https://linuxcontainers.org/lxc/documentation/"
+source: "https://github.com/lxc/lxc"
 visibility: public
 aliases:
   - Linux Containers

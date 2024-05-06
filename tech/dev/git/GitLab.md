@@ -8,11 +8,11 @@ category:
   - git
   - agile
   - devops
-url: https://gitlab.com/
-docs: https://docs.gitlab.com/
+url: "https://gitlab.com/"
+docs: "https://docs.gitlab.com/"
 desc-short: GitLab is the most comprehensive AI-powered DevSecOps Platform.
 visibility: public
-img: '<img src="https://docs.gitlab.com/assets/images/gitlab-logo-header.svg" style="width: 80px;"/>'
+img: "<img src=\"https://docs.gitlab.com/assets/images/gitlab-logo-header.svg\" style=\"width: 80px;\"/>"
 related:
   - "[[Git]]"
 ---

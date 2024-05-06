@@ -4,8 +4,8 @@ type: software
 category:
   - note-taking
   - zettelkasten
-url: https://zk-org.github.io/zk/
-source: https://github.com/zk-org/zk
+url: "https://zk-org.github.io/zk/"
+source: "https://github.com/zk-org/zk"
 developer: "[zk-org](https://github.com/zk-org)"
 desc-short: A plain text note-taking assistant
 tags:

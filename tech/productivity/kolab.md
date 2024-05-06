@@ -9,6 +9,6 @@ docs: "https://docs.kolab.org/"
 source: "https://github.com/kolab-groupware"
 desc-short: |
   Kolab Groupware is a Free Software groupware solution for Email communications, Events & Appointments, Contacts and more.
-tags:
+tags: ""
 ---
 # Kolab

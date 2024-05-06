@@ -1,5 +1,5 @@
 ---
-url: https://daringfireball.net/projects/markdown/
+url: "https://daringfireball.net/projects/markdown/"
 visibility: public
 title: Markdown
 related:

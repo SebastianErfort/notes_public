@@ -4,16 +4,16 @@ type: software
 category:
   - virtualisation
 desc-short: libvirt is an open-source API, daemon and management tool for managing platform virtualization. It can be used to manage KVM, Xen, VMware ESXi, QEMU and other virtualization technologies. These APIs are widely used in the orchestration layer of hypervisors in the development of a cloud-based solution.
-tags: 
+tags: ""
 visibility: public
 related:
   - "[[qemu]]"
   - "[[KVM]]"
 developer: RedHat
-source: https://gitlab.com/libvirt/libvirt
-url: https://libvirt.org/
+source: "https://gitlab.com/libvirt/libvirt"
+url: "https://libvirt.org/"
 img: "![|60](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Libvirt_logo.svg/1280px-Libvirt_logo.svg.png)"
-docs: https://libvirt.org/docs.html
+docs: "https://libvirt.org/docs.html"
 ---
 # libvirt
 

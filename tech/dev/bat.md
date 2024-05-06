@@ -1,6 +1,6 @@
 ---
 title: bat
-source: https://github.com/sharkdp/bat/
+source: "https://github.com/sharkdp/bat/"
 desc-short: bat supports syntax highlighting for a large number of programming and markup languages. bat communicates with git to show modifications with respect to the index (see left side bar).
 tags:
   - markdown/viewer

@@ -1,7 +1,7 @@
 ---
 title: Lustre
-url: https://www.lustre.org/
-docs: https://www.lustre.org/documentation/
+url: "https://www.lustre.org/"
+docs: "https://www.lustre.org/documentation/"
 ---
 three main components:
 

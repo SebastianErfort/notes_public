@@ -4,9 +4,9 @@ type: software
 category:
   - dms
   - data
-url: https://ckan.org/
-docs: https://docs.ckan.org/en/latest/
-source: https://github.com/ckan/ckan
+url: "https://ckan.org/"
+docs: "https://docs.ckan.org/en/latest/"
+source: "https://github.com/ckan/ckan"
 developer: "[Open Knowledge Foundation](https://okfn.org/en/)"
 desc-short: CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data.
 tags:

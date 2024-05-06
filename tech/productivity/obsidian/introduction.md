@@ -7,8 +7,8 @@ date: 2024-01-19
 related:
   - "[[obsidian_features|Obsidian features]]"
   - "[[obsidian|obsidian]]"
-url: https://obsidian.md/
-docs: https://help.obsidian.md/Home
+url: "https://obsidian.md/"
+docs: "https://help.obsidian.md/Home"
 ---
 
 # Introduction to Obsidian

@@ -1,5 +1,6 @@
 ---
 status: rejected
+title: Jekyll Git-Wiki
 ---
 ## Jekyll Page with Git-Wiki Theme
 
