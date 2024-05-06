@@ -22,7 +22,7 @@ visibility: public
 `= ("> " + this.desc-short)`
 ## Features
 
-- text to diagram with AI (currently using Mermaid as intermediary[^medium-text-diagram-ai]
+- text to diagram with AI (currently using Mermaid as intermediary)[^medium-text-diagram-ai]
 
 ## References
 

@@ -10,7 +10,6 @@ category:
   - devops
 url: https://gitlab.com/
 docs: https://docs.gitlab.com/
-developer: ""
 desc-short: GitLab is the most comprehensive AI-powered DevSecOps Platform.
 visibility: public
 img: '<img src="https://docs.gitlab.com/assets/images/gitlab-logo-header.svg" style="width: 80px;"/>'
@@ -22,11 +21,12 @@ related:
 `=this.img`
 `= ("> " + this.desc-short)`
 
-| Item        | References                    |
-| ----------- | ----------------------------- |
-| Links       | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
-| Related     | `=(join(this.related, ", "))` |
-| GitLab docs | [GL Markdown][gl-md]          |
+| Item           | References                                                                      |
+| -------------- | ------------------------------------------------------------------------------- |
+| External Links | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
+| GitLab docs    | [GL Markdown][gl-md]                                                            |
+| Topics         | [[#Issues, Boards, Project Management\|Agile]]                                  |
+| Related        | `=(join(this.related, ", "))`                                                   |
 
 ## Issues, Boards, Project Management
 
@@ -87,15 +87,13 @@ For example, to give read access to a project an access token with role `Reporte
 - [Group](https://docs.gitlab.com/ee/user/group/settings/group_access_tokens)
 - [API: personal/project/group tokens](https://docs.gitlab.com/ee/api/rest/index.html#personalprojectgroup-access-tokens)
 
-## Automation
-
-### CI/CD
+## Automation and CI/CD
 
 By default `.gitlab-ci.yml`
 
 [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 
-- [Keyword reference](https://docs.gitlab.com/ee/ci/yaml/)
+- [CI/CD YAML syntax reference](https://docs.gitlab.com/ee/ci/yaml/)
 - [GitLab CI/CD variables](https://docs.gitlab.com/ee/ci/variables/) | [predefined variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
 - [GitLab CI/CD for external repositories](https://docs.gitlab.com/ee/ci/ci_cd_for_external_repos/index.html)
     apparently it is possible to connect repositories, e.g. from Github, and use GitLab CI/CD
@@ -104,27 +102,37 @@ By default `.gitlab-ci.yml`
 - [GitLab development with Vagrant](https://gitlab.com/gitlab-org/gitlab-development-kit/-/blob/main/doc/howto/vagrant.md)
 - [Migrate from GitHub](https://docs.gitlab.com/ee/ci/migration/github_actions.html)
 
-```yaml
-variables:
-  GIT_SUBMODULE_FORCE_HTTPS: "true"  # force (SSH) URLs to HTTPS
-  GIT_SUBMODULE_STRATEGY: recursive  # init/update/pull SMs recursively
-```
+> [!tip]+ [Example YAML config](https://docs.gitlab.com/ee/ci/yaml/)
+> ```yaml
+> default:
+> interruptible: true # new pipeline may cancel running one (default false)
+>   image: ubuntu:latest # Docker image
+>   # or
+>   image: # docker image
+>     name: python:3
+>     pull_policy: if-not-present # default is "always", has to be enabled in runner config
+> variables:
+>   GIT_SUBMODULE_FORCE_HTTPS: "true"  # force (SSH) URLs to HTTPS
+>   GIT_SUBMODULE_STRATEGY: recursive  # init/update/pull SMs recursively
+> ```
 
-[To Be Continuous][tbc]: [GitLab CI templates][tbc-templates]
-> _to be continuous_ proposes a set of GitLab CI templates developed and maintained by DevOps and technology experts to build state-of-the-art CI/CD pipelines in minutes.
+References
 
-#### Stages
+- [To Be Continuous][tbc]: [GitLab CI templates][tbc-templates]
+    > _to be continuous_ proposes a set of GitLab CI templates developed and maintained by DevOps and technology experts to build state-of-the-art CI/CD pipelines in minutes.
+
+### Stages
 
 - `pages`: special and activated for projects where [[#GitLab Pages]] feature is enabled. After `build` stage artifacts (default `public/`) are deployed to configured destination
 
-#### Script
+### Script
 
 Custom commands to be executed in `script` section
 
 - [before_script](https://docs.gitlab.com/ee/ci/yaml/?query=before_script): run before every command in `script` section. Per stage or globally defined.
 
 
-#### Artifacts
+### Artifacts
 
 Projects settings
 
@@ -140,22 +148,38 @@ curl --request DELETE --header "PRIVATE-TOKEN: <your_access_token>" "https://git
 If old pipelines and jobs keep taking up too much storage, consider API calls to delete these.[^so-api-delete-pipelines][^medium-api-delete-pipelines]
 
 
-#### Docker Images
+### Docker
 
-- [Access image from private Container Registry](https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#access-an-image-from-a-private-container-registry)
+Configure runner in runner `config.toml` (see explanations below)
 
-Image can be specified per job
-
-```yaml
-build:trusty:
-  image: trusty:base
+```toml
+[runners.docker]
+image = "<image name>"
+pull_policy = "if-not-present" # prioritise local images
 ```
 
-Triggers and connecting pipelines (e.g. from another project's pipeline)
+Register runner with a [config template][gl-docs-config-template] (directory with this file has to be mounted as Docker volume)
 
-- [GitLab documentation: Triggers](https://docs.gitlab.com/ee/ci/triggers/)
-- [GitLab documentation: Pipeline Triggers](https://docs.gitlab.com/ee/api/pipeline_triggers.html)
-- [GitLab documentation: Downstream pipelines](https://docs.gitlab.com/ee/ci/pipelines/downstream_pipelines.html): multi-project pipelines, parent-child pipelines
+```bash
+gitlab-runner register --template-config=<config.toml>
+```
+
+- Docker images
+    - [Access image from private Container Registry](https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#access-an-image-from-a-private-container-registry)
+    - [Docker image pull policies](https://docs.gitlab.com/runner/executors/docker.html#configure-how-runners-pull-images)
+- Triggers and connecting pipelines (e.g. from another project's pipeline)
+    - [GitLab documentation: Triggers](https://docs.gitlab.com/ee/ci/triggers/)
+    - [GitLab documentation: Pipeline Triggers](https://docs.gitlab.com/ee/api/pipeline_triggers.html)
+    - [GitLab documentation: Downstream pipelines](https://docs.gitlab.com/ee/ci/pipelines/downstream_pipelines.html): multi-project pipelines, parent-child pipelines
+
+To test a pipeline job from a `.gitlab-ci.yaml` file
+
+```bash
+gitlab-runner exec docker <job name> \
+    --docker-image=<image name>:<image tag>
+    --docker-pull-policy=never \ # for local images
+```
+
 
 ### Webhooks
 
@@ -305,3 +329,4 @@ Examples and References
 [^medium-api-delete-pipelines]: <https://benlobaugh.medium.com/how-to-clean-up-gitlab-artifacts-c7ce34c70213> (2024-03-08)
 [tbc]: <https://to-be-continuous.gitlab.io/>
 [tbc-templates]: <https://gitlab.com/to-be-continuous>
+[gl-docs-config-template]: <https://docs.gitlab.com/runner/register/index.html#register-with-a-configuration-template>

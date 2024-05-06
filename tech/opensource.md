@@ -73,6 +73,7 @@ See also [awesome-open-source] > organisations.
     - [OSI Approved Licenses](https://opensource.org/licenses)
 - [Free Software Foundation (FSF)](https://www.fsf.org)
     - [Protest Against DRM](https://www.fsf.org/news/worldwide-community-of-activists-protest-overdrive-and-others-forcing-drm-upon-libraries): [https://defectivebydesign.org](https://defectivebydesign.org/) #tech/drm
+- [Free Software Foundation Europe (FSFE)](https://fsfe.org/index.en.html)
 - [LibrePlanet](https://libreplanet.org)
 - [CHAOSS](https://chaoss.community/): Community Health Analytics in Open Source Software
     CHAOSS is a Linux Foundation project focused on creating metrics, metrics models, and software to better understand open source community health on a global scale.

@@ -58,7 +58,7 @@ Tools
 - <https://iconduck.com/>
 - GitLab: [[rug/lwp/GitLab#^8b2ea8|GitLab icon SVGs]]
 - [Lucide open source icons](https://lucide.dev/) [![|20](github.png)](https://github.com/lucide-icons/lucide)
-    - used by [[public/tech/productivity/obsidian/Obsidian]]
+    - used by [[obsidian]]
 - <https://super.so/icons>
 
  

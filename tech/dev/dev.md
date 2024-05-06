@@ -51,10 +51,6 @@ related:
 - [haylxon](https://github.com/pwnwriter/haylxon): grab screenshots from terminal
 
 
-#### Licensing
-
-
-
 
 ### Shells
 
@@ -94,6 +90,18 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 - [lefthook] Fast and powerful Git hooks manager for any type of projects
 
 
+## Supply Chain
+
+tags: #dev/bom #dev/sbom
+> A **software supply chain** is composed of the components, libraries, tools, and processes used to develop, build, and publish a software artifact.^[https://en.wikipedia.org/wiki/Software_supply_chain#cite_note-1]
+
+- [[SPDX]] (Software Package Data Exchange)
+- [[CycloneDX]]
+
+References
+
+- [For Good Measure Counting Broken Links: A Quant's View of Software Supply Chain Security][usenix-supply-chain]
+
 ## Code Quality and Static Analysis
 
 - [analysis-tools.dev]: compare tools and linters, filter by open-source and more, user reviews
@@ -128,6 +136,8 @@ Tags: #dev/build
 - [Meson build system](https://mesonbuild.com/)
 - [Ninja](https://ninja-build.org/)
 - [Heroku](https://www.heroku.com/): infrastructure for developers
+- [[just]]
+
 
 Watch files/dirs for changes
 
@@ -261,3 +271,4 @@ Free stock media
 [analysis-tools.dev]: <https://analysis-tools.dev/> 
 [lefthook]: <https://github.com/evilmartians/lefthook>
 [dotfiles-github]: <https://dotfiles.github.io/>
+[usenix-supply-chain]: <https://www.usenix.org/system/files/login/articles/login_winter20_17_geer.pdf>

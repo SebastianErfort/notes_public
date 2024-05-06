@@ -275,7 +275,7 @@ some_url: https://example.com
 ## Integrations
 
 - [[git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
-- Obsidian: [[obsidian/obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- Obsidian: [[obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 - [[mkdocstrings]]
 
 ### Search

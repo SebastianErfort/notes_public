@@ -50,11 +50,11 @@ WHERE type = "software" and contains(category,"security") AND contains(file.fold
 
 ## Vulnerabilities
 
-Website maintainers can provide a `security.txt` file to give security companies and white hackers standardised information on how to report vulnerabilities.[^1]
-
-[^1]: <https://en.wikipedia.org/wiki/Security.txt>
+Website maintainers can provide a [`security.txt`][security.txt] file to give security companies and white hackers standardised information on how to report vulnerabilities.
 
 ## Password management
+
+- [ripasso](https://github.com/cortex/ripasso): password manager written in Rust
 
 ### pass
 
@@ -77,6 +77,5 @@ AddOns
 <https://passkeys.io>
 > A passkey is a new way to sign in that works completely without passwords. By using the security capabilities of your devices like Touch ID and Face ID, passkeys are way more secure and are easier to use than both passwords and all current 2-factor authentication methods.
 
-### More
 
-<https://github.com/cortex/ripasso>: password manager written in Rust
+[security.txt]: <https://en.wikipedia.org/wiki/Security.txt>

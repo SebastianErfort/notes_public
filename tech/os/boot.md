@@ -5,6 +5,9 @@ aliases:
   - PXE
   - iPXE
 ---
+## Tools
+
+- [U-Boot](https://docs.u-boot.org/en/latest/)
 
 ## Network
 

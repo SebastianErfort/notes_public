@@ -13,7 +13,7 @@ visibility: public
 
 Working directory is shared with VM, accessible under `/vagrant`.
 
-# Commands
+## Commands
 
 ```bash
 vagrant init hasicorp/bionic64 # create Vagrantfile for specified box
@@ -30,7 +30,7 @@ vagrant box remove
 vagrant up --provider=vmware_desktop # use specified provider, no changes to Vagrantfile necessary. Following commands should use the same, no need to specify again
 ```
 
-# Provisioning
+## Provisioning
 
 <https://developer.hashicorp.com/vagrant/docs/provisioning>
 Happens
@@ -39,7 +39,7 @@ Happens
 - when running `vagrant provision`
 - calling `vagrant reload --provision`
 
-# Vagrantfile
+## Vagrantfile
 
 Written in [[ruby|ruby]] language
 
@@ -67,7 +67,13 @@ with provisioning script `bootstrap.sh`. Reload after editing, `vagrant reload`.
 
 Vagrant also supports *linked clones*, providing significant savings in disk space, see [this article](https://medium.com/oracledevs/two-birds-with-one-home-cloned-vagrant-multi-machines-2ee5ba75fad8).
 
-# Boxes
+
+## Controlling Machines
+
+- SSH private key in `./.vagrant/machines/default/<hypervisor>/private_key`
+
+
+## Boxes
 
 - Documentation
     - [Boxes > Creating a Base Box](https://developer.hashicorp.com/vagrant/docs/boxes/base)
@@ -79,11 +85,11 @@ Package a box for reuse. **This didn't work the way I expected, the packages box
 
 ```bash
 vagrant package [--base NAME]
-# --base NAME  package a VirtualBox machine VirtualBox manages instead
+## --base NAME  package a VirtualBox machine VirtualBox manages instead
 vagrant box add mybox /path/to/my.box
 ```
 
-### Repository
+#### Repository
 
 [Create private Vagrant box repository](https://softwaretester.info/create-private-vagrant-box-repository/)
 
@@ -103,45 +109,6 @@ vagrant box add mybox /path/to/my.box
    systemctl restart nginx
    ```
 
-# Examples
+## Examples
 
-## HTML server
-
-See <https://developer.hashicorp.com/vagrant/tutorials/networking-provisioning-operations/getting-started-provisioning>
-
-In working dir with Vagrantfile, create dir `html` with file `index.html`
-
-```html
-<!DOCTYPE html>
-<html>
-  <body>
-    <h1>Get started with Vagrant!</h1>
-  </body>
-</html>
-```
-
-Create provisioning script `bootstrap.sh` with content
-
-```bash
-#!/usr/bin/env bash
-
-apt-get update
-apt-get install -y apache2
-if ! [ -L /var/www ]; then
-  rm -rf /var/www
-  ln -fs /vagrant /var/www
-fi
-```
-
-assuming Debian family OS, installing Apache and sym-linking synced Vagrant directory and Apache content directory to be served.
-
-Edit Vagrantfile to use provisioning script
-
-```ruby
-Vagrant.configure("2") do |config|
-  config.vm.box = "hashicorp/bionic64"
-  config.vm.provision :shell, path: "bootstrap.sh"
-end
-```
-
-Start up and verify, for example on VM `vagrant@vagrant:~$ wget -qO- 127.0.0.1`
+[[example_html_server]]

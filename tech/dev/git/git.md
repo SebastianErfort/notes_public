@@ -75,7 +75,14 @@ git config --global -e # Edit global git config file
 ```
 
 Local ignore/exclude file: config `git config --global core.excludesFile ~/.git/info/exclude`
-Environment: `GIT_COMMITTER_NAME`, `GIT_COMMITTER_EMAIL`, `GIT_AUTHOR_NAME`, `GIT_AUTHOR_EMAIL`
+Environment
+
+```text
+GIT_COMMITTER_NAME
+GIT_COMMITTER_EMAIL
+GIT_AUTHOR_NAME
+GIT_AUTHOR_EMAIL
+```
 
 [Sparse Checkout](https://git-scm.com/docs/git-sparse-checkout): clone/check out only part of a repository[^2]
 

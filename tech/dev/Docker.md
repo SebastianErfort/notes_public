@@ -15,9 +15,9 @@ visibility: public
 ```bash
 docker pull <image> # pull image from registry
 docker container ls # list (running) containers
-docker exec -it <container-id> /bin/bash # get a shell
-docker run -it <image name> /bin/bash # get a shell
 docker ps # list containers
+docker run -d -it <image name> # start container
+docker exec -it <container-id> /bin/bash # get a shell
 ```
 
 
@@ -44,7 +44,7 @@ Using an image checksum in the definition can be used to verify integrity and do
 
 - `newuidmap` and `newgidmap` already available, package `uidmap` doesn't exist
 - installed `fuse-overlayfs` as recommended
-- Docker package from official repos didn't have script `dockerd-rootless-setuptool.sh`, so I am trying to install a package provided by Docker
+- Docker package from distro repos didn't have script `dockerd-rootless-setuptool.sh`, so I am trying to install a package provided by Docker
 - run (see [openSUSE forum](https://forums.opensuse.org/t/how-can-i-request-the-official-repository-provides-tools-for-rootless-docker/164199))
 
   ```bash
