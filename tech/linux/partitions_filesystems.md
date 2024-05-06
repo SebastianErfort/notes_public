@@ -41,9 +41,20 @@ aliases:
     - FAT: `(ex)fatlabel device [label]`
 
 
-## Mount
+### Mount
 
 - [Bind mount explained @StackExchange](https://unix.stackexchange.com/a/198591/247791)
+- Overlay filesystem: [ArchWiki][overlay]
+
+    ```bash
+    mount -t overlay overlay -o lowerdir=/lower1:/lower2:/lower3,upperdir=/upper,workdir=/work /merged
+    ```
+
+    or in `/etc/fstab`
+
+    ```fstab
+    overlay /merged overlay noauto,x-systemd.automount,lowerdir=/lower,upperdir=/upper,workdir=/work 0 0
+    ```
 
 
 ## Tools and Commands
@@ -65,3 +76,7 @@ aliases:
   ```
 
 - [FSArchiver](https://www.fsarchiver.org/quickstart/): save the contents of a file-system to a compressed archive file
+
+## References
+
+[overlay]: <https://wiki.archlinux.org/title/Overlay_filesystem>

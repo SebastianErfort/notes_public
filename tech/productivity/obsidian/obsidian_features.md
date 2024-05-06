@@ -28,13 +28,13 @@ Link types
 
 - regular Markdown links: `[link text|alt link text](URI "link title")` (linkt title and alt link text are optional)
     - Link with separate definition (only reading mode, URL has to be valid format, else it won't be rendered)
-    
-      ```markdown
-      [Link text][link-key]
-    
-      [link-key]: URL
-      ```
-   
+
+        ```markdown
+        [Link text][link-key]
+      
+        [link-key]: URL
+        ```
+
 - Wiki-Links: `[[file name|link text]]` ^cecfe6
 - HTML links using the anchor tag: `<a href="URI">link text</a>` ^html-link
 
@@ -68,8 +68,8 @@ For example center images, see `image_center.css` in snippets folder. Usage:
 HTML figure: offers caption, contents and caption can be centered (not working in reader mode)
 
 <figure style="text-align: center;">
-  <img src="https://cdn.pixabay.com/photo/2023/11/22/15/20/books-8405721_1280.jpg"  width="400" style="align: center;">
-  <figcaption><a class="external-link" href="https://pixabay.com/photos/books-leather-old-antique-binding-8405721/">Leather-bound Books (Joa 70 via Pixabay)</a></figcaption>
+<img src="https://cdn.pixabay.com/photo/2023/11/22/15/20/books-8405721_1280.jpg"  width="400" style="align: center;">
+<figcaption><a class="external-link" href="https://pixabay.com/photos/books-leather-old-antique-binding-8405721/">Leather-bound Books (Joa 70 via Pixabay)</a></figcaption>
 </figure>
 
 ### Code Blocks
@@ -118,6 +118,7 @@ Or with an inline footnote ^[without a need to specify the text separately]
 - [call-outs](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types)
     > [!idea] Why don't we ...?
 - special bullet points for check lists: theme feature, support and meaning varies. If unsupported, items show up as checked. Alternatively use CSS to get this function (see `.obsidian/snippets/checkboxes.css`,[^2] some icons might be difficult to see, depending on theme)
+
 > [!tip]- Alternative Checkboxes
 >
 > - [ ] Unchecked
@@ -138,6 +139,7 @@ Or with an inline footnote ^[without a need to specify the text separately]
 > - [c] Con
 > - [b] Bookmark
 > - ["] Quote
+>
 - Metadata or YAML frontmatter (used by many softwares)
 
 [^2]: <https://forum.obsidian.md/t/alternative-checkboxes-icon-bullets-copy-and-paste/35962/15>
@@ -150,8 +152,8 @@ See [Obsidian Documentation](https://help.obsidian.md/Editing+and+formatting/Cal
 Syntax:
 
 ```markdown
-> [!<type>] <title>
-> <content>
+  >  [!<type>] <title>
+  >  <content>
 ```
 
 > [!note] Default supported types
@@ -163,6 +165,7 @@ Syntax:
 
 `tip/hint`
 > [!tip] You can create your own using CSS snippets (Settings: Appearance > CSS snippets), for example. Obsidian is using [Lucide icons][lucide-icons], search there for the name of your desired icon.
+>
 > ```css
 > .callout[data-callout="event"] {
 >     --callout-color: 102, 153, 204;
@@ -229,17 +232,17 @@ Some themes or CSS snippets add further call-outs.
     - inline: #obsidian
     - YAML frontmatter:
 
-  ```yaml
-  ---
-  tags: Obsidian
-  ---
-  ```
+        ```yaml
+        ---
+        tags: Obsidian
+        ---
+        ```
 
 - queries
 
-  ```query
-  #Obsidian
-  ```
+    ```query
+    #Obsidian
+    ```
 
 - graph view
 

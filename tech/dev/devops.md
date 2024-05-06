@@ -22,6 +22,12 @@ Tools
 - [nektosact](https://nektosact.com/): [GitHub](https://github.com/nektos/act)
     > Run your GitHub Actions locally 🚀
 
+
+## Code Review
+
+- [[gerrit]]
+
+
 ## Software
 
 ### GitLab

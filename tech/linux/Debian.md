@@ -48,7 +48,7 @@ dpkg --compare-versions $version1 ne $version2
 
 ### apt
 
-# Linux/apt
+Tags: #linux/apt
 
 Add repository: add file in `/etc/apt/sources.list.d/` with
 
@@ -92,9 +92,16 @@ apt-mark hold linux-headers-${pin}-generic linux-image-${pin}-generic linux-modu
 
 #### Nala
 
-[![[github.svg]] Github](https://github.com/volitank/nala) | [![[book.svg]] Wiki](https://gitlab.com/volian/nala/-/wikis/Installation)
+[Github](https://github.com/volitank/nala) | [![[book.svg]] Wiki](https://gitlab.com/volian/nala/-/wikis/Installation)
 > Nala is a front-end for `libapt-pkg`. Specifically we interface using the `python-apt` api.
 ![|400](https://github.com/volitank/nala/raw/main/imgs/nala-install-2.png)
 <https://trendoceans.com/nala-package-manager/>
 
 
+## References
+
+- [Debian Live Manual][deb-live]
+- [Build Debian live image, blog post][blog-live-build]
+
+[deb-live]: <https://live-team.pages.debian.net/live-manual/html/live-manual/toc.en.html>
+[blog-live-build]: <https://dquinton.github.io/debian-install/netinstall/live-build.html>

@@ -2,8 +2,20 @@
 title: Packaging
 visibility: public
 ---
+See also
 
-## Flatpak
+- [[dev#Licensing|Development > Licensing]]
+
+## Package Repositories
+
+- [[Pulp]]
+
+
+## Package Types
+
+### [[Snap]]
+
+### [[Flatpak]]
 
 - tend to bloat
     - improper clean-up after uninstall
@@ -15,7 +27,7 @@ visibility: public
 
       ```
 
-    - temporary files in `/var/tmp` or `/var/lib/flatpak/repo/tmp` (e.g. case of [[SoaresGirao_Willian|customer]])
+    - temporary files in `/var/tmp` or `/var/lib/flatpak/repo/tmp`
     - forum threads as old as 2017 w/o proper solution, suggesting automated clean-up/manual deleting
 
 ## References

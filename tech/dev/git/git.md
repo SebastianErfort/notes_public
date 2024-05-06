@@ -281,6 +281,7 @@ and optionally
 Helpful
 
 - [[bat]]
+- [gource](https://gource.io/): animated timeline of repo with dirs and files as branches and leaves, option to add highlights
 
 ## Providers and Servers
 
