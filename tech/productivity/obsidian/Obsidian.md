@@ -220,7 +220,7 @@ References
 - <https://flowershow.app/> | [GitHub](https://github.com/datopian/obsidian-flowershow)
 - [obsidian-webpage-export](https://github.com/KosmosisDire/obsidian-webpage-export)
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
-- [quartz](https://quartz.jzhao.xyz/) | [Docs](https://github.com/jackyzha0/quartz)
+- [quartz](https://quartz.jzhao.xyz/) | [Docs](https://github.com/jackyzha0/quartz): [Video @YT][nvdh-quartz]
   > a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites
 
 
@@ -254,3 +254,4 @@ References
 [obsidian-workflow-template]: <https://github.com/mathisgauthey/obsidian-workflow-template>
 [^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`
 [JS in Obsidian]: <https://www.reddit.com/r/ObsidianMD/comments/xal0c7/comment/jccdv0i/>
+[nvdh-quartz]: <https://nicolevanderhoeven.com/blog/20240126-how-to-publish-your-notes-for-free-with-quartz/>
