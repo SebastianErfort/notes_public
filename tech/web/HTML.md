@@ -6,14 +6,16 @@ related:
   - "[[CSS]]"
   - "[[writing/Markdown|Markdown]]"
 ---
+# HTML
 
 See also my notes on [[CSS|CSS]] | [[Markdown|Markdown]]
-
 
 ## Language
 
 
 ### Tags
+
+HTML tag: `<tag>Content</tag>` (some don't require a closing tag)
 
 References
 
@@ -29,9 +31,9 @@ HTML entities: reserved characters in HTML must be replaced with entities[^1]
 
 Additional
 
-Character | Code | Description
--|-|-
-&blank; | `&blank;` | Symbol for a space
+| Character | Code      | Description        |
+| --------- | --------- | ------------------ |
+| &blank;   | `&blank;` | Symbol for a space |
 
 [^1]: <https://www.w3schools.com/HTML/html_entities.asp>
 
@@ -41,9 +43,9 @@ Character | Code | Description
 - Font
     - Specify font in tag with fallback `serif`
 
-      ```html
-      <div style="font-family: DejaVu Sans, serif;">Example text</div>
-      ```
+        ```html
+        <div style="font-family: DejaVu Sans, serif;">Example text</div>
+        ```
 
 - overlay
     - filter

@@ -1,7 +1,9 @@
 ---
 title: Smallstep
 type: software
-category: ""
+category:
+  - certificates
+  - authentication
 url: ""
 docs: ""
 github: ""

@@ -6,11 +6,21 @@ visibility: public
 related:
   - "[[_software#Dev|Software Dev]]"
   - "[[git/GitLab#CI/CD|GitLab CICD]]"
+  - "[[dev/Design|Design]]"
 ---
-| Resource     | References                    |
-| ------------ | ----------------------------- |
-| My notes     | `=(join(this.related, ", "))` |
-| My resources | [sw project template]()       |
+# Development
+
+| Resource | References                    |
+| -------- | ----------------------------- |
+| My notes | `=(join(this.related, ", "))` |
+
+**Table of Contents**
+
+[[#Command Line|⌨️ Command Line]]
+[[#Version Control]]
+[[#build|🛠️ Build]]
+
+---
 
 ## Command Line
 
@@ -25,20 +35,7 @@ related:
 
 #### Quick Reference and Cheatsheets
 
-- [cheat](https://github.com/cheat/cheatsheets): Community-sourced cheatsheets
-  Example:
-
-  ```markdown
-  ---
-  syntax: bash
-  tags: [ vcs, development ]
-  ---
-  # To stage all changes in the current directory:
-  git add --all
-
-  # To commit staged changes:
-  git commit -m <message>
-  ```
+- [[Cheat]]
 
 #### Files and Directories
 
@@ -48,10 +45,6 @@ related:
 #### GUI Interaction
 
 - [haylxon](https://github.com/pwnwriter/haylxon): grab screenshots from terminal
-
-
-#### Licensing
-
 
 
 
@@ -93,6 +86,18 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 - [lefthook] Fast and powerful Git hooks manager for any type of projects
 
 
+## Supply Chain
+
+tags: #dev/bom #dev/sbom
+> A **software supply chain** is composed of the components, libraries, tools, and processes used to develop, build, and publish a software artifact.^[https://en.wikipedia.org/wiki/Software_supply_chain#cite_note-1]
+
+- [[SPDX]] (Software Package Data Exchange)
+- [[CycloneDX]]
+
+References
+
+- [For Good Measure Counting Broken Links: A Quant's View of Software Supply Chain Security][usenix-supply-chain]
+
 ## Code Quality and Static Analysis
 
 - [analysis-tools.dev]: compare tools and linters, filter by open-source and more, user reviews
@@ -120,37 +125,47 @@ WHERE contains(file.path,"lint")
 
 Tags: #dev/build
 
-- [Meson build system](https://mesonbuild.com/)
+- [[make]]
 - [CMake](https://cmake.org/)
     - [CMake repo UCL](https://github.com/UCL/GreatCMakeCookOff)
+- [[Taskfile]]
+- [Meson build system](https://mesonbuild.com/)
 - [Ninja](https://ninja-build.org/)
 - [Heroku](https://www.heroku.com/): infrastructure for developers
+- [[just]]
+- [Shake]
 
 Watch files/dirs for changes
 
+- `inotify`
 - [Watchman](https://facebook.github.io/watchman/) | [Github](https://github.com/facebook/watchman)
 
-### Make
 
-See [[make]]
+## Languages
 
-### [[Taskfile]]
 
+### Templating
+
+- Jinja
+- [Tera]: "A powerful, easy to use template engine for Rust"
 
 ## DevOps and CI/CD
 
-See [[DevOps]]
+See also [[dev/devops|DevOps]].
+
+- [to be continuous](https://to-be-continuous.gitlab.io/): [docs](https://to-be-continuous.gitlab.io/doc/)
+  Guides on building (GitLab) CI/CD pipelines, e.g. suggested stages
 
 
-## Linux
+### Platforms
 
-- [KIWI: command line utility to build Linux system appliances](https://osinside.github.io/kiwi/)
-- [openQA: automated tests (for OSs)](command line utility to build Linux system appliances)
-- [Appstream](https://www.freedesktop.org/software/appstream/docs/): Infrastructure for distro-agnostic software-centers and universal software component metadata
+- [Tekton](https://tekton.dev/) : [docs](https://tekton.dev/docs/) | [source](https://github.com/tektoncd)
+  > Cloud Native CI/CD
+
 
 ## Databases
 
-See [[databases|my notes on databases]]
+See [[public/tech/data/databases/index|my notes on databases]]
 
 ### Automation
 
@@ -169,6 +184,21 @@ See [[databases|my notes on databases]]
 ### [[VMWare]]
 
 ### [[VirtualBox]]
+
+## Linux
+
+- [KIWI: command line utility to build Linux system appliances](https://osinside.github.io/kiwi/)
+- [openQA: automated tests (for OSs)](command line utility to build Linux system appliances)
+- [Appstream](https://www.freedesktop.org/software/appstream/docs/): Infrastructure for distro-agnostic software-centers and universal software component metadata
+
+## Operating Systems
+
+- [[Debian]]
+- [[Ubuntu]]
+
+### Mobile
+
+- [[Android]]
 
 ## Infrastructure
 
@@ -202,18 +232,12 @@ Suggested files and directories
 
 ### Management
 
-[Contributer Covenant: Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
-[[eScienceCenter]]: [[Practical guide to Software Management Plans.pdf|Practical guide to Software Management Plans]]
+- versioning
+    - [asdf](https://asdf-vm.com/): multiple runtime version manager
+- contributing
+    - [Contributer Covenant: Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
+    - [[eScienceCenter]]: [[Practical guide to Software Management Plans.pdf|Practical guide to Software Management Plans]]
 
-
-## Operating Systems
-
-- [[Debian]]
-- [[Ubuntu]]
-
-### Mobile
-
-- [[Android]]
 
 ## [[design|UI and Design]]
 
@@ -254,3 +278,6 @@ Free stock media
 [analysis-tools.dev]: <https://analysis-tools.dev/> 
 [lefthook]: <https://github.com/evilmartians/lefthook>
 [dotfiles-github]: <https://dotfiles.github.io/>
+[usenix-supply-chain]: <https://www.usenix.org/system/files/login/articles/login_winter20_17_geer.pdf>
+[shake]: <https://shakebuild.com/>
+[tera]: <https://keats.github.io/tera/>

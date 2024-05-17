@@ -7,7 +7,7 @@ docs: ""
 source: "https://github.com/rustdesk/rustdesk"
 desc-short: An open-source remote desktop, and alternative to TeamViewer.
 tags:
-  - os/remote-desktop
+  - tech/os/remote-desktop
 visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

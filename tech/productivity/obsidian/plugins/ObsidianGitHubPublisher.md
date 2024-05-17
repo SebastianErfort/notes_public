@@ -11,8 +11,8 @@ desc-short: |-
 summary: Publish your notes in your own GitHub repository for free and do whatever you want with them.
 This allows you to set up any template: Jekyll, Mkdocs, Hugo, or custom-made ones!
 tags:
-  - Obsidian
-  - Obsidian/publishing
+  - obsidian
+  - obsidian/publishing
   - dev/documentation/MkDocs
   - dev/documentation/MkDocs/material
 visibility: public

@@ -7,7 +7,10 @@ aliases:
 related:
   - "[[OSPO]]"
   - "[[openscience|Open Science]]"
+  - "[[data/index|Data]]"
 ---
+# Open Source
+
 |           |                                                             |
 | --------- | ----------------------------------------------------------- |
 | See also  | [[OSPO]], [Open Science](openscience)                       |
@@ -44,13 +47,9 @@ related:
 TABLE WITHOUT ID
 file.link AS "Name",
 url AS "Website",
-category AS "Category"
+(join(category,", ")) AS "Category"
 WHERE type = "software" AND (contains(license,"opensource") OR contains(license,"open-source"))
 ```
-<!--
-GROUP BY category
-broken because category now array?
--->
 
 
 ### Contributing
@@ -74,6 +73,7 @@ See also [awesome-open-source] > organisations.
     - [OSI Approved Licenses](https://opensource.org/licenses)
 - [Free Software Foundation (FSF)](https://www.fsf.org)
     - [Protest Against DRM](https://www.fsf.org/news/worldwide-community-of-activists-protest-overdrive-and-others-forcing-drm-upon-libraries): [https://defectivebydesign.org](https://defectivebydesign.org/) #tech/drm
+- [Free Software Foundation Europe (FSFE)](https://fsfe.org/index.en.html)
 - [LibrePlanet](https://libreplanet.org)
 - [CHAOSS](https://chaoss.community/): Community Health Analytics in Open Source Software
     CHAOSS is a Linux Foundation project focused on creating metrics, metrics models, and software to better understand open source community health on a global scale.
@@ -89,6 +89,7 @@ See also [awesome-open-source] > organisations.
     - https://socialimpact.github.com/insights/what-are-digital-public-goods-and-DPGA/
 - [Open Source Initiative](https://opensource.org/osd/)
 - [disroot.org](https://disroot.org): platform providing online services based on principles of freedom, privacy, federation and decentralization
+- [GOV.UK Open Standards principles](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles)
 
 
 ## People
@@ -108,14 +109,14 @@ See also [awesome-open-source] > organisations.
 ## News and Events
 
 - https://foss.events/
-
-
-- [Article ](https://www.theregister.com/2023/12/27/bruce_perens_post_open/) by (people:: [[Bruce Perensen]]) @TheRegister
-- https://opensource.guide/
-- [gnu.org: What is Free Software?](https://www.gnu.org/philosophy/free-sw.html)
 - [LibrePlanet 2024 event by FSF](https://libreplanet.org/2024/): May 4 & 5, 2024
 
+- [Article ](https://www.theregister.com/2023/12/27/bruce_perens_post_open/) by (people:: [[Bruce Perensen]]) @TheRegister
+
 ## References
+
+- https://opensource.guide/
+- [gnu.org: What is Free Software?](https://www.gnu.org/philosophy/free-sw.html)
 
 [first-os-contrib]: <https://github.com/readme/guides/first-oss-contribution>
 [awesome-open-source]: <https://github.com/cornelius/awesome-open-source>

@@ -11,15 +11,9 @@ visibility: public
 type: software
 category: shell
 ---
-
 # Bash
 
 [Linux Commands](linux.md#Commands) | [code snippets](file://src) |  [Jupyter-lab notebook](file://notes/life/tech/bash.ipynb)
-
-- [wooledge.org Wiki](https://mywiki.wooledge.org/EnglishFrontPage)
-    - [Bashim](https://mywiki.wooledge.org/Bashism)
-    - [Bash Sheet](https://mywiki.wooledge.org/BashSheet)
-- [Bash Bracket Quick Reference](https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/)
 
 ## Options & Config
 
@@ -31,9 +25,9 @@ category: shell
 
 See [readline man page](https://www.man7.org/linux/man-pages/man3/readline.3.html).
 
-Shortcut | Description
--|-
-<kbd>ctrl+x, ctrl+e</kbd> | editing mode in default editor to enter commands like you would in a script, executed upon save+close. Also great when pasting (longer) scripts into your terminal
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>ctrl+x, ctrl+e</kbd> | editing mode in default editor to enter commands like you would in a script, executed upon save+close. Also great when pasting (longer) scripts into your terminal |
 
 Customise in config::  `~/.inputrc`
 
@@ -122,6 +116,18 @@ echo $n
 ```
 
 ### Variables
+
+### Declaration
+
+```bash
+local -a # local array
+global -A # global associative array
+# declare and typeset create local var.s unless -g is specified
+declare -r # read-only
+declare -x # mark for export
+declare -g # global variable in function
+typeset -i i # integer, faster arithmetic and operations such as let y=x**2
+```
 
 #### Booleans: true and false
 
@@ -486,14 +492,19 @@ Examples
 trap "unset ${myvars[@]}" SIGINT SIGQUIT SIGTERM
 ```
 
-Error handling[^1]
+Error handling[^err]
 
 1. use a trap `trap 'cmd1; cmd2; ...' ERR`
 2. Use `errexit` option: `set -e` or `set -o errexit` or start bash with option `-e`
     - Has some [gotchas](http://mywiki.wooledge.org/BashFAQ/105) though.
     - Also consider option `set -o errtrace` (functions and subshells inherit `errexit` option). [StackExchange](https://stackoverflow.com/questions/25378845/what-does-set-o-errtrace-do-in-a-shell-script)
 
-[^1]: <https://stackoverflow.com/questions/64786/error-handling-in-bash>
+
+## Best Practices and Conventions
+
+- Portability: stick to [POSIX Portable Character Set](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap06.html#tag_06_01)
+- [Styleguide by Google](https://google.github.io/styleguide/shellguide.html) ^143a88
+    - functions: lower case, separate words with underscores, use `::` to separate packages/libraries (avoid duplicate names)
 
 ## Testing
 
@@ -508,3 +519,9 @@ Error handling[^1]
 - `set -e`: [caveats and why it is crap](https://mywiki.wooledge.org/BashFAQ/105/Answers)
 [bash: silently kill background function process](https://stackoverflow.com/questions/5719030/bash-silently-kill-background-function-process)
 - [Difference `$@` and `$*` from ChatGPT](arguments.md)
+- [wooledge.org Wiki](https://mywiki.wooledge.org/EnglishFrontPage)
+    - [Bashism](https://mywiki.wooledge.org/Bashism)
+    - [Bash Sheet](https://mywiki.wooledge.org/BashSheet)
+- [Bash Bracket Quick Reference](https://www.assertnotmagic.com/2018/06/20/bash-brackets-quick-reference/)
+
+[^err]: <https://stackoverflow.com/questions/64786/error-handling-in-bash>

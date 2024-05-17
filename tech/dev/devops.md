@@ -1,11 +1,11 @@
 ---
 title: DevOps
 tags:
-  - devops
+  - dev/devops
   - dev
-  - devops/agile
-  - devops/kanban
-  - devops/scrum
+  - dev/devops/Agile
+  - dev/devops/kanban
+  - dev/devops/scrum
 visibility: public
 ---
 ## Dependencies
@@ -21,6 +21,12 @@ Tools
 
 - [nektosact](https://nektosact.com/): [GitHub](https://github.com/nektos/act)
     > Run your GitHub Actions locally 🚀
+
+
+## Code Review
+
+- [[gerrit]]
+
 
 ## Software
 

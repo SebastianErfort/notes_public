@@ -5,11 +5,13 @@ visibility: public
 title: GitLab Reference
 ---
 
-See also [[Gitlab|my notes on GitLab]] and [[GitLab/GitLab|Work notes LWP: GitLab]].
+See also [[docs/seb_public/tech/dev/git/GitLab|my notes on GitLab]] and [[GitLab/GitLab|Work notes LWP: GitLab]].
 
 **Table of Contents**
 
-<!-- This automatically creates a Table of Contents. Unfortunately there doesn't seem to be a way to exclude headings from it, so if one creates a heading for the ToC, it shows up in the ToC itself. -->
+<!-- In GitLab Wikis, this automatically creates a Table of Contents.
+Unfortunately there doesn't seem to be a way to exclude headings from it,
+so if one creates a heading for the ToC, it shows up in the ToC itself. -->
 [[_TOC_]]
 
 To automatically create a table of contents for a page just add the following line
@@ -195,7 +197,7 @@ By default file `.gitlab-ci.yml`
 
 # Wiki
 
-GitLab CE doesn't allow for group Wikis. The GitLab Wiki Webinterface is very limited. The only way to browse pages is by manually creating references, for example on a and in the sidebar. The latter is the same for any page visited, so a fairly good place to have a general table of contents. It is reommenced to edit and view the Wiki with external tools such as [[public/tech/productivity/obsidian/Obsidian]].
+GitLab CE doesn't allow for group Wikis. The GitLab Wiki Webinterface is very limited. The only way to browse pages is by manually creating references, for example on a and in the sidebar. The latter is the same for any page visited, so a fairly good place to have a general table of contents. It is reommenced to edit and view the Wiki with external tools such as [[obsidian]].
 
 # Activity
 

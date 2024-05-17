@@ -4,7 +4,7 @@ visibility: public
 title: Markdown
 related:
   - "[[dev/YAML|YAML]]"
-  - "[[productivity/obsidian/Obsidian]]"
+  - "[[obsidian]]"
   - "[[obsidian_features|Obsidian features]]"
 ---
 
@@ -20,12 +20,17 @@ related:
 
 ## Tools & Software
 
+- command line viewers
+    - [[bat]]
+    - [[glow]]
+    - [[rich]]
+
 ```dataview
 TABLE WITHOUT ID
   file.link AS "Name",
   desc-short AS "Description",
   (join(category)) AS "Category"
-WHERE type = "software" AND contains(category,"markdown")
+WHERE type = "software" AND (contains(category,"markdown") OR contains(tags,"markdown"))
 SORT title
 ```
 
@@ -155,7 +160,7 @@ Discussion
 
 [Website](http://commonmark.org/) | [Specification](https://spec.commonmark.org/0.30/) | [Forum](https://talk.commonmark.org/) | [Tutorial](https://commonmark.org/help/tutorial/)
 
-[[Pandoc]] developer John MacFarlane is one of the founders and maintainers. Used by [[obsidian/Obsidian]].
+[[Pandoc]] developer John MacFarlane is one of the founders and maintainers. Used by [[obsidian]].
 
 
 ### Linting and Style
@@ -172,14 +177,14 @@ Discussion
 
 Front matter
 
-| Package                                                                                           | Description                                                                                                                                                                                                                       | Language   |
-| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| [mdformat-frontmatter]                                                                            | "mdformat plugin to ensure frontmatter is respected"                                                                                                                                                                                                                                  |            |
-| [remark-lint-frontmatter-schema](https://github.com/JulianCataldo/remark-lint-frontmatter-schema) | from JavaScript and VSCode ecosystems 🤮 Didn't get it to run, some shit about [pnpm](javascript#pnpm) failing to install crap after moving tons of [npm](javascript#npm)-installed packages to the void ✨                       | JavaScript |
-| [yaml-fm-lint](https://github.com/leneti/yaml-fm-lint)                                            | "A NodeJS script, which extracts yaml front matter from markdown files and lints the extracted data"<br>❗insists on removing quotes from front matter, only parses one path at a time, removes comments, fails on `path/file.md` |            |
-| [spatie/yaml-front-matter](https://github.com/spatie/yaml-front-matter)                           | "A to the point yaml front matter parser"<br>❕installed using PHP pckg. mgr. `composer` 🤷‍♂                                                                                                                                                                                         | PHP        |
-| [YAML linters](dev/YAML#Linting)                                                                  | YAML only (extract and pass front matter manually)                                                                                                                                                                                |            |
-| [[dev/YAML#Linting\|yamllint]] (no fixing)                                                        | ignores body, treating everything between `---` as YAML (including code blocks with `---`!)                                                                                                                  |            |
+| Package                                                                                           | Description                                                                                                                                                                                                                                     | Language   |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| [mdformat-frontmatter]                                                                            | "mdformat plugin to ensure frontmatter is respected"                                                                                                                                                                                            |            |
+| [remark-lint-frontmatter-schema](https://github.com/JulianCataldo/remark-lint-frontmatter-schema) | from JavaScript and VSCode ecosystems 🤮 Didn't get it to run, some shit about [pnpm](javascript#pnpm) failing to install crap after moving tons of [npm](javascript#npm)-installed packages to the void without confirmation ✨ (different dir) | JavaScript |
+| [yaml-fm-lint](https://github.com/leneti/yaml-fm-lint)                                            | "A NodeJS script, which extracts yaml front matter from markdown files and lints the extracted data"<br>❗insists on removing quotes from front matter, only parses one path at a time, removes comments, fails on `path/file.md`                |            |
+| [spatie/yaml-front-matter](https://github.com/spatie/yaml-front-matter)                           | "A to the point yaml front matter parser"<br>❕installed using PHP pckg. mgr. `composer` 🤷‍♂                                                                                                                                                    | PHP        |
+| [YAML linters](dev/YAML#Linting)                                                                  | YAML only (extract and pass front matter manually)                                                                                                                                                                                              |            |
+| [[dev/YAML#Linting\|yamllint]] (no fixing)                                                        | ignores body, treating everything between `---` as YAML (including code blocks with `---`!)                                                                                                                                                     |            |
 
 All of these seem to fail on ill-formatted [[public/tech/dev/YAML#^7903df|YAML block scalars]]. If the content is under-indented they just die on a missing colon 🤦‍♂
 

@@ -1,9 +1,9 @@
 ---
 title: JavaScript
 ---
-| Category | References |
-| -------- | ---------- |
-| Package manager         | [[#pnpm]]           |
+| Category        | References |
+| --------------- | ---------- |
+| Package manager | [[#pnpm]]  |
 
 ## Package Managers
 
@@ -19,5 +19,7 @@ Doesn't even mention it's a <em>JavaScript</em> package manager. Man do I hope I
 
 
 ## References
+
+- [Article: Yarn, npm or pnpm? @pixelmatters.com](https://www.pixelmatters.com/blog/yarn-npm-or-pnpm)
 
 [pnpm website]: <https://pnpm.io/>

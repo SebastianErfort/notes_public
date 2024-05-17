@@ -6,11 +6,9 @@ type: software
 category: communication
 visibility: public
 ---
-`= ( "[Website](" + this.url + ")")` |  `= ( "[Documentation](" + this.docs + ")")`
+# Zulip
 
-```query
-zulip
-```
+`= ( "[Website](" + this.url + ")")` |  `= ( "[Documentation](" + this.docs + ")")`
 
 [Desktop App installation](https://chat.zulip.com/help/desktop-app-install-guide)
 

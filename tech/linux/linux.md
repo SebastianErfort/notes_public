@@ -98,14 +98,14 @@ find /var/log -type f -printf "%S\t%p\n" | gawk '$1 < 1.0 && $1 > 0.0 {print}'
 
 ## Partitions, File Systems and Swap
 
-![[partitions_filesystems_swap]]
+![[partitions_filesystems]]
 
 ## Network, remote
 
 [wget vs. curl @howtogeek](https://www.howtogeek.com/816518/curl-vs-wget/)
 [[ssh]]
 
-Tags: #net/tools/arping similar to `ping`, but can give results when `ping` doesn't. Reports MAC address
+Tags: #tech/networking/tools/arping similar to `ping`, but can give results when `ping` doesn't. Reports MAC address
 
 [@howtogeek](https://www.howtogeek.com/813741/linux-arping-command/)
 
@@ -288,8 +288,8 @@ Custom fonts can be put for example in `~/.local/share/fonts`, then edit/create 
 Commands
 
 ```bash
-fc-list        # list available fonts
-fc-cache -f -v # refresh fonts
+fc-list [pattern [element... ]] # list available fonts
+fc-cache -f -v [dir]            # refresh fonts
 ```
 
 ## Display
@@ -308,8 +308,8 @@ fc-cache -f -v # refresh fonts
 
 ## Systemd
 >
-> [!info]- [[systemd]]
-> ![[systemd]]
+> [!info]- [[docs/seb_public/tech/linux/systemd]]
+> ![[docs/seb_public/tech/linux/systemd]]
 
 ## supervisord
 

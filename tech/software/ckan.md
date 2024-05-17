@@ -1,16 +1,21 @@
 ---
-title: CKAN
+title: Comprehensive Knowledge Archive Network (CKAN)
 type: software
 category:
   - dms
+  - data
 url: "https://ckan.org/"
 docs: "https://docs.ckan.org/en/latest/"
 source: "https://github.com/ckan/ckan"
 developer: "[Open Knowledge Foundation](https://okfn.org/en/)"
-desc-short: CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data. It powers catalog.data.gov, open.canada.ca/data, data.humdata.org among many other sites.
+desc-short: CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data.
 tags:
   - data/management
 img: "![|50](<https://ckan.org/static/img/ckan-dpg.svg>)"
+aliases:
+  - CKAN
+acronym: CKAN
+license: opensource
 ---
 # `=this.title`
 

@@ -7,7 +7,7 @@ docs: "https://www.mkdocs.org/"
 source: "https://github.com/mkdocs/mkdocs"
 developer: "Copyright © 2014 [Tom Christie](https://twitter.com/starletdreaming), Maintained by the [MkDocs Team](https://www.mkdocs.org/about/release-notes/#maintenance-team)\n"
 desc-short: "MkDocs is a **fast**, **simple** and **downright gorgeous** static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file. Start by reading the [introductory tutorial](https://www.mkdocs.org/getting-started/), then check the [User Guide](https://www.mkdocs.org/user-guide/) for more information.\n"
-tags: ["writing/docs", "docs/mkdocs"]
+tags: ["writing/docs", "tech/docs/mkdocs"]
 docker-image: squidfunk/mkdocs-material
 visibility: public
 ---
@@ -90,7 +90,7 @@ Examples
 - [Cinder](https://sourcefoundry.org/cinder/)
 - [mkdocs-terminal](https://ntno.github.io/mkdocs-terminal/)
 
-#### mkdocs-material
+#### Mkdocs-Material
 
 See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pypi.org/project/mkdocs-material/)
 
@@ -105,6 +105,8 @@ See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pyp
     - [[#Markdown Extensions]]
 - Navigation/sidebar
     - [Navigation Tabs](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs)
+- [Setting up a blog](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/)
+- [versioning using mike](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
 
   ```yaml
   theme:
@@ -230,6 +232,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
         Issues:
         - callouts with open/closed modifiers `[!info]+/-` aren't handled and the `+/-` becomes a list bullet point
     - [mkdocs-obsidian-bridge](https://github.com/GooRoo/mkdocs-obsidian-bridge): currently only handling links (allow partial path, selecting file with shortest match, style dead links)
+- [mkdocs-magiclinks-plugin](): using [[pymarkdown#MagicLink|PyMarkdown extension MagicLink]]
 
 
 ## Editing
@@ -272,7 +275,7 @@ some_url: https://example.com
 ## Integrations
 
 - [[git/GitLab#GitLab Pages|GitLab Pages]]: [Template repo](https://gitlab.com/pages/mkdocs) | [Demo website](https://pages.gitlab.io/mkdocs/)
-- Obsidian: [[personal/projects/templates/obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
+- Obsidian: [[obsidian#Obsidian GitHub Publisher|Obsidian GitHub Publisher]]
 - [[mkdocstrings]]
 
 ### Search

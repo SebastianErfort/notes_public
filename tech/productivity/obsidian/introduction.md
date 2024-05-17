@@ -6,7 +6,7 @@ author: Sebastian Erfort
 date: 2024-01-19
 related:
   - "[[obsidian_features|Obsidian features]]"
-  - "[[productivity/obsidian/Obsidian|Obsidian]]"
+  - "[[obsidian|obsidian]]"
 url: "https://obsidian.md/"
 docs: "https://help.obsidian.md/Home"
 ---
@@ -18,8 +18,8 @@ docs: "https://help.obsidian.md/Home"
 | Websites        | [Website], [Documentation] |
 | Templates       | [Template vault], [Obsidian Workflow][obsidian-workflow-template] (if you want to organise your entire life) |
 | Collections     | [Awesome Obsidian] |
-| Linting & Style | [[markdownlint]], [Obsidian Linter](public/tech/productivity/obsidian/Obsidian.md#^f0ca06) |
-| My notes        | [Obsidian features](obsidian_features.md), [Obsidian](productivity/obsidian/Obsidian) |
+| Linting & Style | [[markdownlint]], [[obsidian.md#^f0ca06\|Obsidian Linter]] |
+| My notes        | [Obsidian features](obsidian_features.md), [[obsidian\|Obsidian]] |
 | My 🌐notes      | [Obsidian][Notes: Obsidian], [Obsidian features][Note: Obsidian features] |
 
 > [!info] What is Obsidian?
@@ -43,7 +43,7 @@ To try the application, start by opening a vault.
 
 ## Features
 
-For details, see [[public/tech/productivity/obsidian/Obsidian]] and [[obsidian_features|Obsidian features]]
+For details, see [[obsidian]] and [[obsidian_features|Obsidian features]]
 
 - [[obsidian_features#Obsidian Canvas|Canvas]]: workspace to collect and connect notes, media, documents and more
 
@@ -85,7 +85,7 @@ A lot of shortcuts are similar to other programs, such as <kbd>ctrl+n</kbd> to c
 
 ### Search and Queries
  
- ![[obsidian/Obsidian#Search and Queries|Obsidian]]
+ ![[obsidian#Search and Queries|Obsidian]]
 
 
 ## Writing
@@ -119,13 +119,15 @@ What to keep in mind
 You can embed an image and even videos and other notes, by adding an exclamation mark before a link, e.g. `![[tux.png]]`. Images can be scaled by specifying a size (in pixels) like
 
 ```markdown
-![[tux.png|20]]
-<!-- or (this is a (HTML) comment) -->
 ![](personal/tux.png)
+<!-- or (this is a (HTML) comment) -->
+![[tux.png|20]]
 ```
 
-For example ![|20](tux.png) or ![[tux.png|20]]
-
+For example
+![|20](Tux_simple_bw.svg)
+or
+![[Tux_simple_bw.svg|20]]
 
 ## Plugins
 

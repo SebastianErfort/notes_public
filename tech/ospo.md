@@ -3,17 +3,20 @@ title: Open Source Program Office (OSPO)
 acronym: OSPO
 visibility: public
 author: Sebastian Erfort
+related:
+  - "[[OpenSource]]"
+  - "[[OpenScience]]"
 ---
-|  |  |  |
-| ---- | ---- | ---- |
-| See also | [OpenSource](public/tech/opensource) |
+|          |                                      |     |
+| -------- | ------------------------------------ | --- |
+| See also | [OpenSource](public/tech/opensource) |     |
 
 > [!info]- OSPO infographic
 > ![](ospo_infographic.pdf)
 
 ## Organisations
 
-See also [[opensource#Organisations|OpenSource: Organisations]]
+See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
 
 [OSPO Landscape](https://landscape.todogroup.org/) ![](https://landscape.todogroup.org/)
 
@@ -25,6 +28,7 @@ See also [[opensource#Organisations|OpenSource: Organisations]]
     - [OSPO Definition](https://github.com/todogroup/ospodefinition.org)
 - [OSPOCO](https://ospo.co/): providing professional help around OSPOs as a service |  [Blog](https://ospo.co/blog/)
     - [Key parts of an OSPO](https://ospo.co/all-about-ospos/key-parts-of-an-ospo/)
+- [[SURF]]: 
  
  
 ## People

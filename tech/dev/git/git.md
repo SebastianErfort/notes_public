@@ -9,6 +9,8 @@ visibility: public
 url: "https://git-scm.com/docs"
 docs: "https://git-scm.com/docs"
 ---
+# Git
+
 | Resource      | Reference                                                   |
 | ------------- | ----------------------------------------------------------- |
 | Documentation | `= ( "[Documentation](" + this.docs + ")")`                 |
@@ -61,7 +63,7 @@ However, I wanted to specify what to sparsely check out, before pulling anything
 Examples and references
 
 - [my Git resources]
-- [[README|Work RUG: LWP-Docs]]
+- [[rsrc/README|Work RUG: LWP-Docs]]
 - <https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/>
 - <https://stackoverflow.com/questions/47541033/sparse-checkouts-how-does-it-works>
 
@@ -73,7 +75,14 @@ git config --global -e # Edit global git config file
 ```
 
 Local ignore/exclude file: config `git config --global core.excludesFile ~/.git/info/exclude`
-Environment: `GIT_COMMITTER_NAME`, `GIT_COMMITTER_EMAIL`, `GIT_AUTHOR_NAME`, `GIT_AUTHOR_EMAIL`
+Environment
+
+```text
+GIT_COMMITTER_NAME
+GIT_COMMITTER_EMAIL
+GIT_AUTHOR_NAME
+GIT_AUTHOR_EMAIL
+```
 
 [Sparse Checkout](https://git-scm.com/docs/git-sparse-checkout): clone/check out only part of a repository[^2]
 
@@ -194,6 +203,14 @@ References
 - [Git submodule fetch and update @stackoverflow](https://stackoverflow.com/questions/50254184/git-submodule-and-fetch)
 - [Git submodule track branch @stackoverflow][stackoverflow: sm track branch]
 
+
+#### Commands
+
+```bash
+git subodule foreach <command> # runs command in each submodule directory
+# offers variables $name, $path and $toplevel (parent repo absolute path), see help page
+```
+
 #### Toubleshooting
 
 - Submodule HEAD is detatched/keepts becoming detatched: see [Stack Overflow question](https://stackoverflow.com/a/36375256/16096134)
@@ -256,6 +273,16 @@ and optionally
 - [Angular contributing rules](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
 
 
+## Tools
+
+- [lazygit]
+- [[sublimemerge|Sublime Merge]]
+
+Helpful
+
+- [[bat]]
+- [gource](https://gource.io/): animated timeline of repo with dirs and files as branches and leaves, option to add highlights
+
 ## Providers and Servers
 
 - [[GitHub]]
@@ -279,3 +306,4 @@ and optionally
 [stackoverflow: sm track branch]: <https://stackoverflow.com/questions/1777854/how-can-i-specify-a-branch-tag-when-adding-a-git-submodule/18799234#18799234>
 [^sm-track-branch]: [Git submodule track branch @stackoverflow][stackoverflow: sm track branch]
 [Git hooks]: <https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks>
+[lazygit]: <https://github.com/jesseduffield/lazygit>

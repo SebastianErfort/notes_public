@@ -10,7 +10,7 @@ desc-short: |
   Task management for the Obsidian knowledge base.
 tags:
   - tech/Obsdidian
-  - Obsidian/plugin
+  - obsidian/plugin
   - productivity
   - productivity/todo
 visibility: public

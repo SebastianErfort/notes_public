@@ -2,11 +2,13 @@
 visibility: public
 title: Visualisation
 ---
-# Maps
+# Visualisation
+
+## Maps
 
 QGIS [Website](https://qgis.org/en/site/index.html) | [Github](https://github.com/qgis/QGIS)
 
-# Data
+## Data
 
 - [Visualising clusters @towardsdatascience](https://towardsdatascience.com/best-practices-for-visualizing-your-cluster-results-20a3baac7426)
 - [d3]() [![|20](github.png)](https://github.com/d3/d3): JavaScript library for visualizing data using web standards
@@ -26,12 +28,12 @@ QGIS [Website](https://qgis.org/en/site/index.html) | [Github](https://github.co
     - <https://bokeh.org/>
     - [jupyter: Interactive data vizualisations](https://jupyterbook.org/en/stable/interactive/interactive.html)
 
-# Graphs
+## Graphs
 
 - [[Markdown#Graphs: Mermaid|Mermaid]]
 - [Kroki](https://kroki.io/): diagrams from textual descriptions
 
-# Presentation
+## Presentation
 
 Canva: create professional designs and share or print them
 <https://www.canva.com/free/>

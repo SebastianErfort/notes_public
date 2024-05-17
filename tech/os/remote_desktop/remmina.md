@@ -7,7 +7,7 @@ docs: ""
 source: "https://gitlab.com/Remmina/Remmina"
 desc-short: The GTK Remmina Remote Desktop Client
 tags:
-  - os/remote-desktop
+  - tech/os/remote-desktop
 visibility: public
 ---
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

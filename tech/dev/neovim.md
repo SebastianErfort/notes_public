@@ -7,7 +7,7 @@ url: "https://neovim.io/"
 visibility: public
 ---
 
-See also my notes on [[vim]] and [[Editors]].
+See also my notes on [[docs/seb_public/tech/dev/vim]] and [[Editors]].
 
 ## To-Do
 

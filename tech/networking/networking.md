@@ -1,9 +1,9 @@
 ---
 title: Networking
 tags:
-  - net
-  - net/DHCP
-  - net/DNS
+  - tech/networking
+  - tech/networking/DHCP
+  - tech/networking/DNS
 visibility: public
 ---
 
@@ -63,7 +63,7 @@ WHERE contains(file.path,"networking/protocols")
 
 ### DNS
 
-Domain Name System (DNS) #net/DNS
+Domain Name System (DNS) #tech/networking/DNS
 
 *DNS*: hierarchical and distributed naming system
 
@@ -90,7 +90,7 @@ IP address | Provider | Description
 
 ### DHCP
 
-Tags:  #net/DHCP
+Tags:  #tech/networking/DHCP
 
 ### NFS
 
@@ -125,7 +125,7 @@ Different models with interoperability problem: NFSv4, Windows and POSIX ACLsw
 
 ### Wake-on-LAN
 
-Tags: #net/wol #net/wakeonlan
+Tags: #tech/networking/wol #tech/networking/wakeonlan
 
 ```bash
 # check status
@@ -153,7 +153,7 @@ ethtool -s eth0 wol g
 
 ## Tools
 
-Tags: #networking/tools
+Tags: #tech/networking/tools
 
 > [!info] General toolkit ^0fd526
 >
@@ -167,7 +167,7 @@ Tags: #networking/tools
 > - Discovery ...
 > - ...
 
-`ip` #networking/tools/ip
+`ip` #tech/networking/tools/ip
 
 - network namespaces
     - create virtual route/network between VM and host ([K8s Documentation](https://docker-k8s-lab.readthedocs.io/en/latest/docker/netns.html))
@@ -232,7 +232,7 @@ netstat -tlpn # show tcp listen with program and numeric addresses
 - `nameif` → `ip link`, ifrename
 - `netstat` → `ss`, `ip route` (for `netstat -r`), `ip -s link` (for `netstat -i`), `ip maddr` for `netstat -g`)
 
-Tags: #net/nc (netcat): scan for (open) ports
+Tags: #tech/networking/nc (netcat): scan for (open) ports
 
 ```bash
 nc [options] host port # usage
@@ -251,7 +251,7 @@ lsof -i -P -n
 # -P: inhibit conversion of port numbers to names for network files
 ```
 
-Tags: #net/tools/ss ^06f80a
+Tags: #tech/networking/tools/ss ^06f80a
 
 ```bash
 ss | less  # get all connections
@@ -279,9 +279,9 @@ _nmap:_ Network exploration tool and security / port scanner. Not commonly pre-i
 nmap -sn # no port scan/"ping scan": allows light reconnaissance of a target   network without attracting much attention
 ```
 
-Tags: #net/tools/dnsmasq: A lightweight DHCP and caching DNS server
+Tags: #tech/networking/tools/dnsmasq: A lightweight DHCP and caching DNS server
 
-Tags: #net/tools/dig (Domain Information Groper): DNS lookup utility
+Tags: #tech/networking/tools/dig (Domain Information Groper): DNS lookup utility
 
 - find CNAMEs and IPs for hostnames
 
@@ -289,13 +289,13 @@ Tags: #net/tools/dig (Domain Information Groper): DNS lookup utility
   dig google.com [@1.0.0.1] # optionally specify DNS server with @
   ```
 
-Tags: #net/tools/resolvctl: #linux/systemd (not present on openSUSE)
+Tags: #tech/networking/tools/resolvctl: #linux/systemd (not present on openSUSE)
 
 > Send control commands to the network name resolution manager, or resolve domain names, IPv4 and IPv6 addresses, DNS records, and services.
 
 Config at `/etc/resolv.conf` specifying DNS servers, but usually managed by some program, e.g. `netconfig`.
 
-Tags: #net/tools/nslookup: (interactively) query Internet name servers
+Tags: #tech/networking/tools/nslookup: (interactively) query Internet name servers
 
 ```bash
 nslookup host [server]
@@ -311,11 +311,11 @@ traceroute <host>
 
 See also [[wireshark|my notes on Wireshark]]
 
-Tags: #net/tools/wireshark: the world’s foremost and widely-used network protocol analyzer
+Tags: #tech/networking/tools/wireshark: the world’s foremost and widely-used network protocol analyzer
 
 [Website](https://www.wireshark.org/) | [Documentation](https://www.wireshark.org/docs/wsug_html_chunked/) | [Wiki](https://gitlab.com/wireshark/wireshark/-/wikis/home)
 
-Tags: #net/tshark: Dump and analyze network traffic
+Tags: #tech/networking/tshark: Dump and analyze network traffic
 
 [Man page](Dump and analyze network traffic)
 
