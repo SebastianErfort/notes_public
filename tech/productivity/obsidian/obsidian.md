@@ -28,9 +28,16 @@ related:
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Websites | `= ("[Website](" + this.url + ")")`, `= ("[Documentation](" + this.docs + ")")` |
 | Collections | [Awesome Obsidian]                                                                                                                                                                   |
-| Linting & Style | [[markdownlint]], [Obsidian Linter](public/tech/productivity/obsidian/Obsidian.md#^f0ca06) |
+| Linting & Style | [[markdownlint]], [Obsidian Linter](obsidian.md#^f0ca06) |
 | My 🌐 stuff | [Notes](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/Obsidian/) (using [[public/tech/documentation/MkDocs]]), [Obsidian Features](https://sebastianerfort.github.io/notes/seb_pub/tech/productivity/Obsidian/features/), [Template vault](https://gitlab.com/treetanium1/resources/obsidian/obsidian-template) |
 | My notes | `=(join(this.related, ", "))` |
+
+> [!todo] add map of content
+
+MoC
+
+- [[#Config & Customisation]]
+- [[#Plugins & Extensions]]
 
 ## Config & Customisation
 
@@ -56,9 +63,13 @@ Browse Appearance > Themes, there's a lot of community-made choices.
 
 I use **Catppuccin** because of aesthetics and different colours for italic/bold text, internal/external links, etc.
 
-### Styling
+### Styling (CSS)
 
-Further customisation and extension can be done using [[CSS]]. Obsidian supports a snippets folder for custom CSS files that can be activated separately.
+Further customisation and extension can be done using [[CSS]].
+
+- [Obsidian docs: CSS > styling](https://docs.obsidian.md/Reference/CSS+variables/About+styling)
+
+Obsidian supports a snippets folder for custom CSS files that can be activated separately.
 
 - [awesome-obsidian: css-snippets](https://github.com/kmaasrud/awesome-obsidian#css-snippets)
 - [obsidian-css-snippets @GitHub](https://github.com/Dmytro-Shulha/obsidian-css-snippets/tree/develop)
@@ -67,10 +78,7 @@ Further customisation and extension can be done using [[CSS]]. Obsidian supports
     - [Add quotation mark before quote](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/39)
     - [“Naked” Embeds](https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/19)
 
-## Features
-
-See [[obsidian_features|summary of Obsidian features]] and [[writing/Markdown|Markdown]].
-
+The two main selectors to distinguish between editing and reading mode are `.markdown-preview-view` and `.markdown-rendered`.
 
 #### Custom
 
@@ -88,7 +96,7 @@ see CSS snippet `callouts.css`
 > [!event] Save the date
 > Don't miss out!
 
-Custom call-out: add CSS to `.obsidian/snippets` with
+Custom call-out: add CSS to [`.obsidian/snippets/callouts.css`](file://rsrc/obsidian/css-snippets/callouts.css).
 
 ```css
 .callout[data-callout="idea"] {
@@ -97,7 +105,6 @@ Custom call-out: add CSS to `.obsidian/snippets` with
 }
 ```
 
-See [CSS snippet file (local)](file://rsrc/obsidian/css-snippets/callouts.css).
 
 ### Search and Queries
 
@@ -156,9 +163,8 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [Obsidian Advanced URI](https://vinzent03.github.io/obsidian-advanced-uri/)
     - [Query Control](https://github.com/nothingislost/obsidian-query-control): add controls to embedded queries (exp./deprec.?)
     - [Embed Code File](https://github.com/almariah/embed-code-file): embed code files from Obsidian vault or remote file (eg., GitHub)
-    - [breadcrumbs](https://github.com/SkepticMystic/breadcrumbs): [GitHub](https://github.com/SkepticMystic/breadcrumbs)
-      > Visualise a custom hierarchy in your Obsidian vault
-    - Markdown Attributes: use widely used[^mkdocs-attrlist] syntax with curly braces `{}` to add (HTML) attributes to Markdown elements (development currently down to maintenance mode)
+    - [breadcrumbs](https://github.com/SkepticMystic/breadcrumbs): [GitHub](https://github.com/SkepticMystic/breadcrumbs) "Visualise a custom hierarchy in your Obsidian vault"
+    - Markdown Attributes: use widely used[^mkdocs-attrlist] syntax with curly braces `{}` to add (HTML) attributes to Markdown elements (development currently down to maintenance mode).
         > [!idea] this should make it possible to give elements a certain HTML id and link to them. Hasn't worked in my test though.
 
     - Supercharged links: add attributes to internal links using the target file's properties, e.g. a certain icon if the linked note if of a specific type
@@ -170,13 +176,7 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Writing
     - [Article LaTeX-like figures and section referencing](https://www.reddit.com/r/ObsidianMD/comments/10lp7e0/latexlike_figures_and_section_referencing_in/):
-      similar to [[Pandoc#pandoc-crossref|pandoc-crossref]] like
-
-    ```markdown
-    ![your nice caption](your_img_path.png){#fig:your_fig_name}
-    ```
-
-[Step-by-step-guide](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
+      similar to [[Pandoc#pandoc-crossref|pandoc-crossref]] like `![your nice caption](your_img_path.png){#fig:your_fig_name}`
 
 ```dataview
 TABLE WITHOUT ID
@@ -255,3 +255,4 @@ References
 [^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`
 [JS in Obsidian]: <https://www.reddit.com/r/ObsidianMD/comments/xal0c7/comment/jccdv0i/>
 [nvdh-quartz]: <https://nicolevanderhoeven.com/blog/20240126-how-to-publish-your-notes-for-free-with-quartz/>
+[Step-by-step-guide](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)

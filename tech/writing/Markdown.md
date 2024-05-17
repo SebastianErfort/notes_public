@@ -4,7 +4,7 @@ visibility: public
 title: Markdown
 related:
   - "[[dev/YAML|YAML]]"
-  - "[[productivity/obsidian/Obsidian]]"
+  - "[[obsidian]]"
   - "[[obsidian_features|Obsidian features]]"
 ---
 
@@ -160,7 +160,7 @@ Discussion
 
 [Website](http://commonmark.org/) | [Specification](https://spec.commonmark.org/0.30/) | [Forum](https://talk.commonmark.org/) | [Tutorial](https://commonmark.org/help/tutorial/)
 
-[[Pandoc]] developer John MacFarlane is one of the founders and maintainers. Used by [[obsidian/Obsidian]].
+[[Pandoc]] developer John MacFarlane is one of the founders and maintainers. Used by [[obsidian]].
 
 
 ### Linting and Style

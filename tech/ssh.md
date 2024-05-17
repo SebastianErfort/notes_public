@@ -10,7 +10,7 @@ visibility: public
 
 ### General
 
-```ssh_config
+```config
 Host xyz x* Enterprise
   HostName 123.456.78.90
   User Picard
@@ -88,20 +88,16 @@ ssh -S /path/to/socket -O check <bogus arg>
 
 ## Commands
 
-Edit remote files
-
-```bash
-program scp://user@server[:port]//path/to/file
-# supported protocols depend on program: sftp, rsync, https, ...
-```
-
-Run local script on remote host[^1]
-
-```bash
+```sh
+# Run local script on remote host[^1]
 ssh user@host "bash -s" -- < local_script.sh arg1 arg2 ...
+# skip host verification prompt (security!)
+ssh -o StrictHostKeyChecking=no ...
+# edit remote files
+# supported protocols depend on program: sftp, rsync, https, ...
+<program> scp://user@server[:port]//path/to/file
 ```
 
-[^1]: <https://www.howtogeek.com/825102/how-to-run-a-local-script-on-a-remote-linux-server/>
 
 ### SSH-Add
 
@@ -151,9 +147,16 @@ For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs
 
 ## Tools
 
-[assh](https://github.com/moul/assh) (I haven't tested it, didn't have the need yet)
-> A transparent wrapper that adds support for regex, aliases, gateways, dynamic hostnames, graphviz, json output, yaml configuration, and more to SSH.
+- [assh](https://github.com/moul/assh) (I haven't tested it, didn't have the need yet)
+  > A transparent wrapper that adds support for regex, aliases, gateways, dynamic hostnames, graphviz, json output, yaml configuration, and more to SSH.
+- sshpass: provide password non-interactively. Security issue but haven't found another way to enter a key pass phrase non-interactively (exposed e.g. in `ps`). Slightly better providing the password through a file ^sshpass
 
+    ```sh
+    sshpass -P"passphrase for key" -p <password> ssh ...
+    # -P command prompt triggering password insertion (default 'assword:' ;)
+    # or providing a password file, slightly more secure
+    sshpass -f <file> ssh ...
+    ```
 
 ## Issues and Alternatives
 
@@ -171,3 +174,4 @@ For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs
 [^6]: [RedHat article SSH ProxyJump](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump)
 [^7]: CVE-2023-51385
 [^config_match]: <https://unix.stackexchange.com/a/528212>
+[^1]: <https://www.howtogeek.com/825102/how-to-run-a-local-script-on-a-remote-linux-server/>
