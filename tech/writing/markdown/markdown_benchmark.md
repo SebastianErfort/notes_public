@@ -80,7 +80,10 @@ item
     ```markdown
     ![image title|size](URI "alt title")
     ```
+    <figure>
     ![Books Leather|400](https://cdn.pixabay.com/photo/2023/11/22/15/20/books-8405721_1280.jpg "Free Books Leather photo and picture")
+    <caption><a href="https://pixabay.com/photos/books-leather-old-antique-binding-8405721/">Free Books Leather photo and picture by Joa70 via Pixabay</a></caption>
+    </figure>
 
 
 ## Code
