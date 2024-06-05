@@ -171,45 +171,25 @@ Tags: #tech/networking/tools
 
 - network namespaces
     - create virtual route/network between VM and host ([K8s Documentation](https://docker-k8s-lab.readthedocs.io/en/latest/docker/netns.html))
-        1. create network namespace for VM
 
-           ```bash
-           sudo ip netns add myns
-           ip netns list
-           ```
-
-        2. execute command in new network namespace
-
-           ```bash
-           sudo ip netns exec myns ip addr
-           ```
-
-        3. create a virtual interface pair, it has two virtual interfaces which are connected by a virtual cable
-
-           ```bash
-           sudo ip link add veth-a type veth peer name veth-b
-           ```
-
-           move one interface to new namespace
-
-           ```bash
-           sudo ip link set veth-b netns test1
-           ```
-
-        4. assign IP addresses and bring interfaces up
-
-           ```bash
-           sudo ip addr add 192.168.1.1/24 dev veth-a
-           sudo ip link set veth-a up
-           sudo ip netns exec myns ip addr add 192.168.1.2/24 dev veth-b
-           sudo ip netns exec myns ip link set dev veth-b up
-           ```
-
-           We should be able to ping interface `b`
-
-           ```bash
-           ping 192.168.1.2
-           ```
+       ```bash
+       # create network namespace for VM
+       sudo ip netns add myns
+       ip netns list
+       # execute command in new network namespace
+       sudo ip netns exec myns ip addr
+       # create a virtual interface pair, it has two virtual interfaces which are connected by a virtual cable
+       sudo ip link add veth-a type veth peer name veth-b
+       # move one interface to new namespace
+       sudo ip link set veth-b netns test1
+       # assign IP addresses and bring interfaces up
+       sudo ip addr add 192.168.1.1/24 dev veth-a
+       sudo ip link set veth-a up
+       sudo ip netns exec myns ip addr add 192.168.1.2/24 dev veth-b
+       sudo ip netns exec myns ip link set dev veth-b up
+       # we should be able to ping interface `b`
+       ping 192.168.1.2
+       ```
 
 `host`: DNS lookup utility
 

@@ -34,5 +34,8 @@ See [libvirt in Docker container @Stackoverflow][libvirt-in-docker].
 
 ## References
 
+- [RedHat guide: Lab with KVM and libvirt][redhat-kvm-libvirt]
+
 [libvirt-in-docker]: <https://stackoverflow.com/a/76684521>
 [^wikipedia]: <https://en.wikipedia.org/wiki/Libvirt>
+[redhat-kvm-libvirt]: <https://www.redhat.com/sysadmin/build-lab-quickly>

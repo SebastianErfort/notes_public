@@ -35,3 +35,8 @@ egrep "svm|vmx" /proc/cpuinfo
 ## References
 
 - [OCI: Open Container Initative](https://opencontainers.org/): open governance structure for the express purpose of creating open industry standards around container formats and runtimes
+
+
+## Images
+
+- [OpenStack image guide](https://docs.openstack.org/image-guide/obtain-images.html)

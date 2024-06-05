@@ -174,6 +174,7 @@ See [[public/tech/data/databases/index|my notes on databases]]
 ## Containers, VMs, etc
 
 - [Apptainer](https://apptainer.org/): container system for secure high performance computing
+- build container images for various architectures: [[Podman#^35f333|podman-farm]]
 
 ### [[Podman]]
 
