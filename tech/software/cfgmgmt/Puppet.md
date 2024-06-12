@@ -7,32 +7,69 @@ tags:
 visibility: public
 docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
 ---
+# Puppet
+
 `=("[Documentation](" + this.docs + ")")`
 
-- Resources
+- [[#Resources]]
+    - [[#^exec|Exec]]
     - [File Resource](https://puppet.com/docs/puppet/7/types/file.html)
     - [Package Resource](https://puppet.com/docs/puppet/7/types/package.html)
 - [Conditionals](https://puppet.com/docs/puppet/7/lang_conditional.html)
     - [selector expressions](https://puppet.com/docs/puppet/7/lang_conditional.html#lang_condition_selector)
-- Variable types
+- [[#Variables]]
     - [Hashes](https://puppet.com/docs/puppet/7/lang_data_hash.html)
 - [Built-in function reference](https://puppet.com/docs/puppet/7/function.html)
 - Programs
     - `agent`: [man page](https://www.puppet.com/docs/puppet/7/man/agent.html)
 
+General
+
+- Desired State Configuration (DSC)
+- Idempotency
+
+
+
 ## Puppet language
 
 ### Resources
 
-- [Meta-parameters](https://www.puppet.com/docs/puppet/7/metaparameter.html): attributes that work with any resource type
-- [Resource Types](https://www.puppet.com/docs/puppet/7/resource_types.html)
-    - [File](https://www.puppet.com/docs/puppet/7/types/file.html)
-    - [Exec](https://www.puppet.com/docs/puppet/7/types/exec.html)
-    - [Service](https://www.puppet.com/docs/puppet/7/types/service.html)
-    - [`Package`](https://puppet.com/docs/puppet/7/types/package.html)
+![[puppet_resource_structure.png]]
+
+- [Meta-parameters](https://www.puppet.com/docs/puppet/7/metaparameter.html): pre-defined attributes that work with any resource type
+- [Resource Types](https://www.puppet.com/docs/puppet/7/resource_types.html) ^resources
+    - [File](https://www.puppet.com/docs/puppet/7/types/file.html) ^file
+    - [Exec](https://www.puppet.com/docs/puppet/7/types/exec.html) ^exec
+    - [Service](https://www.puppet.com/docs/puppet/7/types/service.html) ^service
+    - [`Package`](https://puppet.com/docs/puppet/7/types/package.html) ^package
         - doesn't support #linux/snap [see](https://tickets.puppetlabs.com/browse/PUP-7435) other than through a community/Forge module <https://forge.puppet.com/modules/rootexpert/snap>
     - [`ensure_packages`](https://doc.wikimedia.org/puppet/puppet_functions_ruby3x/ensure_packages.html)
     - [Exported Resources](https://www.puppet.com/docs/puppet/7/lang_exported.html)
+
+Puppet URI: `puppet://<server>/<mount point>/<path>` (better syntax for hosted files available)
+
+Resource defaults
+
+```puppet
+# capital letter
+File {
+  owner => 'root',
+  group => 'root',
+  mode  => '0644',
+}
+# or better in some ways (e.g. scope)
+file {
+  default:
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
+    ensure => file
+  ;
+  '/etc/motd':
+    source => 'puppet:///modules/defaults/motd'
+  ;
+}
+```
 
 #### Dependencies
 
@@ -54,6 +91,138 @@ service { 'resource2':
   require => File['resource2'],
 }
 ```
+
+#### File
+
+file sources
+
+
+```puppet
+file { '/etc/motd':
+  ensure => file,
+  source => 'puppet:///modules/modulname/directory/motd.txt'
+}
+```
+
+
+
+### Classes
+
+Simple abstraction, really a way of naming a block of code to be used elsewhere.
+
+Example
+
+```puppet
+# class definition
+class motd {
+  file { 'Message of the day':
+    path    => '/etc/motd',
+    ensure  => file,
+    content => 'Keep calm and carry on.',
+  }
+}
+
+# class declaration/instance
+class { 'motd':
+  ensure => present,
+}
+```
+
+Often classes are scoped and they can have (type-enforced) parameters, e.g.
+
+```puppet
+class profile::motd (
+  String $message = 'Default message',
+) inherits profile::params {
+  file { 'motd':
+    path    => '/etc/motd',
+    ensure  => file,
+    content => $message,
+  }
+}
+```
+
+Inheritance in Puppet is messy and only parameters should be set like this.
+
+
+### Variables
+
+- immutable, no re-assignment
+
+Syntax example
+
+```puppet
+$some_name = 'Bob' # single quotes as muhc as possible
+$some_greeting = "Hello ${some_name}" # variable for string interpolation
+# selector: variable assignment
+$default_editor = $facts['os']['family'] ? {
+  'Linux'   => 'vim',
+  'Windows' => 'notepad',
+  default   => 'nano',
+}
+```
+
+
+### Logic and Comparators
+
+```puppet
+if $some_boolean {
+
+} else {
+
+}
+# inverted if
+unless $another_boolean {
+
+} else {
+
+}
+# selector: match multiple values
+case $some_name {
+  'bob': { include basic }
+  'carol', 'ben': { include expert }
+  'sue': { include regular }
+}
+```
+
+
+## Iterators
+
+```puppet
+# each: array/hash values to variable(s)
+['carol', 'bob', 'alice'].each |$username| {
+    user { $username:
+    home       => "/var/www/${username}",
+    managehome => true,
+  }
+}
+{
+  'bob' => '/home/bob_burger',
+  'alice' => '/var/rabbit_hole',
+  'tina' => '/srv/justice',
+}.each |$username, $homedir| {
+  # ...
+}
+# see also map and filter
+```
+
+
+### Functions
+
+Examples
+
+```puppet
+# template functions
+file { '/etc/motd':
+  content => epp('motd/message.epp', {message => 'Welcome!'})
+}
+# lookup parameters from Hiera
+$userlist = lookup('profile::admin_users::users')
+user { $userlist:
+  ensure => present,
+}
+```
+
 
 ### Logging
 
@@ -100,15 +269,18 @@ Operations can be performed on strings using Puppet's builtin functionalities. F
 
 Most of these also work within variable substitution `${var}`, such as `${var.strip}`.
 
-## Data and variables: Facter and Hiera
+## Data and Parameters: Facter and Hiera
 
 [Hiera, data and Puppet code: your path to the right data decisions @Puppet blog](https://puppet.com/blog/hiera-data-and-puppet-code-your-path-right-data-decisions/)
 
 ### Facter
 
 [Facter](https://puppet.com/docs/puppet/7/facter.html) | [Custom facts](https://puppet.com/docs/puppet/7/custom_facts.html)
+
 Puppet uses Facter to collect various information on the system and provides them as "facts".
 > Facter is Puppet’s cross-platform system profiling library. It discovers and reports per-node facts, which are available in your Puppet manifests as variables.
+
+Can be used to display OS and system information. To show data as available in Puppet, use `puppet facts`, e.g. `$facts['os']['release']['major']`.
 
 - [Executing shell commands in facts](https://puppet.com/docs/puppet/7/custom_facts.html#executing_shell_commands_in_facts)
 - [Confining facts](https://puppet.com/docs/puppet/7/custom_facts.html#configuring_facts-confining-facts): for example to certain OSs

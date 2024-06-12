@@ -61,79 +61,10 @@ WHERE contains(file.path,"networking/protocols")
 - layer 6: presentation layer
 - layer 7: application layer
 
-### DNS
 
-Domain Name System (DNS) #tech/networking/DNS
+### Wireless
 
-*DNS*: hierarchical and distributed naming system
-
-*mDNS*: multicast DNS for local networks
-
-Machines have an _A record_ to be identified. It maps a domain name to the IP (4/6) address of the computer hosting the domain. Usually is the same as the _hostname_ for convenience and to avoid confusion. In addition there can be an arbitrary number of _CNAME_. Also see _FQDN_ (full qualifies domain name).
-
-To reduce the amount of requests/traffic, usually a (local) cache is used.
-
-DNS resolution config: `/etc/resolv.conf`
-
-Tools: `host`, `nslookup`, `dig`
-
-[DNSSEC (DNS Security Extensions)](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
-
-
-IP address | Provider | Description
--|-|-
-1.1.1.1 | Cloudflare |
-1.1.1.2 | Cloudflare | location based filtering providing some security
-1.1.1.3 | Cloudflare | additional adult content filtering
-8.8.8.8 | Google | d
-: DNS servers
-
-### DHCP
-
-Tags:  #tech/networking/DHCP
-
-### NFS
-
-Tags: #tech/NFS
-
-<https://wiki.archlinux.org/title/NFS>
-
-Tags: #tech/pNFS (parallel NFS)
-
-- [pnfs.com](http://www.pnfs.com/)
-- [RedHat: pNFS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-pnfs)
-- [linux-nfs.org: Configuring pNFS](https://wiki.linux-nfs.org/wiki/index.php/Configuring_pNFS/spnfsd)
-
-#### ACLs (Access Control Lists)
-
-Different models with interoperability problem: NFSv4, Windows and POSIX ACLsw
-<https://wiki.linux-nfs.org/wiki/index.php/ACLs>
-<https://wiki.archlinux.org/title/Access_Control_Lists>
-
-- edit
-    - `setfacl -m "u:user:permissions" file/dir`
-    - `nfs4_editfacl file/dir`
-- read
-
-  ```bash
-  getfacl <file/dir>
-  # find files with ACLs beyond POSIX (-s) recursively (-R)
-  getfacl -Rsp <dir> | grep '# file:' | cut -d" " -f3
-  ```
-
-- if `ls` shows a `+` for files/dirs, they have ACLs
-
-### Wake-on-LAN
-
-Tags: #tech/networking/wol #tech/networking/wakeonlan
-
-```bash
-# check status
-ethtool <nic name> | grep Wake
-# see man page for options
-# set value
-ethtool -s eth0 wol g
-```
+- [[#5G]]
 
 ### Security
 

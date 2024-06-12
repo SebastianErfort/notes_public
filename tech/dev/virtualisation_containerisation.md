@@ -4,6 +4,7 @@ visibility: public
 aliases:
   - Virtualisation
   - Containers
+  - Hypervisors
 related:
   - "[[containerisation]]"
   - "[[virtualisation]]"
@@ -19,9 +20,15 @@ egrep "svm|vmx" /proc/cpuinfo
 
 ## Hypervisors
 
+Classification
+
+- type 1: runs directly on computer's underlying hardware, e.g. VMWare ESXi
+- type 2: runs on top of underlying OS, e.g. VMWare Fusion
+
+Hypervisors
+
 - [[KVM]]
 - [[VirtualBox]]
-- [[Vagrant]]
 - [[VMware]]
 - [[Xen]]
 
@@ -31,6 +38,12 @@ egrep "svm|vmx" /proc/cpuinfo
 ### [[dev/Docker|Docker]]
 
 ### [[LXC]]
+
+
+## Orchestration
+
+- [[Vagrant]]
+- [[libvirt]]
 
 ## References
 
