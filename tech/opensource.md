@@ -106,12 +106,20 @@ See also [awesome-open-source] > organisations.
 | OSPO         | Open Source Program Office                    |
 
 
-## News and Events
-
-- https://foss.events/
-- [LibrePlanet 2024 event by FSF](https://libreplanet.org/2024/): May 4 & 5, 2024
+## News
 
 - [Article ](https://www.theregister.com/2023/12/27/bruce_perens_post_open/) by (people:: [[Bruce Perensen]]) @TheRegister
+
+
+## Events
+
+Lists, overviews, etc.
+
+- https://foss.events/
+
+Past
+
+- [LibrePlanet 2024 event by FSF](https://libreplanet.org/2024/): May 4 & 5, 2024
 
 ## References
 

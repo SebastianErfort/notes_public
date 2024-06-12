@@ -14,11 +14,13 @@ category:
 desc-short: |
   Obsidian is the private and flexible note‑taking app that adapts to the way you think.
 visibility: public
-related:
+related: &rel
   - "[[obsidian_features|Obsidian features]]"
   - "[[DataView|Dataview plugin]]"
   - "[[public/tech/writing/Markdown|Markdown]]"
+down: *rel
 ---
+
 # Obsidian
 
 
@@ -181,7 +183,6 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
 ```dataview
 TABLE WITHOUT ID
 file.link AS "Plugin",
-(join(file.tags)) AS "Tags",
 desc-short AS "Description"
 WHERE contains(file.path,"obsidian/plugins")
 SORT file.name

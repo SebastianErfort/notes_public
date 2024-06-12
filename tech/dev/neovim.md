@@ -135,6 +135,7 @@ Plugin managers
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): `telescope.nvim` is a highly extendable fuzzy finder over lists. Built on the latest awesome features from `neovim` core. Telescope is centered around modularity, allowing for easy customization. ^34282b
 - [trouble](https://github.com/folke/trouble.nvim): ![vertical_traffic_light|20](https://github.githubassets.com/images/icons/emoji/unicode/1f6a6.png) A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 - [nvim-docker](https://github.com/dgrbrady/nvim-docker): Docker management right inside Neovim
+- [gitlab.vim](https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim): official editor extension
 
 ### Filetype
 

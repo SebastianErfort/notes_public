@@ -5,12 +5,12 @@ aliases:
 type: software
 category:
   - password-manager
-url: http://www.passwordstore.org/
-docs: https://git.zx2c4.com/password-store/about/
+url: "http://www.passwordstore.org/"
+docs: "https://git.zx2c4.com/password-store/about/"
 source: ""
 developer: Jason A. Donenfeld <Jason@zx2c4.com>
 desc-short: the standard unix password manager
-tags: 
+tags: ""
 desc: |
   Password management should be simple and follow Unix philosophy. With pass, each password lives inside of a gpg encrypted file whose filename is the title of the website or resource that requires the password. These encrypted files may be organized into meaningful folder hierarchies, copied from computer to computer, and, in general, manipulated using standard command line file management utilities.
   pass makes managing these individual password files extremely easy. All passwords live in ~/.password-store, and pass provides some nice commands for adding, editing, generating, and retrieving passwords. It is a very short and simple shell script. It's capable of temporarily putting passwords on your clipboard and tracking password changes using git.

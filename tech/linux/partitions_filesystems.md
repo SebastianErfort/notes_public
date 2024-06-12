@@ -34,14 +34,30 @@ aliases:
 
 - FUSE
     - [CVMFS](https://wiki.gentoo.org/wiki/CVMFS): FUSE module which implements a HTTP read-only file system
-- labels
-    - MS-DOS labels: `mlabel -i /dev/...  LABEL` (didn't work as intended for FAT partition)
-    - ext: `e2label /dev/... lblname`
-    - NTFS: `ntfslabel device [label]`
-    - FAT: `(ex)fatlabel device [label]`
+- parallel and distributed
+    - [[Lustre]]
+    - [[gpfs|GPFS]]
+
+Labelling
+
+```bash
+# MS-DOS labels (didn't work as intended for FAT partition)
+mlabel -i /dev/...  LABEL
+# EXT
+e2label /dev/... lblname
+# NTFS
+NTFS: ntfslabel device [label]
+# FAT
+(ex)fatlabel device [label]
+```
 
 
 ### Mount
+
+```sh
+findmnt
+mount # verbose list of mount points
+```
 
 - [Bind mount explained @StackExchange](https://unix.stackexchange.com/a/198591/247791)
 - Overlay filesystem: [ArchWiki][overlay]
