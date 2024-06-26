@@ -19,7 +19,10 @@ visibility: public
 up:
   - "[[_configuration_management]]"
 ---
-![|500](https://www.ansible.com/hubfs/2-diagram.jpg)
+# Ansible
+
+![Ansible logo|20](https://github.com/ansible/logos/blob/main/community-marks/Ansible-Community-Mark-Mango.png?raw=true)  `= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")`
+
 `= ("> " + this.desc-short)`
 
 - idempotent (like Puppet)
@@ -35,7 +38,7 @@ up:
 
 - [Ansible code bot][ansible-code-bot] [^ansible-code-bot-redhat]
   > The Ansible code bot integrates natively into git repositories you select. It then scans existing Ansible content (roles, playbooks, etc), and automatically submits pull requests when it finds automation content that could be qualitatively improved with best practices. These pull requests contain code recommendation improvements for you to review, test and apply and improve your existing Ansible content.
-
+- [Ansible Lightspeed](https://www.redhat.com/en/technologies/management/ansible/ansible-lightspeed): AI-based natural language processing to produce recommendations. Uses IBM watsonx Code Assisstant.
 
 ## References
 

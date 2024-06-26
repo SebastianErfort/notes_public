@@ -2,10 +2,11 @@
 title: Writing
 visibility: public
 ---
+## Office
 
-## Fonts
+- Collabora[^collabora-interoperability]
+- LibreOffice
 
-See [[design#Fonts|my notes on Design: Fonts]]
 
 ## Notes
 
@@ -22,18 +23,26 @@ See [[design#Fonts|my notes on Design: Fonts]]
 
 See [[LaTeX]].
 
+
 ## E-Mail
 
 <https://en.wikipedia.org/wiki/Posting_style>
 
 - <https://en.wikipedia.org/wiki/Posting_style#Interleaved_style>
 
+
 ## Tools
 
 - <https://tldrthis.com/>: article summary, human-like AI requires account (10 for free)
+
+
+## Design
+
+See [[design#Fonts|my notes on Design: Fonts]].
 
 
 ## References
 
 - [Designing with Libre Office](https://designingwithlibreoffice.com/)
 
+[^collabora-interoperability]: <https://opensource.com/article/23/4/open-source-collabora-online-interoperability>

@@ -27,6 +27,7 @@ visibility: public
 Tools
 
 - [nektosact](https://nektosact.com/): [GitHub](https://github.com/nektos/act)
+
     > Run your GitHub Actions locally 🚀
 
 
@@ -35,7 +36,12 @@ Tools
 - [[gerrit]]
 
 
-## Software
+## Tools
+
+- [dagger.io](https://dagger.io/)
+
+    > Powerful, programmable open source CI/CD engine that runs your pipelines in containers — pre-push on your local machine and/or post-push in CI
+    > programmable tool that lets you replace your software project's artisanal scripts with a modern API and cross-language scripting engine
 
 ### GitLab
 

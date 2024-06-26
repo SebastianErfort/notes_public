@@ -90,7 +90,7 @@ See also [awesome-open-source] > organisations.
 - [Open Source Initiative](https://opensource.org/osd/)
 - [disroot.org](https://disroot.org): platform providing online services based on principles of freedom, privacy, federation and decentralization
 - [GOV.UK Open Standards principles](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles)
-
+- RedHat: [opensource.com]
 
 ## People
 
@@ -130,3 +130,4 @@ Past
 [awesome-open-source]: <https://github.com/cornelius/awesome-open-source>
 [awesome-selfhosted]: <https://github.com/awesome-selfhosted/awesome-selfhosted>
 [awesome-ospo]: <https://github.com/todogroup/awesome-ospo>
+[opensource.com]: <https://opensource.com/>

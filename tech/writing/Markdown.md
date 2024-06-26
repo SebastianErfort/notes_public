@@ -24,6 +24,8 @@ related:
     - [[bat]]
     - [[glow]]
     - [[rich]]
+- web viewers
+    - [Docsify-This](https://docsify-this.net/)
 
 ```dataview
 TABLE WITHOUT ID
@@ -89,6 +91,14 @@ Description lists are non-standard in Markdown and require HTML
 ### Code blocks
 
 [List of Markdown code block languages](https://markdown.land/markdown-code-block)
+
+Fenced code blocks syntax with triple backticks recommended: code language (highlighting), clear and conventional syntax. Style guides suggest empty lines before and after. Use quadrupel backticks to display tripel backticks, e.g. to display Markdown code.
+
+````markdown
+```sh
+echo "Hello World"
+```
+````
 
 ### Columns
 

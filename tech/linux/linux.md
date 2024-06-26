@@ -5,9 +5,7 @@ tags:
   - dev/bash
 visibility: public
 ---
-
-See also
-[[bash]] | [[ssh]] | [[public/tech/linux/security]] | [[openSUSE]]
+# Linux
 
 Installation
 
@@ -419,12 +417,13 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 
 ### [[openSUSE]]
 
-### [[Asahi Linux]]
+### Fedora
 
-[Asahi Linux](https://asahilinux.org): Linux on Apple Silicon (M1 ARM processor)
+- ![|50](https://fedoraproject.org/assets/images/coreos-logo-dark.png) [Fedora CoreOS][fcos]: container optimized OS
 
 ### Others
 
+- [Asahi Linux](https://asahilinux.org): Linux on Apple Silicon (M1 ARM processor)
 - [OpenWrt](https://openwrt.org/): The OpenWrt Project is a Linux operating system targeting embedded devices. Instead of trying to create a single, static firmware, OpenWrt provides a fully writable filesystem with package management.
 - [Free GNU/Linux distributions](https://www.gnu.org/distros/free-distros.html)
     - [Guix](https://guix.gnu.org/) (also a package and system manager): Guix System is a distribution of the [GNU operating system](https://gnu.org/). It uses the [Linux-libre](https://gnu.org/software/linux-libre) kernel, and support for [the Hurd](https://gnu.org/software/hurd) is being worked on. As a GNU distribution, it is committed to respecting and enhancing [the freedom of its users](https://gnu.org/philosophy/free-sw.html). As such, it adheres to the [GNU Free System Distribution Guidelines](https://gnu.org/distros/free-system-distribution-guidelines.html).
@@ -551,3 +550,5 @@ Reset root password by changing #linux/Grub entry, booting into single-user mode
 ## News
 
 - [Kernel 5.19 features/improvements](https://www.techrepublic.com/article/linux-kernel-5-19-networking-improvements/)
+
+[fcos]: <https://fedoraproject.org/coreos/>

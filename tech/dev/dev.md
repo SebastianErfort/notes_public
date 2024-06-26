@@ -17,7 +17,7 @@ related:
 **Table of Contents**
 
 [[#Command Line|⌨️ Command Line]]
-[[#Version Control]]
+[[#Version Control|  Version Control]]
 [[#build|🛠️ Build]]
 
 ---
@@ -84,6 +84,7 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 - [[github|Notes on GitHub]]
 - [[pre-commit]] framework for managing and maintaining multi-language pre-commit hooks
 - [lefthook] Fast and powerful Git hooks manager for any type of projects
+- [commitlint]: Lint commit messages
 
 
 ## Supply Chain
@@ -275,10 +276,11 @@ Free stock media
 
 ## References
 
-[sw project template]: <>
+[sw project template]: <https://gitlab.com/treetanium1/resources/project/template>
 [analysis-tools.dev]: <https://analysis-tools.dev/> 
 [lefthook]: <https://github.com/evilmartians/lefthook>
 [dotfiles-github]: <https://dotfiles.github.io/>
 [usenix-supply-chain]: <https://www.usenix.org/system/files/login/articles/login_winter20_17_geer.pdf>
 [shake]: <https://shakebuild.com/>
 [tera]: <https://keats.github.io/tera/>
+[commitlint]: <https://commitlint.js.org/>
