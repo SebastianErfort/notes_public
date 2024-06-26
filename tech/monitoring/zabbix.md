@@ -1,7 +1,12 @@
 ---
 visibility: public
 title: Zabbix
+type: software
+category:
+  - Monitoring
 ---
+# Zabbix
+
 Compare previous disk usage to current to warn about filling disk
 <https://www.zabbix.com/forum/zabbix-help/26120-monitoring-disk-space-usage>
 `((last("vfs.fs.size[c:,free]")) - ((last("vfs.fs.size[c:,free]",0,172800))-(last("vfs.fs.size[c:,free]"))))`

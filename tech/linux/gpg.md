@@ -7,32 +7,23 @@ From the man page
 
 # Commands
 
-- list keys: `gpg --list-secret-keys --keyid-format LONG`
-- export/backup and restoring [@howtogeek](https://www.howtogeek.com/816878/how-to-back-up-and-restore-gpg-keys-on-linux/)
-
-  ```shell
-  gpg --export --export-options backup --output public.gpg [user@email.com]
-  gpg --export-secret-keys --export-options backup --output private.gpg
-  gpg --export-ownertrust > trust.gpg
-  # restore backup/import
-  gpg --import public.gpg
-  gpg --import private.gpg
-  gpg --import-ownertrust trust.gpg
-  ```
-
-- [read key ID from key without import](https://security.stackexchange.com/questions/43348/extracting-the-pgp-keyid-from-the-public-key-file)
-  
-  ```bash
-  gpg --dry-run --import --import-options show-only pubkey.gpg
-  ```
-
-- receive public key from keyserver
-
-  ```bash
-  gpg --recv-keys $fingerprint
-  ```
+See also [cheatsheet](file://.config/cheat/cheatsheets/personal/gpg).
 
 ```bash
+gpg --list-secret-keys --keyid-format LONG
+# export/backup and restoring (https://www.howtogeek.com/816878/how-to-back-up-and-restore-gpg-keys-on-linux/)
+gpg --export --export-options backup --output public.gpg [user@email.com]
+gpg --export-secret-keys --export-options backup --output private.gpg
+gpg --export-ownertrust > trust.gpg
+# restore backup/import
+gpg --import public.gpg
+gpg --import private.gpg
+gpg --import-ownertrust trust.gpg
+# [read key ID from key without import](https://security.stackexchange.com/questions/43348/extracting-the-pgp-keyid-from-the-public-key-file)
+gpg --dry-run --import --import-options show-only pubkey.gpg
+# receive public key from keyserver
+gpg --recv-keys $fingerprint
+
 # Retrieve key from keyserver
 wget https://host.domain.tld/<keyfile>
 file <keyfile>

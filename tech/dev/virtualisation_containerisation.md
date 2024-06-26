@@ -25,12 +25,20 @@ Classification
 - type 1: runs directly on computer's underlying hardware, e.g. VMWare ESXi
 - type 2: runs on top of underlying OS, e.g. VMWare Fusion
 
-Hypervisors
+Type 1 Hypervisors
 
 - [[KVM]]
+- [[Proxmox]]
+- [[hyper-v]]
+- [[esxi]]
+- [[XCP-ng]] and [[Xen]]
+- Nutanix AHV
+
+Type 2
+
 - [[VirtualBox]]
-- [[VMware]]
-- [[Xen]]
+- [[VMWare]] Fusion, Workstation
+- bhyve
 
 
 ## Containerisation
@@ -44,6 +52,9 @@ Hypervisors
 
 - [[Vagrant]]
 - [[libvirt]]
+- [[public/tech/dev/Kubernetes|Kubernetes]]
+- [[public/tech/dev/Podman|Podman]]
+
 
 ## References
 

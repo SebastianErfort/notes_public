@@ -19,3 +19,34 @@ desc-short: A generic and open source machine emulator and virtualizer
 
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
+
+- emulation tools and standard virtual hardware: processors, network interfaces, graphics cards, ...
+- can be used to create VMs, especially for old or uncommon hardware (ARM, PowerPC, SPARC, ...) but emulation is slow
+- if processor supports virtualisation, QEMU can use KVM to directly access the systems hardware with near native performance
+
+
+## Tools
+
+`qemu-img`: create images
+
+```bash
+# create disk image (thin provisioning)
+qemu-img create <disk image>.qcow2 -f qcow2 100G
+```
+
+`qemu-system-<architecture>`: create VM
+
+```bash
+qemu-system-x86_64 \
+  -cpu host -smp 4 \                   # simulate host processor model and provide 4 cores
+  -enable-kvm \                        # enable use of KVM for virtualisation
+  -m 4096 \                            # provide the VM 4GB of RAM
+  -k en-us \                           # keyboard layout
+  -vnc :0 \                            # make display available at port 5900 on host
+  -drive file=<disk image>,if=virtio \ # use a file for the system's hard disk
+  -cdrom <iso image> \                 # present disk image as CD-ROM
+  -boot d \                            # boot from disk
+```
+
+- after installation, start machine by dropping last 2 lines.
+- access display through VNC viewer remote desktop viewer

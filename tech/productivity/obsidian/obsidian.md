@@ -84,7 +84,7 @@ The two main selectors to distinguish between editing and reading mode are `.mar
 
 #### Custom
 
-see CSS snippet `callouts.css`
+CSS snippet `callouts.css`:
 
 `myidea`
 > [!myidea] Epiphany!
@@ -107,6 +107,12 @@ Custom call-out: add CSS to [`.obsidian/snippets/callouts.css`](file://rsrc/obsi
 }
 ```
 
+More CSS snippets
+
+- [dashboard++] ^e626d8
+- [Pretty Tables][css-pretty-tables]
+- Canvas
+    - [Canvas cards image](https://www.reddit.com/r/ObsidianMD/comments/11n389p/i_made_a_css_snippet_to_give_your_canvas_cards_a/)
 
 ### Search and Queries
 
@@ -240,7 +246,7 @@ References
 - [Slides: simple presentations](https://demo-obsidian.owenyoung.com/Plugins/Slides/)
 - [Getting comfortable with Obsidian CSS](https://forum.obsidian.md/t/getting-comfortable-with-obsidian-css/133)
 - Icons: [[dev/design#Icons|Lucide]]
-- [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
+- [Obsidian Tutorial for Academic Writing][obsidian-academic-writing]
     - Obsidian + Zotero
     - [[Pandoc#pandoc-crossref|pandoc-crossref]]-like references (citations, figures, equations, ...)
 - templates
@@ -256,4 +262,6 @@ References
 [^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`
 [JS in Obsidian]: <https://www.reddit.com/r/ObsidianMD/comments/xal0c7/comment/jccdv0i/>
 [nvdh-quartz]: <https://nicolevanderhoeven.com/blog/20240126-how-to-publish-your-notes-for-free-with-quartz/>
-[Step-by-step-guide](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
+[obsidian-academic-writing]: <https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522>
+[dashboard++]: <https://tfthacker.com/DashboardPlusPLus>
+[css-pretty-tables]: <https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084>

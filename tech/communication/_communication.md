@@ -23,7 +23,8 @@ aliases:
 - libera.chat (IRC) | FOSS
 - [[matrix]] | FOSS | resource-hungry server application
 - Discord: closed-source, commercial, privacy-concerns
-
+- reddit: commercial and controversial (try [[#^lemmy]]?) ^reddit
+- lemmy: Fediverse alternative to reddit? ^lemmy
 
 ## Clients
 
