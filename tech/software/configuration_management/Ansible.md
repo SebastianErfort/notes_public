@@ -39,5 +39,9 @@ up:
 
 ## References
 
+- Jeff Geerling: [Ansible 101 video series][geerling-ansible101], [Book: Ansible for DevOps][geerling-ansible-devops]
+
 [ansible-code-bot]: <https://github.com/apps/ansible-code-bot>
 [^ansible-code-bot-redhat]: <https://access.redhat.com/documentation/en-us/red_hat_ansible_lightspeed_with_ibm_watsonx_code_assistant/2.x_latest/html/red_hat_ansible_lightspeed_with_ibm_watsonx_code_assistant_user_guide/using-code-bot-for-suggestions_lightspeed-user-guide>
+[geerling-ansible101]: <https://www.jeffgeerling.com/blog/2020/ansible-101-jeff-geerling-youtube-streaming-series>
+[geerling-ansible-devops]: <https://www.ansiblefordevops.com/>
