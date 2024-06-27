@@ -47,3 +47,10 @@ same:
     ```
 
 - create container: button  <button type='button'>Create CT</button>
+
+
+## References
+
+- [Pihole in LXC container][pihole-lxc]
+
+[pihole-lxc]: <https://www.datahoards.com/installing-pi-hole-inside-a-proxmox-lxc-container/>

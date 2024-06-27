@@ -2,6 +2,9 @@
 title: System Administration
 aliases:
   - System Administration
+  - SysAd
+  - Systems Administration
+  - SysAdmin
 ---
 ## Certifications
 
@@ -20,6 +23,14 @@ aliases:
 - [[Zabbix]]
 - Zenoss
 
+## [[virtualisation_containerisation|Virtualisation and Containerisation]]
+
+
 ## Cloud
 
 - [[Foreman]]
+
+
+## References
+
+[awesome-sysadmin]: <https://github.com/awesome-foss/awesome-sysadmin>

@@ -20,26 +20,21 @@ egrep "svm|vmx" /proc/cpuinfo
 
 ## Hypervisors
 
-Classification
-
-- type 1: runs directly on computer's underlying hardware, e.g. VMWare ESXi
-- type 2: runs on top of underlying OS, e.g. VMWare Fusion
-
-Type 1 Hypervisors
+Type 1 Hypervisors: runs directly on computer's underlying hardware, e.g. VMWare ESXi
 
 - [[KVM]]
-- [[Proxmox]]
-- [[hyper-v]]
 - [[esxi]]
+- [[hyper-v]]
+- [[Proxmox]]
 - [[XCP-ng]] and [[Xen]]
 - Nutanix AHV
 
-Type 2
+Type 2: runs on top of underlying OS
 
 - [[VirtualBox]]
 - [[VMWare]] Fusion, Workstation
 - bhyve
-
+- [[qemu]]: emulate hardware, can utilise [[KVM]]
 
 ## Containerisation
 

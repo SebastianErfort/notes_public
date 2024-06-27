@@ -245,6 +245,9 @@ See [[public/tech/networking/security|my notes on networking security]]
 
 ### Packets
 
+- MTU (Maximum Transmission Unit) ^mtu
+  maximum packet size that can be transmitted over your network 
+
 #### Packet Problems
 
 - faulty packets lead to CRC errors (e.g. cable issue)

@@ -13,6 +13,11 @@ visibility: public
 
 ## Dev
 
-- IaaS: Infrastructure as a Service (IaaS) ^IaaS
-- PaaS: Platform as a Service (PaaS) ^PaaS
+- IaaS: Infrastructure as a Service ^IaaS
+- PaaS: Platform as a Service ^PaaS
 - SaaS: Software as a Service ^saas
+
+## Networking
+
+- MTU: Maximum Transmission Unit ^mtu
+  Maximum packet size that can be transmitted over your network 

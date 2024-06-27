@@ -28,13 +28,13 @@ Tools: `host`, `nslookup`, `dig`
 
 [DNSSEC (DNS Security Extensions)](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
 
-IP address | Provider | Description
--|-|-
-1.1.1.1 | Cloudflare |
-1.1.1.2 | Cloudflare | location based filtering providing some security
-1.1.1.3 | Cloudflare | additional adult content filtering
-8.8.8.8 | Google | d
-: DNS servers
+| IP address | Provider   | Description                                      |
+| ---------- | ---------- | ------------------------------------------------ |
+| 1.1.1.1    | Cloudflare |                                                  |
+| 1.1.1.2    | Cloudflare | location based filtering providing some security |
+| 1.1.1.3    | Cloudflare | additional adult content filtering               |
+| 8.8.8.8    | Google     |                                                  |
+: Public DNS servers
 
 
 ## Tools
