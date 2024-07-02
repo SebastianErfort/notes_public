@@ -139,13 +139,11 @@ Projects settings
 - maximum artifact size
 - expiration and keeping artifacts of last successful pipeline
 
-If deleting artifacts through the webinterface doesn't reduce the storage consumption, you can use an [API call to delete project artifacts](https://docs.gitlab.com/ee/api/job_artifacts.html#delete-project-artifacts)
+If deleting artifacts through the webinterface doesn't reduce the storage consumption, you can use an [API call to delete project artifacts](https://docs.gitlab.com/ee/api/job_artifacts.html#delete-project-artifacts)[^so-api-delete-pipelines][^medium-api-delete-pipelines]
 
 ```sh
-curl --request DELETE --header "PRIVATE-TOKEN: <your_access_token>" "https://gitlab.example.com/api/v4/projects/1/artifacts"
+curl --request DELETE --header "PRIVATE-TOKEN: <your_access_token>" "https://gitlab.example.com/api/v4/projects/<project id>/artifacts"
 ```
-
-If old pipelines and jobs keep taking up too much storage, consider API calls to delete these.[^so-api-delete-pipelines][^medium-api-delete-pipelines]
 
 
 ### Docker

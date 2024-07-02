@@ -3,12 +3,13 @@ visibility: public
 title: Gpg
 ---
 From the man page
+
 > Note that on larger installations, it is useful to put predefined files into the directory `/etc/skel/.gnupg` so that newly created  users  start  up with a working configuration.
 
 # Commands
 
 - list keys: `gpg --list-secret-keys --keyid-format LONG`
-- export/backup and restoring [@howtogeek](https://www.howtogeek.com/816878/how-to-back-up-and-restore-gpg-keys-on-linux/)
+- export/backup and restoring^[https://www.howtogeek.com/816878/how-to-back-up-and-restore-gpg-keys-on-linux/]
 
   ```shell
   gpg --export --export-options backup --output public.gpg [user@email.com]
@@ -31,7 +32,7 @@ From the man page
   gpg --recv-keys $fingerprint
   ```
 
-*Mail from Chris*
+```bash
 wget [https://host.domain.tld/path/to/](https://host.domain.tld/path/to/)<keyfile>.<ext>
 file <keyfile>.<ext>
 gpg supports a number of key formats, so if your key is in a different format, convert it by importing it into a temp keyring, then exporting it again:
@@ -52,6 +53,7 @@ deb [signed-by=*/usr/share/keyrings/*<myrepository>-archive-keyring.gpg] [<https
 Or you can add the arch=amd64 in the same fashion:
 deb [arch=amd64 signed-by=*/usr/share/keyrings/*<myrepository>-archive-keyring.gpg] [<https://repository.example.com/debian/ stable main>](https://repository.example.com/debian/stablemain)
 
-Deprecated
+# Deprecated
 wget -qO - [http://example.com/archive.key](http://example.com/archive.key) | apt-key add -
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+```

@@ -17,3 +17,4 @@ See [[Kerberos#NFS|Kerberos: NFS]]
 - <https://wiki.archlinux.org/title/NFS>
 - <https://learn.microsoft.com/en-us/windows-server/storage/nfs/nfs-overview>
 - <https://en.wikipedia.org/wiki/Network_File_System>
+- [Optimizing NFS Performance (tldp.org)](https://tldp.org/HOWTO/NFS-HOWTO/performance.html)
