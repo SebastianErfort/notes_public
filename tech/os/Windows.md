@@ -1,10 +1,13 @@
 ---
 visibility: public
 title: Windows
+developer: "[[Microsoft]]"
+aliases:
+  - Microsoft
 ---
-# Software
+# Windows
 
-## Microsoft
+## Microsoft Software
 
 ![[Microsoft_SaaS_Services.webp]]
 
@@ -21,6 +24,11 @@ title: Windows
 ## Configuration Manager
 
 [PXE boot](https://learn.microsoft.com/en-us/troubleshoot/mem/configmgr/os-deployment/understand-pxe-boot)
+
+
+## Virtualisation
+
+- [[hyper-v]]
 
 # Literature
 

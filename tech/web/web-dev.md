@@ -11,6 +11,8 @@ title: Web Development
 
 ## Website
 
+Consider providing `robots.txt` and [[humans.txt|`humans.txt`]] providing website info in a standardised colophon.
+
 ### Static Site Hosting
 
 #### [Cloudflare Pages](https://pages.cloudflare.com/)

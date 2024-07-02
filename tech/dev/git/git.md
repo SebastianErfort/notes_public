@@ -275,6 +275,14 @@ and optionally
 
 ## Tools
 
+### Platforms
+
+- [[GitHub]]
+- [[GitLab]]
+- [[Gitea]]
+
+### Code Review
+
 - [lazygit]
 - [[sublimemerge|Sublime Merge]]
 

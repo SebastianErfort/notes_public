@@ -3,11 +3,13 @@ title: "Ubuntu Autoinstaller: Subiquity, Cloud-Init and Curtin"
 visibility: public
 aliases:
   - Ubuntu Unattended Installer
+  - Cloud-Init
+  - Curtin
+  - Subiquity
 tags:
   - dev/os/deployment
 ---
-
-# Ubuntu Autoinstall: Subiquity
+# Ubuntu Autoinstall: Subiquity, Cloud-Init and Curtin
 
 ## Cloud-init
 
@@ -33,6 +35,13 @@ Cloud-init assumes defaults where no explicit config is given. It requires yaml-
 - meta-data
 - user-data (optional): [documentation](https://cloudinit.readthedocs.io/en/latest/topics/format.html) | [examples](https://cloudinit.readthedocs.io/en/latest/topics/examples.html) | [further examples](https://gist.github.com/dbkinghorn/c236aea31d76028b2b6ccdf6d3c6f07e)
 - vendor-data (optional)
+
+> [!tip] Important (log) files and directories during install
+> 
+> The working directory of the installer is `/var/snap/subiquity` with subfolders for different stages. The dir for the current stages is symlinked to `current`.
+Log files can be found in `/var/log/{installer,cloud-init*,curtin}`, in case of a critical error in `/var/crash`. The journal for example ends up in `/var/log/installer/installer-journal.txt`.  The logs in `/var/log/installer` are copied into the target at the end of the installation.
+> The cloud-init autoinstall section used by Curtin can be found in `/autoinstall.yaml`.
+
 
 ### user-data
 
@@ -110,10 +119,6 @@ See <https://stackoverflow.com/a/50910735>
 and <https://gist.github.com/zoilomora/f862f76335f5f53644a1b8e55fe98320>
 Need to check though whether at least on first boot it needs to run to finish things up.
 
-*Important (log) files and directories during install*
-The working directory of the installer is `/var/snap/subiquity` with subfolders for different stages. The dir for the current stages is symlinked to `current`.
-Log files can be found in `/var/log/{installer,cloud-init*,curtin}`, in case of a critical error in `/var/crash`, and the cloud-init autoinstall section used by Curtin in `/autoinstall.yaml`. The journal for example ends up in `/var/log/installer/installer-journal.txt`.
-`/var/log/installer` gets copied into the target at the end of the installation.
 
 ### Modules
 
@@ -172,6 +177,8 @@ See [Cloud-Init documentation on NoCloud Datasource](https://cloudinit.readthedo
 > Curtin is intended to be a bare bones “installer”. Its goal is to take data from a source, and get it onto disk as quick as possible and then boot it. The key difference from traditional package based installers is that curtin assumes the thing its installing is intelligent and will do the right thing.
 
 #### Stages
+
+😠 Trying to find a list of the accepted stages for the `autoinstall` section in `user-data` is proving difficult.
 
 Can be (de-)activated in the `stages` section of the `autoinstall` part of `user-data`
 

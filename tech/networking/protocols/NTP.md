@@ -9,7 +9,6 @@ aliases:
 visibility: public
 full-name: Network Time Protocol
 ---
-
 # NTP
 
 <dl>

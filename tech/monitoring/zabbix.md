@@ -1,7 +1,12 @@
 ---
 visibility: public
 title: Zabbix
+type: software
+category:
+  - Monitoring
 ---
+# Zabbix
+
 Compare previous disk usage to current to warn about filling disk
 <https://www.zabbix.com/forum/zabbix-help/26120-monitoring-disk-space-usage>
 

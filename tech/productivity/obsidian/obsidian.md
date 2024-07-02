@@ -14,11 +14,13 @@ category:
 desc-short: |
   Obsidian is the private and flexible note‑taking app that adapts to the way you think.
 visibility: public
-related:
+related: &rel
   - "[[obsidian_features|Obsidian features]]"
   - "[[DataView|Dataview plugin]]"
   - "[[public/tech/writing/Markdown|Markdown]]"
+down: *rel
 ---
+
 # Obsidian
 
 
@@ -82,7 +84,7 @@ The two main selectors to distinguish between editing and reading mode are `.mar
 
 #### Custom
 
-see CSS snippet `callouts.css`
+CSS snippet `callouts.css`:
 
 `myidea`
 > [!myidea] Epiphany!
@@ -105,6 +107,12 @@ Custom call-out: add CSS to [`.obsidian/snippets/callouts.css`](file://rsrc/obsi
 }
 ```
 
+More CSS snippets
+
+- [dashboard++] ^e626d8
+- [Pretty Tables][css-pretty-tables]
+- Canvas
+    - [Canvas cards image](https://www.reddit.com/r/ObsidianMD/comments/11n389p/i_made_a_css_snippet_to_give_your_canvas_cards_a/)
 
 ### Search and Queries
 
@@ -181,7 +189,6 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
 ```dataview
 TABLE WITHOUT ID
 file.link AS "Plugin",
-(join(file.tags)) AS "Tags",
 desc-short AS "Description"
 WHERE contains(file.path,"obsidian/plugins")
 SORT file.name
@@ -220,7 +227,7 @@ References
 - <https://flowershow.app/> | [GitHub](https://github.com/datopian/obsidian-flowershow)
 - [obsidian-webpage-export](https://github.com/KosmosisDire/obsidian-webpage-export)
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
-- [quartz](https://quartz.jzhao.xyz/) | [Docs](https://github.com/jackyzha0/quartz)
+- [quartz](https://quartz.jzhao.xyz/) | [Docs](https://github.com/jackyzha0/quartz): [Video @YT][nvdh-quartz]
   > a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites
 
 
@@ -239,7 +246,7 @@ References
 - [Slides: simple presentations](https://demo-obsidian.owenyoung.com/Plugins/Slides/)
 - [Getting comfortable with Obsidian CSS](https://forum.obsidian.md/t/getting-comfortable-with-obsidian-css/133)
 - Icons: [[dev/design#Icons|Lucide]]
-- [Obsidian Tutorial for Academic Writing](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
+- [Obsidian Tutorial for Academic Writing][obsidian-academic-writing]
     - Obsidian + Zotero
     - [[Pandoc#pandoc-crossref|pandoc-crossref]]-like references (citations, figures, equations, ...)
 - templates
@@ -254,4 +261,7 @@ References
 [obsidian-workflow-template]: <https://github.com/mathisgauthey/obsidian-workflow-template>
 [^mkdocs-attrlist]: e.g. in Python-Markdown extension `attr_list`
 [JS in Obsidian]: <https://www.reddit.com/r/ObsidianMD/comments/xal0c7/comment/jccdv0i/>
-[Step-by-step-guide](https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522)
+[nvdh-quartz]: <https://nicolevanderhoeven.com/blog/20240126-how-to-publish-your-notes-for-free-with-quartz/>
+[obsidian-academic-writing]: <https://betterhumans.pub/obsidian-tutorial-for-academic-writing-87b038060522>
+[dashboard++]: <https://tfthacker.com/DashboardPlusPLus>
+[css-pretty-tables]: <https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084>

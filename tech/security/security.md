@@ -2,6 +2,15 @@
 visibility: public
 title: Security
 ---
+## Firewall
+
+- [[Shorewall]]
+- [[Firewall-Daemon]]
+
+### Tools
+
+- [fail2ban](https://github.com/fail2ban/fail2ban): Daemon to ban hosts that cause multiple authentication errors
+
 ## Authentication
 
 [[web-dev#Authentication|My notes on authentication]]

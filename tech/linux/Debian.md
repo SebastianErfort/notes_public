@@ -16,7 +16,7 @@ title: Debian
 | Debian 11 | [bullseye] | 2021-08-14 |             |
 |           |            |            |             |
 
-## Repositories & Packages
+## Repositories and Packages
 
 <https://wiki.debian.org/DebianRepository/UseThirdParty>
 
@@ -25,7 +25,7 @@ title: Debian
 > After that, it maintains a list of packages that you want to have installed on your system. It uses this list to detect packages that have been installed only because other packages depended on them. If one of these dependencies changes, debfoster will take notice, and ask if you want to remove the old package.
 > This helps you to maintain a clean Debian install, without old (mainly library) packages lying around that aren't used any more.
 
-### Debian Packages
+#### Debian Packages
 
 - Ubuntu 22 changed the required compression for packages. In case of an improperly archived package it might have to be extracted and re-packaged or the proper format requested from the package maintainers.
 
@@ -34,28 +34,28 @@ title: Debian
 See also [RUG: Jurjen's notes on Debian packages].
 
 ```bash
-# add package to repository
+## add package to repository
 sudo reprepro \
     --confdir /etc/wraprepro/vhosts.d/<domain>/<mirror>/<os>/<release>/conf/ \
     includedeb <repository-name> \
     <package>
-# test what packages would be pulled to target channel
+## test what packages would be pulled to target channel
 sudo reprepro \
      --confdir /etc/wraprepro/vhosts.d/<domain>/<mirror>/<os>/<release>/conf/ \
      checkpull <target-repository-name>
-# actually pull changes to target channel: replace checkpull by pull
+## actually pull changes to target channel: replace checkpull by pull
 ```
 
-### dpkg
+#### dpkg
 
 ```bash
-# extract package
+## extract package
 dpkg -x [-X] <package> <destination>
-# compare package versions
+## compare package versions
 dpkg --compare-versions $version1 ne $version2
 ```
 
-### apt
+#### apt
 
 Tags: #linux/apt
 
@@ -90,7 +90,7 @@ sudo apt-get install -c $TF sl
 
 Speed up downloads by using multiple parallel connections: (unofficial) [package `apt-fast`](https://github.com/ilikenwf/apt-fast)
 
-#### Packages
+##### Packages
 
 Pin/hold a package version, for example Kernel version (see [Work notes LWP > Puppet > module Kernel Maintenance](obsidian://vault/lwp-docs/lwp/Puppet/modules/kernel_maintenance) and [code](file://git/puppetserver/our-modules/kernel_maintenance/manifests/init.pp))
 
@@ -99,7 +99,7 @@ apt-mark showhold | grep -q -e '^linux-headers-${pin}' -e '^linux-image-${pin}' 
 apt-mark hold linux-headers-${pin}-generic linux-image-${pin}-generic linux-modules-${pin}-generic linux-modules-extra-${pin}-generic
 ```
 
-#### Nala
+##### Nala
 
 [Github](https://github.com/volitank/nala) | [![[book.svg]] Wiki](https://gitlab.com/volian/nala/-/wikis/Installation)
 > Nala is a front-end for `libapt-pkg`. Specifically we interface using the `python-apt` api.
@@ -107,7 +107,7 @@ apt-mark hold linux-headers-${pin}-generic linux-image-${pin}-generic linux-modu
 <https://trendoceans.com/nala-package-manager/>
 
 
-## References
+### References
 
 - [Debian Live Manual][deb-live]
 - [Build Debian live image, blog post][blog-live-build]

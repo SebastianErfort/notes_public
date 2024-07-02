@@ -5,15 +5,13 @@ tags:
   - dev/bash
 visibility: public
 ---
-
-See also
-[[bash]] | [[ssh]] | [[public/tech/linux/security]] | [[openSUSE]]
+# Linux
 
 Installation
 
 - [Microsoft: Install Linux](https://learn.microsoft.com/en-us/linux/install)
 
-# Command Line
+## Command Line
 
 See 
 
@@ -37,14 +35,20 @@ See
 | **Alt+D** | Delete a word to the right. |
 | **Ctrl+/** | Undo. Yes, the command line has an undo option. |
 
-# Commands & Tools
+## Commands & Tools
 
 [The Linux _man-pages_ project](https://www.kernel.org/doc/man-pages/)
 [tldr pages](https://tldr.sh/)
 [How to create a man page](https://www.golinuxcloud.com/create-man-page-template-linux-with-examples/)
 
-## Files & Directories
+### Files & Directories
 
+- Files
+  
+  ```sh
+    stat <file> # file (system) info
+    ```
+    
 - *Permissions*
     - `umask`: modify file/directory permissions, subtracted from default permissions [davemckay@howtogeek](https://www.howtogeek.com/812961/umask-linux/)
 - *Searching & Navigation*
@@ -71,12 +75,12 @@ See
 ll -h file # show apparent size
 du -h file # show actual size
 find /var/log -type f -printf "%S\t%p\n" | gawk '$1 < 1.0 && $1 > 0.0 {print}'
-# 0.957347        /var/log/journal/59c5fd0e8f8f4098999a0294185c5a04/system@cfc3c6cd1b3e47ceac5de67a2ee443d1-000000000002d055-0005dc4be7e8ffa8.journal
-# 0.960842        /var/log/journal/59c5fd0e8f8f4098999a0294185c5a04/system@cfc3c6cd1b3e47ceac5de67a2ee443d1-0000000000051b70-0005de2bd9b8a8c5.journal
-# 0.069997        /var/log/lastlog
+## 0.957347        /var/log/journal/59c5fd0e8f8f4098999a0294185c5a04/system@cfc3c6cd1b3e47ceac5de67a2ee443d1-000000000002d055-0005dc4be7e8ffa8.journal
+## 0.960842        /var/log/journal/59c5fd0e8f8f4098999a0294185c5a04/system@cfc3c6cd1b3e47ceac5de67a2ee443d1-0000000000051b70-0005de2bd9b8a8c5.journal
+## 0.069997        /var/log/lastlog
 ```
 
-## Users & Groups
+### Users & Groups
 
 - files: `/etc/{passwd,group,shadow}`
 - `getent` command: `getent passwd USERNAME/ID` , `getent group GROUPNAME/ID`
@@ -90,17 +94,17 @@ find /var/log -type f -printf "%S\t%p\n" | gawk '$1 < 1.0 && $1 > 0.0 {print}'
 
     - expire users' password and force setting a new one at next login: `passwd --expire username`
 
-## File/stream processing/manipulation
+### File/stream processing/manipulation
 
 - [[awk]]
 - [[sed]]
 - head/tail
 
-## Partitions, File Systems and Swap
+### Partitions, File Systems and Swap
 
 ![[partitions_filesystems]]
 
-## Network, remote
+### Network, remote
 
 [wget vs. curl @howtogeek](https://www.howtogeek.com/816518/curl-vs-wget/)
 [[ssh]]
@@ -119,15 +123,15 @@ Tags: #linux/systemd network adapter naming: <https://systemd.io/PREDICTABLE_INT
 ```bash
 ssh user@host "bash -s" < script.sh
 ssh user@host "bash -s" -- < script.sh "First" "Second" # pass arguments
-# run part of script remote
+## run part of script remote
 ssh -T user@host << _remote_commands
 cd /home/dave/Documents
-# Finally, update the timestamp file
+## Finally, update the timestamp file
 echo "userscript.sh:" $(date) >> ~/timestamp.txt
 _remote_commands
 ```
 
-## Passwords & Security
+### Passwords & Security
 
 Create password hash
 
@@ -149,7 +153,7 @@ CONFIG=$(base64 -w 0 config.yaml) # convert multi-line file to base64 string w/o
 echo $CONFIG | base64 -d # decode
 ```
 
-## Processes: Monitoring and Analysis
+### Processes: Monitoring and Analysis
 
 - `(h)top`
 - `ps`
@@ -187,7 +191,7 @@ echo $CONFIG | base64 -d # decode
 - *Cronjobs*
     - [Crontab Generator](https://crontab-generator.org/)
 
-## Images, Videos
+### Images, Videos
 
 - (image) file conversion
     - decode QR code: `zbarimg -q --nodbus qrcode.png`
@@ -197,39 +201,39 @@ echo $CONFIG | base64 -d # decode
 - man page examples
     - change metadata for entire folder, using metadata as variables: `exiftool '-comment<ISO=$exif:iso Exposure=${shutterspeed}' dir`
 
-## Software
+### Software
 >
 > [!info]- [[_software#Linux|Linux Software]]
 > ![[_software#Linux]]
 
-# System
+## System
 
-## Kernel
+### Kernel
 
 - show kernel version: `uname -r`
 - list installed kernels
     - Debian/Ubuntu: `dpkg --list | grep linux-image`
 
-## Sudo
+### Sudo
 >
 > [!info]- [[sudo]]
 > ![[sudo]]
 
-## Mounting
+### Mounting
 
 ```bash
-# root
+## root
 mount
 umount
-# user
+## user
 udisksctl mount -b /dev/sda # user-mount block device w/o root perm.
 udisksctl unmount -b /dev/sda # unmount
-# SSHFS
+## SSHFS
 sshfs user@host:<path> <target> # use fuse and SSH to mount remote directory
 fusermount -u <target> # unmount directory
 ```
 
-## Time and Date
+### Time and Date
 
 ```bash
 timedatectl # show time and date info
@@ -238,13 +242,13 @@ timedatectl set-timezone Europe/Berlin # change timezone
 timedatectl set-time hh:mm:ss
 timedatectl set-time yyyy-mm-dd
 timedatectl set-ntp true # activate using NTP
-# if timedatectl shows NTP synchronized: no
+## if timedatectl shows NTP synchronized: no
 systemctl restart systemd-timedated
 ```
 
 See also [[networking#NTP|NTP]].
 
-## Hostname
+### Hostname
 
 `/etc/{hosts,hostname}`
 
@@ -254,14 +258,14 @@ hostnamectl
 hostnamectl set-hostname new_hostname
 ```
 
-## Locale
+### Locale
 
 `locale`, `localectl [status]`, `/etc/default/locale`
 change locale
 
 ```bash
 $ sudo update-locale LANG=LANG=en_IN.UTF-8 LANGUAGE
-# OR
+## OR
 $ sudo localectl set-locale LANG=en_IN.UTF-8
 ```
 
@@ -272,7 +276,7 @@ loadkeys <local> # for command line
 setxkbdmap <locale> # for X
 ```
 
-## Fonts
+### Fonts
 
 See also [[design#Fonts]].
 
@@ -292,60 +296,69 @@ fc-list [pattern [element... ]] # list available fonts
 fc-cache -f -v [dir]            # refresh fonts
 ```
 
-## Display
+### Display
 
 - Xauthority file `~/.Xauthority`: cookies allowing use of displays
     - read with `$ xauth`
     - ensure environment variable `$XAUTHORITY` is set
 
-## Files and Directories
+### Files and Directories
 
-### Temporary Files
+#### Temporary Files
 
 - Systemd [tmpfiles.d](https://www.freedesktop.org/software/systemd/man/tmpfiles.d.html): Configuration for creation, deletion and cleaning of volatile and temporary files
 
-# Daemons and Services
+## Daemons and Services
 
-## Systemd
+### Systemd
 >
 > [!info]- [[docs/seb_public/tech/linux/systemd]]
 > ![[docs/seb_public/tech/linux/systemd]]
 
-## supervisord
+### supervisord
 
 [Documentation](http://supervisord.org)
 > Supervisor is a client/server system that allows its users to monitor and control a number of processes on UNIX-like operating systems.
 
 Written in Python
 
-# Important files and directories
+## Important files and directories
 
-## Logs
+### Logs
 
 - `/var/log{auth,syslog}`
-- #tech/ssh `~/.ssh/config`, `/etc/ssh/ssh_config`, `/etc/ssh/sshd_config`
+- `journalctl`
+  
+    ```sh
+    journalctl --no-pager --since today \
+    --grep 'fail|error|fatal' --output json|jq '._EXE' | \
+    sort | uniq -c | sort --numeric --reverse --key 1
+    ```
 
-## Grub
+### SSH
+
+`~/.ssh/config`, `/etc/ssh/ssh_config`, `/etc/ssh/sshd_config`
+
+### Grub
 
 `/etc/default/grub`, `/boot/grub/grub.cfg` (maintained through command `update-grub` and such, from files in `/etc/grub.d`, see [README](file:///etc/grub.d/README))
 
-## EFI
+### EFI
 
 if the directory `/sys/firmware/efi` exists, the system uses UEFI boot #tech/uefi
 
 
-# Security
+## Security
 
 - <https://www.csoonline.com/article/567855/top-linux-antivirus-software.html>
 
 
-# [[Hardware]]
+## [[Hardware]]
 
-## Touchscreens
+- [[partitions_filesystems|Disks, Partitions and Filesystems]]
+- Touchscreens: <http://tuxmobil.org/tablet_unix.html>
 
-<http://tuxmobil.org/tablet_unix.html>
-
-# Software & Repositories
+## Software & Repositories
 
 Package types
 
@@ -360,18 +373,23 @@ Change default application/command ^eb9a0b
 
 ```bash
 sudo update-alternatives --install <link> <name> <path> <priority>
-# for example changing python version
+## for example changing python version
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 ```
 
-## Debian/Ubuntu
+Package managers
 
-[[Debian#Repositories & Packages]]
+- [[RPM]] (RedHat, Fedora, openSUSE, ...)
+- apt (Debian/Ubuntu)
+
+### Debian/Ubuntu
+
+[[Debian#Repositories & Packages|Debian: Repositories and Packages]]
 
 - [[Debian#apt|apt]]
 - [[Debian#dpkg|dpkg]]
 
-## Snap
+### Snap
 
 <https://snapcraft.io/>
 
@@ -391,33 +409,34 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 
 1. and update the user's entry in `/etc/passwd`
 
-# Distributions
+## Distributions
 
-## [[Debian]]
+### [[Debian]]
 
-## [[Ubuntu]]
+### [[Ubuntu]]
 
-## [[openSUSE]]
+### [[openSUSE]]
 
-## [[Asahi Linux]]
+### Fedora
 
-[Asahi Linux](https://asahilinux.org): Linux on Apple Silicon (M1 ARM processor)
+- ![|50](https://fedoraproject.org/assets/images/coreos-logo-dark.png) [Fedora CoreOS][fcos]: container optimized OS
 
-## Others
+### Others
 
+- [Asahi Linux](https://asahilinux.org): Linux on Apple Silicon (M1 ARM processor)
 - [OpenWrt](https://openwrt.org/): The OpenWrt Project is a Linux operating system targeting embedded devices. Instead of trying to create a single, static firmware, OpenWrt provides a fully writable filesystem with package management.
 - [Free GNU/Linux distributions](https://www.gnu.org/distros/free-distros.html)
     - [Guix](https://guix.gnu.org/) (also a package and system manager): Guix System is a distribution of the [GNU operating system](https://gnu.org/). It uses the [Linux-libre](https://gnu.org/software/linux-libre) kernel, and support for [the Hurd](https://gnu.org/software/hurd) is being worked on. As a GNU distribution, it is committed to respecting and enhancing [the freedom of its users](https://gnu.org/philosophy/free-sw.html). As such, it adheres to the [GNU Free System Distribution Guidelines](https://gnu.org/distros/free-system-distribution-guidelines.html).
       GNU Guix provides [state-of-the-art package management features](https://guix.gnu.org/manual/en/html_node/Features.html) such as transactional upgrades and roll-backs, reproducible build environments, unprivileged package management, and per-user profiles. It uses low-level mechanisms from the [Nix](https://nixos.org/nix/) package manager, but packages are [defined](https://guix.gnu.org/manual/en/html_node/Defining-Packages.html) as native [Guile](https://gnu.org/software/guile) modules, using extensions to the [Scheme](http://schemers.org) language—which makes it nicely hackable.
 
 
-# Desktops
+## Desktops
 
 Environment variable with current desktop: `$XDG_CURRENT_DESKTOP`
 
 ![[KDE#KDE Plasma]]
 
-## Desktop files
+### Desktop Files
 
 - file extension `.desktop`
 See <https://wiki.archlinux.org/title/desktop_entries>
@@ -428,15 +447,15 @@ desktop-file-install --dir=$HOME/.local/share/applications /path/to/app.desktop
 update-desktop-database ~/.local/share/applications
 ```
 
-# Window Systems
+## Window Systems
 
 To find out whether your desktop is using [[x11]] or [[wayland]], check the value of `$XDG_SESSION_TYPE`
 
-## Window Managers
+### Window Managers
 
 - [dwm](https://dwm.suckless.org/):  a dynamic window manager for X. It manages windows in tiled, monocle and floating layouts.
 
-# Tools
+## Tools
 
 [Modern replacements for classic tools @RedHat](https://www.redhat.com/sysadmin/linux-tool-replacements)
 
@@ -469,17 +488,17 @@ To find out whether your desktop is using [[x11]] or [[wayland]], check the valu
   qpdf --decrypt --password=goose.goat.gibbon secret.pdf unlocked.pdf # decrypt
   ```
 
-### tmux
+#### tmux
 
 [tmuxcheatsheet.com](https://tmuxcheatsheet.com/)
 Config: `~/.tmux.conf`
 Plugin-manager
 
 ```bash
-# ~/.tmux.conf:
+## ~/.tmux.conf:
 set -g @plugin 'tmux-plugins/tpm' # plugin manager. required!
-# tmux plugin manager: keep this line at the very bottom of tmux.conf
-# install: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+## tmux plugin manager: keep this line at the very bottom of tmux.conf
+## install: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 run '~/.tmux/plugins/tpm/tpm'
 ```
 
@@ -514,12 +533,12 @@ run '~/.tmux/plugins/tpm/tpm'
       tmux attach-session -t $session
       ```
 
-## ImageMagick
+### ImageMagick
 
 [Text](https://www.imagemagick.org/Usage/text/)
 [Fred's Scripts](http://www.fmwconcepts.com/imagemagick/index.php)
 
-# Misc
+## Misc
 
 Reset root password by changing #linux/Grub entry, booting into single-user mode
 <https://www.layerstack.com/resources/tutorials/Resetting-root-password-for-Linux-Cloud-Servers-by-booting-into-Single-User-Mode#Debian&Ubuntu>
@@ -528,6 +547,8 @@ Reset root password by changing #linux/Grub entry, booting into single-user mode
 2. (re-)mount root directory: `mount -o remount,rw /`
 3. change password: `passwd`
 
-# News
+## News
 
 - [Kernel 5.19 features/improvements](https://www.techrepublic.com/article/linux-kernel-5-19-networking-improvements/)
+
+[fcos]: <https://fedoraproject.org/coreos/>

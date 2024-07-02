@@ -90,7 +90,7 @@ See also [awesome-open-source] > organisations.
 - [Open Source Initiative](https://opensource.org/osd/)
 - [disroot.org](https://disroot.org): platform providing online services based on principles of freedom, privacy, federation and decentralization
 - [GOV.UK Open Standards principles](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles)
-
+- RedHat: [opensource.com]
 
 ## People
 
@@ -106,12 +106,20 @@ See also [awesome-open-source] > organisations.
 | OSPO         | Open Source Program Office                    |
 
 
-## News and Events
-
-- https://foss.events/
-- [LibrePlanet 2024 event by FSF](https://libreplanet.org/2024/): May 4 & 5, 2024
+## News
 
 - [Article ](https://www.theregister.com/2023/12/27/bruce_perens_post_open/) by (people:: [[Bruce Perensen]]) @TheRegister
+
+
+## Events
+
+Lists, overviews, etc.
+
+- https://foss.events/
+
+Past
+
+- [LibrePlanet 2024 event by FSF](https://libreplanet.org/2024/): May 4 & 5, 2024
 
 ## References
 
@@ -122,3 +130,4 @@ See also [awesome-open-source] > organisations.
 [awesome-open-source]: <https://github.com/cornelius/awesome-open-source>
 [awesome-selfhosted]: <https://github.com/awesome-selfhosted/awesome-selfhosted>
 [awesome-ospo]: <https://github.com/todogroup/awesome-ospo>
+[opensource.com]: <https://opensource.com/>

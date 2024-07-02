@@ -1,14 +1,18 @@
 ---
 visibility: public
-title: Github
+title: GitHub
 ---
+| Resource | Links               |
+| -------- | ------------------- |
+| Related  | [[Git]], [[GitLab]] |
+
 # GitHub
 
-See also my notes on [[git]]
 
 [Explore](https://github.com/explore) | [Topics](https://github.com/topics) | [Trending](https://github.com/trending) | [Collections](https://github.com/collections)
 
 > [!warning] Consider **not** using GitHub: [article Give Up GitHub! @sfconservancy.org](https://giveupgithub.org/)
+
 
 ## To Do
 
@@ -24,8 +28,7 @@ See also my notes on [[git]]
 
 ##### .github repository
 
-<https://towardsdev.com/setting-up-default-github-files-with-github-repository-75fd23d71161>
-Special repository with templates etc. for new issues, pull requests etc.
+Special repository with templates etc. for new issues, pull requests etc.^[https://towardsdev.com/setting-up-default-github-files-with-github-repository-75fd23d71161]
 
 ## Dev
 

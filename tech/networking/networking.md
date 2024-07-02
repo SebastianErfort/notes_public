@@ -61,79 +61,10 @@ WHERE contains(file.path,"networking/protocols")
 - layer 6: presentation layer
 - layer 7: application layer
 
-### DNS
 
-Domain Name System (DNS) #tech/networking/DNS
+### Wireless
 
-*DNS*: hierarchical and distributed naming system
-
-*mDNS*: multicast DNS for local networks
-
-Machines have an _A record_ to be identified. It maps a domain name to the IP (4/6) address of the computer hosting the domain. Usually is the same as the _hostname_ for convenience and to avoid confusion. In addition there can be an arbitrary number of _CNAME_. Also see _FQDN_ (full qualifies domain name).
-
-To reduce the amount of requests/traffic, usually a (local) cache is used.
-
-DNS resolution config: `/etc/resolv.conf`
-
-Tools: `host`, `nslookup`, `dig`
-
-[DNSSEC (DNS Security Extensions)](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
-
-
-IP address | Provider | Description
--|-|-
-1.1.1.1 | Cloudflare |
-1.1.1.2 | Cloudflare | location based filtering providing some security
-1.1.1.3 | Cloudflare | additional adult content filtering
-8.8.8.8 | Google | d
-: DNS servers
-
-### DHCP
-
-Tags:  #tech/networking/DHCP
-
-### NFS
-
-Tags: #tech/NFS
-
-<https://wiki.archlinux.org/title/NFS>
-
-Tags: #tech/pNFS (parallel NFS)
-
-- [pnfs.com](http://www.pnfs.com/)
-- [RedHat: pNFS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-pnfs)
-- [linux-nfs.org: Configuring pNFS](https://wiki.linux-nfs.org/wiki/index.php/Configuring_pNFS/spnfsd)
-
-#### ACLs (Access Control Lists)
-
-Different models with interoperability problem: NFSv4, Windows and POSIX ACLsw
-<https://wiki.linux-nfs.org/wiki/index.php/ACLs>
-<https://wiki.archlinux.org/title/Access_Control_Lists>
-
-- edit
-    - `setfacl -m "u:user:permissions" file/dir`
-    - `nfs4_editfacl file/dir`
-- read
-
-  ```bash
-  getfacl <file/dir>
-  # find files with ACLs beyond POSIX (-s) recursively (-R)
-  getfacl -Rsp <dir> | grep '# file:' | cut -d" " -f3
-  ```
-
-- if `ls` shows a `+` for files/dirs, they have ACLs
-
-### Wake-on-LAN
-
-Tags: #tech/networking/wol #tech/networking/wakeonlan
-
-```bash
-# check status
-ethtool <nic name> | grep Wake
-# see man page for options
-# set value
-ethtool -s eth0 wol g
-```
+- [[#5G]]
 
 ### Security
 
@@ -171,45 +102,25 @@ Tags: #tech/networking/tools
 
 - network namespaces
     - create virtual route/network between VM and host ([K8s Documentation](https://docker-k8s-lab.readthedocs.io/en/latest/docker/netns.html))
-        1. create network namespace for VM
 
-           ```bash
-           sudo ip netns add myns
-           ip netns list
-           ```
-
-        2. execute command in new network namespace
-
-           ```bash
-           sudo ip netns exec myns ip addr
-           ```
-
-        3. create a virtual interface pair, it has two virtual interfaces which are connected by a virtual cable
-
-           ```bash
-           sudo ip link add veth-a type veth peer name veth-b
-           ```
-
-           move one interface to new namespace
-
-           ```bash
-           sudo ip link set veth-b netns test1
-           ```
-
-        4. assign IP addresses and bring interfaces up
-
-           ```bash
-           sudo ip addr add 192.168.1.1/24 dev veth-a
-           sudo ip link set veth-a up
-           sudo ip netns exec myns ip addr add 192.168.1.2/24 dev veth-b
-           sudo ip netns exec myns ip link set dev veth-b up
-           ```
-
-           We should be able to ping interface `b`
-
-           ```bash
-           ping 192.168.1.2
-           ```
+       ```bash
+       # create network namespace for VM
+       sudo ip netns add myns
+       ip netns list
+       # execute command in new network namespace
+       sudo ip netns exec myns ip addr
+       # create a virtual interface pair, it has two virtual interfaces which are connected by a virtual cable
+       sudo ip link add veth-a type veth peer name veth-b
+       # move one interface to new namespace
+       sudo ip link set veth-b netns test1
+       # assign IP addresses and bring interfaces up
+       sudo ip addr add 192.168.1.1/24 dev veth-a
+       sudo ip link set veth-a up
+       sudo ip netns exec myns ip addr add 192.168.1.2/24 dev veth-b
+       sudo ip netns exec myns ip link set dev veth-b up
+       # we should be able to ping interface `b`
+       ping 192.168.1.2
+       ```
 
 `host`: DNS lookup utility
 
@@ -333,6 +244,9 @@ See [[public/tech/networking/security|my notes on networking security]]
 ## Principles
 
 ### Packets
+
+- MTU (Maximum Transmission Unit) ^mtu
+  maximum packet size that can be transmitted over your network 
 
 #### Packet Problems
 

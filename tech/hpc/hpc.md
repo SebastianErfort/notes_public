@@ -20,8 +20,7 @@ Tags: #tech/hpc/queue
 
 ## Parallel File Systems
 
-- [[Lustre]]
-- [[gpfs|GPFS]]
+See [[partitions_filesystems#File Systems|Filesystems]].
 
 
 ## Software Builds
