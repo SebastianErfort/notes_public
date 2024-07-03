@@ -13,32 +13,9 @@ category:
 ---
 # Network File System
 
-## Authentication
-
-### Kerberos
-
-See [[Kerberos#NFS|Kerberos: NFS]]
-
-## References
-
-- <https://wiki.archlinux.org/title/NFS>
-- <https://learn.microsoft.com/en-us/windows-server/storage/nfs/nfs-overview>
-- <https://en.wikipedia.org/wiki/Network_File_System>
-
-
-### NFS
-
-Tags: #tech/NFS
-
 <https://wiki.archlinux.org/title/NFS>
 
-Tags: #tech/pNFS (parallel NFS)
-
-- [pnfs.com](http://www.pnfs.com/)
-- [RedHat: pNFS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-pnfs)
-- [linux-nfs.org: Configuring pNFS](https://wiki.linux-nfs.org/wiki/index.php/Configuring_pNFS/spnfsd)
-
-#### ACLs (Access Control Lists)
+## ACLs (Access Control Lists)
 
 Different models with interoperability problem: NFSv4, Windows and POSIX ACLsw
 <https://wiki.linux-nfs.org/wiki/index.php/ACLs>
@@ -56,3 +33,26 @@ Different models with interoperability problem: NFSv4, Windows and POSIX ACLsw
   ```
 
 - if `ls` shows a `+` for files/dirs, they have ACLs
+
+## Parallel NFS (pNFS)
+
+Tags: #tech/pNFS
+
+- [pnfs.com](http://www.pnfs.com/)
+- [RedHat: pNFS](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-pnfs)
+- [linux-nfs.org: Configuring pNFS](https://wiki.linux-nfs.org/wiki/index.php/Configuring_pNFS/spnfsd)
+
+## Authentication
+
+### Kerberos
+
+See [[Kerberos#NFS|Kerberos: NFS]]
+
+
+## References
+
+- <https://wiki.archlinux.org/title/NFS>
+- <https://learn.microsoft.com/en-us/windows-server/storage/nfs/nfs-overview>
+- <https://en.wikipedia.org/wiki/Network_File_System>
+- [Optimizing NFS Performance (tldp.org)](https://tldp.org/HOWTO/NFS-HOWTO/performance.html)
+

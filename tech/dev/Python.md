@@ -8,20 +8,23 @@ visibility: public
 ---
 # Python
 
-| Category           | Tools                                                       |
-| ------------------ | ----------------------------------------------------------- |
-| Package versioning | venv module, (Ana)Conda                                     |
-| Package managers   | pip, [[pipx]]                                               |
-| Package sources    | [PyPI](https://pypi.org)                                    |
-| Linting & syntax   | [Black](black.md), pycodestyle                              |
-| References         | [Standard Library][stdlib], [W3C Python Reference][w3c-ref] |
+| Category         | Tools                                                       |
+| ---------------- | ----------------------------------------------------------- |
+| Environment      | venv module, (Ana)Conda, [Micromamba]                       |
+| Package managers | pip, [[pipx]]                                               |
+| Package sources  | [PyPI](https://pypi.org)                                    |
+| Linting & syntax | [Black](black.md), pycodestyle                              |
+| References       | [Standard Library][stdlib], [W3C Python Reference][w3c-ref] |
 
 ## Installation and Versions
 
-- change system python version: [[linux#^eb9a0b|Linux: default applications]]
 - (virtual) environments
     - Python module `venv`
     - [virtualenv](https://virtualenv.pypa.io/en/latest/#)
+    - (Ana)Conda
+    - [Micromamba]
+      > `micromamba` is a tiny version of the `mamba` package manager. It is a statically linked C++ executable with a separate command line interface. It does not need a `base` environment and does not come with a default version of Python.
+- change system python version: [[linux#^eb9a0b|Linux: default applications]]
 - [2to3 converter](https://docs.python.org/3/library/2to3.html): Automated Python 2 to 3 code translation
 
 ## Functions/methods
@@ -333,7 +336,7 @@ Using Camelot to extract data into Pandas dataframe from PDF with multiple table
 
 ## Jupyter: Notebook, Lab
 
-Tags: #dev/python/jupyter #dev/python/conda #dev/python/Anaconda #dev/python/miniconda
+Tags: #dev/python/jupyter #dev/python/conda #dev/python/anaconda #dev/python/miniconda
 
 - <https://jupyter.org/> | [Jupyter Notebook documentation](https://ipython.org/notebook) |  [Built-in magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
 [Remco's notes @Wiki: conda env, kernel installation](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/Jupyter) 
@@ -351,3 +354,4 @@ Tags: #dev/python/jupyter #dev/python/conda #dev/python/Anaconda #dev/python/min
 
 [stdlib]: <https://docs.python.org/3/library/>
 [w3c-ref]: <https://www.w3schools.com/python/python_reference.asp>
+[micromamba]: <https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html>

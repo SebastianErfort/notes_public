@@ -6,6 +6,15 @@ tags:
 visibility: public
 title: Debian
 ---
+# Debian
+
+## Distros
+
+|           | Codename   | Release    | End-of-life |
+| --------- | ---------- | ---------- | ----------- |
+| Debian 12 | [bookworm] | 2023-06-10 |             |
+| Debian 11 | [bullseye] | 2021-08-14 |             |
+|           |            |            |             |
 
 ## Repositories and Packages
 
@@ -105,3 +114,5 @@ apt-mark hold linux-headers-${pin}-generic linux-image-${pin}-generic linux-modu
 
 [deb-live]: <https://live-team.pages.debian.net/live-manual/html/live-manual/toc.en.html>
 [blog-live-build]: <https://dquinton.github.io/debian-install/netinstall/live-build.html>
+[bullseye]: <https://www.debian.org/releases/bullseye/>
+[bookworm]: <https://www.debian.org/releases/bookworm/>
