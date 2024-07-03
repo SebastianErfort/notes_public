@@ -2,9 +2,9 @@
 title: Git
 tags:
   - dev/git
-  - dev/GitLab
-  - dev/CICD
-  - dev/Github
+  - dev/gitlab
+  - dev/cicd
+  - dev/github
 visibility: public
 url: "https://git-scm.com/docs"
 docs: "https://git-scm.com/docs"

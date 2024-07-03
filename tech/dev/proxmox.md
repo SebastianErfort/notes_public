@@ -34,7 +34,7 @@ same:
 
 ## Config
 
-- access management webinterface through ip+port provided
+- access management webinterface through ip+port provided, default `<ip>:8006`
 - upload ISO
 - create VM using ISO
 - show and download pre-configured container images through Proxmox console: server, client and special-purpose images (`turnkey`)

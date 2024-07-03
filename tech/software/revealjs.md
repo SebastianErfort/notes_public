@@ -2,7 +2,7 @@
 tags:
   - dev/markdown
   - tech/presentation
-  - dev/HTML
+  - dev/html
 visibility: public
 title: Revealjs
 ---

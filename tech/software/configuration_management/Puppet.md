@@ -3,7 +3,7 @@ title: Puppet
 tags:
   - dev/cm/puppet
   - dev/configurationmanagement
-  - dev/cm
+  - dev/CM
 visibility: public
 docs: https://www.puppet.com/docs/puppet/7/puppet_index.html
 up:

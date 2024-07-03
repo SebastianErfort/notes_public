@@ -1,6 +1,6 @@
 ---
 tags:
-  - dev/GitLab
+  - dev/gitlab
 visibility: public
 title: GitLab Reference
 ---

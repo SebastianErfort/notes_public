@@ -45,30 +45,20 @@ related:
 #### GUI Interaction
 
 - [haylxon](https://github.com/pwnwriter/haylxon): grab screenshots from terminal
-
+- xdotool
 
 
 ### Shells
 
-```dataview
-TABLE WITHOUT ID
-file.link AS "Name",
-url AS "Website"
-WHERE contains(type,"software") and category = "shell"
-```
+- [[public/tech/linux/bash|bash]]
 
 ### Terminal Emulators
 
+- alacritty
+- [[kitty]]
+- [[KDE#^57973e|Konsole (KDE)]]
 - [st](https://st.suckless.org/): simple terminal implementation for X.
 - xterm: ugly and old, see [[smirk#^6ffce2|st on xterm]]
-- [[KDE#^57973e|Konsole (KDE)]]
-
-```dataview
-TABLE WITHOUT ID
-file.link AS "Name",
-url AS "Website"
-WHERE contains(type,"software") and category = "terminal-emulator"
-```
 
 
 ## Config and Environment
@@ -87,9 +77,10 @@ WHERE contains(type,"software") and category = "terminal-emulator"
 - [commitlint]: Lint commit messages
 
 
-## Supply Chain
+## Dependencies: Supply Chain
 
 tags: #dev/bom #dev/sbom
+
 > A **software supply chain** is composed of the components, libraries, tools, and processes used to develop, build, and publish a software artifact.^[https://en.wikipedia.org/wiki/Software_supply_chain#cite_note-1]
 
 - [[SPDX]] (Software Package Data Exchange)
@@ -98,6 +89,12 @@ tags: #dev/bom #dev/sbom
 References
 
 - [For Good Measure Counting Broken Links: A Quant's View of Software Supply Chain Security][usenix-supply-chain]
+
+
+### Depencency Update
+
+- [Dependabot]: "Automated dependency updates built into GitHub"
+- [Renovate Bot](https://docs.renovatebot.com/)
 
 ## Code Quality and Static Analysis
 
@@ -121,6 +118,7 @@ TABLE WITHOUT ID
 desc-short AS "Description"
 WHERE contains(file.path,"lint")
 ```
+
 
 ## Build
 
@@ -284,3 +282,4 @@ Free stock media
 [shake]: <https://shakebuild.com/>
 [tera]: <https://keats.github.io/tera/>
 [commitlint]: <https://commitlint.js.org/>
+[dependabot]: <https://github.com/dependabot>
