@@ -31,7 +31,6 @@ General
 - Idempotency
 
 
-
 ## Puppet language
 
 ### Resources
@@ -301,23 +300,27 @@ Can be used to display OS and system information. To show data as available in P
 
 [Remco's Ruby tutorial including Puppet facts](file://edu/ruby/remco/programming-in-ruby/Ruby%20Session4.ipynb)
 
+
 ### Hiera
 
 [Documentation](https://puppet.com/docs/puppet/7/hiera.html) | [Hiera config](https://puppet.com/docs/puppet/7/hiera_config_yaml_5.html)
 Hiera works like a pyramid and the higher up a data layer is, the higher its priority. At the top is usually node-level data, that can overwrite profile/role/lower data such as defaults.
 
 - The main file for this is the file `hiera.yaml` in the base of the repository.
-- Hierarchy between modules is usually set in a file `common.yaml`, in our case `data/99_config.yaml`.  The section `profile::config:` contains the different sets of `modules` to be used in our different profiles
-    - `base`: comon to all profiles
+- Hierarchy between modules is usually set in a file `common.yaml`, e.g. `data/99_config.yaml`. The section `profile::config:` contains the different sets of `modules` to be used in our different profiles
+    - `base`: common to all profiles
     - ...
     - `server`: modules for servers
-- The order of modules within one of these sets is important, if there are dependencies! For example the module `sshd` uses data from the module `mfa` and has thus to come after/below it
-- on top of that we have the node-level files (`node.yaml`), in our case in the directory `data/00_hosts/host.yaml`, role-assignments by IP-ranges in `data/10_roles` as well as external node classifiers (ENCs) in a separate repository [lwp/puppet-enc](https://git.lwp.rug.nl/lwp/puppet-enc).
+- The order of modules within one of these sets is important, if there are dependencies! For example a module `sshd` might use data from the module `mfa` and has thus to come after/below it
+- on top of that we might have node-level files (`<node>.yaml`), e.g. in `data/00_hosts/`, role-assignments by IP-ranges in `data/10_roles` as well as external node classifiers (ENCs, see next section).
 
 
 ### External Node Classifiers (ENCs)
 
 [Puppet documentation on ENCs](https://www.puppet.com/docs/puppet/7/nodes_external.html)
+
+ENCs allow us to assign roles to machines by building, room, hostname, ...
+
 
 ### Lookup
 
