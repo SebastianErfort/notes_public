@@ -20,7 +20,7 @@ egrep "svm|vmx" /proc/cpuinfo
 
 ## Hypervisors
 
-Type 1 Hypervisors: runs directly on computer's underlying hardware, e.g. VMWare ESXi
+Type 1: runs directly on computer's underlying hardware
 
 - [[KVM]]
 - [[esxi]]

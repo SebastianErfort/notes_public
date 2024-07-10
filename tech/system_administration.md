@@ -16,12 +16,17 @@ aliases:
 
 - [[boot|(i)PXE]]
 
-## Monitoring
+## Tools
 
-- Nagios
-- LogicMonitor
+See overview in [awesome-selfhosted].
+
+### Monitoring & Metrics
+
+See overview in [awesome-sysad]
+
+- Grafana
+- Wazuh
 - [[Zabbix]]
-- Zenoss
 
 ## [[virtualisation_containerisation|Virtualisation and Containerisation]]
 
@@ -33,4 +38,6 @@ aliases:
 
 ## References
 
+
 [awesome-sysadmin]: <https://github.com/awesome-foss/awesome-sysadmin>
+[awesome-selfhosted]: <https://github.com/awesome-selfhosted/awesome-selfhosted>
