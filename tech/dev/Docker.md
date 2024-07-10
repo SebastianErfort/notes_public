@@ -42,7 +42,7 @@ Using an image checksum in the definition can be used to verify integrity and do
 Keep user containers alive after logout
 
 ```bash
-loginctl --enable-linger $(id -u)
+sudo loginctl enable-linger $(id -u)
 export DOCKER_HOST=unix:///run/user/$(id -u)/docker.sock
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 systemctl --user status docker.service
