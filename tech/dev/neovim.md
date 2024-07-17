@@ -116,13 +116,16 @@ Plugin managers
     - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - icons
     - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
-- [hologram.nvim](https://github.com/edluffy/hologram.nvim): ![ghost|20](https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png) A cross platform terminal image viewer for Neovim. Extensible and fast, written in Lua and C. Works on macOS and Linux.
-- [Noice](https://github.com/folke/noice.nvim): ![boom|20](https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png) Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu
+- [hologram.nvim](https://github.com/edluffy/hologram.nvim):
+  > 👻 A cross platform terminal image viewer for Neovim. Extensible and fast, written in Lua and C. Works on macOS and Linux.
+- [Noice](https://github.com/folke/noice.nvim):
+  > 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu
 
 ### Editing
 
 - comment
-    - [Comment.nvim](https://github.com/numToStr/Comment.nvim): ![brain|20](https://github.githubassets.com/images/icons/emoji/unicode/1f9e0.png) ![muscle|20](https://github.githubassets.com/images/icons/emoji/unicode/1f4aa.png) // Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
+    - [Comment.nvim](https://github.com/numToStr/Comment.nvim):
+      > 🧠 💪 Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim): EditorConfig plugin for Vim
 - [nvim-osc52](https://github.com/ojroques/nvim-osc52): copy text to the system clipboard using the ANSI OSC52 sequence
 - [true-zen.nvim](https://github.com/Pocco81/true-zen.nvim): Clean and elegant distraction-free writing for NeoVim
@@ -135,7 +138,8 @@ Plugin managers
 ### Dev
 
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): `telescope.nvim` is a highly extendable fuzzy finder over lists. Built on the latest awesome features from `neovim` core. Telescope is centered around modularity, allowing for easy customization. ^34282b
-- [trouble](https://github.com/folke/trouble.nvim): ![vertical_traffic_light|20](https://github.githubassets.com/images/icons/emoji/unicode/1f6a6.png) A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
+- [trouble](https://github.com/folke/trouble.nvim):
+  > 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
 - [nvim-docker](https://github.com/dgrbrady/nvim-docker): Docker management right inside Neovim
 - [gitlab.vim](https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim): official editor extension
 
@@ -148,7 +152,8 @@ Plugin managers
 - [Marksman](https://github.com/artempyanykh/marksman)
 - LSP/auto-completion
     - [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim): configure `nvim-lspconfig` and `nvim-cmp`
-- [lsp-colors](https://github.com/folke/lsp-colors.nvim): ![rainbow|20](https://github.githubassets.com/images/icons/emoji/unicode/1f308.png) Plugin that creates missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin LSP client.
+- [lsp-colors](https://github.com/folke/lsp-colors.nvim):
+  > 🌈 Plugin that creates missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin LSP client.
 - [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim): Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
     - [Builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#vale)
 
