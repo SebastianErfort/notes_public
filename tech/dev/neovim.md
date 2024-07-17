@@ -101,7 +101,7 @@ See [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) for a comprehe
 
 Plugin managers
 
-- [lazy.nvim](https://github.com/folke/lazy.nvim): ![zzz|20](https://github.githubassets.com/images/icons/emoji/unicode/1f4a4.png) A modern plugin manager for Neovim
+- [lazy.nvim](https://github.com/folke/lazy.nvim): 💤 A modern plugin manager for Neovim
 - [vim-plug]
 
 ### UI
