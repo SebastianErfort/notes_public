@@ -11,8 +11,8 @@ tags:
 code: open source
 company: |
   [[RedHat]]
-url: https://www.ansible.com/
-docs: https://docs.ansible.com/ansible/latest/index.html
+url: "https://www.ansible.com/"
+docs: "https://docs.ansible.com/ansible/latest/index.html"
 desc-short: |
   Ansible is an IT automation tool. It can configure systems, deploy software, and orchestrate more advanced IT tasks such as continuous deployments or zero downtime rolling updates.
 visibility: public

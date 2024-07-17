@@ -4,7 +4,7 @@ type: software
 category:
   - webserver
 desc-short: nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server, originally written by Igor Sysoev
-url: https://nginx.org/en
+url: "https://nginx.org/en"
 tags:
   - software/nginx
   - tech/networking/HTTP

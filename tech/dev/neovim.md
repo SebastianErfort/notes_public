@@ -7,7 +7,7 @@ aliases:
   - nvim
   - neovim
   - NeoVIM
-url: https://neovim.io/
+url: "https://neovim.io/"
 visibility: public
 ---
 # NeoVIM

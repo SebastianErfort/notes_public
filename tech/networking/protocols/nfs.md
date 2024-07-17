@@ -2,7 +2,7 @@
 title: Network File System (NFS)
 acronym: NFS
 desc-short: Distributed file system protocol, allowing a user on a client computer to access files over a computer network
-wikipedia: https://en.wikipedia.org/wiki/Network_File_System
+wikipedia: "https://en.wikipedia.org/wiki/Network_File_System"
 tags:
   - "#tech/networking/nfs"
   - "#tech/networking/protocol"

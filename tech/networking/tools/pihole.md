@@ -4,9 +4,9 @@ date: 2024-07-03
 type: software
 category:
   - adblock
-url: https://docs.pi-hole.net/
-docs: https://docs.pi-hole.net/
-source: https://github.com/pi-hole/pi-hole
+url: "https://docs.pi-hole.net/"
+docs: "https://docs.pi-hole.net/"
+source: "https://github.com/pi-hole/pi-hole"
 desc-short: The Pi-hole® is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software.
 aliases:
   - Pi-hole
