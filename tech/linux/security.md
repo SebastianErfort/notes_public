@@ -1,13 +1,10 @@
 ---
-title: Security
+title: Security on Linux
 visibility: public
 ---
-# Links
+# Security on Linux
 
-- [LDAP](https://ldap.com/) | [slapd: Stand-alone LDAP Daemon](https://linux.die.net/man/8/slapd) | [LDAP Wiki](http://ldapwiki.com/wiki/Main)
-- [Enhancing Linux security with Advanced Intrusion Detection Environment (AIDE) @RedHat](https://www.redhat.com/sysadmin/linux-security-aide)
-
-# Encryption
+## Encryption
 
 - LUKS (Linux Unified Key Setup): [Wikipedia](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)
 - VeraCrypt: [Website](https://www.veracrypt.fr/en/Home.html) | [Wikipedia](https://en.wikipedia.org/wiki/VeraCrypt) | [RedHat](https://access.redhat.com/solutions/100463) | [RedHat Article](https://www.redhat.com/sysadmin/disk-encryption-luks)
@@ -27,8 +24,17 @@ udisksctl unmount -b /dev/mapper/cr_dev
 sudo cryptsetup luksClose cr_dev
 ```
 
-# PAM (Pluggable Authentication Module)
 
+
+## Sandboxing
+
+- [Firejail]
+
+## Authentication
+
+### PAM (Pluggable Authentication Module)
+
+PAM (Pluggable Authentication Modules): centralised authentication mechanism
 Tags: #linux/PAM
 
 - [Arch Wiki: PAM](https://wiki.archlinux.org/title/PAM)
@@ -37,16 +43,12 @@ Tags: #linux/PAM
 - [# Anatomy of a Linux Pluggable Authentication Modules (PAM) configuration file @RedHat](https://www.redhat.com/sysadmin/pam-configuration-file)
 - [Setting up multi-factor authentication on Linux systems (using google-authenticator) @RedHat](https://www.redhat.com/sysadmin/mfa-linux)
 
-### General & config
-
-PAM (Pluggable Authentication Modules): centralised authentication mechanism
+#### General & config
 
 - can break security/system if configured incorrectly (allow any password or none at all)
 - a library for programs like SSH to authenticate users
 - configuration files in `/etc/pam.d`
 - in our puppet modules the configuration is not written directly, but through the Debian program `pam-auth-update` which is part of the `libpam-runtime` package
-
-Testing (from [Remco's README for liapam_2fa](https://git.lwp.rug.nl/rwouts/pam_2fa/-/tree/master))
 
 This is a handy tool for testing (on linux)
 
@@ -60,7 +62,7 @@ You can use it by defining `/etc/pam.d/pam_test`
 auth  [success=3 default=ignore]  pam_unix.so nullok try_first_pass
 auth  required                  pam_sss.so use_first_pass
 auth    [success=1]                     /home/user/test/lib/security/pam_2fa.so config=/home/user/.config/netiq.json
-# here's the fallback if no module succeeds
+## here's the fallback if no module succeeds
 auth  requisite      pam_deny.so
 auth  required      pam_permit.so
 auth  required                        pam_group.so use_first_pass
@@ -74,26 +76,27 @@ and then running
 
 from the `pam_test` directory.
 
-## Modules
-
-### pam_exec
+#### Modules
 
 ```
+# pam_exec
 auth [succeed=1, default=ignore]  pam_exec.so quiet exposeauthk /path/to/file
+# pam_succeed_if
+# pam_regex
+# https://www.gnu.org.ua/software/pam-modules/manual/html_chapter/regex.html
+# Seems not be available in default Ubuntu PAM installation and has to be compiled manually. :facepalm:
+# - can be used to transform for example username, say to all lower case
+auth [...] pam_regex.so extended regex=... transform=s/.*/\L&/g
+# pam_ssh_agent_auth
+# Package: `libpam-ssh-agent-auth`
 ```
 
-### pam_succeed_if
+- see [[rug/projects/PAM_SSH-agent|Work LWP: project sudo with SSH agent PAM]]
 
-### pam_regex
 
-[Man page](https://www.gnu.org.ua/software/pam-modules/manual/html_chapter/regex.html)
-Seems not be available in default Ubuntu PAM installation and has to be compiled manually. :facepalm:
+## References
 
-- can be used to transform for example username, say to all lower case
-  `auth [...] pam_regex.so extended regex=... transform=s/.*/\L&/g`
+- [LDAP](https://ldap.com/) | [slapd: Stand-alone LDAP Daemon](https://linux.die.net/man/8/slapd) | [LDAP Wiki](http://ldapwiki.com/wiki/Main)
+- [Enhancing Linux security with Advanced Intrusion Detection Environment (AIDE) @RedHat](https://www.redhat.com/sysadmin/linux-security-aide)
 
-### pam_ssh_agent_auth
-
-Package: `libpam-ssh-agent-auth`
-
-See [[rug/projects/PAM_SSH-agent|Work LWP: project sudo with SSH agent PAM]]
+[Firejail]: <https://firejail.wordpress.com/>

@@ -16,6 +16,15 @@ visibility: public
 
 ## CI/CD
 
+CD
+
+- [Argo CD][argocd]
+- [Flux CD][fluxcd]
+  > Flux is a set of continuous and progressive delivery solutions for Kubernetes that are open and extensible.
+
+
+CI
+
 - [Circle CI][circle]
 - [Travis CI][travis]
 - [Jenkins CI][jenkins]
@@ -55,3 +64,5 @@ See [[git/GitLab]]
 [circle]: <https://circleci.com/>
 [travis]: <https://www.travis-ci.com/>
 [jenkins]: <https://www.jenkins.io/>
+[argocd]: <https://argoproj.github.io/cd/>
+[fluxcd]: <https://fluxcd.io/>

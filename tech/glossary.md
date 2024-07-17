@@ -9,7 +9,10 @@ visibility: public
 - BSP: Board Support Package ^bsp
 - JTAG: Joint Test Action Group ^jtag
 - FPGA: Field-programmable Gate Array ^fpga
+- NUMA: non-uniform memory architecture ^numa
 - SAN: Storage area network ^san
+- SMP: Symmetric multiprocessing or shared-memory multiprocessing ^smp
+    > Symmetric multiprocessing or shared-memory multiprocessing involves a multiprocessor computer hardware and software architecture where two or more identical processors are connected to a single, shared main memory, have full access to all input and output devices, and are controlled by a single operating system instance that treats all processors equally, reserving none for special purposes. [Wikipedia](https://en.wikipedia.org/wiki/Symmetric_multiprocessing)
 
 ## Dev
 

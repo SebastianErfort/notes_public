@@ -15,12 +15,19 @@ same:
 ---
 # KVM
 
+Check CPU virtualisation support
+
+```bash
+ls /dev/kvm
+# or
+lsmod | grep kvm
+```
 
 ## Config and Management
 
 Cumbersome directly, but tools exist to help
 
-- [[virsh]]: command line tool
+- [[libvirt#virsh]]: command line tool
 - GUI: GNOME Boxes, ...
 
 ## Quick-start

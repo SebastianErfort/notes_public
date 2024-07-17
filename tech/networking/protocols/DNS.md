@@ -40,7 +40,7 @@ Tools: `host`, `nslookup`, `dig`
 ## Tools
 
 - [Dnsmasq]: "Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot."
-    - [[RaspberryPi#^pihole|Pihole]]
+    - [[raspberrypi#^pihole|Pihole]]
 
 ## References
 

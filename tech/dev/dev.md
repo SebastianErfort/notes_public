@@ -162,6 +162,11 @@ See also [[dev/devops|DevOps]].
   > Cloud Native CI/CD
 
 
+## GitOps
+
+- [Fleet]
+  > Deploy workloads from Git to large fleets of Kubernetes clusters
+
 ## Databases
 
 See [[public/tech/data/databases/index|my notes on databases]]
@@ -283,3 +288,4 @@ Free stock media
 [tera]: <https://keats.github.io/tera/>
 [commitlint]: <https://commitlint.js.org/>
 [dependabot]: <https://github.com/dependabot>
+[fleet]: <https://fleet.rancher.io/>
