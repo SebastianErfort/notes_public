@@ -109,10 +109,13 @@ Plugin managers
 - statusbar
     - [lualine](https://github.com/nvim-lualine/lualine.nvim)
 - file explorer
-    - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua): A file explorer tree for neovim written in lua
-    - [neotree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim): Neovim plugin to manage the file system and other tree like structures
+    - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua):
+      > A file explorer tree for neovim written in lua
+    - [neotree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim):
+      > Neovim plugin to manage the file system and other tree like structures
 - buffers/tabs
-    - [barbar](): The neovim tabline plugin
+    - [barbar]:
+      > The neovim tabline plugin
     - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 - icons
     - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
@@ -126,21 +129,27 @@ Plugin managers
 - comment
     - [Comment.nvim](https://github.com/numToStr/Comment.nvim):
       > 🧠 💪 Smart and powerful comment plugin for neovim. Supports treesitter, dot repeat, left-right/up-down motions, hooks, and more
-- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim): EditorConfig plugin for Vim
-- [nvim-osc52](https://github.com/ojroques/nvim-osc52): copy text to the system clipboard using the ANSI OSC52 sequence
-- [true-zen.nvim](https://github.com/Pocco81/true-zen.nvim): Clean and elegant distraction-free writing for NeoVim
+- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim):
+  > EditorConfig plugin for Vim
+- [nvim-osc52](https://github.com/ojroques/nvim-osc52):
+  > copy text to the system clipboard using the ANSI OSC52 sequence
+- [true-zen.nvim](https://github.com/Pocco81/true-zen.nvim):
+  > Clean and elegant distraction-free writing for NeoVim
 - snippets
     - [vim-snippets](https://github.com/honza/vim-snippets)
 - auto-completion
-    - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): A completion plugin for neovim coded in Lua
-    - [nvim-autopairs](https://github.com/windwp/nvim-autopairs): A super powerful autopair plugin for Neovim that supports multiple characters.
+    - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp):
+      > A completion plugin for neovim coded in Lua
+    - [nvim-autopairs](https://github.com/windwp/nvim-autopairs):
+      > A super powerful autopair plugin for Neovim that supports multiple characters.
 
 ### Dev
 
 - [telescope](https://github.com/nvim-telescope/telescope.nvim): `telescope.nvim` is a highly extendable fuzzy finder over lists. Built on the latest awesome features from `neovim` core. Telescope is centered around modularity, allowing for easy customization. ^34282b
 - [trouble](https://github.com/folke/trouble.nvim):
   > 🚦 A pretty diagnostics, references, telescope results, quickfix and location list to help you solve all the trouble your code is causing.
-- [nvim-docker](https://github.com/dgrbrady/nvim-docker): Docker management right inside Neovim
+- [nvim-docker](https://github.com/dgrbrady/nvim-docker):
+  > Docker management right inside Neovim
 - [gitlab.vim](https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim): official editor extension
 
 ### Filetype
@@ -154,12 +163,14 @@ Plugin managers
     - [lsp-zero](https://github.com/VonHeikemen/lsp-zero.nvim): configure `nvim-lspconfig` and `nvim-cmp`
 - [lsp-colors](https://github.com/folke/lsp-colors.nvim):
   > 🌈 Plugin that creates missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin LSP client.
-- [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim): Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
+- [null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim):
+  > Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
     - [Builtins](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md#vale)
 
 ### Productivity
 
-- [Telekasten](https://github.com/renerocksai/telekasten.nvim): A Neovim (lua) plugin for working with a markdown zettelkasten / wiki and mixing it with a journal, based on [[#^34282b|telescope.nvim]]
+- [Telekasten](https://github.com/renerocksai/telekasten.nvim):
+  > A Neovim (lua) plugin for working with a markdown zettelkasten / wiki and mixing it with a journal, based on telescope.nvim
     - Demo/set-up: <https://dev.to/2kabhishek/i-made-a-video-about-taking-notes-in-neovim-2l5i>
 
 ## References
@@ -173,3 +184,4 @@ Plugin managers
 - [reddit discussion about neovim plugins and configuration overhead](https://www.reddit.com/r/neovim/comments/wehqqr/some_constructive_criticism_for_the_hard_working/)
 
 [nvim-config-repo]: <https://github.com/SebastianErfort/kickstart.nvim>
+[barbar]: <https://github.com/romgrk/barbar.nvim>
