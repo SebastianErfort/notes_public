@@ -8,29 +8,33 @@ url: "https://docker.com"
 docs: "https://docs.docker.com/"
 visibility: public
 ---
+# Docker
+
 `= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")` | `= ("[Source](" + this.source + ")")`
 
-## Commands
-
-```bash
-docker pull <image> # pull image from registry
-docker container ls # list (running) containers
-docker ps # list containers
-docker run -d -it <image name> # start container
-docker exec -it <container-id> /bin/bash # get a shell
-```
+> [!tip] Important Commands
+>
+> ```bash
+> docker pull $image # pull image from registry
+> docker ps # list containers
+> docker container ls # list (running) containers
+> docker run -d -it $image_name # start persistent container
+> docker exec -it $container_id /bin/bash # get a shell
+> ```
 
 
 ## Images
 
-Using an image checksum in the definition can be used to verify integrity and downloading a modified container.[^1]
-
-[^1]: <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#use-checksum-to-keep-your-image-secure>
+Using an image checksum in the definition can be used to verify integrity and downloading a modified container.[^gldocs-docker-image-security-checksum]
 
 - [[github#GitHub packages|Publish image as GitHub Package]]
 
 
-## Rootless
+## Installation
+
+- [Debian from `apt` repo](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+
+### Rootless
 
 <https://docs.docker.com/engine/security/rootless/>
 
@@ -40,7 +44,18 @@ Using an image checksum in the definition can be used to verify integrity and do
 [^2]: https://serverfault.com/questions/1085738/docker-and-rootless-docker-side-by-side-is-it-allowed
 
 
-### openSUSE
+#### Disadvantages and Limitations
+
+<https://docs.docker.com/engine/security/rootless/#known-limitations>
+
+<https://linuxhandbook.com/rootless-docker/>
+Using [Slirp4netns](https://github.com/rootless-containers/slirp4netns?ref=linuxhandbook.com) mode solves this problem, and shows the original address of the request. But it also has two problems.
+
+- IPv6 not supported.
+- speed is much slower (about 7Gbps).
+
+
+#### openSUSE
 
 - `newuidmap` and `newgidmap` already available, package `uidmap` doesn't exist
 - installed `fuse-overlayfs` as recommended
@@ -57,17 +72,6 @@ Using an image checksum in the definition can be used to verify integrity and do
 The [[openSUSE]] package `rootlesskit` doesn't include all the scripts other repo's packages provide.
 
 
-### Disadvantages and Limitations
-
-<https://docs.docker.com/engine/security/rootless/#known-limitations>
-
-<https://linuxhandbook.com/rootless-docker/>
-Using [Slirp4netns](https://github.com/rootless-containers/slirp4netns?ref=linuxhandbook.com) mode solves this problem, and shows the original address of the request. But it also has two problems.
-
-- IPv6 not supported.
-- speed is much slower (about 7Gbps).
-
-
 # Glossary
 
 Term | Description | Similar | Example
@@ -80,3 +84,5 @@ context | like an environment (incl. endpoint) | | [docs](https://docs.docker.co
 ## References
 
 - [How to Assign a Static IP to a Docker Container](https://www.howtogeek.com/devops/how-to-assign-a-static-ip-to-a-docker-container/)
+
+[^gldocs-docker-image-security-checksum]: <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#use-checksum-to-keep-your-image-secure>

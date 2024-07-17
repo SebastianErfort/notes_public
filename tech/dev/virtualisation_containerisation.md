@@ -23,7 +23,7 @@ egrep "svm|vmx" /proc/cpuinfo
 Type 1 Hypervisors: runs directly on computer's underlying hardware, e.g. VMWare ESXi
 
 - [[KVM]]
-- [[esxi]]
+- [[vsphere]]
 - [[hyper-v]]
 - [[Proxmox]]
 - [[XCP-ng]] and [[Xen]]
@@ -33,14 +33,22 @@ Type 2: runs on top of underlying OS
 
 - [[VirtualBox]]
 - [[VMWare]] Fusion, Workstation
-- bhyve
+- [[bhyve]]
 - [[qemu]]: emulate hardware, can utilise [[KVM]]
+
 
 ## Containerisation
 
-### [[dev/Docker|Docker]]
+- protected spaces, self-contained
+- share host's kernel
+- portable and flexible
+- created from file system images
+- optimized to run a service/application without additional software
 
-### [[LXC]]
+Container applications
+
+- [[dev/Docker|Docker]]
+- [[LXC]]
 
 
 ## Orchestration

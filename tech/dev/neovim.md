@@ -1,9 +1,13 @@
 ---
 title: neovim
 type: software
-category: editor
-aliases: nvim
-url: "https://neovim.io/"
+category:
+  - editor
+aliases:
+  - nvim
+  - neovim
+  - NeoVIM
+url: https://neovim.io/
 visibility: public
 ---
 

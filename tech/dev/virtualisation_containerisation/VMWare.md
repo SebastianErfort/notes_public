@@ -5,14 +5,24 @@ tags:
   - sw/vmware
 organisations:
   - "[[Broadcom]]"
-down: "[[esxi|ESXi]]"
+down: "[[vsphere|ESXi]]"
+aliases:
+  - VMWare Fusion
+  - VMWare Workstation
 ---
 
 # VMWare
 
-## VMWare Workstation
+> [!warning]- License costs
+> Especially since the acquisition through Broadcom, VMWare has been criticised for its subscription model. Broadening licenses to include more products that might not be required, has led to manifold costs for some businesses.[^arstechnica-vmware-critique]
 
-Reset free trial period: delete license file `/etc/vmware/license-ws-...` and run `sudo vmware` once.
+- integrates well with [[vsphere|vSphere]] ecosystem
+
+## VMWare Workstation and Fusion
+
+- Windows: VMWare Workstation
+- MacOS: VMWare Fusion
+- reset free trial period: delete license file `/etc/vmware/license-ws-...` and run `sudo vmware` once.
 
 
 ### Configuration
@@ -24,3 +34,8 @@ Reset free trial period: delete license file `/etc/vmware/license-ws-...` and ru
   smbios.assettag = "wks001001"  
   bios.forceSetupOnce = "TRUE"
   ```
+
+
+## References
+
+[^arstechnica-vmware-critique]: <https://arstechnica.com/information-technology/2024/04/broadcom-execs-say-vmware-price-subscription-complaints-are-unwarranted/>

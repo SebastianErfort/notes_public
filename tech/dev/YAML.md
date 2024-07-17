@@ -42,7 +42,7 @@ description: >-
 
 ## Linting
 
-- yamllint: [Documentation](https://yamllint.readthedocs.io/en/stable/index.html) | [![|20](github.png) GitHub](https://github.com/adrienverge/yamllint)
+- yamllint: [Documentation](https://yamllint.readthedocs.io/en/stable/index.html) | [GitHub](https://github.com/adrienverge/yamllint)
     - supports extracting and processing of **YAML front matter in Markdown** files
 - yamlfmt: [Source: github.com/google/yamlfmt](https://github.com/google/yamlfmt) |
 - yamlfix: [GitHub](https://github.com/lyz-code/yamlfix) | [Documentation](https://lyz-code.github.io/yamlfix/)

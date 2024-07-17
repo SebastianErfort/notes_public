@@ -179,7 +179,7 @@ See [[public/tech/data/databases/index|my notes on databases]]
 
 ### [[Podman]]
 
-### [[Kubernetes]]
+### [[public/tech/dev/Kubernetes]]
 
 ### [[Docker]]
 

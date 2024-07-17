@@ -12,9 +12,9 @@ category: Linux
 
 visibility: public
 ---
-| | | |
-|-|-|-|
-| `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")` |
+|                                         |                                       |                                            |
+| --------------------------------------- | ------------------------------------- | ------------------------------------------ |
+| `= ("[Website](" + this.website + ")")` | `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")` |
 
 ## Commands
 
@@ -52,6 +52,17 @@ See `man systemd.directives` for available stanzas.
 ## Security
 
 [Hardening systemd - Ubuntu version](https://github.com/konstruktoid/hardening)
+
+
+## Containers
+
+The Systemd package `systemd-container` brings helpful tools to manage containers, i.e. `machinectl`. Unlike `su` this ensures that sockets etc., necessary for container management, are properly addresses.
+
+```bash
+machinectl shell --uid <user>
+# or (@<host> defaults to localhost)
+machinectl shell <user>@
+```
 
 
 ## References

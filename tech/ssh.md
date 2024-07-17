@@ -126,7 +126,7 @@ ssh-keygen -t ed25519 -a 100
 Tags: #tech/SSH/SOCKS
 default port:[^4] 1080
 
-[^4]: [IANA: ports](networking#^d2523a)
+[^4]: [IANA: ports](_networking.md#^d2523a)
 
 
 SSH config
