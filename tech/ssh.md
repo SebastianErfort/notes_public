@@ -38,7 +38,7 @@ Host xyz
 
 ### Proxy Command
 
-SSH-tunneling through intermediate host (jumphost). Outdated and vulnerable,[^7] use `ProxyJump` instead[^6]
+SSH-tunneling through intermediate host (jumphost). Outdated and vulnerable,[^cve-proxy-command] use `ProxyJump` instead[^6]
 
 ```
 Host xyz
@@ -170,8 +170,12 @@ For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs
 
 ## References
 
+- [CVE-2024-6387]: regression lead to vulnerability
+    - [patched Ubuntu packages](https://ubuntu.com/security/notices/USN-6859-1)
+
 [^5]: [RedHat article SSH dynamic Port-Forwarding](https://www.redhat.com/sysadmin/ssh-dynamic-port-forwarding)
 [^6]: [RedHat article SSH ProxyJump](https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump)
-[^7]: CVE-2023-51385
+[^cve-proxy-command]: [CVE-2023-51385](<https://nvd.nist.gov/vuln/detail/CVE-2023-51385>)
+[CVE-2024-6387]: <https://nvd.nist.gov/vuln/detail/CVE-2024-6387>
 [^config_match]: <https://unix.stackexchange.com/a/528212>
 [^1]: <https://www.howtogeek.com/825102/how-to-run-a-local-script-on-a-remote-linux-server/>

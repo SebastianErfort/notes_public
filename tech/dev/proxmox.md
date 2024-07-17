@@ -9,10 +9,12 @@ docs: https://www.proxmox.com/en/services/support#support-resources
 source: https://github.com/proxmox
 desc-short: |
   Proxmox Virtual Environment is a virtualisation platform designed for the provisioning of hyper-converged infrastructure. Proxmox allows deployment and management of virtual machines and containers. It is based on a modified Ubuntu LTS kernel. Two types of virtualization are supported: container-based with LXC, and full virtualization with KVM.
-tags: 
-same:
-  - "[[vsphere|ESXi]]"
+tags:
+  - hypervisor
+related: &related
+  - "[[esxi|ESXi]]"
   - "[[hyper-v|Hyper-V]]"
+same: *related
 ---
 > [!warning] No updates without subscription!?
 
@@ -36,7 +38,7 @@ same:
 
 ## Config
 
-- access management webinterface through ip+port provided
+- access management webinterface through ip+port provided, default `<ip>:8006`
 - upload ISO
 - create VM using ISO
 - show and download pre-configured container images through Proxmox console: server, client and special-purpose images (`turnkey`)

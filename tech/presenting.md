@@ -27,6 +27,10 @@ WHERE type = "software" AND contains(category, "present") OR contains(file.folde
 - https://www.slideshare.net/
 
 
+## Tools
+
+- see also [[video#Tools|Hardware > Video # Tools]]
+
 ## References
 
 - <https://hakim.se/> ([[revealjs]])

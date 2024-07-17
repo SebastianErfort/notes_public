@@ -10,7 +10,16 @@ aliases:
   - Partitions
   - Filesystems
   - Blockdevices
+  - Disks
 ---
+## Disks
+
+Rescan/detect disk changes
+
+```bash
+echo 1>/sys/class/block/sdd/device/rescan
+```
+
 ## Partitioning
 
 - [linuxconfig.org](https://linuxconfig.org/how-to-label-hard-drive-partition-under-linux) | `parted` | `fdisk` | `lsblk` | `sgdisk` (GPT)

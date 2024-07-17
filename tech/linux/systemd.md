@@ -12,9 +12,9 @@ category: Linux
 
 visibility: public
 ---
-|                                         |                                       |                                            |
-| --------------------------------------- | ------------------------------------- | ------------------------------------------ |
-| `= ("[Website](" + this.website + ")")` | `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")` |
+# Systemd
+
+`= ("[Website](" + this.website + ")")` | `= ("[Github](" + this.github + ")")` | `= ("[Documentation](" + this.docs + ")")`
 
 ## Commands
 
@@ -35,6 +35,22 @@ visibility: public
 
   > [!info]- Example plot
   > ![[systemd.svg]]
+
+
+## Virtualisation and Containerisation
+
+The package `systemd-container` includes tools for management of virtual machines and containers.
+
+> `machinectl` may be used to introspect and control the state of the systemd virtual machine and container registration manager systemd-machined.service
+
+This can be used to impersonate user (e.g. Docker process owner) and will properly give access to sockets etc. required to interact with hypervisors.
+
+```sh
+machinectl shell --uid=<user id>
+# or (empty host after @ defaults to localhost)
+machienctl shell <user>@
+```
+
 
 ## Service Files
 

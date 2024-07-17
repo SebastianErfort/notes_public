@@ -1,4 +1,7 @@
-## References
+---
+title: Video
+---
+## Tools
 
 - Video wall
     - [info-beamer](https://info-beamer.com/)

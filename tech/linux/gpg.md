@@ -3,9 +3,13 @@ visibility: public
 title: Gpg
 ---
 From the man page
+
 > Note that on larger installations, it is useful to put predefined files into the directory `/etc/skel/.gnupg` so that newly created  users  start  up with a working configuration.
 
 # Commands
+
+- list keys: `gpg --list-secret-keys --keyid-format LONG`
+- export/backup and restoring^[https://www.howtogeek.com/816878/how-to-back-up-and-restore-gpg-keys-on-linux/]
 
 See also [cheatsheet](file://.config/cheat/cheatsheets/personal/gpg).
 
@@ -49,3 +53,4 @@ sudo gpg --no-default-keyring --keyring */usr/share/keyrings/*<myrepository>-arc
 wget -qO - [http://example.com/archive.key](http://example.com/archive.key) | apt-key add -
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
 ```
+

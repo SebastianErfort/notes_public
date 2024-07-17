@@ -12,7 +12,9 @@ docs: https://theforeman.org/manuals/3.10/index.html
 source: https://github.com/theforeman
 desc-short: |
   Foreman is a complete lifecycle management tool for physical and virtual servers. We give system administrators the power to easily automate repetitive tasks, quickly deploy applications, and proactively manage servers, on-premise or in the cloud.
-tags: 
+tags:
+  - dev/automation
+  - dev/server
 aliases:
   - Foreman
 ---

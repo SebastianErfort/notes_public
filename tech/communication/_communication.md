@@ -38,7 +38,7 @@ aliases:
 
 ```dataview
 TABLE WITHOUT ID
-title AS "Name",
+file.link AS "Name",
 ("[Website](" + this.url + ")") AS "Links"
 WHERE type = "software" AND category = "communication"
 ```

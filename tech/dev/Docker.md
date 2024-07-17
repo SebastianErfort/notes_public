@@ -43,6 +43,18 @@ Using an image checksum in the definition can be used to verify integrity and do
 
 [^2]: https://serverfault.com/questions/1085738/docker-and-rootless-docker-side-by-side-is-it-allowed
 
+Keep user containers alive after logout
+
+```bash
+sudo loginctl enable-linger $(id -u)
+export DOCKER_HOST=unix:///run/user/$(id -u)/docker.sock
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+systemctl --user status docker.service
+# if still dead try
+systemctl --user restart docker.service
+```
+
+^4d425a
 
 #### Disadvantages and Limitations
 

@@ -4,10 +4,10 @@ type: software
 category:
   - Automation
 tags:
-  - dev/Ansible
+  - dev/ansible
   - dev/CM
-  - dev/ConfigurationManagement
-  - dev/Automation
+  - dev/configurationmanagement
+  - dev/automation
 code: open source
 company: |
   [[RedHat]]

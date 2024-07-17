@@ -1,8 +1,8 @@
 ---
 title: Terraform
 tags:
-  - dev/IaC
-  - dev/Terraform
+  - dev/iac
+  - dev/terraform
 visibility: public
 type: software
 category: IaS
