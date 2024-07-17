@@ -9,11 +9,15 @@ docs: https://www.proxmox.com/en/services/support#support-resources
 source: https://github.com/proxmox
 desc-short: |
   Proxmox Virtual Environment is a virtualisation platform designed for the provisioning of hyper-converged infrastructure. Proxmox allows deployment and management of virtual machines and containers. It is based on a modified Ubuntu LTS kernel. Two types of virtualization are supported: container-based with LXC, and full virtualization with KVM.
-tags: 
-same:
+tags:
+  - hypervisor
+related: &related
   - "[[esxi|ESXi]]"
   - "[[hyper-v|Hyper-V]]"
+same: *related
 ---
+> [!warning] No updates without subscription!?
+
 # Proxmox
 
 `= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")` | `= ("[Source](" + this.source + ")")`

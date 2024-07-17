@@ -7,13 +7,14 @@ visibility: public
 developer: "[[VMWare]]"
 aliases:
   - ESXi
+  - vSphere
+  - vCenter
 up:
   - "[[vSphere]]"
 ---
-# `=this.title`
+## `=this.title`
 
 - type 1 hypervisor
-- [[vSphere]] ecosystem
 - free with temporary evaluation license or indefinitely with restrictions
 - manage via web, vSphere client or vCenter Server
 - instances can be combined to enable advanced features, for example virtual storage and networking

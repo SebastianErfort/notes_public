@@ -112,7 +112,7 @@ Examples
 
 ## MAC Address
 
-#### Spoofing
+### Spoofing
 
 <https://www.xmodulo.com/spoof-mac-address-network-interface-linux.html>
 <https://arvdl.github.io/posts/mac-address-linux/>

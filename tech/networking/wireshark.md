@@ -36,13 +36,13 @@ Structural approach
 - (divide and conquer, not reliable)
 - shoot-from-the-hip (experienced)
 
-![[networking#^0fd526]]
+![[_networking#^0fd526]]
 
 
 ### Packets
 
-![[networking#Packet Problems]]
-![[networking#Packet Priority]]
+![[_networking#Packet Problems]]
+![[_networking#Packet Priority]]
 
 
 ### Ping and ICMP (Layer 3)

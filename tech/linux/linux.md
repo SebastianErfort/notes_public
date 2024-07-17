@@ -246,7 +246,7 @@ timedatectl set-ntp true # activate using NTP
 systemctl restart systemd-timedated
 ```
 
-See also [[networking#NTP|NTP]].
+See also [[_networking#NTP|NTP]].
 
 ### Hostname
 

@@ -6,7 +6,7 @@ tags:
   - tech/networking/DNS
 visibility: public
 ---
-
+# Networking
 
 ## IP Address, Mask, Gateway
 
@@ -81,6 +81,14 @@ WHERE contains(file.path,"networking/protocols")
 [Netplan documentation](https://netplan.readthedocs.io/en/latest/)
 
 - [YAML configuration](https://netplan.readthedocs.io/en/latest/netplan-yaml/)
+
+
+## Load Balancing
+
+- [[nginx]]: HTTPq
+- [HAProxy](https://www.haproxy.org/): TCP/HTTP
+- [LVS (Linux Virtual Server)](http://www.linuxvirtualserver.org/whatis.html)
+
 
 ## Tools
 
@@ -270,9 +278,12 @@ Detecting Wireshark being used on a network: with active name resolution disable
 Packets have tags to determine priority and ensure Quality of Service (QoS). In most cases this should be reassigned when external packets enter a network as own priorities on traffic are safer to use.
 
 
+## Glossary
+
+![[public/tech/glossary#Networking|glossary]]
+
 ## References
 
 - [Wikipedia: List of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 - [[Hardware#MAC Address|My notes on MAC addresses]]
 - [Get public IP address DaveMcKay@HowToGeek](https://www.howtogeek.com/839170/how-to-get-your-public-ip-in-a-linux-bash-script/)
-
