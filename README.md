@@ -15,3 +15,5 @@ Online version available at <https://sebastianerfort.github.io/notes>.
 ## TODO
 
 - [ ] copyright and licensing
+- [ ] clean
+    - [ ] remove icons/logos in links, e.g. GitHub logo (style through CSS instead)

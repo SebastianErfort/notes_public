@@ -183,6 +183,19 @@ Host hardware can be passed through to guest.
 - if device is unplugged/not plugged in, QEMU keeps checking for it
 - to make device available to host again, guest has to be shut down
 
+
+## Networking
+
+- user-mode networking on private NAT
+
+  | Role             | IP        |
+  | ---------------- | --------- |
+  | DHCP             | 10.0.2.2  |
+  | DNS (forwarding) | 10.0.2.3  |
+  | SMB              | 10.0.2.4  |
+  | Guest            | 10.0.2.15 |
+
+
 ## References
 
 [^numa]: See [[public/tech/glossary#^numa|glossary]]
