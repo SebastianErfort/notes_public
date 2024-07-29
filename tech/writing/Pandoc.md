@@ -47,7 +47,7 @@ Available filters:
 
 ### pandoc-crossref
 
-![[github.png|20]][pandoc-crossref](https://github.com/lierdakil/pandoc-crossref): filter for numbering figures, equations, tables and cross-references to them
+[pandoc-crossref](https://github.com/lierdakil/pandoc-crossref): filter for numbering figures, equations, tables and cross-references to them
 
 ### Mermaid
 
