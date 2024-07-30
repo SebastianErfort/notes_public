@@ -1,6 +1,8 @@
 ---
 visibility: public
 title: LaTeX
+aliases:
+  - TeX
 ---
 [Overleaf guides](https://www.overleaf.com/learn)
 
@@ -26,3 +28,13 @@ Academic Icons | [Source](https://www.ctan.org/pkg/academicons) [Documentation](
 [Glossaries guide @overleaf](https://www.overleaf.com/learn/latex/Glossaries)
 *Reset glossary entry:* this will force the next use of an entry to appear like the first use
 `\glslocalreset{myentry}\gls{entry}`
+
+
+
+## Graphs
+
+### TikZ/PGF
+
+[Documentation](https://tikz.dev/)
+
+- [Plotting functions](https://tikz.dev/tikz-plots)

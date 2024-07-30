@@ -65,7 +65,7 @@ Container applications
 
 ## Orchestration
 
-- [[Vagrant]]
+- [[public/tech/dev/Vagrant]]
 - [[libvirt]]
 - [[public/tech/dev/Kubernetes|Kubernetes]]
 - [[public/tech/dev/Podman|Podman]]

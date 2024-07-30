@@ -84,7 +84,7 @@ GIT_AUTHOR_NAME
 GIT_AUTHOR_EMAIL
 ```
 
-[Sparse Checkout](https://git-scm.com/docs/git-sparse-checkout): clone/check out only part of a repository[^2]
+[Sparse Checkout](https://git-scm.com/docs/git-sparse-checkout): clone/check out only part of a repository[^sparse-checkout]
 
 ```bash
 git config core.sparseCheckout true
@@ -94,7 +94,7 @@ echo -e "[core]\n\tsparseCheckout = true" > .git/config
 echo <dirname> >> .git/info/sparse-checkout
 ```
 
-[^2]: <https://stackoverflow.com/a/13738951>
+[^sparse-checkout]: <https://stackoverflow.com/a/13738951>
 
 ### Hooks
 

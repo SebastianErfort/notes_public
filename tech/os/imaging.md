@@ -10,6 +10,8 @@ visibility: public
 
 See [[docs/wiki/Unattended/Unattended#Imaging|work notes Imaging]].
 
+- FSArchiver: can archive entire partitions and be used as an imaging tool (minus multi-cast restoration)
+
 
 ### ZenworksImaging
 
