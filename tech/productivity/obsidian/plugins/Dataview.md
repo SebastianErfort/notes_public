@@ -136,6 +136,12 @@ dateformat(field, "yyyy-MM-dd") # format dates
 
 Query for all tasks in this file
 
+````markdown
+```dataview
+TASK
+WHERE file.path = this.file.path
+```
+````
 ```dataview
 TASK
 WHERE file.path = this.file.path

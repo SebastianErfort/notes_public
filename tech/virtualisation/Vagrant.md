@@ -9,6 +9,8 @@ category:
   - virtualisation
 visibility: public
 ---
+# Vagrant
+
 `= ("[Website](" + this.website + ")")` |  `= ("[GitHub](" + this.source + ")")`
 
 Working directory is shared with VM, accessible under `/vagrant`.
@@ -41,7 +43,7 @@ Happens
 
 ## Vagrantfile
 
-Written in [[ruby|ruby]] language
+Written in [[ruby]] language
 
 ```ruby
 Vagrant.configure("2") do |config|
@@ -111,4 +113,4 @@ vagrant box add mybox /path/to/my.box
 
 ## Examples
 
-[[example_html_server]]
+- [[example_html_server|HTML server]]

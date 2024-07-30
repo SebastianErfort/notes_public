@@ -7,6 +7,8 @@ tags:
   - dev/devops/kanban
   - dev/devops/scrum
 visibility: public
+up:
+  - "[[dev]]"
 ---
 ## Dependencies
 
@@ -16,9 +18,17 @@ visibility: public
 
 ## CI/CD
 
+### CI
+
 - [Circle CI][circle]
 - [Travis CI][travis]
 - [Jenkins CI][jenkins]
+
+### CD
+
+- [Argo CD][argocd]
+- [Flux CD][fluxcd]
+  > Flux is a set of continuous and progressive delivery solutions for Kubernetes that are open and extensible.
 
 ### [[GitLab#Automation and CI/CD|GitLab]]
 
@@ -26,6 +36,7 @@ visibility: public
 
 Tools
 
+- [[pre-commit]]
 - [nektosact](https://nektosact.com/): [GitHub](https://github.com/nektos/act)
 
     > Run your GitHub Actions locally 🚀
@@ -55,3 +66,5 @@ See [[git/GitLab]]
 [circle]: <https://circleci.com/>
 [travis]: <https://www.travis-ci.com/>
 [jenkins]: <https://www.jenkins.io/>
+[argocd]: <https://argoproj.github.io/cd/>
+[fluxcd]: <https://fluxcd.io/>

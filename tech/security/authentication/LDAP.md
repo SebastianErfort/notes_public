@@ -49,9 +49,9 @@ Attributes
 Tags: #sw/openLDAP
 
 - supports LDAPv3
-- [[networking#Simple Authentication Security Layer (SASL)|SASL]]
-- [[networking#Transport Layer Security (TLS)|TLS]]
-- [[networking#Secure Sockets Layer (SSL)|SSL]]
+- [[_networking#Simple Authentication Security Layer (SASL)|SASL]]
+- [[_networking#Transport Layer Security (TLS)|TLS]]
+- [[_networking#Secure Sockets Layer (SSL)|SSL]]
 - LDAP over IPC (Inter Process Communication): enhances security by allowing local communication instead of network
 - IPv6
 - CAPI for program access

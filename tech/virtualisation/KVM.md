@@ -5,9 +5,9 @@ type: software
 category:
   - virtualisation
 visibility: public
-url: http://www.linux-kvm.org/
-source: https://git.kernel.org/pub/scm/virt/kvm/kvm.git
-docs: https://linux-kvm.org/page/Documents
+url: "http://www.linux-kvm.org/"
+source: "https://git.kernel.org/pub/scm/virt/kvm/kvm.git"
+docs: "https://linux-kvm.org/page/Documents"
 developer: The Linux Kernel community
 desc-short: KVM (for Kernel-based Virtual Machine) is a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V).
 same:
@@ -15,12 +15,19 @@ same:
 ---
 # KVM
 
+Check CPU virtualisation support
+
+```bash
+ls /dev/kvm
+# or
+lsmod | grep kvm
+```
 
 ## Config and Management
 
 Cumbersome directly, but tools exist to help
 
-- [[virsh]]: command line tool
+- [[libvirt#virsh]]: command line tool
 - GUI: GNOME Boxes, ...
 
 ## Quick-start

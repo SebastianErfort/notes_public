@@ -3,12 +3,10 @@ title: Virtual Box
 type: software
 category:
   - virtualisation
-url: ""
-docs: ""
-source: ""
+url: "https://www.virtualbox.org/"
+docs: "https://www.virtualbox.org/wiki/Documentation"
 developer: Oracle
-desc-short: |
-  ...
+desc: "VirtualBox is a powerful x86 and AMD64/Intel64 virtualization product for enterprise as well as home use. Not only is VirtualBox an extremely feature rich, high performance product for enterprise customers, it is also the only professional solution that is freely available as Open Source Software under the terms of the GNU General Public License (GPL) version 3. See \"About VirtualBox\" for an introduction.Presently, VirtualBox runs on Windows, Linux, macOS, and Solaris hosts and supports a large number of guest operating systems including but not limited to Windows (NT 4.0, 2000, XP, Server 2003, Vista, 7, 8, Windows 10 and Windows 11), DOS/Windows 3.x, Linux (2.4, 2.6, 3.x, 4.x, 5.x and 6.x), Solaris and OpenSolaris, OS/2, OpenBSD, NetBSD and FreeBSD.VirtualBox is being actively developed with frequent releases and has an ever growing list of features, supported guest operating systems and platforms it runs on. VirtualBox is a community effort backed by a dedicated company: everyone is encouraged to contribute while Oracle ensures the product always meets professional quality criteria."
 tags:
   - sw/virtualBox
 visibility: public
@@ -16,7 +14,7 @@ visibility: public
 # Oracle VirtualBox
 
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
-`= ("> " + this.desc-short)`
+`= ("> " + this.desc)`
 
 
 ## Configuration and Settings
@@ -59,3 +57,14 @@ VirtualBox Guest Additions:   /sbin/rcvboxadd quicksetup all
 ```
 
 *Update:* `Devices > Upgrade Guest Additions`
+
+
+## Integration
+
+### VirtualBox in Docker
+
+To expose the hosts VirtualBox to a container, create a mapping for the device `/dev/vboxdrv` with
+
+```bash
+docker run -it --dev "/dev/vboxdrv:/dev/vboxdrv"
+```

@@ -14,7 +14,7 @@ related:
 | -------- | ----------------------------- |
 | My notes | `=(join(this.related, ", "))` |
 
-**Table of Contents**
+**Map of Contents**
 
 [[#Command Line|⌨️ Command Line]]
 [[#Version Control|  Version Control]]
@@ -25,7 +25,7 @@ related:
 ## Command Line
 
 - education
-    - [Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/index.html) | [![|20](github.png "GitHub logo") GitHub](https://github.com/swcarpentry/shell-novice)
+    - [Software Carpentry: The Unix Shell](https://swcarpentry.github.io/shell-novice/index.html) | [GitHub](https://github.com/swcarpentry/shell-novice)
 
 ### Software
 
@@ -148,6 +148,13 @@ Watch files/dirs for changes
 - Jinja
 - [Tera]: "A powerful, easy to use template engine for Rust"
 
+
+## Monitoring, Logging and Metrics
+
+- [fluentbit](https://docs.fluentbit.io/manual)
+  > High Performance Telemetry Agent for Logs, Metrics and Traces
+
+
 ## DevOps and CI/CD
 
 See also [[dev/devops|DevOps]].
@@ -161,6 +168,11 @@ See also [[dev/devops|DevOps]].
 - [Tekton](https://tekton.dev/) : [docs](https://tekton.dev/docs/) | [source](https://github.com/tektoncd)
   > Cloud Native CI/CD
 
+
+### GitOps
+
+- [Fleet]
+  > Deploy workloads from Git to large fleets of Kubernetes clusters
 
 ## Databases
 
@@ -177,7 +189,7 @@ See [[public/tech/data/databases/index|my notes on databases]]
 
 ### [[Podman]]
 
-### [[Kubernetes]]
+### [[public/tech/dev/Kubernetes]]
 
 ### [[Docker]]
 
@@ -283,3 +295,4 @@ Free stock media
 [tera]: <https://keats.github.io/tera/>
 [commitlint]: <https://commitlint.js.org/>
 [dependabot]: <https://github.com/dependabot>
+[fleet]: <https://fleet.rancher.io/>

@@ -18,12 +18,18 @@ lscpu | grep Virtualization
 egrep "svm|vmx" /proc/cpuinfo
 ```
 
+- AMD: `AMD-V`
+- Intel: `VT-x`
+
+*Paravirtualisation (VirtIO)*: provides more direct access to host's memory, storage, GPU and other devices for improved performance. Guest is aware of virtualisation.
+
+
 ## Hypervisors
 
 Type 1: runs directly on computer's underlying hardware
 
 - [[KVM]]
-- [[esxi]]
+- [[vsphere]]
 - [[hyper-v]]
 - [[Proxmox]]
 - [[XCP-ng]] and [[Xen]]
@@ -33,14 +39,28 @@ Type 2: runs on top of underlying OS
 
 - [[VirtualBox]]
 - [[VMWare]] Fusion, Workstation
-- bhyve
+- [[bhyve]]
 - [[qemu]]: emulate hardware, can utilise [[KVM]]
+
 
 ## Containerisation
 
-### [[dev/Docker|Docker]]
+- protected spaces, self-contained
+- share host's kernel
+- portable and flexible
+- created from file system images
+- optimized to run a service/application without additional software
 
-### [[LXC]]
+Container applications
+
+- [[dev/Docker|Docker]]
+- [[LXC]]
+
+
+## Virtualisation
+
+- [[KVM]]
+- [[QEMU]]
 
 
 ## Orchestration
@@ -50,6 +70,28 @@ Type 2: runs on top of underlying OS
 - [[public/tech/dev/Kubernetes|Kubernetes]]
 - [[public/tech/dev/Podman|Podman]]
 
+
+## Operation
+
+- display
+    - VNC (virtual network connection): easy, but not very fast or secure way to connect to display
+
+
+## Storage
+
+### Disk Image Files
+
+Formats
+
+- raw
+- QCOW2 (QEMU copy-on-write): snapshots, sparse files
+
+
+### Overlay
+
+Common scenario: use immutable read-only disk image with multiple guests and individual overlayed images to save space.
+
+- over extended period of time, updates and other changes can lead to great deviation between overlay and backing image
 
 ## References
 

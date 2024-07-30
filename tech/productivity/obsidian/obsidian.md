@@ -180,6 +180,7 @@ See this [[Templater#^d366ca|gist]] and [plugin/feature request](https://forum.o
     - [obsidian-emoji-toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
     - [Obsidian-Code-Styler](https://github.com/mayurankv/Obsidian-Code-Styler): styling codeblocks and inline code
     - [obsidian-banners](https://github.com/noatpad/obsidian-banners): adds banners to your notes
+    - [obsidian_supercharged_links](https://github.com/mdelobelle/obsidian_supercharged_links): "obsidian plugin to add attributes and context menu options to internal links"
 - Productivity
     - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
 - Writing

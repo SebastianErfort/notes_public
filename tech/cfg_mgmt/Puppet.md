@@ -5,7 +5,7 @@ tags:
   - dev/configurationmanagement
   - dev/CM
 visibility: public
-docs: https://www.puppet.com/docs/puppet/7/puppet_index.html
+docs: "https://www.puppet.com/docs/puppet/7/puppet_index.html"
 up:
   - "[[_configuration_management]]"
 ---

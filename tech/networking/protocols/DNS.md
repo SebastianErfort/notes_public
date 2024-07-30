@@ -22,9 +22,16 @@ Machines have an _A record_ to be identified. It maps a domain name to the IP (4
 
 To reduce the amount of requests/traffic, usually a (local) cache is used.
 
-DNS resolution config: `/etc/resolv.conf`
+- basic DNS resolution config in `/etc/resolv.conf`
 
-Tools: `host`, `nslookup`, `dig`
+DNS lookup
+
+```bash
+host
+nslookup
+dig
+resolvectl
+```
 
 [DNSSEC (DNS Security Extensions)](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
 
@@ -40,7 +47,7 @@ Tools: `host`, `nslookup`, `dig`
 ## Tools
 
 - [Dnsmasq]: "Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot."
-    - [[RaspberryPi#^pihole|Pihole]]
+    - [[raspberrypi#^pihole|Pihole]]
 
 ## References
 
