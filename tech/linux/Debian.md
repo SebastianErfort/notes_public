@@ -100,7 +100,7 @@ sudo reprepro \
 
 #### Nala
 
-[Github](https://github.com/volitank/nala) | [![[book.svg]] Wiki](https://gitlab.com/volian/nala/-/wikis/Installation)
+[Github](https://github.com/volitank/nala) | [Wiki](https://gitlab.com/volian/nala/-/wikis/Installation)
 > Nala is a front-end for `libapt-pkg`. Specifically we interface using the `python-apt` api.
 ![|400](https://github.com/volitank/nala/raw/main/imgs/nala-install-2.png)
 <https://trendoceans.com/nala-package-manager/>

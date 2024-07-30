@@ -23,7 +23,7 @@ visibility: public
     - [virtualenv](https://virtualenv.pypa.io/en/latest/#)
     - (Ana)Conda
     - [Micromamba]
-      > `micromamba` is a tiny version of the `mamba` package manager. It is a statically linked C++ executable with a separate command line interface. It does not need a `base` environment and does not come with a default version of Python.
+        > `micromamba` is a tiny version of the `mamba` package manager. It is a statically linked C++ executable with a separate command line interface. It does not need a `base` environment and does not come with a default version of Python.
 - change system python version: [[linux#^eb9a0b|Linux: default applications]]
 - [2to3 converter](https://docs.python.org/3/library/2to3.html): Automated Python 2 to 3 code translation
 
@@ -71,10 +71,10 @@ The `with` statement
 - no call of `close()` needed
 - examples
 
-  ```python
-  with open("welcome.txt") as file: # Use file to refer to the file object
-    data = file.read()
-  ```
+    ```python
+    with open("welcome.txt") as file: # Use file to refer to the file object
+      data = file.read()
+    ```
 
 ## Data Types
 
@@ -88,12 +88,12 @@ Merge two dictionaries [stackoverflow](https://stackoverflow.com/a/26853961)
 - Python >= 3.5: `z = {**x, **y}`
 - Python <= 3.4:
 
-  ```python
-  def merge_two_dicts(x, y):
-      z = x.copy()   # start with keys and values of x
-      z.update(y)    # modifies z with keys and values of y
-      return z
-  ```
+    ```python
+    def merge_two_dicts(x, y):
+        z = x.copy()   # start with keys and values of x
+        z.update(y)    # modifies z with keys and values of y
+        return z
+    ```
 
 #### Pictures
 
@@ -121,6 +121,7 @@ Package sources
 _awesome-python:_ curated list of awesome Python frameworks, libraries, software and resources [Github](https://github.com/vinta/awesome-python)
 
 > [!warning]- Why Python packaging sucks (minor rant)
+>
 > - PyPI search sucks: query for `jupyter-lab` doesn't return `jupyterlab` (why do I have to guess packager's use of hyphens?!)
 > - not obvious how to have pip upgrade installed packages (version not pinned by me, e.g. in `requirements.txt`)
 
@@ -136,16 +137,16 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 - [_Python GUI with Qt_](file://rsc/python_gui.py)
 - [_PyAutoGUI: automate GUI interaction across OSs_](file://rsc/PyAutoGUI.py)
     - _rich:_ rich text and beautiful formatting in the terminal.
-      [Github](https://github.com/Textualize/rich)
+        [Github](https://github.com/Textualize/rich)
 - _Seaborn:_ statistical data visualistion (based on Matplotlib) | [Homepage](https://seaborn.pydata.org/index.html)
-  ![Example KDE plot|300](https://media.geeksforgeeks.org/wp-content/uploads/20190318125853/Screenshot-5681.png)
+    ![Example KDE plot|300](https://media.geeksforgeeks.org/wp-content/uploads/20190318125853/Screenshot-5681.png)
 - [PyTorch3D](https://github.com/facebookresearch/pytorch3d): efficient, reusable components for 3D Computer Vision research with [PyTorch](https://pytorch.org)
 
 ### Python Enhancements, Coding, Optimisation
 
 - _functools_: implements decorator `cache` that can significantly speed up things like recursive function calls
 - _Colander:_ dictionary/JSON/YAML data validation
-  [Example](https://towardsdatascience.com/do-not-use-if-else-for-validating-data-objects-in-python-anymore-colander-7dd66c435118)
+    [Example](https://towardsdatascience.com/do-not-use-if-else-for-validating-data-objects-in-python-anymore-colander-7dd66c435118)
 
 ### Image Processing, Data Extraction and Processing
 
@@ -156,45 +157,45 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
     - `flavor`: how PDF is parsed. Options are `lattice` and `stream`
     - see [[#Data Science Pandas etc]] for examples
 - _Mito:_ work with Pandas dataframes like (Excel) tables: select, format, formulas, filter, etc.
-  [1](https://medium.com/p/139e45ce9c69) | [2](https://towardsdatascience.com/6-most-common-pandas-methods-simplified-with-mito-2cd9fe729dab) | [3](https://towardsdatascience.com/how-to-make-basic-visualizations-in-python-without-coding-f1da689d838e) | [Basic Visualisation](https://towardsdatascience.com/how-to-make-basic-visualizations-in-python-without-coding-f1da689d838e)
+    [1](https://medium.com/p/139e45ce9c69) | [2](https://towardsdatascience.com/6-most-common-pandas-methods-simplified-with-mito-2cd9fe729dab) | [3](https://towardsdatascience.com/how-to-make-basic-visualizations-in-python-without-coding-f1da689d838e) | [Basic Visualisation](https://towardsdatascience.com/how-to-make-basic-visualizations-in-python-without-coding-f1da689d838e)
     - read tables: CSV, ...
     - simple analysis: describe
     - fill holes: `fillna`
 - _Pillow:_ Python Imaging Library fork. Example: see _rembg_
 - _rembg:_ remove image backgrounds
-  <details><summary>Example</summary>
+    <details><summary>Example</summary>
 
-  ```python
-  # Remove Background of Images
-  # pip install rembg
-  # pip install pillowfrom rembg import remove as rem
-  from PIL import Imagedef Remove_bg(img):
-      output = "removed_bg.png"
-      input = Image.open(img)
-      output_img = rem(input)
-      output_img.save(output)Remove_bg('input.png')
-  ```
+    ```python
+    # Remove Background of Images
+    # pip install rembg
+    # pip install pillowfrom rembg import remove as rem
+    from PIL import Imagedef Remove_bg(img):
+        output = "removed_bg.png"
+        input = Image.open(img)
+        output_img = rem(input)
+        output_img.save(output)Remove_bg('input.png')
+    ```
 
-  </details>
+    </details>
 - _language-tool-python:_ a grammar checker for Python
-  > This is a Python wrapper for [LanguageTool](https://languagetool.org). LanguageTool is open-source grammar tool, also known as the spellchecker for OpenOffice. This library allows you to make to detect grammar errors and spelling mistakes through a Python script or through a command-line interface.
-  <details><summary>Example</summary>
+    > This is a Python wrapper for [LanguageTool](https://languagetool.org). LanguageTool is open-source grammar tool, also known as the spellchecker for OpenOffice. This library allows you to make to detect grammar errors and spelling mistakes through a Python script or through a command-line interface.
+    <details><summary>Example</summary>
 
-  ```python
-  # Proofread your Documents
-  # pip install language-tool-pythonimport language_tool_python as ltp
+    ```python
+    # Proofread your Documents
+    # pip install language-tool-pythonimport language_tool_python as ltp
 
-  def Proofread():
-      checker = ltp.LanguageTool('en-US')
-      text = 'A quick broun fox jumpps over a a little lazy dog.'
-      correction = checker.correct(text)
-      print("Your Original Text:", text)
-      print("Corrected Text:", correction)
-      Proofread()
-  ```
+    def Proofread():
+        checker = ltp.LanguageTool('en-US')
+        text = 'A quick broun fox jumpps over a a little lazy dog.'
+        correction = checker.correct(text)
+        print("Your Original Text:", text)
+        print("Corrected Text:", correction)
+        Proofread()
+    ```
 
-  </details>
-- [LayoutParser](https://layout-parser.github.io/) | [![|20](github.png)](https://github.com/Layout-Parser/layout-parser)
+    </details>
+- [LayoutParser](https://layout-parser.github.io/) | [source](https://github.com/Layout-Parser/layout-parser)
 
 ### Web Stuff
 
@@ -202,28 +203,28 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 - _Smtplib:_ E-mail automation [Resource 1](https://youtu.be/JRCJ6RtE3xU) | [Resource 2](https://youtu.be/Oz3W-LKfafE?t=2532)
 - [`http.server` module](https://docs.python.org/3/library/http.server.html): run a local HTTP server, accessible from other machines:
 
-  ```python
-  python -m http.server
-  ```
+    ```python
+    python -m http.server
+    ```
 
-  > Warning: `http.server` is not recommended for production. It only implements basic security checks.
+    > Warning: `http.server` is not recommended for production. It only implements basic security checks.
 - _google-search_: what the name implies
-  <details><summary>Example</summary>
+    <details><summary>Example</summary>
 
-  ```python
-  # Search on Google
-  # pip install google-searchfrom googlesearch.googlesearch import GoogleSearchdef Get_Google_Search(query):
-      Google = GoogleSearch()
-      r = Google.search(query, num_results=10)
-      for data in r.results:
-          print("Title: " + data.title)
-          print("Content: " + data.getText())Get_Google_Search("python programming")
-  ```
+    ```python
+    # Search on Google
+    # pip install google-searchfrom googlesearch.googlesearch import GoogleSearchdef Get_Google_Search(query):
+        Google = GoogleSearch()
+        r = Google.search(query, num_results=10)
+        for data in r.results:
+            print("Title: " + data.title)
+            print("Content: " + data.getText())Get_Google_Search("python programming")
+    ```
 
-  </details>
+    </details>
 - _scrapy:_ web scraping, website information extraction, sitecrawler, data mining, monitoring, automated testing
 - _public-apis:_ organised hundreds of free APIs that could be used for software and web development
-  Examples:
+    Examples:
     - Fun Facts: randomly generates a fun fact every time we call it
     - Colormind API: can be used to generate gorgeous colour codes that potentially can be used in our data visualisation
     - Government APIs
@@ -231,30 +232,30 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 ### Hardware, DIY, IoT
 
 - _home-assistant core:_ Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a #tech/hw/RaspberryPi or a local server
-  [Website](https://www.home-assistant.io/) | [Github](https://github.com/home-assistant/core)
+    [Website](https://www.home-assistant.io/) | [Github](https://github.com/home-assistant/core)
 
 ### Obscure
 
 - _real-time-voice-cloning_
 - _face_recognition:_ The world's simplest facial recognition api for Python and the command line [Github](https://github.com/ageitgey/face_recognition)
 - Speech to text AI
-  <details><summary><em>Example</em></summary>
+    <details><summary><em>Example</em></summary>
 
-  ```python
-  # Convert Speech to Text
-  #pip install SpeechRecognitionimport speech_recognition as srdef SpeechToText():Ai = sr.Recognizer()
-    with sr.Microphone() as source:
-        listening = Ai.listen(source, phrase_time_limit = 6)
-    try:
-        command = Ai.recognize_google(listening).lower()
-        print("You said: " + command)
+    ```python
+    # Convert Speech to Text
+    #pip install SpeechRecognitionimport speech_recognition as srdef SpeechToText():Ai = sr.Recognizer()
+      with sr.Microphone() as source:
+          listening = Ai.listen(source, phrase_time_limit = 6)
+      try:
+          command = Ai.recognize_google(listening).lower()
+          print("You said: " + command)
 
-    except sr.UnknownValueError:
-        print("Sorry Can't understand, Try again")
-        SpeechToText()
-  ```
+      except sr.UnknownValueError:
+          print("Sorry Can't understand, Try again")
+          SpeechToText()
+    ```
 
-  </details>
+    </details>
 
 ## Advanced
 
@@ -262,11 +263,11 @@ _awesome-python:_ curated list of awesome Python frameworks, libraries, software
 
 - [`@lru_cache()`](https://docs.python.org/3/library/functools.html#functools.lru_cache) built-in since Python 3.2
 
-  > Decorator to wrap a function with a memoizing callable that saves up to the _maxsize_ most recent calls. It can save time when an expensive or I/O bound function is periodically called with the same arguments.
+    > Decorator to wrap a function with a memoizing callable that saves up to the _maxsize_ most recent calls. It can save time when an expensive or I/O bound function is periodically called with the same arguments.
 
 - [`@cache`](https://docs.python.org/3/library/functools.html#functools.cache) part of module [`functools`](https://docs.python.org/3/library/functools.html), smaller and faster than python SL `@lru_cache()` with a size limit
 
-  > Simple lightweight unbounded function cache. Sometimes called [“memoize”](https://en.wikipedia.org/wiki/Memoization).
+    > Simple lightweight unbounded function cache. Sometimes called [“memoize”](https://en.wikipedia.org/wiki/Memoization).
 
 ## Filetypes
 
@@ -307,7 +308,7 @@ Testing #dev/build/python
 3. deactivate: `deactivate`
 4. Install dependencies: e.g. `pip install -r requirements.txt`
 5. Save them: `pip freeze > requirements.txt`
-   Can then be installed again
+    Can then be installed again
 
 ### Tests
 
@@ -318,7 +319,7 @@ Testing #dev/build/python
 ### Documentation
 
 - [Sphinx](https://www.sphinx-doc.org/en/master/): Python Documentation Generator
-  > Sphinx makes it easy to create intelligent and beautiful documentation ^e526ca
+    > Sphinx makes it easy to create intelligent and beautiful documentation ^e526ca
 - <https://realpython.com/documenting-python-code>
 - [Google Python Styleguide](https://google.github.io/styleguide/pyguide.html) | [Example Documentation Strings from Google](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
 - [[mkdocstrings]]
@@ -339,9 +340,9 @@ Using Camelot to extract data into Pandas dataframe from PDF with multiple table
 Tags: #dev/python/jupyter #dev/python/conda #dev/python/anaconda #dev/python/miniconda
 
 - <https://jupyter.org/> | [Jupyter Notebook documentation](https://ipython.org/notebook) |  [Built-in magic commands](https://ipython.readthedocs.io/en/stable/interactive/magics.html)
-[Remco's notes @Wiki: conda env, kernel installation](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/Jupyter) 
+[Remco's notes @Wiki: conda env, kernel installation](https://git.lwp.rug.nl/lwp/wiki/-/wikis/remco/Jupyter)
 - [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
-  > Build beautiful, publication-quality books and documents from computational content.
+    > Build beautiful, publication-quality books and documents from computational content.
 
 
 ## References

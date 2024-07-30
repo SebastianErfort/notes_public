@@ -23,11 +23,11 @@ Graph types
 
 ## Tools
 
-- [![|20](github.png)mermaid-cli](https://github.com/mermaid-js/mermaid-cli): Command line tool for the Mermaid library
+- [mermaid-cli](https://github.com/mermaid-js/mermaid-cli): Command line tool for the Mermaid library
 
-  ```bash
-  mmdc -i input.md -o output.svg -t dark -b transparent
-  ```
+    ```bash
+    mmdc -i input.md -o output.svg -t dark -b transparent
+    ```
 
 ## Config
 

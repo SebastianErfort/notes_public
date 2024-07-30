@@ -21,4 +21,4 @@ See [[docs/wiki/Unattended/Unattended#ZenworksImaging|work notes ZenworksImaging
 
 ### FOG
 
-[[FOG|My notes]] | [FOG Project](https://fogproject.org/) | [![|20](github.png)](https://github.com/FOGProject/fogproject)
+[[FOG|My notes]] | [FOG Project](https://fogproject.org/) | [source](https://github.com/FOGProject/fogproject)
