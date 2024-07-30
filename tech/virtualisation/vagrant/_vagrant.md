@@ -97,19 +97,19 @@ vagrant box add mybox /path/to/my.box
 
 1. set up [[nginx]] on (virtual) machine
 
-   ```bash
-   # install epel-release and nginx
-   systemctl enable nginx
-   systemctl start nginx
-   mkdir -p /var/www/html/devops/vagrant/boxes
-   chmod -R 755 /var/www/html/devops/
-   touch /var/www/html/devops/vagrant/mybox.json
-   sha1sum /var/www/html/devops/vagrant/boxes/mybox.box
-   # edit JSON file
-   # edit nginx config
-   nginx -t # check nginx config
-   systemctl restart nginx
-   ```
+    ```bash
+    # install epel-release and nginx
+    systemctl enable nginx
+    systemctl start nginx
+    mkdir -p /var/www/html/devops/vagrant/boxes
+    chmod -R 755 /var/www/html/devops/
+    touch /var/www/html/devops/vagrant/mybox.json
+    sha1sum /var/www/html/devops/vagrant/boxes/mybox.box
+    # edit JSON file
+    # edit nginx config
+    nginx -t # check nginx config
+    systemctl restart nginx
+    ```
 
 ## Examples
 
