@@ -71,15 +71,15 @@ excerpt_separator: "<!--more-->"
 
 ### Git-Wiki
 
-[Demo](https://www.drassil.org/git-wiki/main_page) | [![|20](github.png)](https://github.com/Drassil/git-wiki-theme)
+[Demo](https://www.drassil.org/git-wiki/main_page) | [source](https://github.com/Drassil/git-wiki-theme)
 
 ### LibDoc
 
-[Website](https://olivier3lanc.github.io/Jekyll-LibDoc/) | [![|20](github.png)](https://olivier3lanc.github.io/Jekyll-LibDoc/) | [Demo](https://jamstackthemes.dev/demo/theme/jekyll-libdoc/)
+[Website](https://olivier3lanc.github.io/Jekyll-LibDoc/) | [source](https://olivier3lanc.github.io/Jekyll-LibDoc/) | [Demo](https://jamstackthemes.dev/demo/theme/jekyll-libdoc/)
 
 ### Just the Docs
 
-[Website](https://just-the-docs.github.io/just-the-docs/) | [![|20](github.png)](https://github.com/just-the-docs/just-the-docs)
+[Website](https://just-the-docs.github.io/just-the-docs/) | [source](https://github.com/just-the-docs/just-the-docs)
 
 ### Chirpy
 

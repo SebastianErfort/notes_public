@@ -11,7 +11,7 @@ QGIS [Website](https://qgis.org/en/site/index.html) | [Github](https://github.co
 ## Data
 
 - [Visualising clusters @towardsdatascience](https://towardsdatascience.com/best-practices-for-visualizing-your-cluster-results-20a3baac7426)
-- [d3]() [![|20](github.png)](https://github.com/d3/d3): JavaScript library for visualizing data using web standards
+- [d3](https://github.com/d3/d3): JavaScript library for visualizing data using web standards
     - [d3-shape @GitHub](https://github.com/d3/d3-shape)
     - [D3.js](https://d3js.org/): JavaScript library for manipulating documents based on data
     - [Observable](https://observablehq.com/) #data/messaging #data/interactive #data/visualisation #science/data
@@ -19,9 +19,9 @@ QGIS [Website](https://qgis.org/en/site/index.html) | [Github](https://github.co
         - [Plot cheatsheets](https://observablehq.com/@observablehq/plot-cheatsheets?collection=@observablehq/plot-cheatsheets#)
         - [plot examples](https://observablehq.com/collection/@observablehq/plot-examples)
             - <https://observablehq.com/@meetamit/fibonacci-latticesV>
-              animated interactive (3D) plots
+                animated interactive (3D) plots
             - <https://observablehq.com/@climatelab/leaf-index-anomaly-map>
-              map
+                map
 - Python
     - [plotly](https://plotly.com/)
         - [embed graphs](https://plotly.com/chart-studio-help/embed-graphs-in-websites/)

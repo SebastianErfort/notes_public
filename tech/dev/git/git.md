@@ -58,7 +58,7 @@ However, I wanted to specify what to sparsely check out, before pulling anything
 >
 > where the parent repo's Git directory is for example `../../.git/modules/<submodule name/path>`.
 >
-> - [ ] update with this info: https://stackoverflow.com/a/63786181/16096134
+> - [ ] update with this info: <https://stackoverflow.com/a/63786181/16096134>
 
 Examples and references
 
@@ -105,7 +105,7 @@ echo <dirname> >> .git/info/sparse-checkout
 Available hooks
 
 - `prepare-commit-msg`: hook into git's default commit messages (merge etc.).
-  Example: in `.git/hooks/prepare-commit-msg` and make sure that it is executable
+    Example: in `.git/hooks/prepare-commit-msg` and make sure that it is executable
 
     ```bash
     #!/bin/sh
@@ -178,13 +178,13 @@ Nest Git repositories, for example adding some required library to your project.
 
 - will by default not be pulled, instead need to be initialised (fetched) and updated (pulled)
 - update submodules on pull: <https://stackoverflow.com/questions/4611512/is-there-a-way-to-make-git-pull-automatically-update-submodules>
-  As of [Git 2.14](https://github.com/git/git/blob/master/Documentation/RelNotes/2.14.0.txt#L117), you can use `git pull --recurse-submodules` (and alias it to whatever you like).
-  As of [Git 2.15](https://github.com/git/git/blob/master/Documentation/RelNotes/2.15.0.txt#L358), you could set [`submodule.recurse`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulerecurse) to true to enable the desired behaviour.
-  You can do this globally by running:
+    As of [Git 2.14](https://github.com/git/git/blob/master/Documentation/RelNotes/2.14.0.txt#L117), you can use `git pull --recurse-submodules` (and alias it to whatever you like).
+    As of [Git 2.15](https://github.com/git/git/blob/master/Documentation/RelNotes/2.15.0.txt#L358), you could set [`submodule.recurse`](https://git-scm.com/docs/git-config#Documentation/git-config.txt-submodulerecurse) to true to enable the desired behaviour.
+    You can do this globally by running:
 
-  ```
-  git config --global submodule.recurse true
-  ```
+    ```
+    git config --global submodule.recurse true
+    ```
 
 Update/pull submodule(s)
 
@@ -217,17 +217,16 @@ git subodule foreach <command> # runs command in each submodule directory
 - fixing unrelated histories, e.g. when error `fatal: refusing to merge unrelated histories` occurs: <https://stackoverflow.com/a/39783462>
 
 
-
 ### Branches
 
 - [GitHub: Splitting a subfolder out into a new repository](https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository)
 - New branch from dir.(s)[^3]
 
-  ```bash
-  git branch subdir_branch HEAD
-  git filter-branch --subdirectory-filter dir/to/filter -- subdir_branch
-  git push git://.../new_repo.git subdir_branch:master
-  ```
+    ```bash
+    git branch subdir_branch HEAD
+    git filter-branch --subdirectory-filter dir/to/filter -- subdir_branch
+    git push git://.../new_repo.git subdir_branch:master
+    ```
 
 [^3]: <https://stackoverflow.com/questions/9971332/git-create-a-new-branch-with-only-a-specified-directory-and-its-history-then-pus>
 
@@ -242,7 +241,6 @@ git diff
 ## compare branches
 git diff <first branch>...<second branch>
 ```
-
 
 
 ## Committing
@@ -269,7 +267,7 @@ and optionally
 ```
 
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
-  > A specification for adding human and machine readable meaning to commit messages
+    > A specification for adding human and machine readable meaning to commit messages
 - [Angular contributing rules](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines)
 
 

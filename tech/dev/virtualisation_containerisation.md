@@ -21,7 +21,7 @@ egrep "svm|vmx" /proc/cpuinfo
 - AMD: `AMD-V`
 - Intel: `VT-x`
 
-*Paravirtualisation (VirtIO)*: provides more direct access to host's memory, storage, GPU and other devices for improved performance. Guest is aware of virtualisation.
+    *Paravirtualisation (VirtIO)*: provides more direct access to host's memory, storage, GPU and other devices for improved performance. Guest is aware of virtualisation.
 
 
 ## Hypervisors

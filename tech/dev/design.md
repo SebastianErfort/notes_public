@@ -11,7 +11,7 @@ aliases:
 ## UI
 
 - [Patternfly]
-  > PatternFly is an open source design system that enables teams to create consistent and scalable enterprise products. PatternFly is sponsored and maintained by Red Hat, but is open to all.
+    > PatternFly is an open source design system that enables teams to create consistent and scalable enterprise products. PatternFly is sponsored and maintained by Red Hat, but is open to all.
 - [9 Graphic Design courses](https://www.codingem.com/best-graphic-design-courses/)
 
 ### Fonts
@@ -24,13 +24,13 @@ See also (related:: [[linux#Fonts]])
 - [JetBrains](https://www.jetbrains.com/lp/mono/) | [Nerd Font Patch](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)
 - Futura
 - Alegreya: [typographica.org review](https://typographica.org/typeface-reviews/alegreya-ht/)
-- https://www.cufonfonts.com/
+- <https://www.cufonfonts.com/>
 - [Google API: Fonts](https://developers.google.com/fonts/docs/getting_started)
-  for example add stylesheet link to request web font(s)
+    for example add stylesheet link to request web font(s)
 
-  ```html
-  <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Font+Name">
-  ```
+    ```html
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Font+Name">
+    ```
 
 - <https://home.unicode.org/>
 - <https://www.stixfonts.org/>: The mission of the Scientific and Technical Information Exchange (STIX) font creation project is the preparation of a comprehensive set of fonts that serve the scientific and engineering community in the process from manuscript creation through final publication, both in electronic and print formats
@@ -45,13 +45,13 @@ Tools
 ### Icons
 
 - FontAwesome Icons: [Search free icons](https://fontawesome.com/search?o=r&m=free) | [Github](https://github.com/FortAwesome/Font-Awesome)
-  > [!tip]- Search free icons
-  > <iframe title="Search FontAwesome free icons" src="https://fontawesome.com/search?o=r&m=free" width="100%" height="600"></iframe>
+    > [!tip]- Search free icons
+    > <iframe title="Search FontAwesome free icons" src="https://fontawesome.com/search?o=r&m=free" width="100%" height="600"></iframe>
     - CSS: download and import as
 
-      ```html
-      <link rel="stylesheet" href="font-awesome/css/fontawesome.css">
-      ```
+        ```html
+        <link rel="stylesheet" href="font-awesome/css/fontawesome.css">
+        ```
 
     - [Documentation](https://fontawesome.com/docs/web/)
         - [animation](https://fontawesome.com/docs/web/style/animate)
@@ -59,11 +59,11 @@ Tools
 - [Icons8](https://icons8.com/)
 - <https://iconduck.com/>
 - GitLab: [[rug/lwp/GitLab#^8b2ea8|GitLab icon SVGs]]
-- [Lucide open source icons](https://lucide.dev/) [![|20](github.png)](https://github.com/lucide-icons/lucide)
+- [Lucide open source icons](https://lucide.dev/) [source](https://github.com/lucide-icons/lucide)
     - used by [[obsidian]]
 - <https://super.so/icons>
 
- 
+
 ### Colours
 
 <https://coolors.co/?home>
