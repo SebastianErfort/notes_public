@@ -43,6 +43,8 @@ MoC
 
 ## Config & Customisation
 
+> [!tip] Development tools: HTML elements, CSS classes, etc.:  <kbd>ctrl + shit + i</kbd>
+
 > [!tip]- [Obsidian URI set up for Linux / obsidian.desktop](https://forum.obsidian.md/t/obsidian-uri-set-up-for-linux-obsidian-desktop/7494) (see also [[linux#Desktop files|Desktop Files]])
 > Create `desktop`file `$HOME/.local/share/applications/obsidian.desktop`
 >
@@ -223,18 +225,27 @@ References
 
 ## Publish
 
-- [[ObsidianGitHubPublisher|Obsidian GitHub Publisher]]
-- [[git/GitLab#GitLab Pages|GitLab Pages]]: <https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/>
-- <https://flowershow.app/> | [GitHub](https://github.com/datopian/obsidian-flowershow)
+- [[ObsidianGitHubPublisher|Obsidian GitHub Publisher]]: straight from Obsidian, but with limited customisability
+- [[git/GitLab#GitLab Pages|GitLab Pages]]: anything that renders Markdown to HTML, such as static website generatores ([[Hugo]], [[Jekyll]], etc.) can be used to build pages and the resulting HTML files can be deployed to (GitLab) Pages as a simple static website.
+    - [blog post @gitlab.com: Publishing Obsidian notes with GitLab Pages](https://about.gitlab.com/blog/2022/03/15/publishing-obsidian-notes-with-gitlab-pages/)
 - [obsidian-webpage-export](https://github.com/KosmosisDire/obsidian-webpage-export)
 - [obsidian-publish-mkdocs](https://github.com/jobindjohn/obsidian-publish-mkdocs): A Template to Publish Obsidian/Foam Notes on Github Pages (uses MkDocs)
+    - compatibility with Obsidian Markdown and features is work
+    - poor tags support (e.g. inline) out-of-the-box
+    - sensitive Markdown syntax (e.g. 4 spaces indentation)
+- [[Emanote]]: website design is very close to Obsidian's UI with folder-like nesting, tags, etc.
+    - clearly render internal, external and broken links
+    - Obsidian-style callouts
+    - table of contents sidebar
+    - backlinks
+- [Flowerrshow](https://flowershow.app/) | [GitHub](https://github.com/datopian/obsidian-flowershow): create websites from Markdown. Obsidian syntax compatible, open-source.
 - [quartz](https://quartz.jzhao.xyz/) | [Docs](https://github.com/jackyzha0/quartz): [Video @YT][nvdh-quartz]
   > a fast, batteries-included static-site generator that transforms Markdown content into fully functional websites
+    - issues
+        - No navigation sidebar? How do you get an overview of contents other than manually creating maps of content and using the graph view?
 
-
-## Debug
-
-- development tools: <kbd>ctrl + shit + i</kbd>
+> [!warning] Obsidian plugins (especially [[DataView]])
+> So far none of these solutions seem to support Obsidian plugins. Integration of massively helpful plugins such as [[DataView]] would be most excellent.
 
 
 ## References

@@ -11,6 +11,7 @@ title: Security
 ### Tools
 
 - [fail2ban](https://github.com/fail2ban/fail2ban): Daemon to ban hosts that cause multiple authentication errors
+    - [extend event logging](https://www.jwz.org/blog/2024/07/fail2ban/)
 
 ## Authentication
 
