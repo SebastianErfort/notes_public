@@ -8,12 +8,12 @@ tags: ""
 visibility: public
 related:
   - "[[qemu]]"
-  - "[[KVM]]"
+  - "[[kvm]]"
 developer: RedHat
-source: "https://gitlab.com/libvirt/libvirt"
-url: "https://libvirt.org/"
+source: https://gitlab.com/libvirt/libvirt
+url: https://libvirt.org/
 img: "![|60](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Libvirt_logo.svg/1280px-Libvirt_logo.svg.png)"
-docs: "https://libvirt.org/docs.html"
+docs: https://libvirt.org/docs.html
 ---
 
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`

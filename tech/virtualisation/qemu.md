@@ -3,9 +3,9 @@ title: QEMU
 type: software
 category:
   - emulator
-url: "https://www.qemu.org/"
-docs: "https://www.qemu.org/documentation"
-source: "https://gitlab.com/qemu-project/qemu"
+url: https://www.qemu.org/
+docs: https://www.qemu.org/documentation
+source: https://gitlab.com/qemu-project/qemu
 developer: "QEMU team: Peter Maydell, et al."
 desc: QEMU (Quick Emulator[3]) is a free and open-source emulator. It emulates a computer's processor through dynamic binary translation and provides a set of different hardware and device models for the machine, enabling it to run a variety of guest operating systems. It can interoperate with Kernel-based Virtual Machine (KVM) to run virtual machines at near-native speed. QEMU can also do emulation for user-level processes, allowing applications compiled for one architecture to run on another.[4]QEMU supports the emulation of various architectures, including x86, ARM, PowerPC, RISC-V, and others.
 tags:
@@ -13,7 +13,7 @@ tags:
 aliases:
   - Quick Emulator
 related:
-  - "[[KVM]]"
+  - "[[kvm]]"
 desc-short: A generic and open source machine emulator and virtualizer
 ---
 # QEMU
@@ -186,7 +186,7 @@ Host hardware can be passed through to guest.
 
 ## Networking
 
-- user-mode networking on private NAT
+- user-mode networking on private NAT (defaults)
 
   | Role             | IP        |
   | ---------------- | --------- |
@@ -195,9 +195,55 @@ Host hardware can be passed through to guest.
   | SMB              | 10.0.2.4  |
   | Guest            | 10.0.2.15 |
 
+- without further configuration each guest is on a separate NAT with the same IP address
+
+```bash
+qemu-system
+  -netdev # network back end, device ID, DHCP range
+  -device # set emulated device model, MAC address, ...
+  -nic # (newer) comnbine netdev and device
+```
+\
+- `device`: rtl8139, e1000 (see [[_networking#Hardware|Networking: Hardware]]) or VirtIO when using KVM (given driver support)
+    - list available devices: `qemu-system -device help` or `qemu-system -nic model=help`
+- `nic`
+    - port forwarding: `-nic user,hostfwd=<protocol>:<hostaddr>:<hostport-guestaddr>:<guestport>`
+    - disable networking: `-nic none`
+
+[[_networking#Bridging|Bridged Networking]]
+
+- `qemu-bridge-helper`: facilitate creating TAP devices and up/down them when guests starts/shuts down[^qemu-bridge-helper]
+    - ensure `s` bit on executable (`/usr/lib/qemu-bridge-helper` or `/usr/libexec/qemu-bridge-helper` on some systems) and group permissions (e.g. user member of group `kvm`)
+    - allow user(s) to use bridge: `/etc/qemu/bridge.conf` (or `/etc/qemu/${USER}.conf` and include in `bridge.conf`)
+
+        ```conf
+        allow br0
+        ```
+
+
+Examples
+
+```bash
+qemu-system
+  ...
+  -netdev user,ipv6=off,id=net0
+  -device rtl8139,netdev=net0
+  # or shorter
+  -nic user,model=virtio-net-pci
+  # port forwarding
+  # general
+  -nic user,hostfwd=<protocol>:<hostaddr>:<hostport-guestaddr>:<guestport>
+  # explicit
+  -nic user,hostfwd=tcp:0.0.0.0:2222-10.0.2.15:22
+  # using defaults
+  -nic user,hostfwd=::2222-:22
+  # multiple ports
+  -nic user,hostfwd=::2222-:22,hostfwd=::8080-:80
+```
 
 ## References
 
-[^numa]: See [[public/tech/glossary#^numa|glossary]]
-[^smp]: See [[public/tech/glossary#^smp|glossary]]
+[^numa]: See [[public/tech/glossary#^numa|glossary: NUMA]]
+[^smp]: See [[public/tech/glossary#^smp|glossary: SMP]]
 [qemu-9p]: <https://wiki.qemu.org/Documentation/9p>
+[^qemu-bridge-helper]: on Ubuntu `/usr/bin/qemu-bridge-helper`, on openSUSE `/usr/libexec/qemu-bridge-helper`

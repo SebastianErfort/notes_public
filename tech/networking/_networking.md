@@ -10,13 +10,17 @@ visibility: public
 
 ## IP Address, Mask, Gateway
 
-### IPv4
-
-Four 8-bit numbers `0-255.0-255.0-255.0-255`
-
-- subnet mask
 - gateway server: where to send packages?
 - DNS server: resolve domain names to IPs
+
+> [!info] IPv4
+> Four 8-bit numbers `0-255.0-255.0-255.0-255` (total 32 bits)
+>
+> Subnet mask defining routing prefix, alternatively with CIDR notation
+> Example: subnet mask `255.255.255.0` (24 bits fixed, 8 variable) is equivalent to CIDR notation  `x.x.x.1/24`
+
+> [!info] IPv6
+> Eight 16-bit numbers (hexadecimal) (total 128 bits)
 
 ## Ports
 
@@ -60,6 +64,85 @@ WHERE contains(file.path,"networking/protocols")
 - layer 5: session layer
 - layer 6: presentation layer
 - layer 7: application layer
+
+
+### Bridging
+
+Public Bridged Network: host ethernet adapter is added to bridge, giving guests access to host's network.
+
+Private Bridged Network: guests communicate via manual addresses. DHCP and other services can be provided. NAT can be established through routing on the host.
+
+Creating a bridge: use e.g. `ip` for a temporary bridge or Network Manager, netplan, ifupdown etc. to create a permanent bridge (`br0` is a commonly used name).
+A private network for a guest can for example be created using a TAP device.[^tun-tap]
+
+```bash
+# set up a temporary bridge
+sudo ip link add br0 type bridge
+sudo ip link set br0 up
+# (optional) create TAP devices for guests
+sudo ip tuntap add tap1 mode tap && ip link set tap1 up promisc on
+# attach device to bridge
+sudo ip link set tap1 master br0
+# allow guest-guest communication by assigning them ip addresses, e.g. through GUI
+# allow host-guest communication by assigning the bridge an address on the private network
+sudo ip addr add <ip address> dev br0
+```
+
+<figure>
+
+```mermaid
+flowchart RL
+  subgraph g1 [Guest 1]
+    ipg1[ip: 10.10.10.10]
+  end
+  subgraph g2 [Guest 2]
+    ipg2[ip: 10.10.10.11]
+  end
+  subgraph b [Bridge]
+  end
+  subgraph h [Host]
+  end
+  h -.- b --- g1 & g2
+```
+
+<caption>Guest-only private network</caption>
+</figure>
+<figure>
+
+```mermaid
+flowchart RL
+  subgraph g1 [Guest 1]
+    ipg1[ip: 10.10.10.10]
+  end
+  subgraph g2 [Guest 2]
+    ipg2[ip: 10.10.10.11]
+  end
+  subgraph b [Bridge]
+    ipb[ip: 10.10.10.1]
+  end
+  subgraph h [Host]
+  end
+  h --- b --- g1 & g2
+```
+
+<caption>Host-only private network</caption>
+</figure>
+
+Add NAT and routing to allow guests on the PN to communicate beyond the host:
+
+```bash
+# non-persistent, using iptables
+# enable ip packet forwarding through kernel paramater
+sudo sysctl -w net.ipv4.ip_forward=1
+# using iptables
+# add firewall exception
+sudo iptables -A FORWARD -i br0 -j ACCEPT
+# add NAT
+sudo iptables -t nat -I POSTROUTING -s 10.10.10.1/24 -j MASQUERADE
+# using Firewalld
+sudo firewall-cmd [--permanent] --zone=testing --add-source=10.10.10.0/24
+sudo firewall-cmd [--permanent] --zone=testing --add-masquerade
+```
 
 
 ### Wireless
@@ -109,7 +192,7 @@ Tags: #tech/networking/tools
 `ip` #tech/networking/tools/ip
 
 - network namespaces
-    - create virtual route/network between VM and host ([K8s Documentation](https://docker-k8s-lab.readthedocs.io/en/latest/docker/netns.html))
+    - create virtual route/network between VM and host ^[https://docker-k8s-lab.readthedocs.io/en/latest/docker/netns.html]
 
        ```bash
        # create network namespace for VM
@@ -120,7 +203,7 @@ Tags: #tech/networking/tools
        # create a virtual interface pair, it has two virtual interfaces which are connected by a virtual cable
        sudo ip link add veth-a type veth peer name veth-b
        # move one interface to new namespace
-       sudo ip link set veth-b netns test1
+       sudo ip link set veth-b netns myns
        # assign IP addresses and bring interfaces up
        sudo ip addr add 192.168.1.1/24 dev veth-a
        sudo ip link set veth-a up
@@ -144,12 +227,26 @@ netstat -tlpn # show tcp listen with program and numeric addresses
 
 [Alternatives to deprecated `net-tools` programs @StackExchange](https://unix.stackexchange.com/a/261224/247791)
 
-- `arp` → `ip n` (`ip neighbor`)
-- `ifconfig` → `ip a` (`ip addr`), `ip link`, `ip -s` (`ip -stats`)
-- `iptunnel` → `ip tunnel`
-- `iwconfig` → `iw`
-- `nameif` → `ip link`, ifrename
-- `netstat` → `ss`, `ip route` (for `netstat -r`), `ip -s link` (for `netstat -i`), `ip maddr` for `netstat -g`)
+```bash
+# arp
+ip n (ip neighbor)
+# ifconfig
+ip a # ip addr
+ip link
+ip -s # ip -stats
+# iptunnel
+ip tunnel
+# iwconfig
+iw
+# nameif
+ip link
+ifrename
+# netstat
+ss
+ip route # netstat -r
+ip -s link # netstat -i
+ip maddr # netstat -g
+```
 
 Tags: #tech/networking/nc (netcat): scan for (open) ports
 
@@ -238,6 +335,25 @@ Tags: #tech/networking/tshark: Dump and analyze network traffic
 
 [Man page](Dump and analyze network traffic)
 
+
+## Devices
+
+### Virtual
+
+TUN/TAP
+
+- TUN operate on OSI layer 3 (network) carrying IP packets
+- TAP on OSI layer 2 (data link) carrying Ethernet frames
+    - can be used to create a [user space](https://en.wikipedia.org/wiki/User_space "User space") [network bridge](https://en.wikipedia.org/wiki/Network_bridge "Network bridge").
+
+### Hardware
+
+Common network devices
+
+- RTL8139 (Realtek Semiconductor)
+- E1000 (Intel)
+- VirtIO ([Windows drivers](https://github.com/virtio-win))
+
 ## Security
 
 See [[public/tech/networking/security|my notes on networking security]]
@@ -287,3 +403,5 @@ Packets have tags to determine priority and ensure Quality of Service (QoS). In 
 - [Wikipedia: List of TCP and UDP port numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 - [[Hardware#MAC Address|My notes on MAC addresses]]
 - [Get public IP address DaveMcKay@HowToGeek](https://www.howtogeek.com/839170/how-to-get-your-public-ip-in-a-linux-bash-script/)
+
+[^tun-tap]: <https://en.wikipedia.org/wiki/TUN/TAP>

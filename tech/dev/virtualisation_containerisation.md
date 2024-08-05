@@ -28,7 +28,7 @@ egrep "svm|vmx" /proc/cpuinfo
 
 Type 1: runs directly on computer's underlying hardware
 
-- [[KVM]]
+- [[kvm]]
 - [[vsphere]]
 - [[hyper-v]]
 - [[Proxmox]]
@@ -40,7 +40,7 @@ Type 2: runs on top of underlying OS
 - [[VirtualBox]]
 - [[VMWare]] Fusion, Workstation
 - [[bhyve]]
-- [[qemu]]: emulate hardware, can utilise [[KVM]]
+- [[qemu]]: emulate hardware, can utilise [[kvm]]
 
 
 ## Containerisation
@@ -59,7 +59,7 @@ Container applications
 
 ## Virtualisation
 
-- [[KVM]]
+- [[kvm]]
 - [[QEMU]]
 
 

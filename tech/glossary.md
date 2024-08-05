@@ -32,6 +32,7 @@ visibility: public
   Maximum packet size that can be transmitted over your network 
 - NAS: see [[#^nas|NAS]]
 - SMB: Server Message Block (Samba, Windows) ^smb
+- TUN/TAP: Kernel virtual network devices. ^tuntap
 
 ## Misc
 

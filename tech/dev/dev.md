@@ -176,7 +176,7 @@ See also [[dev/devops|DevOps]].
 
 ## Databases
 
-See [[public/tech/data/databases/index|my notes on databases]]
+See [[_databases|my notes on databases]]
 
 ### Automation
 

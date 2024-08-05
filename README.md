@@ -19,7 +19,7 @@ Online version available at <https://sebastianerfort.github.io/notes>.
     - [[dev#Command Line|command line]]: [[bash]], [[awk]], [[sed]], [[editors]], [[vim]], [[neovim]]
     - version control: [[Git]], [[GitLab]], [[GitHub]]
     - [[automation]]
-    - [[virtualisation_containerisation|Virtualisation and Containers]]: [[KVM]], [[QEMU]], [[libvirt]], [[Docker]], [[public/tech/dev/Vagrant]]
+    - [[virtualisation_containerisation|Virtualisation and Containers]]: [[kvm]], [[QEMU]], [[libvirt]], [[Docker]], [[public/tech/dev/Vagrant]]
     - [[DevOps]]: [[devops#CI/CD|CI/CD]]
     - [[dev#Syntax Check, Formatting, Linting|Syntax Check, Formatting, Linting]]
 - [[_documentation|Documentation]], [[productivity]] and [[note-taking]]
