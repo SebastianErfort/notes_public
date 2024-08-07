@@ -29,7 +29,8 @@ lsmod | grep kvm
 
 Cumbersome directly, but tools exist to help
 
-- [[libvirt#virsh]]: command line tool
+- [[libvirt#virsh|virsh]]: command line tool
+- [[libvirt#virt-manager|Virtual Machine Manager]]: GUI tool
 - GUI: GNOME Boxes, ...
 
 ## Quick-start
@@ -70,15 +71,35 @@ Following [RedHat guide][redhat-kvm-libvirt]
     ssh -i labkey root@192.168.122.76
     ```
 
+
+## Migration
+
+Migrate KVM host with ZFS filesystem
+
+1. create snapshot
+2. send and receive
+   
+    ```bash
+    sudo zfs send <image> | ssh -Y <target> sudo zfs receive <target image>
+    ```
+
+1. copy libvirt XML definition
+   
+    ```bash
+    virsh dumpxml > tempate.xml
+    virsh -c qemu+ssh://<target> create --paused template.xml
+    ```
+    
+
 ## References
 
 - [OpenSUSE: Setting up a KVM VM Host Server](https://doc.opensuse.org/documentation/leap/virtualization/html/book-virtualization/cha-qemu-host.html)
 - [RedHat guide: Lab with KVM and libvirt][redhat-kvm-libvirt]
 
 [redhat-kvm-libvirt]: <https://www.redhat.com/sysadmin/build-lab-quickly>
-[^network-error]: error `network ... not active`:
+[^network-error]: error `network ... not active`
 
-    ```sh
+    ```bash
     # virsh net-list --all
     virsh net-start default
     # start at boot

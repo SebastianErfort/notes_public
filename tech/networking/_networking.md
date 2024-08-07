@@ -88,6 +88,12 @@ sudo ip link set tap1 master br0
 sudo ip addr add <ip address> dev br0
 ```
 
+And optionally set up DHCP on this bridge, e.g. with dnsmasq.
+        
+```bash
+sudo dnsmasq --interface=br0 --bind-interfaces --dhcp-range=10.10.10.2,10.10.10.100
+```
+
 <figure>
 
 ```mermaid
@@ -128,7 +134,7 @@ flowchart RL
 <caption>Host-only private network</caption>
 </figure>
 
-Add NAT and routing to allow guests on the PN to communicate beyond the host:
+Add NAT and routing to allow guests on the PN to communicate beyond the host (didn't get that to work yet): ^nat
 
 ```bash
 # non-persistent, using iptables
@@ -140,8 +146,11 @@ sudo iptables -A FORWARD -i br0 -j ACCEPT
 # add NAT
 sudo iptables -t nat -I POSTROUTING -s 10.10.10.1/24 -j MASQUERADE
 # using Firewalld
+sudo firewall-cmd [--permanent] --zone=testing --add-interface=br0
 sudo firewall-cmd [--permanent] --zone=testing --add-source=10.10.10.0/24
 sudo firewall-cmd [--permanent] --zone=testing --add-masquerade
+sudo firewall-cmd [--permanent] --zone=testing --add-forward
+sudo firewall-cmd [--permanent] --zone=testing --add-target=ACCEPT
 ```
 
 

@@ -15,6 +15,7 @@ url: https://libvirt.org/
 img: "![|60](https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Libvirt_logo.svg/1280px-Libvirt_logo.svg.png)"
 docs: https://libvirt.org/docs.html
 ---
+# libvirt
 
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
@@ -26,7 +27,36 @@ docs: https://libvirt.org/docs.html
 </figure>
 
 
-## virsh
+- APIs communicate e.g. with [[QEMU]]
+- central management for disk images and snapshots
+- config files
+    - `/etc/libvirt/qemu.conf`
+
+
+## Networking
+
+Libvirt creates a bridge to provide a NAT network with default IP range `192.168.122.x`.
+
+
+## Tools
+
+### virsh
+
+[Libvirt documentation: virsh](https://libvirt.org/manpages/virsh.html)
+
+```bash
+# interactive mode
+virsh
+help
+list [--all] # list VMs
+edit <name> # edit XML
+```
+
+### Virtual Machine Manager
+
+- package name `virt-managaer`
+- ⚠ issue I encountered on openSUSE: VMs created in root domain instead of user space
+
 
 ## Examples
 
