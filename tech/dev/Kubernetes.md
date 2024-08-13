@@ -152,6 +152,9 @@ References
         - Kubernetes and Cloud Native Associate exam
         - Certified Kubernetes Application Developer exam
         - Certified Kubernetes Administrator exam
+- [article @theregister: Alibaba claims K8s meshes can require more resources than apps](https://www.theregister.com/2024/08/12/alibaba_microservices_mesh_canal/) #dev/k8s #tech/ecology
+    - Alibaba Canal Mesh with much superior throughput and CPU consumption than Istio and Google Ambient
+
 
 [lf-intro-kubernetes]: <https://training.linuxfoundation.org/training/introduction-to-kubernetes/>
 [snyk]: <https://docs.snyk.io/>

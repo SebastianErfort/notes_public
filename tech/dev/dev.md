@@ -77,6 +77,14 @@ related:
 - [commitlint]: Lint commit messages
 
 
+## Databases
+
+See [[_databases|my notes on databases]]
+
+### Automation
+
+<https://github.com/ReimuNotMoe/ydotool>
+
 ## Dependencies: Supply Chain
 
 tags: #dev/bom #dev/sbom
@@ -174,14 +182,6 @@ See also [[dev/devops|DevOps]].
 - [Fleet]
   > Deploy workloads from Git to large fleets of Kubernetes clusters
 
-## Databases
-
-See [[_databases|my notes on databases]]
-
-### Automation
-
-<https://github.com/ReimuNotMoe/ydotool>
-
 ## Containers, VMs, etc
 
 - [Apptainer](https://apptainer.org/): container system for secure high performance computing
@@ -216,9 +216,17 @@ See [[_databases|my notes on databases]]
 
 ### OpenStack
 
+
+## Cloud
+
+- [[AWS]]
+- [[Azure]]
+- [[GCP]]
+
+
 ## Projects
 
-See also [sw project template]
+See also [software project template][sw-proj-template]
 
 - Changelogs
     - [keepchangelog.com](https://keepachangelog.com): motivation and guidelines for changelogs
@@ -238,7 +246,8 @@ Suggested files and directories
 ├── example/
 ├── .editorconfig
 ├── README
-└── src/
+├── src/
+└── test/
 ```
 
 
@@ -286,7 +295,7 @@ Free stock media
 
 ## References
 
-[sw project template]: <https://gitlab.com/treetanium1/resources/project/template>
+[sw-proj-template]: <https://gitlab.com/treetanium1/resources/project/template>
 [analysis-tools.dev]: <https://analysis-tools.dev/> 
 [lefthook]: <https://github.com/evilmartians/lefthook>
 [dotfiles-github]: <https://dotfiles.github.io/>

@@ -89,4 +89,8 @@ AddOns
 > A passkey is a new way to sign in that works completely without passwords. By using the security capabilities of your devices like Touch ID and Face ID, passkeys are way more secure and are easier to use than both passwords and all current 2-factor authentication methods.
 
 
+## References
+
+- [article @theregister: Secure Web Gateway bypasses (promoting end-point protection)](https://www.theregister.com/2024/08/09/secure_web_gateways_are_anything/)
+
 [security.txt]: <https://en.wikipedia.org/wiki/Security.txt>

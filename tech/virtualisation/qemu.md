@@ -18,7 +18,7 @@ desc-short: A generic and open source machine emulator and virtualizer
 ---
 # QEMU
 
-`=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
+`= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
 
 - emulation tools and standard virtual hardware: processors, network interfaces, graphics cards, ...
@@ -74,9 +74,9 @@ qemu-system-x86_64 \                     # Create a guest with x86_64 architectu
     -k en-us \                           # keyboard layout
     -vnc :0 \                            # make display available at port 5900 on host
     -drive file=<disk image>,if=virtio \ # use a file for the system's hard disk with paravirtualisation
+    -usbdevice tablet \                  # improve mousing
     -cdrom <iso image> \                 # present disk image as CD-ROM
-    -boot d \                            # boot from CD-ROM device
-    -usbdevice table                     # improve mousing
+    -boot d                              # boot from CD-ROM device
 ```
 
 - CPU architecture: SMP[^SMP] or [^numa]
@@ -159,6 +159,7 @@ Check extended attributes on host with `getfattr -d shared/file.txt`.
 
 Host hardware can be passed through to guest.
 
+
 ### USB
 
 - v1.1, v2 or v3 (using xHCI if supported)
@@ -203,7 +204,7 @@ qemu-system
   -device # set emulated device model, MAC address, ...
   -nic # (newer) comnbine netdev and device
 ```
-\
+
 - `device`: rtl8139, e1000 (see [[_networking#Hardware|Networking: Hardware]]) or VirtIO when using KVM (given driver support)
     - list available devices: `qemu-system -device help` or `qemu-system -nic model=help`
 - `nic`
@@ -219,6 +220,23 @@ qemu-system
         ```conf
         allow br0
         ```
+
+Example
+
+```bash
+qemu-system-x86_64 \
+  -enable-kvm \
+  -cpu host \
+  -smp 2 \
+  -m 4096 \
+  -k en-us \
+  -display gtk \
+  -vga std \
+  -drive file=<disk image>,if=virtio \
+  -usbdevice tablet \
+  -monitor stdio \
+  -nic bridge,br=br0,model=virtio
+```
 
 
 Examples
