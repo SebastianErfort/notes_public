@@ -13,7 +13,7 @@ Installation
 
 ## Command Line
 
-See 
+See
 
 - [[UbuntuServerCLI_cheatsheet.pdf|Ubuntu Server CLI Cheatsheet]]
 - shells: [[bash]], [[zsh]]
@@ -44,30 +44,30 @@ See
 ### Files & Directories
 
 - Files
-  
-  ```sh
-    stat <file> # file (system) info
+
+    ```sh
+      stat <file> # file (system) info
     ```
-    
+
 - *Permissions*
     - `umask`: modify file/directory permissions, subtracted from default permissions [davemckay@howtogeek](https://www.howtogeek.com/812961/umask-linux/)
 - *Searching & Navigation*
     - `find`
 
-      ```shell
-      find work -type d -execdir echo "In:" {} \; # find directories and print names
-      find work -name "*.txt" -type f -execdir echo "Found:" {} \; # find .txt files
-      find . -inum file/pattern -exec rm {} + # delete files by inode
-      ```
+        ```shell
+        find work -type d -execdir echo "In:" {} \; # find directories and print names
+        find work -name "*.txt" -type f -execdir echo "Found:" {} \; # find .txt files
+        find . -inum file/pattern -exec rm {} + # delete files by inode
+        ```
 
     - `tree`: show file/directory tree
 
-      ```bash
-      tree -d # only show directories
-      tree -L 2 # set level up to  which branches are shown
-      ```
+        ```bash
+        tree -d # only show directories
+        tree -L 2 # set level up to  which branches are shown
+        ```
 
-*Sparse Files*
+    *Sparse Files*
 [Sparse files @ArchWiki](https://wiki.archlinux.org/title/sparse_file)
 [Find sparse files](https://www.thegeekdiary.com/how-to-find-all-the-sparse-file-in-linux/) (includes a lot of files with sparseness 0 in `/`, e.g. buses)
 
@@ -87,12 +87,24 @@ find /var/log -type f -printf "%S\t%p\n" | gawk '$1 < 1.0 && $1 > 0.0 {print}'
 - passwords
     - `chage`: change user password expiry information
 
-      ```bash
-      chage -l username # show expiry info for user's password
-      chage -M num_days username # change password expiry duration
-      ```
+        ```bash
+        chage -l username # show expiry info for user's password
+        chage -M num_days username # change password expiry duration
+        ```
 
     - expire users' password and force setting a new one at next login: `passwd --expire username`
+
+Groups
+
+```bash
+# add user to group
+sudo usermod -aG <group name> <user name>
+# activate new group membership without logging out
+newgrp <group name>
+# check group membership
+groups [<user>]
+id <user>
+```
 
 ### File/stream processing/manipulation
 
@@ -158,12 +170,12 @@ echo $CONFIG | base64 -d # decode
 - `(h)top`
 - `ps`
 
-  ```bash
-  ps -fC cmd # find processes for command cmd
-  ```
+    ```bash
+    ps -fC cmd # find processes for command cmd
+    ```
 
 - detach/disown a process from the current terminal (so it keeps running when you close it)
-  
+
     ```bash
     # ctrl+z to stop the process
     bg %<job number> # continue job in background
@@ -178,14 +190,14 @@ echo $CONFIG | base64 -d # decode
     - print set Signal traps: `trap -p`
     - common case: ctrl+c sends `SIGINT`, so trap it and clean up before exiting
 
-      ```bash
-      trap graceful_shutdown SIGINT SIGQUIT SIGTERM
-      graceful_shutdown() {
-        echo -e "\nRemoving temporary file:" $temp_file
-        rm -rf "$temp_file"
-        exit
-      }
-      ```
+        ```bash
+        trap graceful_shutdown SIGINT SIGQUIT SIGTERM
+        graceful_shutdown() {
+          echo -e "\nRemoving temporary file:" $temp_file
+          rm -rf "$temp_file"
+          exit
+        }
+        ```
 
 - processes using GPU: `lsof /dev/nvidia` #tech/graphics #tech/GPU #tech/nvidia
 - *Cronjobs*
@@ -196,7 +208,7 @@ echo $CONFIG | base64 -d # decode
 - (image) file conversion
     - decode QR code: `zbarimg -q --nodbus qrcode.png`
     - encode text to QR code: `qrencode -o qrcode.png 'STRING'`
-*exiftools*
+    *exiftools*
 - [change metadata @linuxconfig.org](https://linuxconfig.org/how-to-get-and-change-image-metadata-in-linux)
 - man page examples
     - change metadata for entire folder, using metadata as variables: `exiftool '-comment<ISO=$exif:iso Exposure=${shutterspeed}' dir`
@@ -328,7 +340,7 @@ Written in Python
 
 - `/var/log{auth,syslog}`
 - `journalctl`
-  
+
     ```sh
     journalctl --no-pager --since today \
     --grep 'fail|error|fatal' --output json|jq '._EXE' | \
@@ -395,7 +407,7 @@ Package managers
 
 - [Network requirements](https://snapcraft.io/docs/network-requirements)
 
-*Installation*
+    *Installation*
 
 - openSUSE: <https://snapcraft.io/docs/installing-snap-on-opensuse>
 
@@ -403,9 +415,9 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 
 1. bind-mount home directory under `/home/<username>`
 
-   ```bash
-   sudo mount --bind /path/to/homedir /home/<username>
-   ```
+    ```bash
+    sudo mount --bind /path/to/homedir /home/<username>
+    ```
 
 1. and update the user's entry in `/etc/passwd`
 
@@ -427,7 +439,7 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 - [OpenWrt](https://openwrt.org/): The OpenWrt Project is a Linux operating system targeting embedded devices. Instead of trying to create a single, static firmware, OpenWrt provides a fully writable filesystem with package management.
 - [Free GNU/Linux distributions](https://www.gnu.org/distros/free-distros.html)
     - [Guix](https://guix.gnu.org/) (also a package and system manager): Guix System is a distribution of the [GNU operating system](https://gnu.org/). It uses the [Linux-libre](https://gnu.org/software/linux-libre) kernel, and support for [the Hurd](https://gnu.org/software/hurd) is being worked on. As a GNU distribution, it is committed to respecting and enhancing [the freedom of its users](https://gnu.org/philosophy/free-sw.html). As such, it adheres to the [GNU Free System Distribution Guidelines](https://gnu.org/distros/free-system-distribution-guidelines.html).
-      GNU Guix provides [state-of-the-art package management features](https://guix.gnu.org/manual/en/html_node/Features.html) such as transactional upgrades and roll-backs, reproducible build environments, unprivileged package management, and per-user profiles. It uses low-level mechanisms from the [Nix](https://nixos.org/nix/) package manager, but packages are [defined](https://guix.gnu.org/manual/en/html_node/Defining-Packages.html) as native [Guile](https://gnu.org/software/guile) modules, using extensions to the [Scheme](http://schemers.org) language—which makes it nicely hackable.
+        GNU Guix provides [state-of-the-art package management features](https://guix.gnu.org/manual/en/html_node/Features.html) such as transactional upgrades and roll-backs, reproducible build environments, unprivileged package management, and per-user profiles. It uses low-level mechanisms from the [Nix](https://nixos.org/nix/) package manager, but packages are [defined](https://guix.gnu.org/manual/en/html_node/Defining-Packages.html) as native [Guile](https://gnu.org/software/guile) modules, using extensions to the [Scheme](http://schemers.org) language—which makes it nicely hackable.
 
 
 ## Desktops
@@ -463,30 +475,30 @@ To find out whether your desktop is using [[x11]] or [[wayland]], check the valu
 - top: `htop`, `glances`
 - dig, nslookup: `drill`
 
-  ```shell
-  drill @8.8.8.8 mx nasa.org
-  ```
+    ```shell
+    drill @8.8.8.8 mx nasa.org
+    ```
 
 - show file contents with highlighting for various formats: `rich`
 
-  ```
-  pip install --user rich-cli
-  ```
+    ```
+    pip install --user rich-cli
+    ```
 
 [_Cheat_](https://github.com/cheat/cheat): [@RedHat](https://www.redhat.com/sysadmin/linux-cheat-command)
 > allows you to create and view interactive cheatsheets on the command-line
 
 - _qpdf_: combine/merge PDFs | [Documentation](https://qpdf.readthedocs.io/en/stable/index.html)
 
-  ```bash
-  qpdf --empty --pages first.pdf second.pdf -- combined.pdf
-  qpdf --empty --pages first.pdf 1-2 second.pdf 1 -- combined # specify page ranges
-  qpdf --empty --pages large.pdf 1-3,7,11,18-21,55 -- summary.pdf  # specify specific pages and ranges
-  qpdf summary.pdf page.pdf --split-pages # split/burst pages
-  qpdf --rotate=+90:1 summary.pdf rotated1.pdf # rotate pages
-  qpdf --encrypt hen.rat.squid goose.goat.gibbon 256 -- summary.pdf secret.pdf # encrypt with user (read) and owner (change password/permissions) passwords
-  qpdf --decrypt --password=goose.goat.gibbon secret.pdf unlocked.pdf # decrypt
-  ```
+    ```bash
+    qpdf --empty --pages first.pdf second.pdf -- combined.pdf
+    qpdf --empty --pages first.pdf 1-2 second.pdf 1 -- combined # specify page ranges
+    qpdf --empty --pages large.pdf 1-3,7,11,18-21,55 -- summary.pdf  # specify specific pages and ranges
+    qpdf summary.pdf page.pdf --split-pages # split/burst pages
+    qpdf --rotate=+90:1 summary.pdf rotated1.pdf # rotate pages
+    qpdf --encrypt hen.rat.squid goose.goat.gibbon 256 -- summary.pdf secret.pdf # encrypt with user (read) and owner (change password/permissions) passwords
+    qpdf --decrypt --password=goose.goat.gibbon secret.pdf unlocked.pdf # decrypt
+    ```
 
 #### tmux
 
@@ -510,28 +522,28 @@ run '~/.tmux/plugins/tpm/tpm'
 
     - Script by Heiko to re-start sessions
 
-      ```bash
-      #!/bin/bash
+        ```bash
+        #!/bin/bash
 
-      #eval $(ssh-agent)
-      ssh-add ~/.ssh/srv/id_rsa
+        #eval $(ssh-agent)
+        ssh-add ~/.ssh/srv/id_rsa
 
-      serverlist=$HOME/.tmux/tmux_list
-      # contents for example
-      # server1
-      # server2
-      # as defined in SSH config
-      session=$1
+        serverlist=$HOME/.tmux/tmux_list
+        # contents for example
+        # server1
+        # server2
+        # as defined in SSH config
+        session=$1
 
-      tmux new-session -d -s $session
+        tmux new-session -d -s $session
 
-      for server in $(cat $serverlist) ; do
-          tmux new-window -a -t $session -d -c ~ -n $server "ssh ${server}"
-      done
+        for server in $(cat $serverlist) ; do
+            tmux new-window -a -t $session -d -c ~ -n $server "ssh ${server}"
+        done
 
-      tmux select-window -t ${session}:0
-      tmux attach-session -t $session
-      ```
+        tmux select-window -t ${session}:0
+        tmux attach-session -t $session
+        ```
 
 ### ImageMagick
 
