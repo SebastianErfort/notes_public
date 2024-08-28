@@ -19,7 +19,7 @@ title: Security
 
 ### Kerberos
 
-[[Kerberos|My notes on Kerberos]]
+[[authentication/Kerberos|My notes on Kerberos]]
 
 ### LDAP
 

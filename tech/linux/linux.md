@@ -13,27 +13,38 @@ Installation
 
 ## Command Line
 
-See
-
-- [[UbuntuServerCLI_cheatsheet.pdf|Ubuntu Server CLI Cheatsheet]]
 - shells: [[bash]], [[zsh]]
+- terminal emulators (GUI, often with tabs, split view and customisation): for example [[alacritty]] and [[kitty]]
+- editors: for example [[dev/vim|vim]] and [[neovim]]
 - environment
     - [Environment modules](https://modules.sourceforge.net/)
+- cheat sheets and CLI tools
+    - [[UbuntuServerCLI_cheatsheet.pdf|Ubuntu Server CLI Cheatsheet]] | [download](https://github.com/canonical-web-and-design/ubuntu.com/files/3989524/Ubuntu.Server.CLI.pro.tips.1.pdf)
+    - [cheat] CLI tool
+- multiplexing (multiple terminal sessions in one window, e.g. split screen): [[tmux]], [GNU screen][screen]
 
-| Shortcut | Description |
-|--|---|
-| **Ctrl+A** | Move to the start of the line. Same as **Home**. |
-| **Ctrl+E** | Move to the end of the line. Same as **End**. |
-| **Alt+F** | Move forward through the line _one word_ at a time. Same as **Ctrl+Right Arrow**. |
-| **Alt+B** | Move backward through the line _one word_ at a time. Same as **Ctrl+Left Arrow**. |
-| **Ctrl+F** | Move forward through the line _one letter_ at a time. Same as **Right Arrow**. |
-| **Ctrl+B** | Move backward through the line _one letter_ at a time. Same as **Left Arrow**. |
-|||
-| **Ctrl+U** | Delete from the cursor position to the start of the line. |
-| **Ctrl+K** | Delete from the cursor position to the end of the line. |
-| **Ctrl+W** | Delete a word to the left. Same as **Alt+Backspace**. |
-| **Alt+D** | Delete a word to the right. |
-| **Ctrl+/** | Undo. Yes, the command line has an undo option. |
+### Keyboard
+
+See [readline man page](https://www.man7.org/linux/man-pages/man3/readline.3.html).
+
+| Shortcut                  | Description                                                                                                                                                         |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>ctrl+c</kbd>         | Interrupt program.                                                                                                                                                  |
+| <kbd>ctrl+d</kbd>         | Exit e.g. program or shell.                                                                                                                                         |
+| <kbd>ctrl+a</kbd>         | Move to the start of the line. Same as **Home**.                                                                                                                    |
+| <kbd>ctrl+e</kbd>         | Move to the end of the line. Same as **End**.                                                                                                                       |
+| <kbd>ctrl+f</kbd>         | Move forward through the line _one letter_ at a time. Same as **Right Arrow**.                                                                                      |
+| <kbd>ctrl+b</kbd>         | Move backward through the line _one letter_ at a time. Same as **Left Arrow**.                                                                                      |
+| <kbd>alt+f</kbd>          | Move forward through the line _one word_ at a time. Same as **Ctrl+Right Arrow**.                                                                                   |
+| <kbd>alt+b</kbd>          | Move backward through the line _one word_ at a time. Same as **Ctrl+Left Arrow**.                                                                                   |
+| <kbd>ctrl+u</kbd>         | Delete from the cursor position to the start of the line.                                                                                                           |
+| <kbd>ctrl+k</kbd>         | Delete from the cursor position to the end of the line.                                                                                                             |
+| <kbd>ctrl+w</kbd>         | Delete a word to the left. Same as **Alt+Backspace**.                                                                                                               |
+| <kbd>alt+d</kbd>          | Delete a word to the right.                                                                                                                                         |
+| <kbd>ctrl+/</kbd>         | Undo. Yes, the command line has an undo option.                                                                                                                     |
+| <kbd>ctrl+r</kd>          | Search history                                                                                                                                                      |
+| <kbd>ctrl+x, ctrl+e</kbd> | editing mode in default editor to enter commands like you would in a script, executed upon save+close. Also great when pasting (longer) scripts into your terminal. |
+
 
 ## Commands & Tools
 
@@ -67,7 +78,7 @@ See
         tree -L 2 # set level up to  which branches are shown
         ```
 
-    *Sparse Files*
+        *Sparse Files*
 [Sparse files @ArchWiki](https://wiki.archlinux.org/title/sparse_file)
 [Find sparse files](https://www.thegeekdiary.com/how-to-find-all-the-sparse-file-in-linux/) (includes a lot of files with sparseness 0 in `/`, e.g. buses)
 
@@ -111,6 +122,7 @@ id <user>
 - [[awk]]
 - [[sed]]
 - head/tail
+- cut
 
 ### Partitions, File Systems and Swap
 
@@ -118,10 +130,10 @@ id <user>
 
 ### Network, remote
 
-[wget vs. curl @howtogeek](https://www.howtogeek.com/816518/curl-vs-wget/)
-[[ssh]]
+See also [[_networking|Networking]].
 
-Tags: #tech/networking/tools/arping similar to `ping`, but can give results when `ping` doesn't. Reports MAC address
+- [wget vs. curl @howtogeek](https://www.howtogeek.com/816518/curl-vs-wget/)
+- [[ssh]]
 
 [@howtogeek](https://www.howtogeek.com/813741/linux-arping-command/)
 
@@ -208,7 +220,7 @@ echo $CONFIG | base64 -d # decode
 - (image) file conversion
     - decode QR code: `zbarimg -q --nodbus qrcode.png`
     - encode text to QR code: `qrencode -o qrcode.png 'STRING'`
-    *exiftools*
+        *exiftools*
 - [change metadata @linuxconfig.org](https://linuxconfig.org/how-to-get-and-change-image-metadata-in-linux)
 - man page examples
     - change metadata for entire folder, using metadata as variables: `exiftool '-comment<ISO=$exif:iso Exposure=${shutterspeed}' dir`
@@ -220,16 +232,24 @@ echo $CONFIG | base64 -d # decode
 
 ## System
 
+
+### Configuration
+
+The system configuration is mostly in `/etc`, system-wide user configuration in `/usr` and users' personal configuration in `$HOME/.config` or (hidden) `rc` files `$HOME/.*rc`.
+
+
 ### Kernel
 
 - show kernel version: `uname -r`
 - list installed kernels
     - Debian/Ubuntu: `dpkg --list | grep linux-image`
 
+
 ### Sudo
->
+
 > [!info]- [[sudo]]
 > ![[sudo]]
+
 
 ### Mounting
 
@@ -564,3 +584,5 @@ Reset root password by changing #linux/Grub entry, booting into single-user mode
 - [Kernel 5.19 features/improvements](https://www.techrepublic.com/article/linux-kernel-5-19-networking-improvements/)
 
 [fcos]: <https://fedoraproject.org/coreos/>
+[screen]: <https://www.gnu.org/software/screen/>
+[cheat]: <https://github.com/cheat/cheat/>

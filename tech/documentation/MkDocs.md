@@ -21,7 +21,7 @@ visibility: public
 > - use only relative links, not absolute links, for compatibility between different Markdown viewers/editors
 >     - using Markdown extensions such as mkdocs-ezlinked locate files and make it significantly easier to use links
 >     - [[personal/projects/templates/obsidian|obsidian]]: activate shortest possible paths in settings to achieve compatible links.
- 
+
 ## Getting Started
 
 1. install `mkdocs` package and other requirements (from package repos or via `pip`, consider creating a new Python virtual environment)
@@ -57,7 +57,7 @@ visibility: public
     git submodule add URL docs
     ```
 
-    or in separate subdirectories if you include more sources. [[git#Sparse Checkout|Git's sparse checkout]] can be helpful if you want to integrate repos containing more than documentation as this lets you chose which files and directories you want to have present.
+    or in separate subdirectories if you include more sources. [[_git#Sparse Checkout|Git's sparse checkout]] can be helpful if you want to integrate repos containing more than documentation as this lets you chose which files and directories you want to have present.
 1. start server for local testing or build (output to `public/`)
 
     ```bash
@@ -97,7 +97,7 @@ See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pyp
 - [Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)
 - [plugins: search](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#setting-up-site-search)
 - [plugins: tags](https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#setting-up-tags): support for tags in page front matter and search function
-  Caveat: slightly more picky about YAML syntax than Obsidian
+    Caveat: slightly more picky about YAML syntax than Obsidian
     - create a [Tags Index](https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#adding-a-tags-index): `[TAGS]`
     - hide tags on a page: add following to front matter, `hide: [tags]`
 - Markdown
@@ -108,13 +108,13 @@ See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pyp
 - [Setting up a blog](https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/)
 - [versioning using mike](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/)
 
-  ```yaml
-  theme:
-    features:
-      - navigation.top  # back-to-top button
-      - toc.follow  # auto-scroll toc sidebar
+    ```yaml
+    theme:
+      features:
+        - navigation.top  # back-to-top button
+        - toc.follow  # auto-scroll toc sidebar
 
-  ```
+    ```
 
 ## Markdown in MkDocs
 
@@ -129,6 +129,7 @@ A number of Markdown extensions and MkDocs plugins is used, see `mkdocs.yml`. Th
 #### Markdown Extensions
 
 > [!todo] Clean
+>
 > - [ ] categorise extensions/plugins
 
 See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-guide/configuration/#markdown_extensions), [list of Python-Markdown extensions](https://python-markdown.github.io/extensions/) and [[Python-Markdown]]
@@ -139,9 +140,9 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 - [Admonition](https://python-markdown.github.io/extensions/admonition/#admonition): not configurable, full compatibility with Obsidian call-outs would require work (open/closed with `> [!info]-`) #todo/contrib
 - [Definition Lists](https://python-markdown.github.io/extensions/definition_lists/)
 - [`mdx_truly_sane_lists`](https://github.com/radude/mdx_truly_sane_lists): `pip install mdx-truly-sane-lists`
-  > Extension for Python-Markdown that makes lists truly sane. Custom indents for nested lists and fix for messy linebreaks and paragraphs between lists.
-  
-  Issues: [#16: doesn't support mixing indentations](https://github.com/radude/mdx_truly_sane_lists/issues/16) | [#7: list not rendering without preceding empty line] #todo/tech/markdown/mkdocs
+    > Extension for Python-Markdown that makes lists truly sane. Custom indents for nested lists and fix for messy linebreaks and paragraphs between lists.
+
+    Issues: [#16: doesn't support mixing indentations](https://github.com/radude/mdx_truly_sane_lists/issues/16) | [#7: list not rendering without preceding empty line] #todo/tech/markdown/mkdocs
 - [mdx-breakless-lists](https://github.com/adamb70/mdx-breakless-lists/tree/master): don't require empty line before lists, uses regex to enter empty line in processing, so one doesn't have to change the source
 
 [[#mkdocs-material]] documentation
@@ -161,6 +162,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
 
 <!-- TODO embed a file once I created a [[templates/mkdocs|MkDocs template]] -->
 > [!example]- Example `mkdocs.yml` configuration
+>
 > ```yaml
 > ---
 > # some sections error'd with 2 spaces indentation, keep 4!
@@ -222,7 +224,7 @@ See [MkDocs documentation on markdown extensions](https://www.mkdocs.org/user-gu
     ```
 
 - [mkdocs-exclude-search](https://github.com/chrieke/mkdocs-exclude-search): Exclude selected files or sections from the search index.
-- [mkdocs-table-reader-plugin](https://github.com/timvink/mkdocs-table-reader-plugin
+- [mkdocs-table-reader-plugin](<https://github.com/timvink/mkdocs-table-reader-plugin>
 - [mkdocs-redirects](https://github.com/datarobot/mkdocs-redirects): Page redirects for moved/renamed pages
 - [mkdocs-macros](https://mkdocs-macros-plugin.readthedocs.io/en/latest/): A plugin for unleashing the power of Mkdocs, by using variables and macros
 - [mkdocs-gitlab-plugin](https://gitlab.inria.fr/vidjil/mkdocs-gitlab-plugin): MkDocs plugin to transform strings such as #1234, %56, or !789 into links to a GitLab repository.
@@ -269,7 +271,6 @@ some_url: https://example.com
 - [embedding external files](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files): [pymdown-extension snippets](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/) (Obsidian syntax for embedding other notes could be translated to use this, see [[mkdocs_obsidian_compatibility|project MkDocs-Obsidian compatibility]] #idea/tech/mkdocs #idea/tech/obsidian)
     - [snippets notation](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation)
     - can be used to keep a central file of references, e.g. a glossary, that can be included and things like hyperlinks defined therein can be accessed
-    
 
 
 ## Integrations

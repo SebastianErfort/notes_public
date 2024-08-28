@@ -40,7 +40,7 @@ Windows showed ARP requests to detect whether the IP is already in use. My Linux
 
 Example capture file from instructor: research network environment with problems
 
-- Conversations/Endpoints shows `10.90.16.x` addresses, but also something private-looking `172.x.x.x`
+- Conversations/endpoints shows `10.90.16.x` addresses, but also something private-looking `172.x.x.x`
 - filtering for DHCP shows offers from different servers
 - turns out someone hooked up their own hardware (improperly connected) and the device started handing out IP addresses
 

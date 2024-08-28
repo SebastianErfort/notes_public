@@ -7,7 +7,6 @@ related:
   - "[[obsidian]]"
   - "[[obsidian_features|Obsidian features]]"
 ---
-
 # Markdown
 
 | Resource | Links |
