@@ -7,7 +7,7 @@ aliases:
 related:
   - "[[OSPO]]"
   - "[[openscience|Open Science]]"
-  - "[[data/index|Data]]"
+  - "[[_data|Data]]"
 ---
 # Open Source
 
@@ -79,14 +79,14 @@ See also [awesome-open-source] > organisations.
     CHAOSS is a Linux Foundation project focused on creating metrics, metrics models, and software to better understand open source community health on a global scale.
 - [Software in the Public Interest (SPI)](https://www.spi-inc.org/)
 - [Open and Free Technology Community (OFTC)](https://www.oftc.net/) (member of SPI) ^4c4450
-  > The Open and Free Technology Community aims to provide stable and effective collaboration services to members of the community in any part of the world, while closely listening to their needs and desires.
+    > The Open and Free Technology Community aims to provide stable and effective collaboration services to members of the community in any part of the world, while closely listening to their needs and desires.
 - [OW2](https://www.ow2.org)
-  > OW2 is an independent, global, open-source software community. We are not academics, we are not researchers, we are not lobbyists, we foster open source projects and we actually deliver software, and we claim to be the only such non-profit open source organisation of EU origin and DNA.
+    > OW2 is an independent, global, open-source software community. We are not academics, we are not researchers, we are not lobbyists, we foster open source projects and we actually deliver software, and we claim to be the only such non-profit open source organisation of EU origin and DNA.
 - Open Source Hardware Association (OSHWA)
 - GitHub
 - [[WHO#OSPO|WHO OSPO]]
 - DPGA (Digital Public Goods Alliance)
-    - https://socialimpact.github.com/insights/what-are-digital-public-goods-and-DPGA/
+    - <https://socialimpact.github.com/insights/what-are-digital-public-goods-and-DPGA/>
 - [Open Source Initiative](https://opensource.org/osd/)
 - [disroot.org](https://disroot.org): platform providing online services based on principles of freedom, privacy, federation and decentralization
 - [GOV.UK Open Standards principles](https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles)
@@ -115,7 +115,7 @@ See also [awesome-open-source] > organisations.
 
 Lists, overviews, etc.
 
-- https://foss.events/
+- <https://foss.events/>
 
 Past
 
@@ -123,7 +123,7 @@ Past
 
 ## References
 
-- https://opensource.guide/
+- <https://opensource.guide/>
 - [gnu.org: What is Free Software?](https://www.gnu.org/philosophy/free-sw.html)
 
 [first-os-contrib]: <https://github.com/readme/guides/first-oss-contribution>

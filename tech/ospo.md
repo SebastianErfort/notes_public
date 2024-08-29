@@ -4,7 +4,7 @@ acronym: OSPO
 visibility: public
 author: Sebastian Erfort
 related:
-  - "[[OpenSource]]"
+  - "[[tech/opensource]]"
   - "[[OpenScience]]"
 ---
 |          |                                      |     |
@@ -28,9 +28,9 @@ See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
     - [OSPO Definition](https://github.com/todogroup/ospodefinition.org)
 - [OSPOCO](https://ospo.co/): providing professional help around OSPOs as a service |  [Blog](https://ospo.co/blog/)
     - [Key parts of an OSPO](https://ospo.co/all-about-ospos/key-parts-of-an-ospo/)
-- [[SURF]]: 
- 
- 
+- [[SURF]]:
+
+
 ## People
 
 - Christine Abernathy, F5,  OSPO director
@@ -40,7 +40,7 @@ See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
 ## Events
 
 - [[2023-11-28]]: [CERN OSPO Inaugural Event](https://indico.cern.ch/event/1327562/timetable/?view=standard)
-      Presentations: NVIDIA, OSHWA, WHO OSPO
+    Presentations: NVIDIA, OSHWA, WHO OSPO
 - [Linux Foundation: TODO Group, OSPOlogy](https://community.linuxfoundation.org/todo-group-ospology/)
 - [OSPOlogy meetings](https://github.com/todogroup/ospology/tree/main/meetings#ospology-planning)
 
@@ -68,11 +68,10 @@ See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
     - GitHub
         - [OSPO community @GitHub](https://github.com/community/OSPO)
         - [github-ospo](https://github.com/github/github-ospo): Helping open source program offices get started
-             - [Blog post](https://github.blog/2023-03-13-an-open-source-project-to-empower-ospos-everywhere/)
+            - [Blog post](https://github.blog/2023-03-13-an-open-source-project-to-empower-ospos-everywhere/)
 - [RedHat article: guide to setting up your OSPO](https://opensource.com/article/20/5/open-source-program-office)
 - [awesome-ospo @GH](https://github.com/todogroup/awesome-ospo)
 - GitHub
     - [Topic: OSPO](https://github.com/topics/ospo)
     - [The ReadME Project](https://github.com/readme) #check/tech/open-source
 
-[awesome-ospo]: <https://github.com/todogroup/awesome-ospo>
