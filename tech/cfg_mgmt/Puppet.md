@@ -46,6 +46,9 @@ General
         - doesn't support #linux/snap [see](https://tickets.puppetlabs.com/browse/PUP-7435) other than through a community/Forge module <https://forge.puppet.com/modules/rootexpert/snap>
     - [`ensure_packages`](https://doc.wikimedia.org/puppet/puppet_functions_ruby3x/ensure_packages.html)
     - [Exported Resources](https://www.puppet.com/docs/puppet/7/lang_exported.html)
+- [Puppet Forge](): community modules with varying quality
+    - [apt][puppet-forge-apt]
+    - [recursive_file_permissions](https://forge.puppet.com/modules/npwalker/recursive_file_permissions/readme) (even suggested in Puppet's docs)
 
 Puppet URI: `puppet://<server>/<mount point>/<path>` (better syntax for hosted files available)
 
@@ -104,7 +107,6 @@ file { '/etc/motd':
   source => 'puppet:///modules/modulname/directory/motd.txt'
 }
 ```
-
 
 
 ### Classes
@@ -288,15 +290,15 @@ Can be used to display OS and system information. To show data as available in P
 - Facts can be created as well
 - Facts can be specified as command line environment variables, for example
 
-  ```bash
-  FACTER_timeout=0 puppet agent -t
-  ```
+    ```bash
+    FACTER_timeout=0 puppet agent -t
+    ```
 
 - determine value of fact and debug
 
-  ```puppet
-  puppet facts --verbose --debug <your_fact>
-  ```
+    ```puppet
+    puppet facts --verbose --debug <your_fact>
+    ```
 
 [Remco's Ruby tutorial including Puppet facts](file://edu/ruby/remco/programming-in-ruby/Ruby%20Session4.ipynb)
 

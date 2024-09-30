@@ -1,14 +1,20 @@
 ---
 title: Security on Linux
 visibility: public
+tags:
+  - linux/security/luks
+  - linux/auth/pam
 ---
 # Security on Linux
 
 ## Encryption
 
-- LUKS (Linux Unified Key Setup): [Wikipedia](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)
 - VeraCrypt: [Website](https://www.veracrypt.fr/en/Home.html) | [Wikipedia](https://en.wikipedia.org/wiki/VeraCrypt) | [RedHat](https://access.redhat.com/solutions/100463) | [RedHat Article](https://www.redhat.com/sysadmin/disk-encryption-luks)
-- [[../../../rug/cit/Disk_encryption|CIT disk encryption guide for personal devices]]
+
+
+### Linux Unified Key Setup (LUKS)
+
+[Wikipedia](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup)
 
 Opening and mounting an encrypted device
 
@@ -24,7 +30,9 @@ udisksctl unmount -b /dev/mapper/cr_dev
 sudo cryptsetup luksClose cr_dev
 ```
 
+References
 
+- <https://www.redhat.com/en/blog/implementing-corporate-laptop-encryption-using-luks>
 
 ## Sandboxing
 
@@ -91,7 +99,7 @@ auth [...] pam_regex.so extended regex=... transform=s/.*/\L&/g
 # Package: `libpam-ssh-agent-auth`
 ```
 
-- see [[rug/projects/PAM_SSH-agent|Work LWP: project sudo with SSH agent PAM]]
+- see [[projects/PAM_SSH-agent|Work LWP: project sudo with SSH agent PAM]]
 
 
 ## References

@@ -14,3 +14,8 @@ up: "[[SMB]]"
 # Samba
 
 An implementation of [[SMB]].
+
+
+## References
+
+- [Ubuntu Server documentation: Samba](https://documentation.ubuntu.com/server/how-to/samba/)

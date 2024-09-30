@@ -1,7 +1,8 @@
 ---
-title: awk
+title: AWK
 type: software
-category: cl-utility
+category:
+  - cl-utility
 url: "https://www.gnu.org/software/gawk"
 docs: "https://www.gnu.org/software/gawk/manual/gawk.html"
 developer: ""
@@ -16,9 +17,9 @@ aliases:
   - gawk
 visibility: public
 ---
-# `=this.title`
+# AWK
 
-`= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")` | `= ("[Reources](" + this.rsc + ")")` | [Cheatsheet](file://.config/cheat/cheatsheets/personal/awk)
+`= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")` | `= ("[Resources](" + this.rsc + ")")` | [Cheatsheet][cheat]
 `= ("> " + this.desc-short)`
 
 Quick reference [cheatsheet](file://rsrc/awk/awk.sh)
@@ -131,7 +132,8 @@ END { close("sh") }
 
 [My snippets/scripts](file://rsrc/awk)
 
-- Find regular expression, if next line matches another regular expression insert something in-between (empty line): [regexps_differentlines_insert.awk](file://rsrc/awk/regexps_differentlines_insert.awk)
+- unique strings (without sort)
+- find regular expression, if next line matches another regular expression insert something in-between (empty line): [regexps_differentlines_insert.awk](file://rsrc/awk/regexps_differentlines_insert.awk)
 
 ## References
 
@@ -142,3 +144,5 @@ Tutorials and courses
 - [[LIL_awk_et|LinkedIn Learning course: AWK Essential Training]]
 - <https://www.tutorialspoint.com/awk/index.htm>
 - <https://developer.ibm.com/tutorials/l-awk1/>
+
+[cheat]: <file://.config/cheat/cheatsheets/personal/awk>
