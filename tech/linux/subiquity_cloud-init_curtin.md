@@ -186,7 +186,7 @@ See [Cloud-Init documentation on NoCloud Datasource](https://cloudinit.readthedo
 
 > Curtin is intended to be a bare bones “installer”. Its goal is to take data from a source, and get it onto disk as quick as possible and then boot it. The key difference from traditional package based installers is that curtin assumes the thing its installing is intelligent and will do the right thing.
 
-#### Stages
+### Stages
 
 😠 Trying to find a list of the accepted stages for the `autoinstall` section in `user-data` is proving difficult.
 
@@ -202,7 +202,7 @@ Can be (de-)activated in the `stages` section of the `autoinstall` part of `user
 
 Easiest way to get a terminal in non-interactive stages (`early`, `late`): produce an error, for example run `false`.
 
-#### Commands
+### Commands
 
 - `curtin block-discover`: print current storage information in the usual JSON format that translated to the YAML format used in the `storage` section in `user-data > autoinstall`. Doesn't report disk size and free space has to be calculated from "gaps" around partitions.
     [Work LWP: Remco's examples](https://git.lwp.rug.nl/lwp/unattended/lwp5/-/commit/d2b61dba51093790528bbdcf976614d42386fffc)
