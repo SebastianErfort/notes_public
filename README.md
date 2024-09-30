@@ -17,12 +17,12 @@ Online version available at <https://sebastianerfort.github.io/notes>.
     - [[Puppet]]
 - [[dev|Development]]
     - [[dev#Command Line|command line]]: [[bash]], [[awk]], [[sed]], [[editors]], [[vim]], [[neovim]]
-    - version control: [[Git]], [[GitLab]], [[GitHub]]
+    - version control: [[_git]], [[GitLab]], [[GitHub]]
     - [[automation]]
     - [[virtualisation_containerisation|Virtualisation and Containers]]: [[kvm]], [[QEMU]], [[libvirt]], [[Docker]], [[public/tech/dev/Vagrant]]
     - [[DevOps]]: [[devops#CI/CD|CI/CD]]
     - [[dev#Syntax Check, Formatting, Linting|Syntax Check, Formatting, Linting]]
-- [[_documentation|Documentation]], [[productivity]] and [[note-taking]]
+- [[_documentation|Documentation]], [[productivity]] and [[writing#Notes|note-taking]]
     - [[MkDocs]]
     - [[Obsidian]]
     - [[Markdown]]
@@ -45,12 +45,11 @@ Online version available at <https://sebastianerfort.github.io/notes>.
     - [[HTML]]
     - [[Hugo]]
 
-Notes/pages starting with an underscore `_` are meta pages or maps of content.
+Notes/pages starting with an underscore `_` are index or meta pages, or maps of content.
 
 ## TODO
 
 - [ ] copyright and licensing
-- [ ] clean
-    - [ ] remove icons/logos in links, e.g. GitHub logo (style through CSS instead)
+- [ ] move concept notes to private repo until worth publishing
 
 [^1]: [[public/tech/documentation/MkDocs#Obsidian|Compatibility MkDocs - Obsidian]]

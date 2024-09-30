@@ -26,11 +26,11 @@ Different models with interoperability problem: NFSv4, Windows and POSIX ACLsw
     - `nfs4_editfacl file/dir`
 - read
 
-  ```bash
-  getfacl <file/dir>
-  # find files with ACLs beyond POSIX (-s) recursively (-R)
-  getfacl -Rsp <dir> | grep '# file:' | cut -d" " -f3
-  ```
+    ```bash
+    getfacl <file/dir>
+    # find files with ACLs beyond POSIX (-s) recursively (-R)
+    getfacl -Rsp <dir> | grep '# file:' | cut -d" " -f3
+    ```
 
 - if `ls` shows a `+` for files/dirs, they have ACLs
 
@@ -46,7 +46,7 @@ Tags: #tech/pNFS
 
 ### Kerberos
 
-See [[Kerberos#NFS|Kerberos: NFS]]
+See [[docs/seb_public/tech/security/authentication/Kerberos#NFS|Kerberos: NFS]]
 
 
 ## References

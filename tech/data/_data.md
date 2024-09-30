@@ -2,7 +2,7 @@
 title: Data
 related:
   - "[[research_data|Research Data]]"
-  - "[[OpenSource|Open Source]]"
+  - "[[tech/opensource|Open Source]]"
 ---
 # Data
 
@@ -27,9 +27,11 @@ WHERE type = "software" and contains(category, "database")
 TABLE WITHOUT ID
 file.link AS "Name",
 ("[Website](" + this.url + ")") AS "Links",
+desc-short AS "Description",
 (join(tags, ", ")) AS "Tags"
 WHERE contains(category, "data")
 ```
+
 
 ## References
 

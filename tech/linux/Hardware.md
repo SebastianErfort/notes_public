@@ -24,7 +24,7 @@ cat /proc/meminfo
 sudo dmidecode --type 17
 inxi -m
 ```
-    
+
 ## Audio
 
 - Default: Pulse Audio
@@ -32,16 +32,16 @@ inxi -m
     - [Pipewire](https://pipewire.org/) | [Documentation](https://docs.pipewire.org/)
 - Bluetooth: [opensuse.org](https://en.opensuse.org/SDB:Bluetooth)
     - Headset
-      [[../../../rug/journal/today#16/01/2022|See failed attempts.]] I switched to Pipewire, see <https://lists.opensuse.org/archives/list/factory@lists.opensuse.org/thread/VNROKVXVFICDVJXCXZQIB6UYHYVGFGFK/,`>
+        [[../../../rug/journal/today#16/01/2022|See failed attempts.]] I switched to Pipewire, see <https://lists.opensuse.org/archives/list/factory@lists.opensuse.org/thread/VNROKVXVFICDVJXCXZQIB6UYHYVGFGFK/,`>
 
-      ```bash
-      sudo zypper install pipewire pipewire-pulseaudio pipewire-alsa wireplumber-pulse
-      systemctl --user enable pipewire-pulse
-      systemctl --user start pipewire-pulse
-      ```
+        ```bash
+        sudo zypper install pipewire pipewire-pulseaudio pipewire-alsa wireplumber-pulse
+        systemctl --user enable pipewire-pulse
+        systemctl --user start pipewire-pulse
+        ```
 
-      which is working like a charm so far. I read that for some applications the sound quality is bad, but haven't encountered that yet.
-      Switch profile between playback only (*A2DP*, high quality) and headset mode (*HSP/HFP*)
+        which is working like a charm so far. I read that for some applications the sound quality is bad, but haven't encountered that yet.
+        Switch profile between playback only (*A2DP*, high quality) and headset mode (*HSP/HFP*)
 
 
 ## GPU
@@ -87,28 +87,28 @@ lspci # list PCI devices
 
 1. find device (information) for example with
 
-   ```
-   # udevadm monitor --environment --udev
-   # dmesg
-   ```
+    ```
+    # udevadm monitor --environment --udev
+    # dmesg
+    ```
 
 2. Get device attributes
 
-   ```
-   # udevadm info --atribute-walk --name="/dev/input/by-path/..."
-   ```
+    ```
+    # udevadm info --atribute-walk --name="/dev/input/by-path/..."
+    ```
 
 3. add rule to `/etc/udev/rules.d/??.rules` and point to script, for example in `/usr/local/bin`,
 4. create script to run commands
 5. Reload `udev` rules
 
-   ```
-   # udevadm control --reload-rules
-   ```
+    ```
+    # udevadm control --reload-rules
+    ```
 
 Examples
 
-- [[docs/seb/Yubikey]]: lock/unlock computer when removing/inserting key
+- [[docs/seb/cit/Yubikey]]: lock/unlock computer when removing/inserting key
 
 ## MAC Address
 
@@ -119,33 +119,33 @@ Examples
 
 - temporary ^8a2c0a
 
-  ```bash
-  sudo ip link set dev eth0 down
-  sudo ip link set dev eth0 address 00:00:00:00:00:01
-  sudo ip link set dev eth0 up
-  ```
+    ```bash
+    sudo ip link set dev eth0 down
+    sudo ip link set dev eth0 address 00:00:00:00:00:01
+    sudo ip link set dev eth0 up
+    ```
 
 - permanent
     - with NetworkManager: edit `/etc/NetworkManager/dispatcher.d/00-changemac`
 
-      ```bash
-      #!/bin/sh
-      if [ "$IFACE" = eth0 ]; then
-        ip link set dev "$IFACE" address 00:00:00:00:00:01
-      fi
-      ```
+        ```bash
+        #!/bin/sh
+        if [ "$IFACE" = eth0 ]; then
+          ip link set dev "$IFACE" address 00:00:00:00:00:01
+        fi
+        ```
 
-      and change permissions `sudo chmod 755 /etc/NetworkManager/if-up.d/00-changemac`
+        and change permissions `sudo chmod 755 /etc/NetworkManager/if-up.d/00-changemac`
     - with Systemd: edit `/etc/systemd/network/eth0.link`
 
-      ```conf
-      [Match]
-      MACAddress=xx:xx:xx:xx:xx:xx
+        ```conf
+        [Match]
+        MACAddress=xx:xx:xx:xx:xx:xx
 
-      [Link]
-      MACAddressPolicy=random
-      NamePolicy=kernel database onboard slot path
-      ```
+        [Link]
+        MACAddressPolicy=random
+        NamePolicy=kernel database onboard slot path
+        ```
 
 ## Devices
 
@@ -166,11 +166,11 @@ lsusb
     - find device ID in `lsusb`
     - edit `/etc/default/grub` and add to `GRUB_CMDLINE_LINUX_DEFAULT`:
 
-      ```bash
-      usbhid.quirks=0x*ID_before_colon*:0x*ID_after_colon*:0x00000008
-      # or try
-      atkbd.reset # might need sudo modprobe psmouse if touchpad stops working
-      ```
+        ```bash
+        usbhid.quirks=0x*ID_before_colon*:0x*ID_after_colon*:0x00000008
+        # or try
+        atkbd.reset # might need sudo modprobe psmouse if touchpad stops working
+        ```
 
     - update grub on boot device: `update-config` (doesn't exist as a command in openSUSE, use `sudo grub2-mkconfig -o /boot/grub2/grub.cfg` instead)
 - [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB): Open source RGB lighting control that doesn't depend on manufacturer software

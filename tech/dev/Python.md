@@ -16,7 +16,7 @@ visibility: public
 | Linting & syntax | [Black](black.md), pycodestyle                              |
 | References       | [Standard Library][stdlib], [W3C Python Reference][w3c-ref] |
 
-## Installation and Versions
+## Installation, Version and Package Management
 
 - (virtual) environments
     - Python module `venv`

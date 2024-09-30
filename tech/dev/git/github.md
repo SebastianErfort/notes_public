@@ -4,7 +4,7 @@ title: GitHub
 ---
 | Resource | Links               |
 | -------- | ------------------- |
-| Related  | [[Git]], [[GitLab]] |
+| Related  | [[_git]], [[GitLab]] |
 
 # GitHub
 

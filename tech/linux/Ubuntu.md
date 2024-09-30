@@ -4,6 +4,7 @@ visibility: public
 docker-image:
   - ubuntu
   - ubuntu:jammy
+up: "[[canonical]]"
 ---
 
 ## Releases

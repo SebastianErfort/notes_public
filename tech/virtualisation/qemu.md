@@ -3,9 +3,9 @@ title: QEMU
 type: software
 category:
   - emulator
-url: https://www.qemu.org/
-docs: https://www.qemu.org/documentation
-source: https://gitlab.com/qemu-project/qemu
+url: "https://www.qemu.org/"
+docs: "https://www.qemu.org/documentation"
+source: "https://gitlab.com/qemu-project/qemu"
 developer: "QEMU team: Peter Maydell, et al."
 desc: QEMU (Quick Emulator[3]) is a free and open-source emulator. It emulates a computer's processor through dynamic binary translation and provides a set of different hardware and device models for the machine, enabling it to run a variety of guest operating systems. It can interoperate with Kernel-based Virtual Machine (KVM) to run virtual machines at near-native speed. QEMU can also do emulation for user-level processes, allowing applications compiled for one architecture to run on another.[4]QEMU supports the emulation of various architectures, including x86, ARM, PowerPC, RISC-V, and others.
 tags:
@@ -18,7 +18,7 @@ desc-short: A generic and open source machine emulator and virtualizer
 ---
 # QEMU
 
-`= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
+`= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")` (bad)
 `= ("> " + this.desc-short)`
 
 - emulation tools and standard virtual hardware: processors, network interfaces, graphics cards, ...
@@ -134,7 +134,7 @@ qemu-system \
 ## Storage and File Sharing
 
 See [[#Images]] for creating and inter-operating with disk image files.
- 
+
 File-sharing between guest and host: [Plan 9 Filesystem Protocol (9P)][qemu-9p]
 
 ```bash
@@ -165,7 +165,7 @@ Host hardware can be passed through to guest.
 - v1.1, v2 or v3 (using xHCI if supported)
 - option `-usbdevice` uses USB 1.1
 - set up bus and connect device
-  
+
     ```bash
     # find usb device on host: bus, device/port, vendor id, product id
     lsusb
@@ -189,12 +189,12 @@ Host hardware can be passed through to guest.
 
 - user-mode networking on private NAT (defaults)
 
-  | Role             | IP        |
-  | ---------------- | --------- |
-  | DHCP             | 10.0.2.2  |
-  | DNS (forwarding) | 10.0.2.3  |
-  | SMB              | 10.0.2.4  |
-  | Guest            | 10.0.2.15 |
+    | Role             | IP        |
+    | ---------------- | --------- |
+    | DHCP             | 10.0.2.2  |
+    | DNS (forwarding) | 10.0.2.3  |
+    | SMB              | 10.0.2.4  |
+    | Guest            | 10.0.2.15 |
 
 - without further configuration each guest is on a separate NAT with the same IP address
 
@@ -246,6 +246,9 @@ qemu-system
   ...
   -netdev user,ipv6=off,id=net0
   -device rtl8139,netdev=net0
+  # configure MAC address
+  -netdev bridge,id=vn0
+  -device virtio-net-pci,netdev=vn0,mac=00:00:00:00:00:00
   # or shorter
   -nic user,model=virtio-net-pci
   # port forwarding
@@ -264,4 +267,4 @@ qemu-system
 [^numa]: See [[public/tech/glossary#^numa|glossary: NUMA]]
 [^smp]: See [[public/tech/glossary#^smp|glossary: SMP]]
 [qemu-9p]: <https://wiki.qemu.org/Documentation/9p>
-[^qemu-bridge-helper]: on Ubuntu `/usr/bin/qemu-bridge-helper`, on openSUSE `/usr/libexec/qemu-bridge-helper`
+[^qemu-bridge-helper]: or  `/usr/bin/qemu-bridge-helper`, `/usr/lib/qemu/qemu-bridge-helper`, `/usr/libexec/qemu-bridge-helper`
