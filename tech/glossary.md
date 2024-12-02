@@ -29,7 +29,7 @@ visibility: public
 ## Networking
 
 - MTU: Maximum Transmission Unit ^mtu
-  Maximum packet size that can be transmitted over your network 
+  Maximum packet size that can be transmitted over your network  ^926fe6
 - NAS: see [[#^nas|NAS]]
 - SMB: Server Message Block (Samba, Windows) ^smb
 - TUN/TAP: Kernel virtual network devices. ^tuntap

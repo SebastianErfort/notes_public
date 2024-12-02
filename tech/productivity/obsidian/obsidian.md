@@ -115,6 +115,7 @@ More CSS snippets
 - [Pretty Tables][css-pretty-tables]
 - Canvas
     - [Canvas cards image](https://www.reddit.com/r/ObsidianMD/comments/11n389p/i_made_a_css_snippet_to_give_your_canvas_cards_a/)
+    - [Export Canvas to HTML (barely more helpful than an image file)](https://forum.obsidian.md/t/exporting-canvas-to-html-and-pdf/60331)
 
 ### Search and Queries
 

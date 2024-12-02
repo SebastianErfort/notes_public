@@ -12,7 +12,7 @@ source: "https://github.com/blacksmithgu/obsidian-dataview"
 developer: ""
 visibility: public
 ---
-# `= this.title`
+# Obsidian Dataview
 
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
@@ -26,20 +26,20 @@ visibility: public
     ...
     ```
 
-### Metadata
+## Metadata
 
-#### YAML Front Matter
+### YAML Front Matter
 
 Most metadata should go in the (YAML) front matter of a note. The structure used therein will determine how data is presented in a rendered DataView query.
 
-#### Inline
+### Inline
 
 You can add data inline as [curry:: Thai] with `curry:: Katsu` or `[curry: ]`
 or hiding the long key output in Reading mode (cake:: Schwarzwälder Kirsch)
 
 I love `= this.curry` curry and `= this.cake` cake
 
-#### Implicit Fields
+### Implicit Fields
 
 Automatically added fields, collected under `file`[^1]
 
@@ -70,7 +70,7 @@ Automatically added fields, collected under `file`[^1]
 
 [^1]: <https://blacksmithgu.github.io/obsidian-dataview/annotation/metadata-pages/>
 
-### Queries
+## Queries
 
 - Types: `LIST`, `TABLE`, `TASK` and `CALENDAR`, see [query types](https://blacksmithgu.github.io/obsidian-dataview/queries/query-types/).
 - Fields
@@ -100,19 +100,14 @@ Automatically added fields, collected under `file`[^1]
 
 [Example vault with queries](https://github.com/s-blu/obsidian_dataview_example_vault/)
 
-#### Inline
+### Inline
 
 See [documentation on inline DQLs](https://blacksmithgu.github.io/obsidian-dataview/queries/dql-js-inline/):
 
 - data from other notes can be accessed with <code>`=[[otherNote]].file.name`</code>
 
 
-#### Export
-
-HTML from rendered DataView queries can be accessed through Obsidian development tools, e.g. <kbd>ctrl+shift+i</kbd>.
-
-
-### Functions
+## Functions
 
 <https://blacksmithgu.github.io/obsidian-dataview/reference/functions/>
 DataView uses [Luxon tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for time formatting.
@@ -121,30 +116,40 @@ DataView uses [Luxon tokens](https://moment.github.io/luxon/#/formatting?id=tabl
 dateformat(field, "yyyy-MM-dd") # format dates
 ```
 
-#### Javascript
+### Javascript
 
 ```markdown
 %% find index of element in array %%
 `$= dv.current().field.indexOf("value")`
 ```
 
+## Export
+
+HTML from rendered DataView queries can be accessed through Obsidian development tools, e.g. <kbd>ctrl+shift+i</kbd>.
+
+
+
 ## Examples
 
 [Dataview task and project examples](https://forum.obsidian.md/t/dataview-task-and-project-examples/17011)
 
 - [ ] a task
+- [x] a finished task
 
 Query for all tasks in this file
 
 ````markdown
 ```dataview
 TASK
-WHERE file.path = this.file.path
+WHERE file.path = this.file.path AND !completed
 ```
 ````
+
+will render to
+
 ```dataview
 TASK
-WHERE file.path = this.file.path
+WHERE file.path = this.file.path AND !completed
 ```
 
 ### Calendar

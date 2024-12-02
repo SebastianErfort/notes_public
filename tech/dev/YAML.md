@@ -6,10 +6,11 @@ tags:
 type: language
 category:
   - markup
-url: "https://yaml.org/"
-related:
+url: https://yaml.org/
+related: &related
   - "[[JSON]]"
   - "[[dhall]]"
+same: *related
 ---
 # YAML
 
@@ -17,6 +18,7 @@ related:
 
 | Resource                         | References                                        |
 | -------------------------------- | ------------------------------------------------- |
+| Personal references              | [Cheatsheet](file://rsrc/yaml/reference.yaml)     |
 | Cheatsheets and Quick References | [yaml.org refcard](https://yaml.org/refcard.html) |
 
 ## Language

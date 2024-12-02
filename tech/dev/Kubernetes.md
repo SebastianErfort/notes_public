@@ -25,7 +25,7 @@ aka K8s (K-8 letters-s)
     - [CIS Hardening Guide](https://docs.k3s.io/security/hardening-guide)
 - k0s
 - Microk8s
-- [[Minikube]]
+- [[minikube]]
 - [[OKD]]
 - [[OpenShift]]
 - [Quarks](https://quarkus.io/)
