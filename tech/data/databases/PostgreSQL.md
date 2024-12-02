@@ -19,6 +19,11 @@ title: PostgreSQL
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")`
 `= ("> " + this.desc-short)`
 
+## Configuration
+
+- [Host-based authentication: pg_hba.conf](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html)
+
+
 ## Docker
 
 ```bash

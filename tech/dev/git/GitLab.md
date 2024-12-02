@@ -14,7 +14,7 @@ desc-short: GitLab is the most comprehensive AI-powered DevSecOps Platform.
 visibility: public
 img: "<img src=\"https://docs.gitlab.com/assets/images/gitlab-logo-header.svg\" style=\"width: 80px;\"/>"
 related:
-  - "[[Git]]"
+  - "[[_git]]"
 ---
 # GitLab
 
@@ -103,6 +103,7 @@ By default `.gitlab-ci.yml`
 - [Migrate from GitHub](https://docs.gitlab.com/ee/ci/migration/github_actions.html)
 
 > [!tip]+ [Example YAML config](https://docs.gitlab.com/ee/ci/yaml/)
+>
 > ```yaml
 > default:
 > interruptible: true # new pipeline may cancel running one (default false)
@@ -200,7 +201,7 @@ There's a number of events to chose from as webhooks, for example `Wiki page eve
 
 ### Console
 
-Fixing requirement of both MFA *and* password some users experience
+Fixing requirement of both MFA _and_ password some users experience
 
 ```ruby
 ## gitlab-rails console
@@ -229,7 +230,7 @@ See also [[wiki/GitLab/GitLab#LDAP|LWP: GitLab > LDAP]]
 - reset password: [[#^8cee12|Rake Task]], [[#^1b2997|Rails console]]
 - [Server Hooks @GitLab Documentation](https://docs.gitlab.com/ee/administration/server_hooks.html)
 - [Repository Storage Types > Translate Hashed Storage Paths](https://docs.gitlab.com/ee/administration/repository_storage_types.html#translate-hashed-storage-paths)
-    1. with admin rights: go to **Admin Area** > *project* > **Gitaly relative path**
+    1. with admin rights: go to **Admin Area** > _project_ > **Gitaly relative path**
     2. ...
 
 ### Enterprise Edition (EE)

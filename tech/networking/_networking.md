@@ -27,6 +27,7 @@ visibility: public
 [IANA (Internet Assigned Numbers Authority): Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt) ^d2523a
 
 > [!example] Excerpt
+>
 > ```
 > Service   Port    Transport   Description
 > Name     Number   Protocol
@@ -39,7 +40,7 @@ visibility: public
 > [!info] What is a protocol?[^1]
 > In networking, a protocol is a standardized set of rules for formatting and processing data. Protocols enable computers to communicate with one another.
 
-[^1]: https://www.cloudflare.com/en-gb/learning/network-layer/what-is-a-protocol/
+[^1]: <https://www.cloudflare.com/en-gb/learning/network-layer/what-is-a-protocol/>
 
 ### Protocols
 
@@ -89,7 +90,7 @@ sudo ip addr add <ip address> dev br0
 ```
 
 And optionally set up DHCP on this bridge, e.g. with dnsmasq.
-        
+
 ```bash
 sudo dnsmasq --interface=br0 --bind-interfaces --dhcp-range=10.10.10.2,10.10.10.100
 ```
@@ -203,24 +204,24 @@ Tags: #tech/networking/tools
 - network namespaces
     - create virtual route/network between VM and host ^[https://docker-k8s-lab.readthedocs.io/en/latest/docker/netns.html]
 
-       ```bash
-       # create network namespace for VM
-       sudo ip netns add myns
-       ip netns list
-       # execute command in new network namespace
-       sudo ip netns exec myns ip addr
-       # create a virtual interface pair, it has two virtual interfaces which are connected by a virtual cable
-       sudo ip link add veth-a type veth peer name veth-b
-       # move one interface to new namespace
-       sudo ip link set veth-b netns myns
-       # assign IP addresses and bring interfaces up
-       sudo ip addr add 192.168.1.1/24 dev veth-a
-       sudo ip link set veth-a up
-       sudo ip netns exec myns ip addr add 192.168.1.2/24 dev veth-b
-       sudo ip netns exec myns ip link set dev veth-b up
-       # we should be able to ping interface `b`
-       ping 192.168.1.2
-       ```
+        ```bash
+        # create network namespace for VM
+        sudo ip netns add myns
+        ip netns list
+        # execute command in new network namespace
+        sudo ip netns exec myns ip addr
+        # create a virtual interface pair, it has two virtual interfaces which are connected by a virtual cable
+        sudo ip link add veth-a type veth peer name veth-b
+        # move one interface to new namespace
+        sudo ip link set veth-b netns myns
+        # assign IP addresses and bring interfaces up
+        sudo ip addr add 192.168.1.1/24 dev veth-a
+        sudo ip link set veth-a up
+        sudo ip netns exec myns ip addr add 192.168.1.2/24 dev veth-b
+        sudo ip netns exec myns ip link set dev veth-b up
+        # we should be able to ping interface `b`
+        ping 192.168.1.2
+        ```
 
 `host`: DNS lookup utility
 
@@ -233,6 +234,8 @@ host name [server] # find IP or hostname, optionally specify DNS server
 ```bash
 netstat -tlpn # show tcp listen with program and numeric addresses
 ```
+
+`arping`: similar to `ping`, but can give results when `ping` doesn't and can contact a host by its MAC address.
 
 [Alternatives to deprecated `net-tools` programs @StackExchange](https://unix.stackexchange.com/a/261224/247791)
 
@@ -310,9 +313,9 @@ Tags: #tech/networking/tools/dig (Domain Information Groper): DNS lookup utility
 
 - find CNAMEs and IPs for hostnames
 
-  ```bash
-  dig google.com [@1.0.0.1] # optionally specify DNS server with @
-  ```
+    ```bash
+    dig google.com [@1.0.0.1] # optionally specify DNS server with @
+    ```
 
 Tags: #tech/networking/tools/resolvctl: #linux/systemd (not present on openSUSE)
 
@@ -379,7 +382,7 @@ See [[public/tech/networking/security|my notes on networking security]]
 ### Packets
 
 - MTU (Maximum Transmission Unit) ^mtu
-  maximum packet size that can be transmitted over your network 
+    maximum packet size that can be transmitted over your network
 
 #### Packet Problems
 
@@ -390,10 +393,10 @@ See [[public/tech/networking/security|my notes on networking security]]
 Main issues
 
 - *delay*
-- *jitter* (variation in arrival of packets)
+- _jitter_ (variation in arrival of packets)
 - *packet loss*
 
-*Fragmented packets* pose security problems as they can be able to avoid signature detection as firewall's signature detection would require putting them back together. This would mean a lot of processing, so they are often dropped. For example Google drops ping attempts with size 4096 bytes. Thus fragmented packets can hint at security issues. On modern networks they shouldn't be present anymore.
+    _Fragmented packets_ pose security problems as they can be able to avoid signature detection as firewall's signature detection would require putting them back together. This would mean a lot of processing, so they are often dropped. For example Google drops ping attempts with size 4096 bytes. Thus fragmented packets can hint at security issues. On modern networks they shouldn't be present anymore.
 
 Detecting Wireshark being used on a network: with active name resolution disabled Wireshark is passive, but tools can look for promiscuous NIC behaviour.
 

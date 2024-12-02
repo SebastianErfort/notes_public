@@ -69,7 +69,7 @@ related:
 
 ### Git
 
-- [[git|Notes on Git]]
+- [[_git|Notes on Git]]
 - [[rug/lwp/GitLab|Notes on GitLab]]
 - [[github|Notes on GitHub]]
 - [[pre-commit]] framework for managing and maintaining multi-language pre-commit hooks
@@ -273,10 +273,10 @@ Suggested files and directories
 
 Hosting
 
-- https://imageshack.com/
-- https://www.flickr.com/
-- https://imgur.com/
-- https://web.500px.com/
+- <https://imageshack.com/>
+- <https://www.flickr.com/>
+- <https://imgur.com/>
+- <https://web.500px.com/>
 
 Free stock media
 
@@ -296,7 +296,7 @@ Free stock media
 ## References
 
 [sw-proj-template]: <https://gitlab.com/treetanium1/resources/project/template>
-[analysis-tools.dev]: <https://analysis-tools.dev/> 
+[analysis-tools.dev]: <https://analysis-tools.dev/>
 [lefthook]: <https://github.com/evilmartians/lefthook>
 [dotfiles-github]: <https://dotfiles.github.io/>
 [usenix-supply-chain]: <https://www.usenix.org/system/files/login/articles/login_winter20_17_geer.pdf>

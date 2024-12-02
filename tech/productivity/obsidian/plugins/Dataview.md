@@ -109,12 +109,16 @@ See [documentation on inline DQLs](https://blacksmithgu.github.io/obsidian-datav
 
 ## Functions
 
-<https://blacksmithgu.github.io/obsidian-dataview/reference/functions/>
-DataView uses [Luxon tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for time formatting.
+[Dataview documentation: Functions](https://blacksmithgu.github.io/obsidian-dataview/reference/functions/)
 
-```
-dateformat(field, "yyyy-MM-dd") # format dates
-```
+- [Utility](https://blacksmithgu.github.io/obsidian-dataview/reference/functions/#utility-functions)
+
+    ```js
+    // return first value if true, else second value - can be used e.g. as a switch depending on a field value
+    choice(bool, "a", "b")
+    // format dates: DataView uses [Luxon tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for time formatting.
+    dateformat(field, "yyyy-MM-dd")
+    ```
 
 ### Javascript
 

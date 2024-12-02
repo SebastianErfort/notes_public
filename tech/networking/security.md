@@ -1,6 +1,7 @@
 ---
 visibility: public
 title: Security
+type: glossary
 ---
 ## TLS
 

@@ -40,7 +40,7 @@ aka K8s (K-8 letters-s)
     - list components with: `kubectl api-resources`
     - show Kubernetes system pods: `kubectl get pods -n kube-system`
     - show API pod info with: `kubectl describe pod kube-api... -n kube-system`
-2. etcd: open-source, highly-available key-value store - saves all data about cluster state
+2. [etcd](https://etcd.io/): open-source, highly-available key-value store - saves all data about cluster state
 3. scheduler: assign new pods to nodes
 4. controller-manager: constantly check components, e.g. pods to start a new one in case of an issue
 5. cloud provider API: connection to AWS, GCP, Azure, etc.
@@ -132,6 +132,9 @@ References
 
 ## Tools
 
+- [[argo]]
+- [[Rancher]]
+- [[OKD]]
 - [Konveyor](https://www.konveyor.io/)
   > The Konveyor community helps modernize applications by providing open source tools to rehost, replatform, and refactor applications to Kubernetes and cloud-native technologies.
 
@@ -144,11 +147,13 @@ References
 
 ## References
 
-- [Canoncial: Kubernetes at the edge](file://edu/kubernetes/MicroK8s+Strict+Confinement+Whitepaper.pdf) #dev/iot #dev/edge
+- [awesome-kubernetes], [awesome-k8s]
+- [Canonical: Kubernetes at the edge](file://edu/kubernetes/MicroK8s+Strict+Confinement+Whitepaper.pdf) #dev/iot #dev/edge
 - [Guide/Blog FaaS cluster on RPi's with Kubernetes](https://rpi4cluster.com/)
-- training and certification
+- [training and certification](https://kubernetes.io/training/)
     - Linux Foundation
         - [Linux Foundation: Introduction to Kubernetes (LFS158)][lf-intro-kubernetes]: free introduction course 15-20h course material, hands-on & assignments, ...
+        - [LinuxFoundationX: Introduction to Kubernetes](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes)
         - Kubernetes and Cloud Native Associate exam
         - Certified Kubernetes Application Developer exam
         - Certified Kubernetes Administrator exam
@@ -158,3 +163,5 @@ References
 
 [lf-intro-kubernetes]: <https://training.linuxfoundation.org/training/introduction-to-kubernetes/>
 [snyk]: <https://docs.snyk.io/>
+[awesome-kubernetes]: <https://github.com/ramitsurana/awesome-kubernetes>
+[awesome-k8s]: <https://github.com/tomhuang12/awesome-k8s-resources>

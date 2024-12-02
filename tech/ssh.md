@@ -6,7 +6,35 @@ visibility: public
 ---
 # SSH
 
+## Commands
+
+> [!tip] SSH commands
+>
+> ```bash
+> ssh [-i key_file] [user@]host # connect to host
+> ssh-keygen # generate private/public key pair
+> ssh-agent # start a SSH agent (can hold keys and more, making frequent/multiple connections much more convenient)
+> ssh-add [-t life_time] key_file # add key to the agent to make it available for subsequent connections
+> ```
+
 ## Config
+
+> [!tip]+ Tokens (variables)
+> `%%`    A literal ‘%’.
+> `%C`    Identifies the connection endpoints, containing four space‐separated values: client address, client port number, server address,  and
+> server port number.
+> `%D`    The routing domain in which the incoming connection was received.
+> `%F`    The fingerprint of the CA key.
+> `%f`    The fingerprint of the key or certificate.
+> `%h`    The home directory of the user.
+> `%i`    The key ID in the certificate.
+> `%K`    The base64‐encoded CA key.
+> `%k`    The base64‐encoded key or certificate for authentication.
+> `%s`    The serial number of the certificate.
+> `%T`    The type of the CA key.
+> `%t`    The key or certificate type.
+> `%U`    The numeric user ID of the target user.
+> `%u`    The username.
 
 ### General
 
@@ -148,7 +176,7 @@ For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs
 ## Tools
 
 - [assh](https://github.com/moul/assh) (I haven't tested it, didn't have the need yet)
-  > A transparent wrapper that adds support for regex, aliases, gateways, dynamic hostnames, graphviz, json output, yaml configuration, and more to SSH.
+    > A transparent wrapper that adds support for regex, aliases, gateways, dynamic hostnames, graphviz, json output, yaml configuration, and more to SSH.
 - sshpass: provide password non-interactively. Security issue but haven't found another way to enter a key pass phrase non-interactively (exposed e.g. in `ps`). Slightly better providing the password through a file ^sshpass
 
     ```sh
@@ -160,7 +188,7 @@ For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs
 
 ## Issues and Alternatives
 
-> [!tip]- For flaky connections or if changing networks in something you regular do, consider [mosh (mobile shell)](https://mosh.org/). 
+> [!tip]- For flaky connections or if changing networks in something you regular do, consider [mosh (mobile shell)](https://mosh.org/).
 > >Remote terminal application that allows **roaming**, supports **intermittent connectivity**, and provides intelligent **local echo** and line editing of user keystrokes.
 > >
 > >Mosh is a replacement for interactive SSH terminals. It's more robust and responsive, especially over Wi-Fi, cellular, and long-distance links.
@@ -178,4 +206,3 @@ For example in Firefox, usage of a SOCKS proxy can be selective for certain URLs
 [^cve-proxy-command]: [CVE-2023-51385](<https://nvd.nist.gov/vuln/detail/CVE-2023-51385>)
 [CVE-2024-6387]: <https://nvd.nist.gov/vuln/detail/CVE-2024-6387>
 [^config_match]: <https://unix.stackexchange.com/a/528212>
-[^1]: <https://www.howtogeek.com/825102/how-to-run-a-local-script-on-a-remote-linux-server/>

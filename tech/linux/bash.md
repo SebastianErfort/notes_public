@@ -13,7 +13,7 @@ category: shell
 ---
 # Bash
 
-[Linux Commands](linux.md#Commands) | [code snippets](file://src) |  [Jupyter-lab notebook](file://notes/life/tech/bash.ipynb)
+[Code snippets](file://src/bash "local files") |  [Jupyter-lab notebook](file://notes/life/tech/bash.ipynb)
 
 ## Options & Config
 
@@ -23,23 +23,14 @@ category: shell
 
 ### Keyboard Shortcuts & Readline
 
-See [readline man page](https://www.man7.org/linux/man-pages/man3/readline.3.html).
-
-| Shortcut | Description |
-| -------- | ----------- |
-| <kbd>ctrl+x, ctrl+e</kbd> | editing mode in default editor to enter commands like you would in a script, executed upon save+close. Also great when pasting (longer) scripts into your terminal |
-
-Customise in config::  `~/.inputrc`
-
-- enable <kbd>Pg up/down</kbd> to search command history, based on characters typed so far
+- see [[linux#Keyboard|Linux: command line keyboard input]] and [readline man page](https://www.man7.org/linux/man-pages/man3/readline.3.html)
+- customise in config::  `~/.inputrc`
 
     ```config
+    # Pg-up and Pg-down to search history
     "\e[5~": history-search-backward
     "\e[6~": history-search-forward
-    ```
-- *bracketed paste*: encapsulate pasted content in special control characters to avoid command execution upon newline characters - this greatly enhances pasting commands into your commandline, especially if you're clumsy or don't trust your various copy buffers. 
-
-    ```config
+    # bracketed paste: encapsulate pasted content in special control characters to avoid command execution upon newline characters - this greatly enhances pasting commands into your commandline, especially if you're clumsy or don't trust your various copy buffers. 
     set enable-bracketed-paste On
     ```
 
@@ -52,12 +43,29 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
 
 ### History
 
-  ```bash
-  !!     # repeat last command
-  !123   # repeat command 123 from history
-  !cmd   # repeat last command starting with "cmd"
-  !cmd:p # print command but don't execute
-  ```
+List of executed commands, very helpful to trace back steps or run commands again.
+
+```bash
+!!     # repeat last command
+!123   # repeat command 123 from history
+!cmd   # repeat last command starting with "cmd"
+!cmd:p # print command but don't execute
+```
+
+How many are stored depends on the settings. Some people like an eternal history
+
+> [!tip]- Bash: configure eternal history, e.g. in `$HOME/.bashrc`
+>
+> ```bash
+> # Undocumented feature which sets the size to "unlimited".
+> # http://stackoverflow.com/questions/9457233/unlimited-bash-history
+> export HISTFILESIZE=
+> export HISTSIZE=
+> export HISTTIMEFORMAT="[%F %T] "
+> # Change the file location because certain bash sessions truncate .bash_history file upon close.
+> # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
+> export HISTFILE=~/.bash_eternal_history
+> ```
 
 ## General
 
@@ -65,44 +73,44 @@ See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-
 
 - iterate over list or array
 
-  ```bash
-  for f in $(ls *.jpg*); do
-    # rename files to date_time.ext
-    exiftool '-filename<CreateDate' -d %Y%m%d_%H%M%S%%-c.%%e
-  done
-  for e in ${arr[@]}; do
-    echo $e
-  done
-  ```
+    ```bash
+    for f in $(ls *.jpg*); do
+      # rename files to date_time.ext
+      exiftool '-filename<CreateDate' -d %Y%m%d_%H%M%S%%-c.%%e
+    done
+    for e in ${arr[@]}; do
+      echo $e
+    done
+    ```
 
 - Infinite loop (till broken)
 
-  ```bash
-  for (( ; ; )); do
-    if condition
-      break
-    fi
-    if other_condition
-      continue
-    fi
-  done
-  ```
+    ```bash
+    for (( ; ; )); do
+      if condition
+        break
+      fi
+      if other_condition
+        continue
+      fi
+    done
+    ```
 
-  or
+    or
 
-  ```bash
-  while true; do
-    ...
-  done
-  ```
+    ```bash
+    while true; do
+      ...
+    done
+    ```
 
 - Three-expression loop
 
-  ```bash
-  for (( c=1 ; c<=5 ; c++ )); do
-    ...
-  done
-  ```
+    ```bash
+    for (( c=1 ; c<=5 ; c++ )); do
+      ...
+    done
+    ```
 
 ### Arithmetics and logic
 
@@ -142,88 +150,88 @@ done
 - Length of a string `${#s}`
 - Substring accessing
 
-  ```bash
-  s='abcABC123ABCabc'
-  echo ${s:3} ${s:6:3} ${s:(-3)} ${s: -6} # negative indices (position from end of string) need parentheses or space to be escaped
-  # extract a maximum of $length positional parameters, starting at $position
-  function f() {
-      start=2
-      number=4
-      echo ${*:$start}
-      echo ${@:$start:$number}
-  }
-  f {1..10}
-  # 2 3 4 5 6 7 8 9 10
-  # 2 3 4 5
-  ```
+    ```bash
+    s='abcABC123ABCabc'
+    echo ${s:3} ${s:6:3} ${s:(-3)} ${s: -6} # negative indices (position from end of string) need parentheses or space to be escaped
+    # extract a maximum of $length positional parameters, starting at $position
+    function f() {
+        start=2
+        number=4
+        echo ${*:$start}
+        echo ${@:$start:$number}
+    }
+    f {1..10}
+    # 2 3 4 5 6 7 8 9 10
+    # 2 3 4 5
+    ```
 
 - Deleting substrings
 
-  ```bash
-  s='abcABC123xyzABC456'
-  echo ${s#a*C} # delete shortest match from beginning
-  echo ${s##a*C} # delete longest match from beginning
-  echo ${s%A*[0-9]} # delete shortest match from end
-  echo ${s%%A*[0-9]} # delete longest match from end
-  ```
+    ```bash
+    s='abcABC123xyzABC456'
+    echo ${s#a*C} # delete shortest match from beginning
+    echo ${s##a*C} # delete longest match from beginning
+    echo ${s%A*[0-9]} # delete shortest match from end
+    echo ${s%%A*[0-9]} # delete longest match from end
+    ```
 
 - Substring substitution
 
-  ```bash
-  stringZ=abcABC123ABCabc
-  echo $stringZ
-  echo ${stringZ/abc} # delete from start
-  echo ${stringZ/%abc} # delete from end
-  echo ${stringZ/#abc/XYZ} # replace from start
-  echo ${stringZ/%abc/XYZ} # replace from end
-  echo ${stringZ//abc/XYZ} # replace all occurances
-  echo ${stringZ//abc} # delete all occurances
-  ```
+    ```bash
+    stringZ=abcABC123ABCabc
+    echo $stringZ
+    echo ${stringZ/abc} # delete from start
+    echo ${stringZ/%abc} # delete from end
+    echo ${stringZ/#abc/XYZ} # replace from start
+    echo ${stringZ/%abc/XYZ} # replace from end
+    echo ${stringZ//abc/XYZ} # replace all occurances
+    echo ${stringZ//abc} # delete all occurances
+    ```
 
 - String concatenation
 
-  ```bash
-  a='bla'
-  b='blubb'
-  c=${a}${b}
-  echo $c
-  b+=$a
-  echo $b
-  ```
+    ```bash
+    a='bla'
+    b='blubb'
+    c=${a}${b}
+    echo $c
+    b+=$a
+    echo $b
+    ```
 
 - To lower or upper case
 
-  ```bash
-  s='bla blubb'
-  echo ${s^} # first upper case
-  echo ${s^^} # all upper case
-  echo ${s^^[l]} # only certain characters
-  s='BLA BLUBB'
-  echo ${s,} # first lower case
-  echo ${s,,} # all lower case
-  ```
+    ```bash
+    s='bla blubb'
+    echo ${s^} # first upper case
+    echo ${s^^} # all upper case
+    echo ${s^^[l]} # only certain characters
+    s='BLA BLUBB'
+    echo ${s,} # first lower case
+    echo ${s,,} # all lower case
+    ```
 
 - Sanitise a string
 
-  ```bash
-  s='abc123XYZ@troll_ol-!"§$%&/()=?'
-  echo ${s//[^a-zA-Z0-9_@\\\-.]} # delete all characters not matching
-  ```
+    ```bash
+    s='abc123XYZ@troll_ol-!"§$%&/()=?'
+    echo ${s//[^a-zA-Z0-9_@\\\-.]} # delete all characters not matching
+    ```
 
 #### Variable Expansion
 
 or shell-parameter expansion, manipulation and interpolation #dev/bash, see [bash documentation on gnu.org](https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html)
 
-  ```bash
-  fname=john
-  john=thomas
-  echo ${!fname} # returns thomas
-  # use default value if parameter is unset or null
-  myvar=${1:-Default}
-  # assign default to parameter if unset or null
-  [[ -f "${myfile:=/tmp/myfile}" ]] || touch "$myfile"
-  ```
-  
+```bash
+fname=john
+john=thomas
+echo ${!fname} # returns thomas
+# use default value if parameter is unset or null
+myvar=${1:-Default}
+# assign default to parameter if unset or null
+[[ -f "${myfile:=/tmp/myfile}" ]] || touch "$myfile"
+```
+
 See also <https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Brace-Expansion>
 
 - [Bash Error Handling @RedHat](https://www.redhat.com/sysadmin/bash-error-handling)
@@ -270,23 +278,23 @@ ${#arr[@]}
 
 - special variables
 
-  ```bash
-  $0   # shell or script name
-  $@   # arguments
-  $*   # arguments
-  $#   # number of arguments
-  $$   # current shell pid
-  $!   # last pid
-  $?   # return value of last process
-  ${-} # current shell options
-  ${_} # argument to previous command
-  ```
+    ```bash
+    $0   # shell or script name
+    $@   # arguments
+    $*   # arguments
+    $#   # number of arguments
+    $$   # current shell pid
+    $!   # last pid
+    $?   # return value of last process
+    ${-} # current shell options
+    ${_} # argument to previous command
+    ```
 
 - environment variables
 
-  ```bash
-  $TERM # terminal type
-  ```
+    ```bash
+    $TERM # terminal type
+    ```
 
 ### Regular Expressions
 

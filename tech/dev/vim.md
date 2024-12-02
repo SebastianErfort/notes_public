@@ -13,33 +13,31 @@ related:
 ---
 # VIM
 
-|            |                                                                   |
-| ---------- | ----------------------------------------------------------------- |
-| Related    | `=(join(this.related, ", "))`                                     |
-| References | [Best cheatsheet](https://thingsfittogether.com/product/vim-cheat-sheet-advanced-digital-download/), [Cheat cheatsheet](file://.config/cheat/cheatsheets/personal/vim) |
+- [best cheatsheet](https://thingsfittogether.com/product/vim-cheat-sheet-advanced-digital-download/), [Cheat cheatsheet](file://.config/cheat/cheatsheets/personal/vim)
 
-![[VIM_reference_poster.png|200]]
+![VIM reference poster|200](VIM_reference_poster.png)
 
-# Basics
 
 ## Registers
 
 - list: `:registers`
 - `"a-z`: named registers
 
+
 ## Search
 
 - find lines longer than n characters: `/\%>80v.\+`
+
 
 ## Files, buffers
 
 - [Modeline](https://vim.fandom.com/wiki/Modeline_magic): VIM settings in file itself
     - for `root` usually disabled for security
-  Example:
+        Example:
 
-    ```bash
-    # vim: ft=yaml tw=4 sw=4
-    ```
+        ```bash
+        # vim: ft=yaml tw=4 sw=4
+        ```
 
 _Remote file editing_
 
@@ -49,25 +47,28 @@ vim scp://user@host[:port]//path/to/file
 
 also supports `sftp`, `http` (read-only), `rsync`
 
-# Commands
 
-## Auto-commands
+## Commands
+
+### Auto-commands
 
 ```vim
 " execute script after writing file (https://stackoverflow.com/a/4628210/16096134) or use inotify
 :autocmd BufWritePost * !run_tests.sh <afile>
 ```
 
-# Plugins
+## Plugins
 
 Plugin managers
 
 - [vim-plug](https://github.com/junegunn/vim-plug/master/plug.vim)
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 
+
 ## Config
 
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim): use <https://editorconfig.org> files
+
 
 ## Editing
 
@@ -85,7 +86,8 @@ Plugin managers
 - [vim-tabular]():
     - [article](http://vimcasts.org/episodes/aligning-text-with-tabular-vim/): gist for automatic indentation/tabularisation when typing for example `|`
 
-# Aesthetics, customisation
+
+## Aesthetics, customisation
 
 [Color scheme highlight groups](https://github.com/norcalli/nvim-base16.lua/blob/master/lua/base16.lua#L102)
 Show highlight group used for code under cursor:
