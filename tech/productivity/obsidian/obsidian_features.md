@@ -119,7 +119,7 @@ Or with an inline footnote ^[without a need to specify the text separately]
     > [!idea] Why don't we ...?
 - special bullet points for check lists: theme feature, support and meaning varies. If unsupported, items show up as checked. Alternatively use CSS to get this function (see `.obsidian/snippets/checkboxes.css`,[^2] some icons might be difficult to see, depending on theme)
 
-> [!tip]- Alternative Checkboxes
+> [!tip]+ Alternative Checkboxes
 >
 > - [ ] Unchecked
 > - [x] Checked
@@ -138,9 +138,12 @@ Or with an inline footnote ^[without a need to specify the text separately]
 > - [p] Pro
 > - [c] Con
 > - [b] Bookmark
+> - [d] Trending downwards
+> - [u] Trending upwards
 > - ["] Quote
+> - [w] ??
 >
-- Metadata or YAML frontmatter (used by many softwares)
+- Metadata or YAML frontmatter (used by many apps)
 
 [^2]: <https://forum.obsidian.md/t/alternative-checkboxes-icon-bullets-copy-and-paste/35962/15>
 

@@ -205,7 +205,7 @@ See also [[dev/devops|DevOps]].
 
 ## Operating Systems
 
-- [[Debian]]
+- [[public/tech/linux/Debian]]
 - [[Ubuntu]]
 
 ### Mobile
@@ -219,8 +219,8 @@ See also [[dev/devops|DevOps]].
 
 ## Cloud
 
-- [[AWS]]
-- [[Azure]]
+- [[aws]]
+- [[azure]]
 - [[GCP]]
 
 

@@ -12,7 +12,6 @@ title: Software Testing
 Tags: #dev/test/InSpec #dev/test/spec #dev/test/rspec
 
 - [[InSpec|My notes on Chef InSpec]]
-- [[Code Testing|Work notes LWP: Code Testing > InSpec]]
 - [InSpec](https://github.com/inspec/inspec)
 
 ### Methods
@@ -30,3 +29,9 @@ Tags: #dev/test/InSpec #dev/test/spec #dev/test/rspec
       expect{create_volunteer}.to change(Volunteer, :count).by(1)
     end
     ```
+
+## GUI
+
+- [Selenium](https://www.selenium.dev/): automating web applications for testing purposes
+    - [Selenoid](https://aerokube.com/selenoid/latest/): Selenoid is a powerful [Golang](http://golang.org/) implementation of original [Selenium](http://github.com/SeleniumHQ/selenium) hub code.
+- [xdotool]

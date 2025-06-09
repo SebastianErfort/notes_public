@@ -10,6 +10,7 @@ aliases:
 url: "https://neovim.io/"
 visibility: public
 ---
+> [!warning] Under revision (2025-01-23): sections on starter config (NvChad), plugins and LSP are outdated. #todo/tech/vim
 # NeoVIM
 
 See also
@@ -17,19 +18,13 @@ See also
 - my notes on [[dev/vim|vim]] and [[Editors]]
 - [my config repo][nvim-config-repo]
 
-## To-Do
-
-Tags: #TODO/nvim
-
-- [ ] Plugins
-    - [ ] [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
-
 ## Installation
 
-- from distro repos
+- [[AppImage]]
 - from archive
     1. download [archive](https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz)
     2. extract and move files for example to `~/.local`
+- from distro repos (might be outdated)
 
 ## Config
 
@@ -43,13 +38,13 @@ Quick start with pre-made config
     ```
 
 2. install base config
+    - [NvChad](https://nvchad.com/): [Source](https://github.com/NvChad/NvChad) (**currently using this (2025-01-23)**)
+        > Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience
     - [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim):
         > A launch point for your personal nvim configuration. Just clone the repository as the nvim config and the next time you start nvim an automatic setup is started. ^kickstart-nvim
         - [Video *Effective Neovim: Instant IDE*](https://www.youtube.com/watch?v=stqUbv-5u2s) by TJ DeVries (developer of [[#^telescope|telescope.nvim]] and more)
     - [LazyVim](A launch point for your personal nvim configuration):
         > Neovim setup powered by [💤 lazy.nvim](https://github.com/folke/lazy.nvim) to make it easy to customize and extend your config
-    - [NvChad](https://nvchad.com/): [Source](https://github.com/NvChad/NvChad)
-        > Blazing fast Neovim config providing solid defaults and a beautiful UI, enhancing your neovim experience
 
 3. edit config, transfer VIM settings
 
@@ -75,6 +70,8 @@ Config can be split up by including (lua) files. The tree structure should be so
 ```
 📂 ~/.config/nvim
 ├── 📂 lua
+│   ├── 📂 custom
+│   ├── 📂 custom
 │   └─ config.lua
 └── init.vim
 ```
@@ -94,6 +91,8 @@ lua require('config')
 
 - [LSP docs](https://neovim.io/doc/user/lsp.html)
 - [[#Filetype|LSP plugins]]
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md): sensible defaults for many LS's and *their names to activate them!*  (mind the name mapping 🤦‍♂)
+
 
 ## Plugins
 
@@ -102,7 +101,7 @@ See [awesome-neovim](https://github.com/rockerBOO/awesome-neovim) for a comprehe
 
 Plugin managers
 
-- [lazy.nvim](https://github.com/folke/lazy.nvim)
+- [lazy.nvim](https://github.com/folke/lazy.nvim) ^lazy
     > 💤 A modern plugin manager for Neovim
 - [vim-plug]
 
@@ -158,9 +157,13 @@ Plugin managers
 
 ### Filetype
 
+> [!tip] [Mason](https://github.com/williamboman/mason.nvim): simplify installation of LSP servers, linters, formatters, etc.
+
+- [nvim-helm]: Helm (Kubernetes) (required for `helm_ls` filetype recognition :sigh:)
+- [helm-ls]: Helm language server
 - [nvim-markdown](https://github.com/ixru/nvim-markdown)
-- [Mason](https://github.com/williamboman/mason.nvim): simplify installation of LSP servers, linters, formatters, etc.
     > Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters.
+- [nvim-html-css](https://github.com/Jezda1337/nvim-html-css)
 
 ### Productivity
 
@@ -174,6 +177,9 @@ Plugin managers
 - [Auto-run command (after save) @YouTube](https://www.youtube.com/watch?v=9gUatBHuXE0)
     - <https://github.com/stevearc/overseer.nvim>
 - [lemmy-help: vim help doc from lua plugin](https://github.com/numToStr/lemmy-help)
+- [Neovim setup for React, TypeScript, Tailwind CSS](https://dev.to/craftzdog/my-neovim-setup-for-react-typescript-tailwind-css-etc-58fb)
 
 [nvim-config-repo]: <https://github.com/SebastianErfort/kickstart.nvim>
 [barbar]: <https://github.com/romgrk/barbar.nvim>
+[nvim-helm]: <https://github.com/towolf/vim-helm>
+[helm-ls]: <https://github.com/mrjosh/helm-ls>

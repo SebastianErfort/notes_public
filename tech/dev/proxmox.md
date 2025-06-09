@@ -26,7 +26,7 @@ same: *related
 ## Features
 
 - type 1 hypervisor
-- based on [[Debian|Debian Linux]]
+- based on [[public/tech/linux/Debian|Debian Linux]]
 - can run VMs and containers
 - Proxmox VE can be used for free, updates and support require subscription
 - instances can be combined to enable advanced features such as virtual storage and networking, high availability features

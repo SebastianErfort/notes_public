@@ -42,7 +42,7 @@ echo 1>/sys/class/block/sdd/device/rescan
 ## File Systems
 
 - Linux
-    - [[zfs]]
+    - [[bullhorn/zfs]]
 - FUSE
     - [CVMFS](https://wiki.gentoo.org/wiki/CVMFS): FUSE module which implements a HTTP read-only file system
 - parallel and distributed

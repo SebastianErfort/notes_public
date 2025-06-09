@@ -16,3 +16,7 @@ tags:
 ## Tools
 
 - Zoom Scheduler: Google Chrome extension allowing one to schedule meetings from within calendar
+
+## Troubleshoot
+
+- Zoom links not opening in Zoom app (e.g. chromium instead) - try switching to Firefox at least to get signin to work with the app

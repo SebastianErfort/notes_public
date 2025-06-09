@@ -3,5 +3,5 @@ title: Configuration Management
 ---
 ## Tools
 
-- [[Ansible]]
+- [[public/tech/cfg_mgmt/Ansible]]
 - [[cfg_mgmt/Puppet|Puppet]]

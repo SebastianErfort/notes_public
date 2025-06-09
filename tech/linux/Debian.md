@@ -14,7 +14,6 @@ title: Debian
 | --------- | ---------- | ---------- | ----------- |
 | Debian 12 | [bookworm] | 2023-06-10 |             |
 | Debian 11 | [bullseye] | 2021-08-14 |             |
-|           |            |            |             |
 
 ## Repositories and Packages
 
@@ -27,6 +26,11 @@ title: Debian
 
 - Ubuntu 22 changed the required compression for packages. In case of an improperly archived package it might have to be extracted and re-packaged or the proper format requested from the package maintainers.
 
+## Package Sources
+
+Update URIs to e.g. change mirror
+
+- GUI: software centre > Settings > Software Sources
 
 ### dpkg
 
@@ -49,6 +53,14 @@ Tags: #linux/apt
 sudo apt install package_name=package_version
 # empty cache (downloaded packages) [Foss](https://itsfoss.com/clear-apt-cache/)
 apt-get clean
+```
+
+Newer packages: [Debian backports](https://wiki.debian.org/Backports?action=show&redirect=DebianBackports)
+
+```bash
+apt edit-sources
+deb http://deb.debian.org/debian bookworm-backports main contrib non-free non-free-firmware
+apt update
 ```
 
 > [!warning]- `sudo apt` vulnerability/exploit to get a root shell

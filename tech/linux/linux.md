@@ -133,7 +133,7 @@ id <user>
 See also [[_networking|Networking]].
 
 - [wget vs. curl @howtogeek](https://www.howtogeek.com/816518/curl-vs-wget/)
-- [[ssh]]
+- [[bullhorn/ssh]]
 
 [@howtogeek](https://www.howtogeek.com/813741/linux-arping-command/)
 
@@ -416,10 +416,10 @@ Package managers
 
 ### Debian/Ubuntu
 
-[[Debian#Repositories & Packages|Debian: Repositories and Packages]]
+[[public/tech/linux/Debian#Repositories & Packages|Debian: Repositories and Packages]]
 
-- [[Debian#apt|apt]]
-- [[Debian#dpkg|dpkg]]
+- [[public/tech/linux/Debian#apt|apt]]
+- [[public/tech/linux/Debian#dpkg|dpkg]]
 
 ### Snap
 
@@ -443,7 +443,7 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 
 ## Distributions
 
-### [[Debian]]
+### [[public/tech/linux/Debian]]
 
 ### [[Ubuntu]]
 
