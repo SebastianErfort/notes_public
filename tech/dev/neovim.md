@@ -125,6 +125,9 @@ Plugin managers
     > 👻 A cross platform terminal image viewer for Neovim. Extensible and fast, written in Lua and C. Works on macOS and Linux.
 - [Noice](https://github.com/folke/noice.nvim):
     > 💥 Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu
+- [NvUI (NvChad UI + Base46)](https://nvchad.com/news/nvui/)
+- [Volt](https://nvchad.com/news/volt/)
+  > Volt is a Neovim plugin to create interactive UIs within Neovim!
 
 ### Editing
 

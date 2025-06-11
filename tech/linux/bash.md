@@ -9,7 +9,10 @@ tags:
   - dev/coding
 visibility: public
 type: software
-category: shell
+category:
+  - shell
+up:
+  - "[[commandline]]"
 ---
 # Bash
 
@@ -521,6 +524,9 @@ Error handling[^err]
 - [BATS (Bash Automated Testing System)](https://github.com/sstephenson/bats)
 - [BATS-core](https://github.com/bats-core/bats-core)
 
+## Tools
+
+- [GNU parallel](https://www.gnu.org/software/parallel/): shell tool for executing jobs in parallel using one or more computers
 
 ## References
 
