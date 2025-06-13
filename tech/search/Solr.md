@@ -2,9 +2,9 @@
 title: Solr
 type: software
 category: search
-url: "https://solr.apache.org/"
-docs: "https://solr.apache.org/resources.html#documentation"
-source: "https://solr.apache.org/downloads.html"
+url: https://solr.apache.org/
+docs: https://solr.apache.org/resources.html#documentation
+source: https://solr.apache.org/downloads.html
 developer: Apache
 desc-short: |
   Solr is the popular, blazing-fast, open source enterprise search platform built on Apache Lucene
@@ -14,3 +14,7 @@ visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
+
+## Tools
+
+- [Solr Kubernetes operator](https://solr.apache.org/operator/) ^solr-k8s-op
