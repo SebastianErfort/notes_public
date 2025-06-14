@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"f1698cd48981d4e7","type":"group","x":-1040,"y":600,"width":900,"height":460,"label":"Markdown editors"},
+		{"id":"216883aa30712d3d","type":"file","file":"public/tech/productivity/obsidian/obsidian.md","x":-1020,"y":640,"width":400,"height":400},
+		{"id":"f93ac562e3e84a39","type":"file","file":"public/tech/productivity/Zettlr.md","x":-560,"y":640,"width":400,"height":400},
+		{"id":"1be73d34e62cf896","type":"file","file":"public/tech/writing/Markdown.md","x":-780,"y":0,"width":400,"height":400},
+		{"id":"b1f030fd04799f35","x":-285,"y":120,"width":505,"height":420,"type":"text","text":"![[Markdown#Specifications, Implementations and Parsers]]"}
+	],
+	"edges":[
+		{"id":"00d408f05ea1d596","fromNode":"f1698cd48981d4e7","fromSide":"top","toNode":"1be73d34e62cf896","toSide":"bottom","label":"uses"},
+		{"id":"31c5a4519edc9d28","fromNode":"1be73d34e62cf896","fromSide":"right","toNode":"b1f030fd04799f35","toSide":"top"}
+	]
+}

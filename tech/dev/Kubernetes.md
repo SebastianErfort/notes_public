@@ -182,7 +182,9 @@ kubectl --kubeconfig /root/clusters/${cluster}/kubeconfig \ label pod ${pod} \ b
 
 ## References
 
-- [awesome-kubernetes], [awesome-k8s]
+- repos & templates
+    - [awesome-kubernetes], [awesome-k8s]
+    - [HariSekhon/Kubernetes-configs](https://github.com/HariSekhon/Kubernetes-configs)
 - [Canonical: Kubernetes at the edge](file://edu/kubernetes/MicroK8s+Strict+Confinement+Whitepaper.pdf) #dev/iot #dev/edge
 - [Guide/Blog FaaS cluster on RPi's with Kubernetes](https://rpi4cluster.com/)
 - [training and certification](https://kubernetes.io/training/)

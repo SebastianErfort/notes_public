@@ -84,7 +84,7 @@ Using [Slirp4netns](https://github.com/rootless-containers/slirp4netns?ref=linux
 The [[openSUSE]] package `rootlesskit` doesn't include all the scripts other repo's packages provide.
 
 
-# Glossary
+## Glossary
 
 Term | Description | Similar | Example
 -|-|-|-
@@ -92,9 +92,10 @@ image |
 registry | place to store images | harbor
 context | like an environment (incl. endpoint) | | [docs](https://docs.docker.com/engine/context/working-with-contexts/)
 
-
 ## References
 
 - [How to Assign a Static IP to a Docker Container](https://www.howtogeek.com/devops/how-to-assign-a-static-ip-to-a-docker-container/)
+- repos & templates
+    - [HariSekhon/Dockerfiles](https://github.com/HariSekhon/Dockerfiles)
 
 [^gldocs-docker-image-security-checksum]: <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html#use-checksum-to-keep-your-image-secure>

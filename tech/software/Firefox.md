@@ -14,6 +14,10 @@ visibility: public
 `=this.img` `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
 
+## Config & Troubleshooting
+
+- [Cookies permission button not working](https://support.mozilla.org/en-US/questions/1249232)
+
 ## Extensions
 
 - [GNUzilla's list of free addons](http://www.gnu.org/software/gnuzilla/addons.html)
