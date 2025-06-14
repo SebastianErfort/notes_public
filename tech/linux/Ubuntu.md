@@ -13,7 +13,7 @@ up: "[[canonical]]"
 
 ## Repositories and Packages
 
-![[Debian#Repositories & Packages]]
+![[public/tech/linux/Debian#Repositories & Packages]]
 
 ## Updates and Upgrades
 

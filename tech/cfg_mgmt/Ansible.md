@@ -26,13 +26,27 @@ up:
 `= ("> " + this.desc-short)`
 
 - idempotent (like Puppet)
-- [[YAML]]
+- [[YAML]]-based syntax, some config/ini-like collections (inventories) with [[Jinja2]] templating
 
 ## Roles and Collections
 
 - [Ansible-Galaxy](https://galaxy.ansible.com/home)
     - [Community > General](https://galaxy.ansible.com/community/general)
 
+## Inventory
+
+[Inventory](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html)
+
+Automate collecting inventory from VMWare with plugin
+
+```yaml
+plugin: vmware_vm_inventory
+```
+
+## Modules
+
+- URL download: [ansible.builtin.get_url](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/get_url_module.html)
+- install packages (generic, not specific package manager): [ansible.builtin.package](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_module.html)
 
 ## Tools
 

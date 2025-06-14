@@ -2,7 +2,7 @@
 title: Data
 related:
   - "[[research_data|Research Data]]"
-  - "[[tech/opensource|Open Source]]"
+  - "[[opensource|Open Source]]"
 ---
 # Data
 

@@ -416,10 +416,10 @@ Package managers
 
 ### Debian/Ubuntu
 
-[[Debian#Repositories & Packages|Debian: Repositories and Packages]]
+[[public/tech/linux/Debian#Repositories & Packages|Debian: Repositories and Packages]]
 
-- [[Debian#apt|apt]]
-- [[Debian#dpkg|dpkg]]
+- [[public/tech/linux/Debian#apt|apt]]
+- [[public/tech/linux/Debian#dpkg|dpkg]]
 
 ### Snap
 
@@ -443,11 +443,11 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 
 ## Distributions
 
-### [[Debian]]
+### [[debian|Debian]]
 
-### [[Ubuntu]]
+### [[ubuntu|Ubuntu]]
 
-### [[openSUSE]]
+### [[opensuse|openSUSE]]
 
 ### Fedora
 

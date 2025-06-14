@@ -13,7 +13,7 @@ See also
 
 ## Package Types
 
-### [[Snap]]
+### [[snap]]
 
 ### [[Flatpak]]
 

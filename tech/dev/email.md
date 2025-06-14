@@ -14,7 +14,6 @@ echo "$message" | mailx \
 $to_addr
 ```
 
-
 `s-nail`
 
 ```bash

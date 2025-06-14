@@ -24,20 +24,19 @@ See overview in [awesome-selfhosted].
 
 See overview in [awesome-sysad]
 
-- Grafana
-- Wazuh
-- [[Zabbix]]
+- system resources and metrics
+    - [[Grafana]]
+    - [[Zabbix]]
+- security
+    - [[Wazuh]]
 
 ## [[virtualisation_containerisation|Virtualisation and Containerisation]]
-
 
 ## Cloud
 
 - [[Foreman]]
 
-
 ## References
-
 
 [awesome-sysadmin]: <https://github.com/awesome-foss/awesome-sysadmin>
 [awesome-selfhosted]: <https://github.com/awesome-selfhosted/awesome-selfhosted>
