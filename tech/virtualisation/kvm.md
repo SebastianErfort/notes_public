@@ -89,7 +89,7 @@ Migrate KVM host with ZFS filesystem
     virsh dumpxml > tempate.xml
     virsh -c qemu+ssh://<target> create --paused template.xml
     ```
-    
+
 
 ## References
 
@@ -99,9 +99,9 @@ Migrate KVM host with ZFS filesystem
 [redhat-kvm-libvirt]: <https://www.redhat.com/sysadmin/build-lab-quickly>
 [^network-error]: error `network ... not active`
 
-    ```bash
-    # virsh net-list --all
-    virsh net-start default
-    # start at boot
-    virsh net-autostart default
-    ```
+```bash
+# virsh net-list --all
+virsh net-start default
+# start at boot
+virsh net-autostart default
+```

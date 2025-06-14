@@ -34,7 +34,6 @@ category: shell
     set enable-bracketed-paste On
     ```
 
-
 ### Completion
 
 See files in [`/usr/share/bash-completion/completions/`](file:///usr/share/bash-completion/completions) and `/etc/bash_completion.d/`
@@ -112,7 +111,18 @@ How many are stored depends on the settings. Some people like an eternal history
     done
     ```
 
-### Arithmetics and logic
+### Test Expressions
+
+```bash
+[[ $a == $b ]] # string equality
+[[ $a =~ $b ]] # string regex match
+[[ -z "$string" ]] # test string is zero
+[[ -n "$string" ]] # test string is non-zero
+[[ -f "$file" ]] # test for file
+[[ -s "$file" ]] # test for non-empty file
+```
+
+### Arithmetic and Logic
 
 ```bash
 n=0

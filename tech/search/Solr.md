@@ -14,3 +14,7 @@ visibility: public
 ---
 `= ("[Website](" + this.url + ")")` |  `= ("[Source](" + this.source + ")")` | `= ("[Documentation](" + this.docs + ")")`
 `= ("> " + this.desc-short)`
+
+## Tools
+
+- [Solr Kubernetes operator](https://solr.apache.org/operator/) ^solr-k8s-op

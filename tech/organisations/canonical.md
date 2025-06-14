@@ -3,7 +3,7 @@ title: Canonical
 aliases:
   - Canonical
 down:
-  - "[[Ubuntu]]"
+  - "[[public/tech/linux/Ubuntu]]"
 ---
 ## Products
 

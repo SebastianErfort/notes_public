@@ -38,7 +38,6 @@ For example set up usage of a (SSH) SOCKS proxy[^1]
 
 [^1]: [[ssh#SOCKS proxy]]
 
-
 ## Alternatives
 
 - [GNUzilla IceCat (formerly IceWeasel)](https://www.gnu.org/software/gnuzilla/)

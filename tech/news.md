@@ -8,7 +8,6 @@ title: Tech News
 - EdTech
     - [Ed Tech Magazine](https://edtechmagazine.com/higher/)
 
-
 ## Articles
 
 - 07.01.2022

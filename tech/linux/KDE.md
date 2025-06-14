@@ -25,3 +25,10 @@ visibility: public
 ## Software
 
 - Konsole terminal emulator ^57973e
+
+## Plasma
+### Customisation and Themes
+
+Global theme
+
+- not installing? Locate archive in `/tmp` and put it in `~/.local/share/plasma/look-and-feel`
