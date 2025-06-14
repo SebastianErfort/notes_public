@@ -4,7 +4,7 @@ title: API
 ---
 ## Dev
 
-- [swagger.io](https://bullhorn.atlassian.net/wiki/spaces/SE/pages/460490381/Invenias): open-source API tools
+- swagger.io: open-source API tools
 
 ## Databases
 

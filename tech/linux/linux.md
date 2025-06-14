@@ -133,7 +133,7 @@ id <user>
 See also [[_networking|Networking]].
 
 - [wget vs. curl @howtogeek](https://www.howtogeek.com/816518/curl-vs-wget/)
-- [[bullhorn/ssh]]
+- [[ssh]]
 
 [@howtogeek](https://www.howtogeek.com/813741/linux-arping-command/)
 
@@ -443,11 +443,11 @@ Home directory outside of `/home`: `snap` currently requires a workaround
 
 ## Distributions
 
-### [[public/tech/linux/Debian]]
+### [[debian|Debian]]
 
-### [[Ubuntu]]
+### [[ubuntu|Ubuntu]]
 
-### [[openSUSE]]
+### [[opensuse|openSUSE]]
 
 ### Fedora
 

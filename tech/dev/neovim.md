@@ -71,7 +71,6 @@ Config can be split up by including (lua) files. The tree structure should be so
 📂 ~/.config/nvim
 ├── 📂 lua
 │   ├── 📂 custom
-│   ├── 📂 custom
 │   └─ config.lua
 └── init.vim
 ```

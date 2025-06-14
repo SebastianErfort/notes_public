@@ -178,7 +178,7 @@ kubectl --kubeconfig /root/clusters/${cluster}/kubeconfig \ label pod ${pod} \ b
 - `${cluster}` gets replaced with the cluster where UL lives
 - `${branch}` can be whatever we want to call the new branch for easy lookup. e.g. Jira ticket number
 - `${namespace}` is the namespace of the deployment/service (i.e. slxxx or osl)
-- `${pod}` is the pod you want to isolate. To find the pod names for a particular deployment/service, run the [list-pods](https://bullhorn.atlassian.net/wiki/spaces/SE/pages/669253879/Kubecli+Heap+Dumps+I+Thread+Dumps+-+Kubernetes#list-pods "https://bullhorn.atlassian.net/wiki/spaces/SE/pages/669253879/Kubecli+Heap+Dumps+I+Thread+Dumps+-+Kubernetes#list-pods") command.
+- `${pod}` is the pod you want to isolate. To find the pod names for a particular deployment/service, run `list-pods` command.
 
 ## References
 

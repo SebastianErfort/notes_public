@@ -36,8 +36,7 @@ For example set up usage of a (SSH) SOCKS proxy[^1]
 ![|300](FoxyProxy_patterns.png "FoxyProxy proxy patterns")
 ![|200](FoxyProxy_extension_popup.png "FoxyProxy extension pop-up")
 
-[^1]: [[bullhorn/ssh#SOCKS proxy]]
-
+[^1]: [[ssh#SOCKS proxy]]
 
 ## Alternatives
 

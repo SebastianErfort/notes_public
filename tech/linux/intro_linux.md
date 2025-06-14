@@ -15,7 +15,7 @@ title: Introduction to Linux
         - [`man` pages](https://www.kernel.org/doc/man-pages/)
         - [[bash#History|command history]]
         - cheat sheets and command line tools: [[unix_command_reference.pdf|Unix cheat sheet]], [cheat] CLI tool
-    - remote access: [[bullhorn/ssh]]
+    - remote access: [[ssh]]
 - [[linux/linux#System|system]]
     - [[linux#Kernel|Linux Kernel]]
     - [[linux#Files & Directories|files and directories, permissions]]

@@ -9,7 +9,7 @@ title: Prometheus
 
 ## Tools & Implementations
 
-- Kubernetes: [kube-prometheus-stack](https://bhsource.bullhorn.com/kubernetes/helm-charts/-/tree/master/kube-prometheus-stack)
+- Kubernetes: [kube-prometheus-stack]
 - Exporters
     - [[windows_exporter]]
     - [blackbox-exporter](https://github.com/prometheus/blackbox_exporter)
