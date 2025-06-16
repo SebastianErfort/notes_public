@@ -1,16 +1,20 @@
 ---
 title: Obsidian DataView
 tags:
-  - obsidian
   - obsidian/DataView
-desc-short: "Dataview is a live index and query engine over your personal knowledge base. You can [**add metadata**](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/) to your notes and **query** them with the [**Dataview Query Language**](https://blacksmithgu.github.io/obsidian-dataview/queries/structure/) to list, filter, sort or group your data. Dataview keeps your queries always up to date and makes data aggregation a breeze."
+desc-short: Dataview is a live index and query engine over your personal knowledge base. You can [**add metadata**](https://blacksmithgu.github.io/obsidian-dataview/annotation/add-metadata/) to your notes and **query** them with the [**Dataview Query Language**](https://blacksmithgu.github.io/obsidian-dataview/queries/structure/) to list, filter, sort or group your data. Dataview keeps your queries always up to date and makes data aggregation a breeze.
 type: software
-category: ""
-url: "https://blacksmithgu.github.io/obsidian-dataview/"
-docs: "https://blacksmithgu.github.io/obsidian-dataview/"
-source: "https://github.com/blacksmithgu/obsidian-dataview"
+category:
+  - ""
+url: https://blacksmithgu.github.io/obsidian-dataview/
+docs: https://blacksmithgu.github.io/obsidian-dataview/
+source: https://github.com/blacksmithgu/obsidian-dataview
 developer: ""
 visibility: public
+next:
+  - "[[datacore]]"
+up:
+  - "[[obsidian-plugins]]"
 ---
 # Obsidian Dataview
 
@@ -162,6 +166,13 @@ HTML link from metadata[^1]
 
 ```js
 page = dv.page(dv.parse(THE_STRING))
-
 link = `<a href="${page.file.path}" class="internal-link">${page.file.name}</a>`
 ```
+
+## Develop and Debug
+
+~~~~markdown
+```dataviewjs
+console.log(dv.current().file.frontmatter)
+```
+~~~~

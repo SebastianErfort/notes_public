@@ -3,6 +3,8 @@ tags:
   - obsidian
 visibility: public
 title: Features
+up:
+  - "[[public/tech/productivity/obsidian/obsidian|obsidian]]"
 ---
 # Obsidian Features
 

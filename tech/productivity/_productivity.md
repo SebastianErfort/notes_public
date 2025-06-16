@@ -1,7 +1,15 @@
 ---
 visibility: public
 title: Productivity
+aliases:
+  - Productivity
 ---
+## Automation
+
+- [IFTTT](https://ifttt.com/ "Home")
+- [[huginn]]
+- Zapier
+
 ## Documents
 
 - [Docspell]: document organizer, optical character recognition (OCR) and text analysis (ML)

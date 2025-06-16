@@ -153,6 +153,7 @@ References
 - [Canonical: Kubernetes at the edge](file://edu/kubernetes/MicroK8s+Strict+Confinement+Whitepaper.pdf) #dev/iot #dev/edge
 - [Guide/Blog FaaS cluster on RPi's with Kubernetes](https://rpi4cluster.com/)
 - [training and certification](https://kubernetes.io/training/)
+    - [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
     - Linux Foundation
         - [Linux Foundation: Introduction to Kubernetes (LFS158)][lf-intro-kubernetes]: free introduction course 15-20h course material, hands-on & assignments, ...
         - [LinuxFoundationX: Introduction to Kubernetes](https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes)

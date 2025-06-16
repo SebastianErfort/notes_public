@@ -22,7 +22,7 @@ Online version available at <https://sebastianerfort.github.io/notes>.
     - [[virtualisation_containerisation|Virtualisation and Containers]]: [[kvm]], [[QEMU]], [[libvirt]], [[Docker]], [[public/tech/dev/Vagrant]]
     - [[DevOps]]: [[devops#CI/CD|CI/CD]]
     - [[dev#Syntax Check, Formatting, Linting|Syntax Check, Formatting, Linting]]
-- [[_documentation|Documentation]], [[productivity]] and [[writing#Notes|note-taking]]
+- [[_documentation|Documentation]], [[_productivity]] and [[writing#Notes|note-taking]]
     - [[MkDocs]]
     - [[Obsidian]]
     - [[Markdown]]
@@ -43,7 +43,7 @@ Online version available at <https://sebastianerfort.github.io/notes>.
 - [[web-dev|Web stuff]]
     - [[public/tech/web/CSS|CSS]]
     - [[HTML]]
-    - [[Hugo]]
+    - [[_hugo]]
 
 Notes/pages starting with an underscore `_` are index or meta pages, or maps of content.
 

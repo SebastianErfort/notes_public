@@ -6,5 +6,4 @@ url: "https://sebastianerfort.github.io/"
 source: "https://github.com/SebastianErfort/SebastianErfort.github.io"
 visibility: public
 ---
-
-[My personal website](https://sebastianerfort.github.io/) on [[github#Github Pages|Github Pages]] using [[Hugo]] with the [[hugo#Clarity|Clarity theme]].
+[My personal website](https://sebastianerfort.github.io/) on [[github#Github Pages|Github Pages]] using [[_hugo|Hugo]] with the [[Blowfish]] theme.

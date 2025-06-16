@@ -37,7 +37,7 @@ See [[public/tech/dev/git/GitLab#GitLab Pages|notes on GitLab Pages]].
 - themes
     - [Jamstack: Themes for Hugo, Jekyll, ...](https://jamstackthemes.dev/)
 
-#### [[Hugo]]
+#### [[_hugo]]
 
 #### Hexo
 
@@ -108,6 +108,11 @@ Based on: Python
 ## Embed
 
 - [oEmbed format](https://oembed.com/): format for API supported by a number of websites, e.g. Flickr. Get standard reply with data required for embedding.
+
+## Meta Data
+
+- [Schema.org](https://schema.org/)
+  > Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
 
 ## Security
 
