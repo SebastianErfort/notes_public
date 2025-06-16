@@ -4,19 +4,20 @@ acronym: OSPO
 visibility: public
 author: Sebastian Erfort
 related:
-  - "[[tech/opensource]]"
+  - "[[opensource]]"
   - "[[OpenScience]]"
+up:
+  - "[[opensource]]"
+same:
+  - "[[openscience]]"
 ---
-|          |                                      |     |
-| -------- | ------------------------------------ | --- |
-| See also | [OpenSource](public/tech/opensource) |     |
 
 > [!info]- OSPO infographic
 > ![](ospo_infographic.pdf)
 
 ## Organisations
 
-See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
+See also [[opensource#Organisations|OpenSource: Organisations]]
 
 [OSPO Landscape](https://landscape.todogroup.org/) ![](https://landscape.todogroup.org/)
 
@@ -34,7 +35,7 @@ See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
 ## People
 
 - Christine Abernathy, F5,  OSPO director
-- [[Samuel Mbuthia]]: leads the WHO [[OSPO]]
+- [[Samuel Mbuthia]]: leads the WHO [[ospo]]
 - Ashley Wolf, GitHub, Open Source Director
 
 ## Events
@@ -48,7 +49,7 @@ See also [[public/tech/opensource#Organisations|OpenSource: Organisations]]
 ## Resources
 
 - [TODO Group OSPO guides](https://todogroup.org/resources/guides/)
-![[public/tech/opensource#^1a1526]]
+![[opensource#^1a1526]]
 
 
 ## References

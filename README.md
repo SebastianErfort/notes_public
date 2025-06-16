@@ -14,7 +14,7 @@ Online version available at <https://sebastianerfort.github.io/notes>.
 **Map of Contents** (excerpt)
 
 - [[_configuration_management|Configuration Management]]
-    - [[Puppet]]
+    - [[public/tech/cfg_mgmt/Puppet]]
 - [[dev|Development]]
     - [[dev#Command Line|command line]]: [[bash]], [[awk]], [[sed]], [[editors]], [[vim]], [[neovim]]
     - version control: [[_git]], [[GitLab]], [[GitHub]]
@@ -35,11 +35,11 @@ Online version available at <https://sebastianerfort.github.io/notes>.
         - [[partitions_filesystems|Disks, partitions and filesystems]]: [[btrfs]], [[imaging]]
     - [[public/tech/linux/linux#Distributions|Distros]]
         - [[openSUSE]]
-        - [[Debian]]
+        - [[public/tech/linux/Debian]]
         - [[Ubuntu]]
     - [[KDE]]
 - [[public/tech/software/_software|Software]]
-    - [[public/tech/opensource|Open-Source]]: [[OSPO]]
+    - [[opensource|Open-Source]]: [[ospo]]
 - [[web-dev|Web stuff]]
     - [[public/tech/web/CSS|CSS]]
     - [[HTML]]

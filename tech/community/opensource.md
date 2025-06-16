@@ -5,7 +5,7 @@ aliases:
   - Open Software
   - FOSS
 related:
-  - "[[OSPO]]"
+  - "[[ospo]]"
   - "[[openscience|Open Science]]"
   - "[[_data|Data]]"
 ---
@@ -13,7 +13,7 @@ related:
 
 |           |                                                             |
 | --------- | ----------------------------------------------------------- |
-| See also  | [[OSPO]], [Open Science](openscience)                       |
+| See also  | [[ospo]], [Open Science](openscience)                       |
 | Overviews | [awesome-open-source], [awesome-selfhosted], [awesome-ospo] |
 
 ## Motivation
@@ -40,7 +40,7 @@ related:
 - [gnu.org](https://www.gnu.org/)
 - <https://www.fossology.org/>: FOSSology is a open source license compliance software system and toolkit ^1a1526
 - [Research Software Alliance: Guidelines](https://www.researchsoft.org/guidelines/)
-- [[OSPO|Open Source Program Offices]]
+- [[ospo|Open Source Program Offices]]
 - [OW2 IT infrastructure](https://www.ow2.org/view/IT_Infrastructure/): RocketChat, GitLab, SonarQube, Collabora
 
 ```dataview
@@ -95,7 +95,7 @@ See also [awesome-open-source] > organisations.
 ## People
 
 - Bryce Adelstein Lelbach: C++, US standards committee for programming languages
-- Samuel Mbuthia: leads the WHO [[OSPO]]
+- Samuel Mbuthia: leads the WHO [[ospo]]
 
 
 ## Glossary

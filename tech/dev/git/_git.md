@@ -273,6 +273,8 @@ and optionally
 
 ## Tools
 
+- [Git Repo Manager (GRM)](https://hakoerber.github.io/git-repo-manager/worktree_remotes.html): manage repos declaratively; config in TOML or YAML.
+
 ### Platforms
 
 - [[GitHub]]

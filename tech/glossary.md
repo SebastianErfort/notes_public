@@ -1,6 +1,8 @@
 ---
 title: Technology Glossary
 visibility: public
+up:
+  - "[[public/glossary|glossary]]"
 ---
 # Technology Glossary
 
@@ -16,15 +18,26 @@ visibility: public
 
 ## Dev
 
+- [BDD](https://en.wikipedia.org/wiki/Behavior-driven_development): Behavior-driven development
+    In software engineering, behavior-driven development (BDD) is a software development process that encourages collaboration among developers, quality assurance experts, and customer representatives in a software project.  ^bdd
 - IaaS: Infrastructure as a Service ^IaaS
 - PaaS: Platform as a Service ^PaaS
 - SaaS: Software as a Service ^saas
+
+### Kubernetes
+
+- Calico ^calico
+    > Calico is ==an open-source networking and security solution for Kubernetes==. It allows containers, virtual machines, and other workloads to communicate securely.
 
 ## Storage
 
 - AFP: Apple Filing Protocol ^afp
 - NAS: Network-Attached Storage ^nas
 - SAN: Storage area network ^san
+
+### Databases
+
+- RDS: Relational Database Service ^rds
 
 ## Networking
 
@@ -34,6 +47,18 @@ visibility: public
 - SMB: Server Message Block (Samba, Windows) ^smb
 - TUN/TAP: Kernel virtual network devices. ^tuntap
 
+## Cloud
+
+- [[aws]]: Amazon Web Services ^aws
+    - ARN: Amazon Resource Name ^arn
+        - Amazon Relational Database Service (Amazon RDS) ^amazon-rds
+    - EBS: Elastic Bean Stalk ^ebs
+
+## Web
+
+- WAR: Web Application Resource or Web application ARchive ^war
+
 ## Misc
 
 - JTAG: Joint Test Action Group ^jtag
+- RCA: root cause analysis ^rca
