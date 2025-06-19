@@ -5,6 +5,9 @@ title: Tech News
 
 ## Sources
 
+- Cloud
+    - AWS
+        - [AWS News Blog](https://aws.amazon.com/blogs/aws/)
 - EdTech
     - [Ed Tech Magazine](https://edtechmagazine.com/higher/)
 

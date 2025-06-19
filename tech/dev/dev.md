@@ -182,20 +182,10 @@ See also [[dev/devops|DevOps]].
 - [Fleet]
   > Deploy workloads from Git to large fleets of Kubernetes clusters
 
-## Containers, VMs, etc
+## [[virtualisation_containerisation|Containerisation & Virtualisation]]
 
 - [Apptainer](https://apptainer.org/): container system for secure high performance computing
 - build container images for various architectures: [[Podman#^35f333|podman-farm]]
-
-### [[Podman]]
-
-### [[public/tech/dev/Kubernetes]]
-
-### [[Docker]]
-
-### [[VMWare]]
-
-### [[VirtualBox]]
 
 ## Linux
 
@@ -219,7 +209,7 @@ See also [[dev/devops|DevOps]].
 
 ## Cloud
 
-- [[aws]]
+- [[_aws]]
 - [[azure]]
 - [[GCP]]
 

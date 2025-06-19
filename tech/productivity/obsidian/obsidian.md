@@ -152,7 +152,7 @@ Since Markdown supports usage of most HTML, this can be used to extend the featu
 - Zotero
     - <https://forum.obsidian.md/t/zotero-best-practices/164/57>
 
-#### Optical Character Recognition ([[OCR]])
+#### Optical Character Recognition ([[ocr]])
 
 This would allow integration of hand-written notes.
 

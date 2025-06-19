@@ -25,6 +25,7 @@ aliases:
 - Discord: closed-source, commercial, privacy-concerns
 - reddit: commercial and controversial (try [[#^lemmy]]?) ^reddit
 - lemmy: Fediverse alternative to reddit? ^lemmy
+- [[mattermost]]: chatbot
 
 ## Clients
 
@@ -39,10 +40,10 @@ aliases:
 ```dataview
 TABLE WITHOUT ID
 file.link AS "Name",
-("[Website](" + this.url + ")") AS "Links"
-WHERE type = "software" AND category = "communication"
+("[Website](" + this.url + ") | " + "[Documentation](" + this.docs + ")") AS "Links",
+(default(desc-short, description)) AS "Description"
+WHERE contains(file.folder, this.file.folder) AND file.path != this.file.path
 ```
-
 
 ## References
 

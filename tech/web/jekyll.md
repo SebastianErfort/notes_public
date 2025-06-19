@@ -1,14 +1,11 @@
 ---
 title: Jekyll
 type: software
-# category: ""
-url: "https://jekyllrb.com/"
-# docker-image: ""
-# desc-short: |
-#   ...
-# tags: ""
+url: https://jekyllrb.com/
 visibility: public
 ---
+# `= this.title`
+
 `= ("[Website](" + this.website + ")")` |  `= ("[Github](" + this.github + ")")`
 `= ("> " + this.desc-short)`
 [Github Pages](github#Github Pages)
@@ -130,3 +127,10 @@ Features
 - Instagram Feed
 - Ionicons Icons
 - Google Fonts
+
+#### Jekyll
+
+[Website](https://jekyllrb.com/)a | [Github](https://github.com/jekyll/jekyll)
+
+- uses [[Markdown|Markdown]], [[Liquid]] templating language, [[HTML]] & [[CSS]]
+- [Showcases](https://jekyllrb.com/showcase/)

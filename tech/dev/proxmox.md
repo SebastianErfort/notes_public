@@ -49,8 +49,11 @@ same: *related
   pveam download local <image name>
     ```
 
-- create container: button  <button type='button'>Create CT</button>
+- create container: button <button type='button'>Create CT</button>
 
+### Display
+
+[Spice](https://pve.proxmox.com/wiki/SPICE)
 
 ## References
 

@@ -11,6 +11,8 @@ visibility: public
 url: https://help.obsidian.md/web-clipper
 up:
   - "[[obsidian-plugins]]"
+down:
+  - "[[_ml|Machine Learning]]"
 ---
 
 - [Interpret web pages](https://help.obsidian.md/web-clipper/interpreter)

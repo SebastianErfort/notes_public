@@ -42,7 +42,6 @@ Type 2: runs on top of underlying OS
 - [[bhyve]]
 - [[qemu]]: emulate hardware, can utilise [[kvm]]
 
-
 ## Containerisation
 
 - protected spaces, self-contained
@@ -56,12 +55,10 @@ Container applications
 - [[dev/Docker|Docker]]
 - [[LXC]]
 
-
 ## Virtualisation
 
 - [[kvm]]
 - [[QEMU]]
-
 
 ## Orchestration
 
@@ -69,7 +66,6 @@ Container applications
 - [[libvirt]]
 - [[public/tech/dev/Kubernetes|Kubernetes]]
 - [[public/tech/dev/Podman|Podman]]
-
 
 ## Operation
 

@@ -1,3 +1,8 @@
+---
+title: AWS
+aliases:
+  - AWS
+---
 ## Install and Update
 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html - use zipped installer
@@ -22,7 +27,15 @@ gp2
 gp3
 : cheaper and faster than gp2, 3000 IOPS by default
 
-## IAM and Policies
+## Security
+
+- [AWS Security Services Best Practices](https://aws.github.io/aws-security-services-best-practices/ "AWS Security Services Best Practices")
+- post-quantum security: Lever, TLS/SSL
+
+Services
+- [[guard_duty|Guard Duty]]
+
+### IAM and Policies
 
 S3 read-only
 ```json
@@ -43,6 +56,7 @@ S3 read-only
   ]
 }
 ```
+
 ## CLI
 
 ### Roles and Instances

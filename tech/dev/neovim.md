@@ -156,6 +156,8 @@ Plugin managers
 - [gitlab.vim](https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim): official editor extension
 - [oversee.nvim](https://github.com/stevearc/overseer.nvim)
     > A task runner and job management plugin for Neovim
+- [copilot.vim](https://github.com/github/copilot.vim)
+  > Neovim plugin for GitHub Copilot
 
 ### Filetype
 

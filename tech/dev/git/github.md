@@ -1,11 +1,11 @@
 ---
 visibility: public
 title: GitHub
+same:
+  - "[[GitLab]]"
+up:
+  - "[[_git|Git]]"
 ---
-| Resource | Links               |
-| -------- | ------------------- |
-| Related  | [[_git]], [[GitLab]] |
-
 # GitHub
 
 
@@ -60,3 +60,7 @@ GitHub uses [**kramdown**](Markdown.md#kramdown) for Markdown conversion, [**Rou
 - [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 - [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 - [Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
+
+## News
+
+- [Blog](https://github.blog/)

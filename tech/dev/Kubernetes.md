@@ -18,7 +18,7 @@ aka K8s (K-8 letters-s)
 
 [How to run Kubernetes workloads in systemd with Podman @RedHat](https://www.redhat.com/sysadmin/kubernetes-workloads-podman-systemd): Use Kubernetes YAML with Podman template to spin up pods/containers through [[linux#systemd|systemd]].
 
-> [!details] QuickRef.me cheatsheet
+> [!details]- QuickRef.me cheatsheet
 > <iframe src="https://quickref.me/kubernetes" width="100%"></iframe>
 
 ## Implementations, Frameworks and Distributions

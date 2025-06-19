@@ -65,12 +65,12 @@ Plugin managers
 - [vim-pathogen](https://github.com/tpope/vim-pathogen)
 
 
-## Config
+### Config
 
 - [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim): use <https://editorconfig.org> files
 
 
-## Editing
+### Editing
 
 - YouCompleteMe
     - Needs compilation
@@ -87,7 +87,7 @@ Plugin managers
     - [article](http://vimcasts.org/episodes/aligning-text-with-tabular-vim/): gist for automatic indentation/tabularisation when typing for example `|`
 
 
-## Aesthetics, customisation
+### Aesthetics, customisation
 
 [Color scheme highlight groups](https://github.com/norcalli/nvim-base16.lua/blob/master/lua/base16.lua#L102)
 Show highlight group used for code under cursor:

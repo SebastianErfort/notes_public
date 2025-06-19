@@ -15,16 +15,14 @@ Consider providing `robots.txt` and [[humans.txt|`humans.txt`]] providing websit
 
 ### Static Site Hosting
 
-#### [Cloudflare Pages](https://pages.cloudflare.com/)
-
-Free $0
-
-- 1 build at a time
-- 500 builds per month
-- 100 custom domains per project
-- Unlimited sites
-- Unlimited static requests
-- Unlimited bandwidth
+> [!details]- [Cloudflare Pages](https://pages.cloudflare.com/)
+> Free $0
+> - 1 build at a time
+> - 500 builds per month
+> - 100 custom domains per project
+> - Unlimited sites
+> - Unlimited static requests
+> - Unlimited bandwidth
 
 #### GitLab Pages
 
@@ -37,67 +35,17 @@ See [[public/tech/dev/git/GitLab#GitLab Pages|notes on GitLab Pages]].
 - themes
     - [Jamstack: Themes for Hugo, Jekyll, ...](https://jamstackthemes.dev/)
 
-#### [[_hugo]]
-
-#### Hexo
-
-<https://hexo.io/> | [Github](https://github.com/hexojs/hexo)
-
-- [Themes](https://hexo.io/themes/)
-    - <https://github.com/probberechts/hexo-theme-cactus>
-
-#### Jekyll
-
-[Website](https://jekyllrb.com/)a | [Github](https://github.com/jekyll/jekyll)
-
-- uses [[Markdown|Markdown]], [[Liquid]] templating language, [[HTML]] & [[CSS]]
-- [Showcases](https://jekyllrb.com/showcase/)
-
-#### [[public/tech/documentation/MkDocs|MkDocs]]
-
-#### Wowchemy
-
-[Wowchemy](https://wowchemy.com/): no-code website builder | [Docs](https://wowchemy.com/docs/)
-
-#### Publii
-
-<https://getpublii.com/>
-> [Publii](https://getpublii.com/) is a desktop-based CMS for Windows, Mac and Linux that makes creating static websites fast and hassle-free, even for beginners.
-
-#### Open SDG platform
-
-Open Sustainable Goals (SDG)
-> open source, free-to-reuse platform for managing and publishing data and statistics related to the [UN Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/) (SDGs)
-
-- [Quick Start](https://open-sdg.readthedocs.io/en/latest/quick-start/)
-- [Features](https://open-sdg.readthedocs.io/en/latest/open-sdg-features/)
-- [Customisation](https://open-sdg.readthedocs.io/en/latest/customisation/)
-- [GitHub Pages](https://open-sdg.readthedocs.io/en/latest/hosting/github-pages-production/)
-
-
-
-#### Astro
-
-[Website](https://astro.build/) | [Documentation](https://docs.astro.build/en/getting-started/) | [Source](https://github.com/withastro/astro)
-
-Themes
-
-- [Astroplate](https://github.com/zeon-studio/astroplate)
-
-
-#### [[Gatsby]]
-
-
-#### Pelican
-
-[Website](https://getpelican.com/)
-Based on: Python
-
-#### Bootstrap
-
-[Website](https://getbootstrap.com/)
-> Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.
-
+- [[_hugo|Hugo]]
+- [[hexo]]
+- [[jekyll]]
+- [[public/tech/documentation/MkDocs|MkDocs]]
+- [[wowchemy]]
+- [[publii]]
+- [[Open SDG Platform]]
+- [[astro]]
+- [[Gatsby]]
+- [[Pelican]]
+- [[Bootstrap]]
 
 ## Assets
 
@@ -113,6 +61,11 @@ Based on: Python
 
 - [Schema.org](https://schema.org/)
   > Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
+- [[humans.txt]]
+
+## Domains
+
+[[DDNS]]
 
 ## Security
 

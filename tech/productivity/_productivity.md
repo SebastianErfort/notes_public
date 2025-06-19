@@ -3,7 +3,9 @@ visibility: public
 title: Productivity
 aliases:
   - Productivity
+share: "true"
 ---
+# `=this.title`
 ## Automation
 
 - [IFTTT](https://ifttt.com/ "Home")

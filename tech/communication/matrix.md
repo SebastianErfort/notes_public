@@ -1,13 +1,15 @@
 ---
 title: Matrix
 type: software
-category: communication
+category:
+  - communication
 model: free (open source)
-url: "https://matrix.org/"
+url: https://matrix.org/
 visibility: public
+desc-short: An open network for secure, decentralized communication
 ---
 `= ( "[Website](" + this.url + ")")`
-> An open network for secure, decentralized communication
+`= ("> " + this.desc-short)`
 
 - [Clients](https://matrix.org/docs/projects/try-matrix-now/)
     - [FOSS: 9 Best Matrix Clients](https://itsfoss.com/best-matrix-clients/)

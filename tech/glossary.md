@@ -49,7 +49,7 @@ up:
 
 ## Cloud
 
-- [[aws]]: Amazon Web Services ^aws
+- [[_aws]]: Amazon Web Services ^aws
     - ARN: Amazon Resource Name ^arn
         - Amazon Relational Database Service (Amazon RDS) ^amazon-rds
     - EBS: Elastic Bean Stalk ^ebs
