@@ -13,3 +13,8 @@ Convert ANSI to HTML
 ```
 cat "$file" | ansi2html > output.html
 ```
+
+## Tools
+
+- [Carapace](https://carapace.sh/) | [github.com/carapace-sh/carapace](https://github.com/carapace-sh/carapace)
+  > A multi-shell completion **[library](https://github.com/carapace-sh/carapace)** and **[binary](https://github.com/carapace-sh/carapace-bin)**.

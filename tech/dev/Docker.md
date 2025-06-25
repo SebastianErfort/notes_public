@@ -20,8 +20,8 @@ visibility: public
 > docker container ls # list (running) containers
 > docker run -d -it $image_name # start persistent container
 > docker exec -it $container_id /bin/bash # get a shell
+> docker compose up [-d] # start container from compose.yml file (in background)
 > ```
-
 
 ## Images
 
@@ -33,6 +33,7 @@ Using an image checksum in the definition can be used to verify integrity and do
 ## Installation
 
 - [Debian from `apt` repo](https://docs.docker.com/engine/install/debian/#install-using-the-repository)
+- [Docker Compose Plugin](https://docs.docker.com/compose/install/linux/ "Docker Compose Plugin")
 
 ### Rootless
 
@@ -54,13 +55,14 @@ systemctl --user status docker.service
 systemctl --user restart docker.service
 ```
 
-^4d425a
+^linger
 
 #### Disadvantages and Limitations
 
 <https://docs.docker.com/engine/security/rootless/#known-limitations>
 
 <https://linuxhandbook.com/rootless-docker/>
+
 Using [Slirp4netns](https://github.com/rootless-containers/slirp4netns?ref=linuxhandbook.com) mode solves this problem, and shows the original address of the request. But it also has two problems.
 
 - IPv6 not supported.
@@ -83,14 +85,13 @@ Using [Slirp4netns](https://github.com/rootless-containers/slirp4netns?ref=linux
 
 The [[openSUSE]] package `rootlesskit` doesn't include all the scripts other repo's packages provide.
 
-
 ## Glossary
 
-Term | Description | Similar | Example
--|-|-|-
-image |
-registry | place to store images | harbor
-context | like an environment (incl. endpoint) | | [docs](https://docs.docker.com/engine/context/working-with-contexts/)
+| Term     | Description                          | Similar | Example                                                               |
+| -------- | ------------------------------------ | ------- | --------------------------------------------------------------------- |
+| image    | packaged base container read to run  |         |                                                                       |
+| registry | place to store images                | harbor  |                                                                       |
+| context  | like an environment (incl. endpoint) |         | [docs](https://docs.docker.com/engine/context/working-with-contexts/) |
 
 ## References
 

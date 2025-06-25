@@ -110,8 +110,9 @@ Automatically added fields, collected under `file`[^1]
 
 See [documentation on inline DQLs](https://blacksmithgu.github.io/obsidian-dataview/queries/dql-js-inline/):
 
+- standard syntax: <code>`=this.title`</code>
+- JavsScript inline: <code>`$=console.log(dv.current().file.frontmatter)`</code>
 - data from other notes can be accessed with <code>`=[[otherNote]].file.name`</code>
-
 
 ## Functions
 
