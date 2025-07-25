@@ -18,3 +18,4 @@ status: Maintenance Mode
 ## Features
 
 - supports markers (linking notes) and gpx!
+

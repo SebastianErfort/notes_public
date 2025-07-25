@@ -16,8 +16,8 @@ same:
 up:
   - "[[iac]]"
   - "[[iac|IaaS]]"
-docs: https://developer.hashicorp.com/terraform/docs
-url: https://terraform.io/
+docs: "https://developer.hashicorp.com/terraform/docs"
+url: "https://terraform.io/"
 ---
 `= ("[Website](" + this.url + ")")` | `= ("[Documentation](" + this.docs + ")")` | [Registry]
 [Awesome Terraform][awesome-tf]

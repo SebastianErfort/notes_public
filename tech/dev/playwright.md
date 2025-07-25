@@ -9,7 +9,7 @@ docs: ""
 source: ""
 desc-short: |
   Playwright is an open-source automation library for browser testing and web scraping developed by Microsoft .
-tags:
+tags: ""
 ---
 # Playwright
 

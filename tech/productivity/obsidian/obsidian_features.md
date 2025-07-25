@@ -2,7 +2,7 @@
 tags:
   - obsidian
 visibility: public
-title: Features
+title: "Obsidian: Features"
 ---
 # Obsidian Features
 
@@ -115,8 +115,7 @@ Or with an inline footnote ^[without a need to specify the text separately]
 ![[othernote^block]]
 ```
 
-- [call-outs](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types)
-    > [!idea] Why don't we ...?
+- [[#call-outs]]
 - special bullet points for check lists: theme feature, support and meaning varies. If unsupported, items show up as checked. Alternatively use CSS to get this function (see `.obsidian/snippets/checkboxes.css`,[^2] some icons might be difficult to see, depending on theme)
 
 > [!tip]+ Alternative Checkboxes
@@ -148,7 +147,7 @@ Or with an inline footnote ^[without a need to specify the text separately]
 [^2]: <https://forum.obsidian.md/t/alternative-checkboxes-icon-bullets-copy-and-paste/35962/15>
 
 
-### Call-outs
+#### Call-outs
 
 See [Obsidian Documentation](https://help.obsidian.md/Editing+and+formatting/Callouts#Supported+types).
 

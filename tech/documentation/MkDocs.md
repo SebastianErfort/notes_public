@@ -47,7 +47,7 @@ visibility: public
     ```
     my-project/
     ├── docs/
-    │   └── index.md
+    │   └── index.md
     └── mkdocs.yml
     ```
 
@@ -113,7 +113,6 @@ See [Website](https://squidfunk.github.io/mkdocs-material/) | [PyPI](https://pyp
       features:
         - navigation.top  # back-to-top button
         - toc.follow  # auto-scroll toc sidebar
-
     ```
 
 ## Markdown in MkDocs

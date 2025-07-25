@@ -6,7 +6,7 @@ tags:
 type: language
 category:
   - markup
-url: https://yaml.org/
+url: "https://yaml.org/"
 related: &related
   - "[[JSON]]"
   - "[[dhall]]"

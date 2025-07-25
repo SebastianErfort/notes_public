@@ -7,9 +7,8 @@ category:
 url: "https://zoom.com"
 docs: ""
 source: ""
-desc-short: |
-
-tags:
+desc-short: ""
+tags: ""
 ---
 # zoom
 

@@ -1,5 +1,6 @@
 ---
-url: https://github.com/prometheus-community/windows_exporter
+url: "https://github.com/prometheus-community/windows_exporter"
+title: Windows exporter
 ---
 ## Config
 
