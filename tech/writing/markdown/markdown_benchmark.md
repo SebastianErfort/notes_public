@@ -2,13 +2,19 @@
 title: Markdown Benchmark
 author: Sebastian Erfort
 date: 2024-01-11
+date-updated: 2025-07-25
 ---
-
-# h1
 
 See [markdownguide.org](https://www.markdownguide.org) for basic and extended Markdown syntax.
 
 Markdown is fairly relaxed regarding its syntax, e.g. indentation. However, different Markdown processors are more or less forgiving. Python-Markdown (MkDocs) for example, requires 4 spaces of indentation or things won't render properly.
+
+For further subsets of Markdown, see for example
+- [[markdown_benchmark_mkdocs|MkDocs]]
+
+# h1
+
+Some Markdown parsers have the philosphy that there shouldn't be any `h1` headings and reserve these for the page title.
 
 ## h2
 
@@ -195,7 +201,7 @@ col2
 </div>
 </div>
 
-This happens to render fine in MkDocs (using [[Python-Markdown]]), but not in Obsidian.
+This happens to render fine in [[markdown_benchmark_mkdocs|MkDocs]] (using [[Python-Markdown]]), but not in Obsidian.
 
 
 ## Tags
@@ -211,12 +217,39 @@ tags:
   - tag2
 ```
 
-or inline #markdown/tags
+or inline #markdown/tags with `#markdown/tags`.
 
-MkDocs (Python-Markdown) don't handle tags at a line start well and interpret
-them as headings. Obsidian considers them as tags as it is assumed that headings
-will have a space after the `#` symbol.
+MkDocs (Python-Markdown) doesn't handle tags at a line start well and interpret them as headings. Obsidian considers them as tags as it is assumed that headings will have a space after the `#` symbol.
 
+## Admonitions or Call-outs
+
+These are highlighted boxes and are another common Markdown extension. They feature a title line and usually distinct symbols and colours to stand out. As such they are great to emphasise important information. They are similar to the HTML tag `<details>` and can be collapsible as well.
+
+In Obsidian these are called call-outs, whereas in MkDocs they're called admonitions.
+
+> [!type] title
+> content
+
+>  [!type]- collapsed call-out
+>  content
+
+>  [!type]+ expanded call-out
+>  content
+
+One common syntax, used for example by Obsidian, is
+
+````markdown
+> [!type] title
+> content
+
+>  [!type]- collapsed call-out
+>  content
+
+>  [!type]+ expanded call-out
+>  content
+````
+
+With MkDocs plugins this syntax can be kept and will be automatically translated to MkDocs admonition syntax, see [mkdocs-callouts](https://github.com/sondregronas/mkdocs-callouts) and [mkdocs-obsidian-support-plugin](https://github.com/ndy2/mkdocs-obsidian-support-plugin).
 
 ## Maths
 
@@ -245,74 +278,20 @@ graph LR
   B ---->|No| E[Yay!];
 ```
 
-<pre>
-<code>&grave;&grave;&grave;mermaid
+````markdown
+```mermaid
 graph LR
   A[Start] --> B{Error?};
   B -->|Yes| C[Hmm...];
   C --> D[Debug];
   D --> B;
   B ---->|No| E[Yay!];
-&grave;&grave;&grave;</code>
-</pre>
-
+```
+````
 
 ## Emojis
 
 Some Markdown processors support rendering emoji short codes (possibly requiring
 a plugin). `:partying_face:` :partying_face:
-
 Refer for example to this (not necessarily complete) [list of emoji shortcodes](https://gist.github.com/rxaviers/7360908).
 
-
-## Admonitions or Call-outs
-
-
-These are highlighted boxes and are another common Markdown extension. They feature a title line and usually distinct symbols and colours to stand out. As such they are great to emphasise important information. They are similar to the HTML tag `<details>` and can be collapsible as well.
-
-!!! info "MkDocs admonitions"
-
-    In MkDocs the extension `admonition` is required in `mkdocs.yml`. MkDocs uses the syntax
-
-    ```markdown
-    !!! type "title"
-        content
-
-    ??? tip "collapsible, collapsed by default"
-
-    ???+ tip "collapsible, expanded by default"
-    ```
-
-    This is problematic for various reasons and renders poorly in systems not supporting this extension.
-
-Obsidian uses the term call-out and the syntax
-
-<!-- NOTE: Had to use HTLM pre+code for HTML entity &#62; (>), using Markdown
-           plugins would replace Obsidian syntax with MkDocs syntax bc. of
-           poor coding not respecting code blocks. Hence no syntax highlighting -->
-<pre>
-<code>&#62; [!type] title
-&#62; content
-
-&#62; [!type]- collapsed call-out
-&#62; content
-
-&#62; [!type]+ expanded call-out
-&#62; content</code>
-</pre>
-
-rendering more reasonable in processors without this Markdown extension.
-
-With MkDocs plugins this syntax can be kept and will be automatically translated
-to MkDocs admonition syntax, see [mkdocs-callouts](https://github.com/sondregronas/mkdocs-callouts) and [mkdocs-obsidian-support-plugin](https://github.com/ndy2/mkdocs-obsidian-support-plugin).
-
-
-<!--
-## Embedding
-
-MkDocs snippets
-
-```yaml
---8<-- "mkdocs.yml"
-```
--->
